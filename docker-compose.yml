@@ -1,0 +1,47 @@
+services:
+  postgis:
+    image: postgis/postgis:18-3.6
+    container_name: postgis
+    environment:
+      - POSTGRES_DB=osm
+      - POSTGRES_USER=osm_user
+      - POSTGRES_PASSWORD=osmissoocool
+    ports:
+      - 5432:5432
+    volumes:
+      - postgis:/var/lib/postgresql
+  pg_tileserv:
+    image: pramsey/pg_tileserv
+    container_name: pg_tileserv
+    depends_on:
+      - postgis
+    environment:
+      - DATABASE_URL=postgresql://osm_user:osmissoocool@postgis/osm
+    ports:
+      - 7800:7800
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin4
+    depends_on:
+      - postgis
+    ports:
+      - 5050:80
+    environment:
+      PGADMIN_DEFAULT_EMAIL: a@b.de
+      PGADMIN_DEFAULT_PASSWORD: catsarecool
+    volumes:
+      - pgadmin:/var/lib/pgadmin
+  portainer:
+    image: portainer/portainer-ce
+    container_name: portainer
+    restart: always
+    ports:
+      - 9443:9443
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /root/portainer:/data
+
+volumes:
+  postgis:
+  pgadmin:
+  pg_tileserv:
