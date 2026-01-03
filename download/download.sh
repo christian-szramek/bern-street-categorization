@@ -1,9 +1,6 @@
 #!/bin/bash
 
 WORK_DIR=$1
-CITY_NAME=$2
-REGION_URL=$3
-BOUNDARIES_URL=$4
 
 # OSM region file
 
@@ -15,6 +12,7 @@ curl -L -o "$WORK_DIR/download/region.osm.pbf" $REGION_URL
 
 # OSM boundaries file
 
+# If no boundaries file is required -> move and rename the region.osm.pbf and exit
 if [ "$BOUNDARIES_URL" = "" ]; then
     mv "$WORK_DIR/download/region.osm.pbf" "$WORK_DIR/$CITY_NAME.osm.pbf"
     exit 0;

@@ -1,12 +1,11 @@
 #!/bin/bash
 
 WORK_DIR=$1
-CITY_NAME=$2
 
 osm2pgsql  \
---host localhost \
---database osm \
---user osm_user \
+--host $PGHOST \
+--database $TARGET_DB \
+--user $PGUSER \
 --output=flex \
 --style="$WORK_DIR/import/street_segments.lua" \
 --slim \

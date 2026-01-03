@@ -1,14 +1,14 @@
-#!/usr/bin/bash
+#!/usr/bin/env bash
 
-# Configuration (override via environment variables)
-PGHOST=localhost
-PGPORT=5432
-PGUSER=osm_user
-TARGET_DB=osm
-MAINTENANCE_DB=postgres
-
-# TODO improve this
-export PGPASSWORD="osmissoocool"
+# Load .env file
+if [ -f .env ]; then
+  set -a
+  source .env
+  set +a
+else
+  echo ".env file not found" >&2
+  exit 1
+fi
 
 echo "Recreating database '${TARGET_DB}'..."
 
