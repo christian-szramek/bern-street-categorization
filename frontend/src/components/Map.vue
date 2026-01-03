@@ -42,7 +42,7 @@ onMounted(() => {
         vectorTileLayerStyles: {
           "public.street_segments_closed_ways": {
             stroke: true,
-            color: "blue",
+            color: "green",
             weight: 2,
             opacity: 1,
             interactive: true,
@@ -62,7 +62,7 @@ onMounted(() => {
         vectorTileLayerStyles: {
           "public.street_segments_multipolygon": {
             area: true,
-            color: "red",
+            color: "green",
             weight: 2,
             opacity: 1,
             interactive: true,
