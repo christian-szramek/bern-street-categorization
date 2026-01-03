@@ -7,6 +7,9 @@ PGUSER=osm_user
 TARGET_DB=osm
 MAINTENANCE_DB=postgres
 
+# TODO improve this
+export PGPASSWORD="osmissoocool"
+
 echo "Recreating database '${TARGET_DB}'..."
 
 # Drop and recreate database
