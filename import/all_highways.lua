@@ -10,14 +10,7 @@ local highway_ways = osm2pgsql.define_way_table('highway_ways', {
     { column = 'geom', type = 'linestring', not_null = true }
 })
 
-local highway_closed_ways = osm2pgsql.define_area_table('highway_closed_ways', {
-    { column = 'type', type = 'text' },
-    { column = 'tags', type = 'jsonb' },
-    { column = 'geom', type = 'geometry', not_null = true }
-})
-
-local highway_multipolygons = osm2pgsql.define_area_table('highway_multipolygons', {
-    { column = 'type', type = 'text' },
+local highway_areas = osm2pgsql.define_area_table('highway_areas', {
     { column = 'tags', type = 'jsonb' },
     { column = 'geom', type = 'geometry', not_null = true }
 })
@@ -32,25 +25,46 @@ function osm2pgsql.process_node(object)
 end
 
 function osm2pgsql.process_way(object)
-    if object.is_closed and (object.tags.highway or object.tags['area:highway']) then
-        highway_closed_ways:insert({
-            type = object.type,
-            tags = object.tags,
-            geom = object:as_polygon()
-        })
+    -- if object.is_closed and (object.tags.highway or object.tags['area:highway']) then
+    --     highway_closed_ways:insert({
+    --         type = object.type,
+    --         tags = object.tags,
+    --         geom = object:as_polygon()
+    --     })
+    -- end
+
+    -- if not object.is_closed and object.tags.highway then
+    --     highway_ways:insert({
+    --         tags = object.tags,
+    --         geom = object:as_linestring()
+    --     })
+    -- end
+
+    if object.tags.highway then
+        if object.tags.area == 'yes' then
+            highway_areas:insert({
+                tags = object.tags,
+                geom = object:as_polygon()
+            })
+        else
+            highway_ways:insert({
+                tags = object.tags,
+                geom = object:as_linestring()
+            })
+        end
     end
 
-    if not object.is_closed and object.tags.highway then
-        highway_ways:insert({
+    if object.tags['area:highway'] then
+        highway_areas:insert({
             tags = object.tags,
-            geom = object:as_linestring()
+            geom = object:as_polygon()
         })
     end
 end
 
 function osm2pgsql.process_relation(object)
     if object.tags.highway then
-        highway_multipolygons:insert({
+        highway_areas:insert({
             type = object.type,
             tags = object.tags,
             geom = object:as_multipolygon()
