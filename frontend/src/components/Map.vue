@@ -7,6 +7,19 @@ let map;
 
 const bern = [46.9481, 7.4474];
 
+const infrastructureColors = {
+  footway: "blue",
+  cycleway: "yellow",
+  motorway: "red",
+  residential: "gray",
+};
+
+const defaultColor = "#666";
+
+function colorByInfrastructure(props) {
+  return infrastructureColors[props.Infrastructure_Type] ?? defaultColor;
+}
+
 onMounted(() => {
   map = L.map("map").setView(bern, 13);
 
@@ -20,11 +33,11 @@ onMounted(() => {
   L.vectorGrid
     .protobuf("http://localhost:7800/public.highway_nodes/{z}/{x}/{y}.pbf", {
       vectorTileLayerStyles: {
-        "public.highway_nodes": (properties, zoom) => {
+        "public.highway_nodes": (props, zoom) => {
           return {
             radius: 4, // circle radius in pixels
-            fillColor: "blue",
-            color: "blue",
+            fillColor: colorByInfrastructure(props),
+            color: colorByInfrastructure(props),
             weight: 1,
             opacity: 1,
             fillOpacity: 1,
@@ -41,15 +54,15 @@ onMounted(() => {
   L.vectorGrid
     .protobuf("http://localhost:7800/public.highway_ways/{z}/{x}/{y}.pbf", {
       vectorTileLayerStyles: {
-        "public.highway_ways": {
+        "public.highway_ways": props => ({
           stroke: true,
-          color: "green",
+          color: colorByInfrastructure(props),
           weight: 2,
           opacity: 1,
-          interactive: true,
-          getFeatureId: f => f.properties.id,
-        },
+        }),
       },
+      interactive: true,
+      getFeatureId: f => f.properties.id,
       maxZoom: 19,
     })
     .addTo(map);
@@ -58,15 +71,17 @@ onMounted(() => {
   L.vectorGrid
     .protobuf("http://localhost:7800/public.highway_areas/{z}/{x}/{y}.pbf", {
       vectorTileLayerStyles: {
-        "public.highway_areas": {
-          area: true,
-          color: "red",
-          weight: 2,
+        "public.highway_areas": props => ({
+          fill: true,
+          fillColor: colorByInfrastructure(props),
+          color: colorByInfrastructure(props),
+          weight: 1,
+          fillOpacity: 0.6,
           opacity: 1,
-          interactive: true,
-          getFeatureId: f => f.properties.id,
-        },
+        }),
       },
+      interactive: true,
+      getFeatureId: f => f.properties.id,
       maxZoom: 19,
     })
     .addTo(map);
