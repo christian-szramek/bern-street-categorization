@@ -31,18 +31,8 @@ services:
       PGADMIN_DEFAULT_PASSWORD: catsarecool
     volumes:
       - pgadmin:/var/lib/pgadmin
-  portainer:
-    image: portainer/portainer-ce
-    container_name: portainer
-    restart: always
-    ports:
-      - 9443:9443
-    volumes:
-      - /var/run/docker.sock:/var/run/docker.sock
-      - portainer:/data
 
 volumes:
   postgis:
   pg_tileserv:
   pgadmin:
-  portainer:
