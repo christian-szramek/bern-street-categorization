@@ -1,5 +1,7 @@
 print('osm2pgsql version: ' .. osm2pgsql.version)
 
+local IMPORT_AREA_HIGHWAY = true
+
 local highway_nodes = osm2pgsql.define_node_table('highway_nodes', {
     { column = 'tags', type = 'jsonb' },
     { column = 'infrastructure_type', type = 'text' },
@@ -22,7 +24,7 @@ function osm2pgsql.process_node(object)
     if object.tags.highway then
         highway_nodes:insert({
             tags = object.tags,
-            infrastructure_type = get_infrastructure_type(tags),
+            infrastructure_type = get_infrastructure_type(object.tags),
             geom = object:as_point()
         })
     end
@@ -33,22 +35,22 @@ function osm2pgsql.process_way(object)
         if object.tags.area == 'yes' then
             highway_areas:insert({
                 tags = object.tags,
-                infrastructure_type = get_infrastructure_type(tags),
+                infrastructure_type = get_infrastructure_type(object.tags),
                 geom = object:as_polygon()
             })
         else
             highway_ways:insert({
                 tags = object.tags,
-                infrastructure_type = get_infrastructure_type(tags),
+                infrastructure_type = get_infrastructure_type(object.tags),
                 geom = object:as_linestring()
             })
         end
     end
 
-    if object.tags['area:highway'] then
+    if IMPORT_AREA_HIGHWAY and object.tags['area:highway'] then
         highway_areas:insert({
             tags = object.tags,
-            infrastructure_type = get_infrastructure_type(tags),
+            infrastructure_type = get_infrastructure_type(object.tags),
             geom = object:as_polygon()
         })
     end
@@ -59,12 +61,16 @@ function osm2pgsql.process_relation(object)
         highway_areas:insert({
             type = object.type,
             tags = object.tags,
-            infrastructure_type = get_infrastructure_type(tags),
+            infrastructure_type = get_infrastructure_type(object.tags),
             geom = object:as_multipolygon()
         })
     end
 end
 
 function get_infrastructure_type(tags) 
-    return 'Infrastructure_Type_A'
+    if tags.highway == 'pedestrian' or tags.highway == 'footway' or tags.highway == 'steps' or tags.highway == 'crossing' or (tags.highway == 'path' and (tags.sidewalk or tags.footway)) then
+        return 'pedestrian'
+    else
+        return 'non_pedestrian'
+    end
 end
