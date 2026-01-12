@@ -8,16 +8,14 @@ let map;
 const bern = [46.9481, 7.4474];
 
 const infrastructureColors = {
-  footway: "blue",
-  cycleway: "yellow",
-  motorway: "red",
-  residential: "gray",
+  pedestrian: "blue",
+  non_pedestrian: "green",
 };
 
 const defaultColor = "#666";
 
 function colorByInfrastructure(props) {
-  return infrastructureColors[props.Infrastructure_Type] ?? defaultColor;
+  return infrastructureColors[props.infrastructure_type] ?? defaultColor;
 }
 
 onMounted(() => {
