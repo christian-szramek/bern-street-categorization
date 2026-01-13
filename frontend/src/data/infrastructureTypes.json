@@ -1,0 +1,10 @@
+[
+  {
+    "name": "pedestrian",
+    "color": "blue"
+  },
+  {
+    "name": "non_pedestrian",
+    "color": "green"
+  }
+]
