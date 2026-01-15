@@ -19,6 +19,10 @@ const waysURL = "http://localhost:7800/public.highway_ways/{z}/{x}/{y}.pbf";
 const areasURL = "http://localhost:7800/public.highway_areas/{z}/{x}/{y}.pbf";
 const tileURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 
+const showNodes = true;
+const showWays = true;
+const showAreas = true;
+
 /* transform the infrastructureTypes to allow direct access when rendering the map
  *
  * [
@@ -135,12 +139,20 @@ onMounted(() => {
   }).addTo(map);
 
   // Initial load
-  loadNodes();
-  loadWays();
-  loadAreas();
+  if (showNodes) {
+    loadNodes();
+  }
+  if (showWays) {
+    loadWays();
+  }
+  if (showAreas) {
+    loadAreas();
+  }
 
-  // Reload nodes when map moves
-  map.on("moveend", loadNodes);
+  if (showNodes) {
+    // Reload nodes when map moves
+    showNodes ?? map.on("moveend", loadNodes);
+  }
 });
 </script>
 
