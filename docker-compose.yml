@@ -19,6 +19,15 @@ services:
       - DATABASE_URL=postgresql://osm_user:osmissoocool@postgis/osm
     ports:
       - 7800:7800
+  pg_featureserv:
+    image: pramsey/pg_featureserv
+    container_name: pg_featureserv
+    depends_on:
+      - postgis
+    environment:
+      - DATABASE_URL=postgresql://osm_user:osmissoocool@postgis/osm
+    ports:
+      - 9000:9000
   pgadmin:
     image: dpage/pgadmin4
     container_name: pgadmin4
