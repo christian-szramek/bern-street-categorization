@@ -4,6 +4,7 @@ import "leaflet.vectorgrid";
 import { ref, computed, onMounted } from "vue";
 
 const props = defineProps(["infrastructureTypes"]);
+
 const emit = defineEmits(["info"]);
 
 let map;
