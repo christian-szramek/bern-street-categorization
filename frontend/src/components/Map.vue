@@ -4,6 +4,7 @@ import "leaflet.vectorgrid";
 import { ref, computed, onMounted } from "vue";
 
 const props = defineProps(["infrastructureTypes"]);
+const emit = defineEmits(["info"]);
 
 let map;
 let nodeLayer = ref(null);
@@ -44,6 +45,10 @@ function colorByInfrastructure(vectorProps) {
   );
 }
 
+function handleMouseover(e) {
+  emit("info", e);
+}
+
 async function loadNodes() {
   const b = map.getBounds();
 
@@ -69,7 +74,7 @@ async function loadNodes() {
       }),
     onEachFeature: (feature, layer) => {
       layer.on("mouseover", () => {
-        console.log(feature.properties.tags);
+        handleMouseover(feature.properties.tags);
       });
     },
   }).addTo(map);
@@ -91,7 +96,7 @@ function loadWays() {
       maxZoom: 19,
     })
     .on("mouseover", e => {
-      console.log(e.layer.properties);
+      handleMouseover(e.layer.properties);
     })
     .addTo(map);
 }
@@ -114,7 +119,7 @@ function loadAreas() {
       maxZoom: 19,
     })
     .on("mouseover", e => {
-      console.log(e.layer.properties);
+      handleMouseover(e.layer.properties);
     })
     .addTo(map);
 }
@@ -145,6 +150,6 @@ onMounted(() => {
 <style scoped>
 #map {
   height: 100vh;
-  width: 100vw;
+  width: auto;
 }
 </style>

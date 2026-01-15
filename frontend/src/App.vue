@@ -1,14 +1,29 @@
 <script setup>
+import { ref } from "vue";
+
 import Map from "@/components/Map.vue";
 import Legend from "@/components/Legend.vue";
+import Info from "@/components/Info.vue";
 
 import infrastructureTypes from "@/data/infrastructureTypes.json";
+
+const showInfo = ref(false);
+const info = ref({});
+
+function handleInfo(e) {
+  info.value = e;
+  showInfo.value = true;
+}
 </script>
 
 <template>
   <div>
-    <Map />
+    <Map
+      :infrastructureTypes="infrastructureTypes"
+      @info="e => handleInfo(e)"
+    />
     <Legend :infrastructureTypes="infrastructureTypes" />
+    <Info v-if="showInfo" :info="info" />
   </div>
 </template>
 
