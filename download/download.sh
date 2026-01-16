@@ -1,38 +1,24 @@
 #!/bin/bash
 
-WORK_DIR=$1
+TMP_DIR=$1
 
-# OSM region file
-
+# Dowmload the OSM region file
 echo "Downloading the OSM region file..." 
-if [ -f "$WORK_DIR/download/region.osm.pbf" ]; then
-    rm "$WORK_DIR/download/region.osm.pbf"
-fi
-curl -L -o "$WORK_DIR/download/region.osm.pbf" $REGION_URL
 
-# OSM boundaries file
+curl -L -o "$TMP_DIR/region.osm.pbf" $REGION_URL
 
+# Download the OSM boundaries file
 # If no boundaries file is required -> move and rename the region.osm.pbf and exit
 if [ "$BOUNDARIES_URL" = "" ]; then
-    mv "$WORK_DIR/download/region.osm.pbf" "$WORK_DIR/$CITY_NAME.osm.pbf"
+    mv "$TMP_DIR/region.osm.pbf" "$TMP_DIR/final.osm.pbf"
     exit 0;
 fi
 
 echo "Downloading the OSM boundaries file..."
-if [ -f "$WORK_DIR/download/boundaries.osm.pbf" ]; then
-    rm "$WORK_DIR/download/boundaries.osm.pbf"
-fi
-curl -L -o "$WORK_DIR/download/boundaries.osm" $BOUNDARIES_URL
 
-# Crop
+curl -L -o "$TMP_DIR/boundaries.osm" $BOUNDARIES_URL
 
+# Crop the region file with the boundaries file
 echo "Cropping the OSM region file..."
-if [ -f "$WORK_DIR/$CITY_NAME.osm.pbf" ]; then 
-    rm "$WORK_DIR/$CITY_NAME.osm.pbf"
-fi
-osmium extract -p "$WORK_DIR/download/boundaries.osm" "$WORK_DIR/download/region.osm.pbf" -o "$WORK_DIR/$CITY_NAME.osm.pbf"
 
-# Cleanup
-
-rm "$WORK_DIR/download/boundaries.osm"
-rm "$WORK_DIR/download/region.osm.pbf"
+osmium extract -p "$TMP_DIR/boundaries.osm" "$TMP_DIR/region.osm.pbf" -o "$TMP_DIR/final.osm.pbf"

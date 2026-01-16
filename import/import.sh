@@ -1,6 +1,7 @@
 #!/bin/bash
 
 WORK_DIR=$1
+TMP_DIR=$2
 
 osm2pgsql  \
 --host $PGHOST \
@@ -9,7 +10,5 @@ osm2pgsql  \
 --output=flex \
 --style="$WORK_DIR/import/flex/$LUA_SCRIPT" \
 --slim \
---prefix "$CITY_NAME" \
-"$WORK_DIR/$CITY_NAME.osm.pbf"
-
-rm "$WORK_DIR/$CITY_NAME.osm.pbf"
+--drop \
+"$TMP_DIR/final.osm.pbf"
