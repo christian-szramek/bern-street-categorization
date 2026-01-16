@@ -4,9 +4,9 @@ WORK_DIR=$1
 TMP_DIR=$2
 
 osm2pgsql  \
---host $PGHOST \
---database $TARGET_DB \
---user $PGUSER \
+--host $PG_HOST \
+--database $PG_DB \
+--user $PG_USER \
 --output=flex \
 --style="$WORK_DIR/import/flex/$LUA_SCRIPT" \
 --slim \

@@ -10,38 +10,38 @@ else
   exit 1
 fi
 
-echo "Recreating database '${TARGET_DB}'..."
+echo "Recreating database '${PG_DB}'..."
 
 # Drop and recreate database
 psql \
-  --host="$PGHOST" \
-  --port="$PGPORT" \
-  --username="$PGUSER" \
-  --dbname="$MAINTENANCE_DB" \
+  --host="$PG_HOST" \
+  --port="$PG_PORT" \
+  --username="$PG_USER" \
+  --dbname="$PG_MAINTENANCE_DB" \
   --set=ON_ERROR_STOP=on <<EOF
 
 -- Terminate existing connections
 SELECT pg_terminate_backend(pid)
 FROM pg_stat_activity
-WHERE datname = '${TARGET_DB}'
+WHERE datname = '${PG_DB}'
   AND pid <> pg_backend_pid();
 
 -- Drop and recreate database
-DROP DATABASE IF EXISTS ${TARGET_DB};
-CREATE DATABASE ${TARGET_DB};
+DROP DATABASE IF EXISTS ${PG_DB};
+CREATE DATABASE ${PG_DB};
 
 EOF
 
 # Enable PostGIS extension in the new database
 psql \
-  --host="$PGHOST" \
-  --port="$PGPORT" \
-  --username="$PGUSER" \
-  --dbname="$TARGET_DB" \
+  --host="$PG_HOST" \
+  --port="$PG_PORT" \
+  --username="$PG_USER" \
+  --dbname="$PG_DB" \
   --set=ON_ERROR_STOP=on <<EOF
 
 CREATE EXTENSION IF NOT EXISTS postgis;
 
 EOF
 
-echo "Database '${TARGET_DB}' recreated and PostGIS enabled successfully."
+echo "Database '${PG_DB}' recreated and PostGIS enabled successfully."
