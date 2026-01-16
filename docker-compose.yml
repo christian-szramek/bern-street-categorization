@@ -3,45 +3,46 @@ services:
     image: postgis/postgis:18-3.6
     container_name: postgis
     environment:
-      - POSTGRES_DB=osm
-      - POSTGRES_USER=osm_user
-      - POSTGRES_PASSWORD=osmissoocool
+      - POSTGRES_DB=${PG_DB}
+      - POSTGRES_USER=${PG_USER}
+      - POSTGRES_PASSWORD=${PGPASSWORD}
     ports:
-      - 5432:5432
+      - ${PG_PORT}:5432
     volumes:
       - postgis:/var/lib/postgresql
   pg_tileserv:
-    image: pramsey/pg_tileserv
+    image: pramsey/pg_tileserv:20250131
     container_name: pg_tileserv
     depends_on:
       - postgis
+    restart: on-failure
     environment:
-      - DATABASE_URL=postgresql://osm_user:osmissoocool@postgis/osm
+      - DATABASE_URL=postgresql://${PG_USER}:${PGPASSWORD}@postgis/${PG_DB}
     ports:
-      - 7800:7800
+      - ${PG_TILESERV_PORT}:7800
   pg_featureserv:
-    image: pramsey/pg_featureserv
+    image: pramsey/pg_featureserv:20250917
     container_name: pg_featureserv
     depends_on:
       - postgis
+    restart: on-failure
     environment:
-      - DATABASE_URL=postgresql://osm_user:osmissoocool@postgis/osm
+      - DATABASE_URL=postgresql://${PG_USER}:${PGPASSWORD}@postgis/${PG_DB}
     ports:
-      - 9000:9000
+      - ${PG_FEATURESERV_PORT}:9000
   pgadmin:
-    image: dpage/pgadmin4
+    image: dpage/pgadmin4:9.11.0
     container_name: pgadmin4
     depends_on:
       - postgis
     ports:
-      - 5050:80
+      - ${PGADMIN_PORT}:80
     environment:
-      PGADMIN_DEFAULT_EMAIL: a@b.de
-      PGADMIN_DEFAULT_PASSWORD: catsarecool
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_EMAIL}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
     volumes:
       - pgadmin:/var/lib/pgadmin
 
 volumes:
   postgis:
-  pg_tileserv:
   pgadmin:
