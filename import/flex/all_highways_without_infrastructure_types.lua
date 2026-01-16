@@ -1,5 +1,7 @@
 print('osm2pgsql version: ' .. osm2pgsql.version)
 
+local logic = dofile('./import/flex/logic.lua')
+
 local IMPORT_AREA_HIGHWAY = false
 
 local highway_nodes = osm2pgsql.define_node_table('highway_nodes', {
@@ -18,7 +20,7 @@ local highway_areas = osm2pgsql.define_area_table('highway_areas', {
 })
 
 function osm2pgsql.process_node(object)
-    if object.tags.highway then
+    if logic.is_highway(object.tags) then
         highway_nodes:insert({
             tags = object.tags,
             geom = object:as_point()
@@ -27,8 +29,8 @@ function osm2pgsql.process_node(object)
 end
 
 function osm2pgsql.process_way(object)
-    if object.tags.highway then
-        if object.tags.area == 'yes' then
+    if logic.is_highway(object.tags) then
+        if logic.is_area(object.tags) then
             highway_areas:insert({
                 tags = object.tags,
                 geom = object:as_polygon()
@@ -41,7 +43,7 @@ function osm2pgsql.process_way(object)
         end
     end
 
-    if IMPORT_AREA_HIGHWAY and object.tags['area:highway'] then
+    if IMPORT_AREA_HIGHWAY and logic.is_area_highway(object.tags) then
         highway_areas:insert({
             tags = object.tags,
             geom = object:as_polygon()
@@ -50,7 +52,7 @@ function osm2pgsql.process_way(object)
 end
 
 function osm2pgsql.process_relation(object)
-    if object.tags.highway then
+    if logic.is_highway(object.tags) then
         highway_areas:insert({
             type = object.type,
             tags = object.tags,

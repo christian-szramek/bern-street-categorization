@@ -7,7 +7,7 @@ osm2pgsql  \
 --database $TARGET_DB \
 --user $PGUSER \
 --output=flex \
---style="$WORK_DIR/import/$LUA_SCRIPT" \
+--style="$WORK_DIR/import/flex/$LUA_SCRIPT" \
 --slim \
 --prefix "$CITY_NAME" \
 "$WORK_DIR/$CITY_NAME.osm.pbf"
