@@ -20,6 +20,8 @@ services:
       - DATABASE_URL=postgresql://${PG_USER}:${PGPASSWORD}@postgis/${PG_DB}
     ports:
       - ${PG_TILESERV_PORT}:7800
+    volumes:
+      - pg_tileserv_config:/config
   pg_featureserv:
     image: pramsey/pg_featureserv:20250917
     container_name: pg_featureserv
@@ -30,6 +32,10 @@ services:
       - DATABASE_URL=postgresql://${PG_USER}:${PGPASSWORD}@postgis/${PG_DB}
     ports:
       - ${PG_FEATURESERV_PORT}:9000
+    volumes:
+      - pg_featureserv_config:/config
+      - pg_featureserv_cache:/cache
+      - pg_featureserv_assets:/assets
   pgadmin:
     image: dpage/pgadmin4:9.11.0
     container_name: pgadmin4
@@ -46,3 +52,7 @@ services:
 volumes:
   postgis:
   pgadmin:
+  pg_tileserv_config:
+  pg_featureserv_config:
+  pg_featureserv_cache:
+  pg_featureserv_assets:
