@@ -10,6 +10,7 @@ services:
       - ${PG_PORT}:5432
     volumes:
       - postgis:/var/lib/postgresql
+      - ./docker/postgis/initdb:/docker-entrypoint-initdb.d
   pg_tileserv:
     image: pramsey/pg_tileserv:20250131
     container_name: pg_tileserv
