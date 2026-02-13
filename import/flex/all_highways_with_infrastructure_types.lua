@@ -53,7 +53,7 @@ function osm2pgsql.process_way(object)
                 tags = object.tags,
                 infrastructure_type = infrastructure_types.get_infrastructure_type(object.tags),
                 geom = object:as_linestring()
-            })
+            })            
         end
     end
 

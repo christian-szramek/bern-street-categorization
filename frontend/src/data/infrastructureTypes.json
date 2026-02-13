@@ -1,10 +1,26 @@
 [
   {
+    "name": "car",
+    "color": "red"
+  },
+  {
+    "name": "street",
+    "color": "yellow"
+  },
+  {
     "name": "pedestrian",
     "color": "blue"
   },
   {
-    "name": "non_pedestrian",
-    "color": "green"
+    "name": "horse",
+    "color": "purple"
+  },
+  {
+    "name": "cycleway",
+    "color": "purple"
+  },
+  {
+    "name": "uncategorized",
+    "color": "grey"
   }
 ]
