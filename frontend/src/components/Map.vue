@@ -1,24 +1,25 @@
 <script setup>
 import L from "leaflet";
 import "leaflet.vectorgrid";
-import { ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted, onUpdated } from "vue";
 
 const props = defineProps(["infrastructureTypes"]);
 
 const emit = defineEmits(["info"]);
 
 let map;
-let nodeLayer = ref(null);
 
-const bern = {
-  coordinates: [46.9481, 7.4474],
-  zoomLevel: 13,
-};
+const nodeLayer = ref(null);
+const waysLayer = ref(null);
+const areasLayer = ref(null);
 
-const berlin = {
-  coordinates: [52.5244, 13.4105],
-  zoomLevel: 15,
-};
+const cities = new Map()
+  .set("bern", [46.9481, 7.4474])
+  .set("weimar", [50.9803, 11.32903])
+  .set("wichitaFalls", [33.9137, -98.4934])
+  .set("berlin", [52.5244, 13.4105]);
+
+const centeredCity = ref(cities.get("bern"));
 
 const defaultColor = "#666";
 
@@ -42,6 +43,7 @@ const tilesURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
  *  infrastructure_type_b: "green"
  * }
  */
+
 const infrastructureColorMap = computed(() => {
   return Object.fromEntries(
     props.infrastructureTypes.map(type => [type.name, type.color]),
@@ -87,11 +89,12 @@ async function loadNodes() {
         handleMouseover(feature.properties.tags);
       });
     },
+    maxZoom: 20,
   }).addTo(map);
 }
 
 function loadWays() {
-  L.vectorGrid
+  waysLayer.value = L.vectorGrid
     .protobuf(waysURL, {
       vectorTileLayerStyles: {
         "public.highway_ways": props => ({
@@ -101,6 +104,8 @@ function loadWays() {
           opacity: 1,
         }),
       },
+      minZoom: 12,
+      maxZoom: 20,
       interactive: true,
       getFeatureId: f => f.properties.id,
     })
@@ -111,7 +116,7 @@ function loadWays() {
 }
 
 function loadAreas() {
-  L.vectorGrid
+  areasLayer.value = L.vectorGrid
     .protobuf(areasURL, {
       vectorTileLayerStyles: {
         "public.highway_areas": props => ({
@@ -123,6 +128,7 @@ function loadAreas() {
           opacity: 1,
         }),
       },
+      maxZoom: 20,
       interactive: true,
       getFeatureId: f => f.properties.id,
     })
@@ -140,7 +146,7 @@ function loadTiles() {
 }
 
 onMounted(() => {
-  map = L.map("map").setView(bern.coordinates, bern.zoomLevel);
+  map = L.map("map").setView(centeredCity.value, 15);
 
   loadTiles();
   loadNodes();
@@ -148,6 +154,11 @@ onMounted(() => {
   loadAreas();
 
   map.on("moveend", loadNodes);
+
+  // Remove when finished
+  map.on("zoomend", () => {
+    console.log(map.getZoom());
+  });
 });
 </script>
 
