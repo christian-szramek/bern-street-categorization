@@ -5,7 +5,7 @@ import Map from "@/components/Map.vue";
 import Legend from "@/components/Legend.vue";
 import Info from "@/components/Info.vue";
 
-import infrastructureTypes from "@/data/infrastructureTypes.json";
+import infrastructureTypes from "@/config/infrastructureTypes.json";
 
 const showInfo = ref(false);
 const info = ref({});
