@@ -19,17 +19,14 @@ const berlin = {
   coordinates: [52.5244, 13.4105],
   zoomLevel: 15,
 };
+
 const defaultColor = "#666";
 
 const nodesURL =
   "http://localhost:9000/collections/public.highway_nodes/items.json?bbox=";
 const waysURL = "http://localhost:7800/public.highway_ways/{z}/{x}/{y}.pbf";
 const areasURL = "http://localhost:7800/public.highway_areas/{z}/{x}/{y}.pbf";
-const tileURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
-
-const showNodes = true;
-const showWays = true;
-const showAreas = true;
+const tilesURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
 
 /* transform the infrastructureTypes to allow direct access when rendering the map
  *
@@ -135,29 +132,22 @@ function loadAreas() {
     .addTo(map);
 }
 
-onMounted(() => {
-  map = L.map("map").setView(bern.coordinates, bern.zoomLevel);
-
-  L.tileLayer(tileURL, {
+function loadTiles() {
+  L.tileLayer(tilesURL, {
     attribution:
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
+}
 
-  // Initial load
-  if (showNodes) {
-    loadNodes();
-  }
-  if (showWays) {
-    loadWays();
-  }
-  if (showAreas) {
-    loadAreas();
-  }
+onMounted(() => {
+  map = L.map("map").setView(bern.coordinates, bern.zoomLevel);
 
-  if (showNodes) {
-    // Reload nodes when map moves
-    showNodes ?? map.on("moveend", loadNodes);
-  }
+  loadTiles();
+  loadNodes();
+  loadWays();
+  loadAreas();
+
+  map.on("moveend", loadNodes);
 });
 </script>
 
