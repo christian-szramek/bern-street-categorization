@@ -31,7 +31,7 @@ local highway_areas = osm2pgsql.define_area_table('highway_areas', {
 })
 
 function osm2pgsql.process_node(object)
-    if infrastructure_types.is_highway(object.tags) then
+    if infrastructure_types.is_highway(object.tags) and not infrastructure_types.is_ignored(object.tags) then
         highway_nodes:insert({
             tags = object.tags,
             infrastructure_type = infrastructure_types.get_infrastructure_type(object.tags),
@@ -41,7 +41,7 @@ function osm2pgsql.process_node(object)
 end
 
 function osm2pgsql.process_way(object)
-    if infrastructure_types.is_highway(object.tags) then
+    if infrastructure_types.is_highway(object.tags) and not infrastructure_types.is_ignored(object.tags) then
         if infrastructure_types.is_area(object.tags) then
             highway_areas:insert({
                 tags = object.tags,
@@ -57,7 +57,7 @@ function osm2pgsql.process_way(object)
         end
     end
 
-    if IMPORT_AREA_HIGHWAY and infrastructure_types.is_area_highway(object.tags) then
+    if IMPORT_AREA_HIGHWAY and infrastructure_types.is_area_highway(object.tags) and not infrastructure_types.is_ignored(object.tags) then
         highway_areas:insert({
             tags = object.tags,
             infrastructure_type = infrastructure_types.get_infrastructure_type(object.tags),
@@ -67,7 +67,7 @@ function osm2pgsql.process_way(object)
 end
 
 function osm2pgsql.process_relation(object)
-    if infrastructure_types.is_highway(object.tags) then
+    if infrastructure_types.is_highway(object.tags) and not infrastructure_types.is_ignored(object.tags) then
         highway_areas:insert({
             type = object.type,
             tags = object.tags,

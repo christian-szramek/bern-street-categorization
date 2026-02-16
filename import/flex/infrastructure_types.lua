@@ -47,8 +47,6 @@ function M.get_infrastructure_type(tags)
         return 'horse'
     elseif M.is_cycleway(tags) then
         return 'cycleway'
-    elseif M.is_ignored(tags) then
-        return 'ignored'
     else
         return 'uncategorized'
     end
