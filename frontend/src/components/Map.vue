@@ -10,7 +10,15 @@ const emit = defineEmits(["info"]);
 let map;
 let nodeLayer = ref(null);
 
-const bern = [46.9481, 7.4474];
+const bern = {
+  coordinates: [46.9481, 7.4474],
+  zoomLevel: 13,
+};
+
+const berlin = {
+  coordinates: [52.5244, 13.4105],
+  zoomLevel: 15,
+};
 const defaultColor = "#666";
 
 const nodesURL =
@@ -39,7 +47,7 @@ const showAreas = true;
  */
 const infrastructureColorMap = computed(() => {
   return Object.fromEntries(
-    props.infrastructureTypes.map(type => [type.name, type.color])
+    props.infrastructureTypes.map(type => [type.name, type.color]),
   );
 });
 
@@ -98,7 +106,6 @@ function loadWays() {
       },
       interactive: true,
       getFeatureId: f => f.properties.id,
-      maxZoom: 19,
     })
     .on("mouseover", e => {
       handleMouseover(e.layer.properties);
@@ -121,7 +128,6 @@ function loadAreas() {
       },
       interactive: true,
       getFeatureId: f => f.properties.id,
-      maxZoom: 19,
     })
     .on("mouseover", e => {
       handleMouseover(e.layer.properties);
@@ -130,10 +136,9 @@ function loadAreas() {
 }
 
 onMounted(() => {
-  map = L.map("map").setView(bern, 13);
+  map = L.map("map").setView(bern.coordinates, bern.zoomLevel);
 
   L.tileLayer(tileURL, {
-    maxZoom: 19,
     attribution:
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
   }).addTo(map);
