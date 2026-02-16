@@ -22,7 +22,7 @@ services:
     ports:
       - ${PG_TILESERV_PORT}:7800
     volumes:
-      - pg_tileserv_config:/config
+      - ./docker/pg_tileserv/pg_tileserv.toml:/etc/pg_tileserv.toml
   pg_featureserv:
     image: pramsey/pg_featureserv:20250917
     container_name: pg_featureserv
