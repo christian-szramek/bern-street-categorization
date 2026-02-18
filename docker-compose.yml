@@ -34,7 +34,7 @@ services:
     ports:
       - ${PG_FEATURESERV_PORT}:9000
     volumes:
-      - pg_featureserv_config:/config
+      - ./docker/pg_featureserv/pg_featureserv.toml:/etc/pg_featureserv.toml
       - pg_featureserv_cache:/cache
       - pg_featureserv_assets:/assets
   pgadmin:
