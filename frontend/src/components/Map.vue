@@ -16,71 +16,31 @@ const emit = defineEmits(["info"]);
 
 let map;
 
+const tilesURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+
 const cities = new Map()
   .set("bern", [46.9481, 7.4474])
   .set("weimar", [50.9803, 11.32903])
   .set("wichitaFalls", [33.9137, -98.4934])
   .set("berlin", [52.5244, 13.4105]);
 
-const centeredCity = ref(cities.get("bern"));
+const centeredCity = ref(cities.get("berlin"));
 
-const nodeLayers = new Map()
-  .set("carNodeLayer", null)
-  .set("streetNodeLayer", null)
-  .set("pedestrianNodeLayer", null)
-  .set("horseNodeLayer", null)
-  .set("cyclewayNodeLayer", null)
-  .set("uncategorizedNodeLayer", null);
-
-const wayLayers = new Map()
-  .set("carWayLayer", null)
-  .set("streetWayLayer", null)
-  .set("pedestrianWayLayer", null)
-  .set("horseWayLayer", null)
-  .set("cyclewayWayLayer", null)
-  .set("uncategorizedWayLayer", null);
-
-const areaLayers = new Map()
-  .set("carAreaLayer", null)
-  .set("streetAreaLayer", null)
-  .set("pedestrianAreaLayer", null)
-  .set("horseAreaLayer", null)
-  .set("cyclewayAreaLayer", null)
-  .set("uncategorizedAreaLayer", null);
-
-const tilesURL = "https://tile.openstreetmap.org/{z}/{x}/{y}.png";
+const extendedInfrastructureTypes = ref([]);
 
 const handleMouseOver = e => {
   emit("info", e);
 };
 
 const removeAllNodeLayers = () => {
-  nodeLayers.forEach((value, key, nodeLayersMap) => {
-    if (value) {
-      map.removeLayer(value);
-      nodeLayersMap.set(key, null);
-    }
-  });
-};
-
-const addAllNodeLayersToMap = () => {
-  nodeLayers.forEach(value => {
-    if (value) {
-      value.addTo(map);
-    }
-  });
-};
-
-const addAllWayLayers = () => {
-  wayLayers.forEach(layer => {
-    layer.addTo(map);
-  });
-};
-
-const addAllAreaLayers = () => {
-  areaLayers.forEach(layer => {
-    layer.addTo(map);
-  });
+  extendedInfrastructureTypes.value
+    .filter(it => it.type === "node")
+    .forEach(it => {
+      if (it.layer) {
+        map.removeLayer(it.layer);
+        it.layer = null;
+      }
+    });
 };
 
 const loadNodes = async () => {
@@ -88,140 +48,77 @@ const loadNodes = async () => {
   removeAllNodeLayers();
 
   const mapZoom = map.getZoom();
-
-  if (mapZoom < 13) {
-    return;
-  }
-
   const mapBounds = map.getBounds();
 
-  const [
-    carData,
-    streetData,
-    pedestrianData,
-    horseData,
-    cyclewayData,
-    uncategorizedData,
-  ] = await Promise.all([
-    getNodes("car", mapBounds),
-    getNodes("street", mapBounds),
-    getNodes("pedestrian", mapBounds),
-    getNodes("horse", mapBounds),
-    getNodes("cycleway", mapBounds),
-    getNodes("uncategorized", mapBounds),
-  ]);
-
-  nodeLayers.set("carNodeLayer", getNodeLayer(carData, "red", handleMouseOver));
-
-  nodeLayers.set(
-    "streetNodeLayer",
-    getNodeLayer(streetData, "yellow", handleMouseOver),
-  );
-
-  nodeLayers.set(
-    "pedestrianNodeLayer",
-    getNodeLayer(pedestrianData, "blue", handleMouseOver),
-  );
-
-  nodeLayers.set(
-    "horseNodeLayer",
-    getNodeLayer(horseData, "purple", handleMouseOver),
-  );
-
-  nodeLayers.set(
-    "cyclewayNodeLayer",
-    getNodeLayer(cyclewayData, "green", handleMouseOver),
-  );
-
-  nodeLayers.set(
-    "uncategorizedNodeLayer",
-    getNodeLayer(uncategorizedData, "grey", handleMouseOver),
-  );
-
-  addAllNodeLayersToMap();
+  extendedInfrastructureTypes.value
+    .filter(it => it.type === "node")
+    .filter(it => mapZoom >= it.minZoom)
+    .forEach(async it => {
+      const layerData = await getNodes(it.name, mapBounds);
+      it.layer = getNodeLayer(layerData, it.color, handleMouseOver);
+      it.layer.addTo(map);
+    });
 };
 
 const loadWays = () => {
-  wayLayers.set("carWayLayer", getWayLayer("car", "red", handleMouseOver, 13));
-
-  wayLayers.set(
-    "streetWayLayer",
-    getWayLayer("street", "yellow", handleMouseOver, 13),
-  );
-
-  wayLayers.set(
-    "pedestrianWayLayer",
-    getWayLayer("pedestrian", "blue", handleMouseOver, 13),
-  );
-
-  wayLayers.set(
-    "horseWayLayer",
-    getWayLayer("horse", "purple", handleMouseOver, 13),
-  );
-
-  wayLayers.set(
-    "cyclewayWayLayer",
-    getWayLayer("cycleway", "green", handleMouseOver, 13),
-  );
-
-  wayLayers.set(
-    "uncategorizedWayLayer",
-    getWayLayer("uncategorized", "grey", handleMouseOver, 13),
-  );
-
-  addAllWayLayers();
+  extendedInfrastructureTypes.value
+    .filter(it => it.type === "way")
+    .forEach(it => {
+      it.layer = getWayLayer(it.name, it.color, handleMouseOver, it.minZoom);
+      it.layer.addTo(map);
+    });
 };
 
 const loadAreas = () => {
-  areaLayers.set(
-    "carAreaLayer",
-    getAreaLayer("car", "red", handleMouseOver, 13),
-  );
-
-  areaLayers.set(
-    "streetAreaLayer",
-    getAreaLayer("street", "yellow", handleMouseOver, 13),
-  );
-
-  areaLayers.set(
-    "pedestrianAreaLayer",
-    getAreaLayer("pedestrian", "blue", handleMouseOver, 13),
-  );
-
-  areaLayers.set(
-    "horseAreaLayer",
-    getAreaLayer("horse", "purple", handleMouseOver, 13),
-  );
-
-  areaLayers.set(
-    "cyclewayAreaLayer",
-    getAreaLayer("cycleway", "green", handleMouseOver, 13),
-  );
-
-  areaLayers.set(
-    "uncategorizedAreaLayer",
-    getAreaLayer("uncategorized", "grey", handleMouseOver, 13),
-  );
-
-  addAllAreaLayers();
+  extendedInfrastructureTypes.value
+    .filter(it => it.type === "area")
+    .forEach(it => {
+      it.layer = getAreaLayer(it.name, it.color, handleMouseOver, it.minZoom);
+      it.layer.addTo(map);
+    });
 };
 
 const loadTiles = () => {
   L.tileLayer(tilesURL, {
     attribution:
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 20,
   }).addTo(map);
 };
 
-onMounted(() => {
-  map = L.map("map").setView(centeredCity.value, 15);
+// Add  three layers (node, way, area) or every infrastructure type
+const extendInfrastructureTypes = () => {
+  props.infrastructureTypes.forEach(it => {
+    extendedInfrastructureTypes.value.push({
+      ...it,
+      type: "node",
+    });
 
+    extendedInfrastructureTypes.value.push({
+      ...it,
+      type: "way",
+    });
+
+    extendedInfrastructureTypes.value.push({
+      ...it,
+      type: "area",
+    });
+  });
+};
+
+onMounted(() => {
+  map = L.map("map").setView(centeredCity.value, 16);
+
+  extendInfrastructureTypes();
   loadTiles();
   loadNodes();
   loadWays();
   loadAreas();
 
   map.on("moveend", loadNodes);
+
+  // For Testing
+  map.on("moveend", () => console.log("Zoom level: ", map.getZoom()));
 });
 </script>
 
