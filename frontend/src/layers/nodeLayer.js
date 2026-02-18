@@ -1,4 +1,4 @@
-const getNodeLayer = (data, color, handleMouseOver, minZoom) => {
+const getNodeLayer = (data, color, handleMouseOver) => {
   return L.geoJSON(data, {
     pointToLayer: (_, latlng) =>
       L.circleMarker(latlng, {
@@ -14,8 +14,6 @@ const getNodeLayer = (data, color, handleMouseOver, minZoom) => {
         handleMouseOver(feature.properties.tags);
       });
     },
-    minZoom: minZoom,
-    maxZoom: 20,
   });
 };
 

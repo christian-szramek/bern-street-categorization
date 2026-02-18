@@ -55,16 +55,19 @@ const handleMouseOver = e => {
 };
 
 const removeAllNodeLayers = () => {
-  nodeLayers.forEach(layer => {
-    if (layer) {
-      map.removeLayer(layer);
+  nodeLayers.forEach((value, key, nodeLayersMap) => {
+    if (value) {
+      map.removeLayer(value);
+      nodeLayersMap.set(key, null);
     }
   });
 };
 
-const addAllNodeLayers = () => {
-  nodeLayers.forEach(layer => {
-    layer.addTo(map);
+const addAllNodeLayersToMap = () => {
+  nodeLayers.forEach(value => {
+    if (value) {
+      value.addTo(map);
+    }
   });
 };
 
@@ -84,43 +87,58 @@ const loadNodes = async () => {
   // Remove previous node layer to avoid duplicates
   removeAllNodeLayers();
 
-  const carData = await getNodes("car", map.getBounds());
-  nodeLayers.set(
-    "carNodeLayer",
-    getNodeLayer(carData, "red", handleMouseOver, 13),
-  );
+  const mapZoom = map.getZoom();
 
-  const streetData = await getNodes("street", map.getBounds());
+  if (mapZoom < 13) {
+    return;
+  }
+
+  const mapBounds = map.getBounds();
+
+  const [
+    carData,
+    streetData,
+    pedestrianData,
+    horseData,
+    cyclewayData,
+    uncategorizedData,
+  ] = await Promise.all([
+    getNodes("car", mapBounds),
+    getNodes("street", mapBounds),
+    getNodes("pedestrian", mapBounds),
+    getNodes("horse", mapBounds),
+    getNodes("cycleway", mapBounds),
+    getNodes("uncategorized", mapBounds),
+  ]);
+
+  nodeLayers.set("carNodeLayer", getNodeLayer(carData, "red", handleMouseOver));
+
   nodeLayers.set(
     "streetNodeLayer",
-    getNodeLayer(streetData, "yellow", handleMouseOver, 13),
+    getNodeLayer(streetData, "yellow", handleMouseOver),
   );
 
-  const pedestrianData = await getNodes("pedestrian", map.getBounds());
   nodeLayers.set(
     "pedestrianNodeLayer",
-    getNodeLayer(pedestrianData, "blue", handleMouseOver, 13),
+    getNodeLayer(pedestrianData, "blue", handleMouseOver),
   );
 
-  const horseData = await getNodes("horse", map.getBounds());
   nodeLayers.set(
     "horseNodeLayer",
-    getNodeLayer(horseData, "purple", handleMouseOver, 13),
+    getNodeLayer(horseData, "purple", handleMouseOver),
   );
 
-  const cyclewayData = await getNodes("cycleway", map.getBounds());
   nodeLayers.set(
     "cyclewayNodeLayer",
-    getNodeLayer(cyclewayData, "green", handleMouseOver, 13),
+    getNodeLayer(cyclewayData, "green", handleMouseOver),
   );
 
-  const uncategorizedData = await getNodes("uncategorized", map.getBounds());
   nodeLayers.set(
     "uncategorizedNodeLayer",
-    getNodeLayer(uncategorizedData, "grey", handleMouseOver, 13),
+    getNodeLayer(uncategorizedData, "grey", handleMouseOver),
   );
 
-  addAllNodeLayers();
+  addAllNodeLayersToMap();
 };
 
 const loadWays = () => {
@@ -204,11 +222,6 @@ onMounted(() => {
   loadAreas();
 
   map.on("moveend", loadNodes);
-
-  // Remove when finished
-  map.on("zoomend", () => {
-    console.log(map.getZoom());
-  });
 });
 </script>
 
