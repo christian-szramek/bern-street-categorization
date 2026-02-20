@@ -1,26 +1,32 @@
 [
   {
     "name": "car",
-    "color": "red"
+    "color": "red",
+    "minZoom": 1
   },
   {
     "name": "street",
-    "color": "yellow"
+    "color": "yellow",
+    "minZoom": 13
   },
   {
     "name": "pedestrian",
-    "color": "blue"
+    "color": "blue",
+    "minZoom": 15
   },
   {
     "name": "horse",
-    "color": "purple"
+    "color": "purple",
+    "minZoom": 16
   },
   {
     "name": "cycleway",
-    "color": "green"
+    "color": "green",
+    "minZoom": 13
   },
   {
     "name": "uncategorized",
-    "color": "grey"
+    "color": "grey",
+    "minZoom": 16
   }
 ]
