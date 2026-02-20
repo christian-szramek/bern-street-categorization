@@ -24,7 +24,7 @@ const cities = new Map()
   .set("wichitaFalls", [33.9137, -98.4934])
   .set("berlin", [52.5244, 13.4105]);
 
-const centeredCity = ref(cities.get("berlin"));
+const centeredCity = ref(cities.get("bern"));
 
 const extendedInfrastructureTypes = ref([]);
 
