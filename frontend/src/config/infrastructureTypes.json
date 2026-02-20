@@ -10,8 +10,13 @@
     "minZoom": 13
   },
   {
-    "name": "pedestrian",
+    "name": "pedestrian_shared",
     "color": "blue",
+    "minZoom": 15
+  },
+  {
+    "name": "pedestrian_exclusive",
+    "color": "brown",
     "minZoom": 15
   },
   {

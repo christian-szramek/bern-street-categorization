@@ -1,7 +1,8 @@
 local M = {
   { name = "car" },
   { name = "street" },
-  { name = "pedestrian" },
+  { name = "pedestrian_shared" },
+  { name = "pedestrian_exclusive" },
   { name = "horse" },
   { name = "cycleway_shared" },
   { name = "cycleway_exclusive" },

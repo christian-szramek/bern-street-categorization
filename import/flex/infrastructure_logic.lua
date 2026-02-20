@@ -48,13 +48,21 @@ function M.is_mofa_allowed(tags)
     return tags.mofa == 'yes' or tags.mofa == 'designated'
 end
 
+function M.is_bicycle_allowed(tags)
+    return tags.bicycle == 'yes' or tags.bicycle == 'designated'
+end
+
 function M.get_infrastructure_type(tags) 
     if M.is_car(tags) then 
         return 'car'
     elseif M.is_street(tags) then
         return 'street'
     elseif M.is_pedestrian(tags) then
-        return 'pedestrian'
+        if M.is_bicycle_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
+            return 'pedestrian_shared'
+        else
+            return 'pedestrian_exclusive'
+        end
     elseif M.is_horse(tags) then
         return 'horse'
     elseif M.is_cycleway(tags) then
