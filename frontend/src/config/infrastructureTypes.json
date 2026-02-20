@@ -20,8 +20,13 @@
     "minZoom": 16
   },
   {
-    "name": "cycleway",
+    "name": "cycleway_shared",
     "color": "green",
+    "minZoom": 13
+  },
+  {
+    "name": "cycleway_exclusive",
+    "color": "orange",
     "minZoom": 13
   },
   {
