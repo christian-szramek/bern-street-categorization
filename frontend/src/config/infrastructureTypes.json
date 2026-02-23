@@ -5,32 +5,37 @@
     "minZoom": 1
   },
   {
-    "name": "street",
+    "name": "one-way_street",
+    "color": "black",
+    "minZoom": 13
+  },
+  {
+    "name": "two-way_street",
     "color": "yellow",
     "minZoom": 13
   },
   {
-    "name": "pedestrian_shared",
+    "name": "pedestrian_with_cycling_allowed",
     "color": "blue",
     "minZoom": 15
   },
   {
-    "name": "pedestrian_exclusive",
+    "name": "pedestrian",
     "color": "brown",
     "minZoom": 15
   },
   {
-    "name": "horse",
+    "name": "bridleway",
     "color": "purple",
     "minZoom": 16
   },
   {
-    "name": "cycleway_shared",
+    "name": "cycleway_multiuse",
     "color": "green",
     "minZoom": 13
   },
   {
-    "name": "cycleway_exclusive",
+    "name": "cycleway",
     "color": "orange",
     "minZoom": 13
   },

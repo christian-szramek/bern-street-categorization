@@ -24,7 +24,7 @@ function M.is_pedestrian(tags)
     return tags.highway == 'pedestrian' or tags.highway == 'footway' or tags.highway == 'steps' or tags.highway == 'corridor' or tags.highway == 'via_ferrata' or tags.footway == 'sidewalk' or tags.footway == 'sidewalk' or tags.footway == 'crossing' or tags.footway == 'trafic_island' or tags.highway == 'elevator' or tags.highway == 'ladder'
 end
 
-function M.is_horse(tags)
+function M.is_bridleway(tags)
     return tags.highway == 'bridleway'
 end
 
@@ -49,27 +49,35 @@ function M.is_mofa_allowed(tags)
 end
 
 function M.is_bicycle_allowed(tags)
-    return tags.bicycle == 'yes' or tags.bicycle == 'designated'
+    return tags.bicycle == 'yes'
+end
+
+function M.is_oneway(tags)
+    return tags.oneway ~= nil and tags.oneway ~= 'no' 
 end
 
 function M.get_infrastructure_type(tags) 
     if M.is_car(tags) then 
         return 'car'
     elseif M.is_street(tags) then
-        return 'street'
-    elseif M.is_pedestrian(tags) then
-        if M.is_bicycle_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
-            return 'pedestrian_shared'
-        else
-            return 'pedestrian_exclusive'
+        if M.is_oneway(tags) then
+            return 'one-way_street'
+        else 
+            return 'two-way_street'
         end
-    elseif M.is_horse(tags) then
-        return 'horse'
+    elseif M.is_pedestrian(tags) then
+        if M.is_bicycle_allowed(tags) then
+            return 'pedestrian_with_cycling_allowed'
+        else
+            return 'pedestrian'
+        end
+    elseif M.is_bridleway(tags) then
+        return 'bridleway'
     elseif M.is_cycleway(tags) then
         if M.is_foot_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
-            return 'cycleway_shared'
+            return 'cycleway_multiuse'
         else
-            return 'cycleway_exclusive'
+            return 'cycleway'
         end
     else
         return 'uncategorized'
