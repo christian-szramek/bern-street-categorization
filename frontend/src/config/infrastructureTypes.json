@@ -20,6 +20,11 @@
     "minZoom": 1
   },
   {
+    "name": "separate_cycling_lane_on_sidewalk",
+    "color": "#33A02C",
+    "minZoom": 15
+  },
+  {
     "name": "street_with_shared_cycling_lane_on_carriageway",
     "color": "#A6D96A",
     "minZoom": 1
@@ -30,23 +35,8 @@
     "minZoom": 1
   },
   {
-    "name": "pedestrian_with_cycling_allowed",
-    "color": "#2C7BB6",
-    "minZoom": 16
-  },
-  {
-    "name": "pedestrian",
-    "color": "#ABD9E9",
-    "minZoom": 16
-  },
-  {
-    "name": "bridleway",
-    "color": "#8C510A",
-    "minZoom": 16
-  },
-  {
-    "name": "cycleway_multiuse",
-    "color": "#00A6CA",
+    "name": "cycleroad",
+    "color": "#E7298A",
     "minZoom": 15
   },
   {
@@ -55,9 +45,24 @@
     "minZoom": 15
   },
   {
-    "name": "separate_cycling_lane_on_sidewalk",
-    "color": "#33A02C",
+    "name": "cycleway_multiuse",
+    "color": "#00A6CA",
     "minZoom": 15
+  },
+  {
+    "name": "pedestrian",
+    "color": "#ABD9E9",
+    "minZoom": 16
+  },
+  {
+    "name": "pedestrian_with_cycling_allowed",
+    "color": "#2C7BB6",
+    "minZoom": 16
+  },
+  {
+    "name": "bridleway",
+    "color": "#8C510A",
+    "minZoom": 16
   },
   {
     "name": "uncategorized",

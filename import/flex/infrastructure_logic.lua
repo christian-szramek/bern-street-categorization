@@ -13,7 +13,7 @@ function M.is_area(tags)
 end
 
 function M.is_street_with_cycling_forbidden(tags)
-    return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'busway' or tags.highway == 'motorway_junction' or tags.bicycle == 'no'
+    return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'busway' or tags.bicycle == 'no'
 end
 
 function M.is_street(tags)
@@ -21,7 +21,7 @@ function M.is_street(tags)
 end
 
 function M.is_pedestrian(tags)
-    return tags.highway == 'pedestrian' or tags.highway == 'footway' or tags.highway == 'steps' or tags.highway == 'corridor' or tags.highway == 'via_ferrata' or tags.footway == 'sidewalk' or tags.footway == 'sidewalk' or tags.footway == 'crossing' or tags.footway == 'trafic_island' or tags.highway == 'elevator' or tags.highway == 'ladder'
+    return tags.highway == 'pedestrian' or tags.highway == 'footway' or tags.highway == 'steps' or tags.highway == 'via_ferrata' or tags.footway == 'sidewalk' or tags.footway == 'crossing' or tags.footway == 'traffic_island'
 end
 
 function M.is_bridleway(tags)
@@ -32,8 +32,12 @@ function M.is_cycleway(tags)
     return tags.highway == 'cycleway' and tags.cycleway ~= 'sidepath'
 end
 
+function M.is_cycleroad(tags)
+    return tags.bicycle_road == 'yes'
+end
+
 function M.is_ignored(tags)
-    return tags.highway == 'bus_stop' or tags.highway == 'cyclist_waiting_aid' or tags.highway == 'emergency_bay' or tags.highway == 'emergency_access_point' or tags.highway == 'give_way' or tags.emergency_phone ~= nil or tags.highway == 'hitchhiking' or tags.highway == 'milestone' or tags.highway == 'passing_place' or tags.highway == 'platform' or tags.highway == 'rest_area' or tags.highway == 'services'  or tags.highway == 'speed_camera' or tags.highway == 'speed_display' or tags.highway == 'stop' or tags.highway == 'street_lamp' or tags.highway == 'toll_gantry' or tags.highway == 'traffic_mirror' or tags.highway == 'traffic_signals' or tags.highway == 'trailhead' or tags.highway == 'turning_circle'
+    return tags.highway == 'elevator' or tags.highway == 'ladder' or tags.highway == 'corridor' or tags.highway == 'motorway_junction' or tags.highway == 'bus_stop' or tags.highway == 'cyclist_waiting_aid' or tags.highway == 'emergency_bay' or tags.highway == 'emergency_access_point' or tags.highway == 'give_way' or tags.emergency_phone ~= nil or tags.highway == 'hitchhiking' or tags.highway == 'milestone' or tags.highway == 'passing_place' or tags.highway == 'platform' or tags.highway == 'rest_area' or tags.highway == 'services'  or tags.highway == 'speed_camera' or tags.highway == 'speed_display' or tags.highway == 'stop' or tags.highway == 'street_lamp' or tags.highway == 'toll_gantry' or tags.highway == 'traffic_mirror' or tags.highway == 'traffic_signals' or tags.highway == 'trailhead' or tags.highway == 'turning_circle'
 end
 
 function M.is_foot_allowed(tags)
@@ -75,6 +79,8 @@ end
 function M.get_infrastructure_type(tags) 
     if M.is_street_with_cycling_forbidden(tags) then 
         return 'street_with_cycling_forbidden'
+    elseif M.is_cycleroad(tags) then
+        return 'cycleroad'
     elseif M.is_street(tags) then
         if M.is_oneway(tags) then
             return 'one-way_street'
