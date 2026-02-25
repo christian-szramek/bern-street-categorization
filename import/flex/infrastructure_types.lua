@@ -1,5 +1,5 @@
 local M = {
-  { name = "street_with_cycling_forbidden" },
+  { name = "street_or_way_with_cycling_forbidden" },
   { name = "one-way_street" },
   { name = "street_with_separate_cycling_or_bus_lane" },
   { name = "street_with_separate_cycling_lane_on_sidewalk" },

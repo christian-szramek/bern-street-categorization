@@ -12,7 +12,7 @@ function M.is_area(tags)
     return tags.area == 'yes'
 end
 
-function M.is_street_with_cycling_forbidden(tags)
+function M.is_street_or_way_with_cycling_forbidden(tags)
     return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'busway' or tags.bicycle == 'no'
 end
 
@@ -77,8 +77,8 @@ function M.is_extra_marked_separate_cycling_lane_on_sidewalk(tags)
 end
 
 function M.get_infrastructure_type(tags) 
-    if M.is_street_with_cycling_forbidden(tags) then 
-        return 'street_with_cycling_forbidden'
+    if M.is_street_or_way_with_cycling_forbidden(tags) then 
+        return 'street_or_way_with_cycling_forbidden'
     elseif M.is_cycleroad(tags) then
         return 'cycleroad'
     elseif M.is_street(tags) then
