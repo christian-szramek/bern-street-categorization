@@ -7,37 +7,37 @@
   {
     "name": "one-way_street",
     "color": "#FC8D59",
-    "minZoom": 13
+    "minZoom": 1
   },
   {
     "name": "street_with_separate_cycling_or_bus_lane",
     "color": "#1A9850",
-    "minZoom": 13
+    "minZoom": 1
   },
   {
     "name": "street_with_separate_cycling_lane_on_sidewalk",
     "color": "#66BD63",
-    "minZoom": 13
+    "minZoom": 1
   },
   {
     "name": "street_with_shared_cycling_lane_on_carriageway",
     "color": "#A6D96A",
-    "minZoom": 13
+    "minZoom": 1
   },
   {
     "name": "street_without_cycling_infrastructure",
     "color": "#762A83",
-    "minZoom": 13
+    "minZoom": 1
   },
   {
     "name": "pedestrian_with_cycling_allowed",
     "color": "#2C7BB6",
-    "minZoom": 15
+    "minZoom": 16
   },
   {
     "name": "pedestrian",
     "color": "#ABD9E9",
-    "minZoom": 15
+    "minZoom": 16
   },
   {
     "name": "bridleway",
@@ -47,17 +47,17 @@
   {
     "name": "cycleway_multiuse",
     "color": "#00A6CA",
-    "minZoom": 13
+    "minZoom": 15
   },
   {
     "name": "cycleway",
     "color": "#006837",
-    "minZoom": 13
+    "minZoom": 15
   },
   {
     "name": "separate_cycling_lane_on_sidewalk",
     "color": "#33A02C",
-    "minZoom": 13
+    "minZoom": 15
   },
   {
     "name": "uncategorized",

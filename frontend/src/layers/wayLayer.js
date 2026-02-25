@@ -2,10 +2,10 @@ const baseURL = "http://localhost:7800";
 
 const getWayLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
   const styles = {};
-  styles[`public.${infrastructureType}_ways`] = _ => ({
+  styles[`public.${infrastructureType}_ways`] = (_, zoom) => ({
     stroke: true,
     color: color,
-    weight: 2,
+    weight: zoom <= 14 ? 1 : 2,
     opacity: 1,
   });
 
@@ -13,7 +13,7 @@ const getWayLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
     .protobuf(`${baseURL}/public.${infrastructureType}_ways/{z}/{x}/{y}.pbf`, {
       vectorTileLayerStyles: styles,
       minZoom: minZoom,
-      maxZoom: 20,
+      maxZoom: 19,
       interactive: true,
       getFeatureId: f => f.properties.id,
     })

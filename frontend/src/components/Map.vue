@@ -24,7 +24,7 @@ const cities = new Map()
   .set("wichitaFalls", [33.9137, -98.4934])
   .set("berlin", [52.5244, 13.4105]);
 
-const centeredCity = ref(cities.get("bern"));
+const centeredCity = ref(cities.get("berlin"));
 
 const extendedInfrastructureTypes = ref([]);
 
@@ -82,7 +82,7 @@ const loadTiles = () => {
   L.tileLayer(tilesURL, {
     attribution:
       '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    maxZoom: 20,
+    maxZoom: 19,
   }).addTo(map);
 };
 
@@ -107,7 +107,7 @@ const extendInfrastructureTypes = () => {
 };
 
 onMounted(() => {
-  map = L.map("map").setView(centeredCity.value, 16);
+  map = L.map("map").setView(centeredCity.value, 17);
 
   extendInfrastructureTypes();
   loadTiles();

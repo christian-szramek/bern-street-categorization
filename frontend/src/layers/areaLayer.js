@@ -15,7 +15,7 @@ const getAreaLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
     .protobuf(`${baseURL}/public.${infrastructureType}_areas/{z}/{x}/{y}.pbf`, {
       vectorTileLayerStyles: styles,
       minZoom: minZoom,
-      maxZoom: 20,
+      maxZoom: 19,
       interactive: true,
       getFeatureId: f => f.properties.id,
     })
