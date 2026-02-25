@@ -57,7 +57,7 @@ function M.is_bicycle_allowed(tags)
 end
 
 function M.is_oneway(tags)
-    return tags.oneway ~= nil and tags.oneway ~= 'no' 
+    return tags.oneway == 'yes' or tags.oneway == 'true' or tags.oneway == '1' or tags.oneway == '-1' or tags.oneway == 'reverse' or tags.oneway == 'reversible' or tags.oneway == 'alternating'
 end
 
 function M.is_street_with_separate_cycling_or_bus_lane(tags)
