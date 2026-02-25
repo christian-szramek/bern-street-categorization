@@ -12,8 +12,8 @@ function M.is_area(tags)
     return tags.area == 'yes'
 end
 
-function M.is_car(tags)
-    return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'busway' or tags.highway == 'motorway_junction'
+function M.is_street_with_cycling_forbidden(tags)
+    return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'busway' or tags.highway == 'motorway_junction' or tags.bicycle == 'no'
 end
 
 function M.is_street(tags)
@@ -29,7 +29,7 @@ function M.is_bridleway(tags)
 end
 
 function M.is_cycleway(tags) 
-    return tags.highway == 'cycleway'
+    return tags.highway == 'cycleway' and tags.cycleway ~= 'sidepath'
 end
 
 function M.is_ignored(tags)
@@ -56,14 +56,38 @@ function M.is_oneway(tags)
     return tags.oneway ~= nil and tags.oneway ~= 'no' 
 end
 
+function M.is_street_with_separate_cycling_or_bus_lane(tags)
+    return tags.cycleway == 'lane' or tags['cycleway:both'] == 'lane' or tags['cycleway:left'] == 'lane' or tags['cycleway:right'] == 'lane' or tags.cycleway == 'share_busway'
+end
+
+function M.is_street_with_separate_cycling_lane_on_sidewalk(tags)
+    return tags.cycleway == 'track' or tags['cycleway:both'] == 'track' or tags['cycleway:left'] == 'track' or tags['cycleway:right'] == 'track' or tags.cycleway == 'separate' or tags['cycleway:both'] == 'separate' or tags['cycleway:left'] == 'separate' or tags['cycleway:right'] == 'separate'
+end
+
+function M.is_street_with_shared_cycling_lane_on_carriageway(tags)
+    return tags.cycleway == 'shared_lane'
+end
+
+function M.is_extra_marked_separate_cycling_lane_on_sidewalk(tags)
+    return ( tags.highway == 'cycleway' and tags.cycleway == 'sidepath' ) or ( tags.highway == 'path' and tags.path == 'sidepath'  and tags.bicycle == 'designated' )
+end
+
 function M.get_infrastructure_type(tags) 
-    if M.is_car(tags) then 
-        return 'car'
+    if M.is_street_with_cycling_forbidden(tags) then 
+        return 'street_with_cycling_forbidden'
     elseif M.is_street(tags) then
         if M.is_oneway(tags) then
             return 'one-way_street'
         else 
-            return 'two-way_street'
+            if M.is_street_with_separate_cycling_or_bus_lane(tags) then
+                return 'street_with_separate_cycling_or_bus_lane'
+            elseif M.is_street_with_separate_cycling_lane_on_sidewalk(tags) then
+                return 'street_with_separate_cycling_lane_on_sidewalk'
+            elseif M.is_street_with_shared_cycling_lane_on_carriageway(tags) then 
+                return 'street_with_shared_cycling_lane_on_carriageway'
+            else 
+                return 'street_without_cycling_infrastructure'
+            end
         end
     elseif M.is_pedestrian(tags) then
         if M.is_bicycle_allowed(tags) then
@@ -78,7 +102,9 @@ function M.get_infrastructure_type(tags)
             return 'cycleway_multiuse'
         else
             return 'cycleway'
-        end
+        end                
+    elseif M.is_extra_marked_separate_cycling_lane_on_sidewalk(tags) then
+        return 'separate_cycling_lane_on_sidewalk'
     else
         return 'uncategorized'
     end
