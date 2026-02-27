@@ -1,6 +1,11 @@
 local M = {
   { name = "street_or_way_with_cycling_forbidden" },
-  { name = "one-way_street" },
+  { name = "ows_with_sep_cyc_or_bus_lane" },
+  { name = "ows_with_sep_cyc_or_bus_lane_in_oppo_dir" },
+  { name = "ows_with_sep_cyc_lane_on_sw" },
+  { name = "ows_with_sep_cyc_lane_on_sw_in_oppo_dir" },
+  { name = "ows_without_cyc_infra" },
+  { name = "ows_without_cyc_infra_with_cyc_in_oppo_dir" },
   { name = "street_with_separate_cycling_or_bus_lane" },
   { name = "street_with_separate_cycling_lane_on_sidewalk" },
   { name = "separate_cycling_lane_on_sidewalk" },

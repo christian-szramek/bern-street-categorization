@@ -61,7 +61,7 @@ function M.is_oneway(tags)
 end
 
 function M.is_street_with_separate_cycling_or_bus_lane(tags)
-    return tags.cycleway == 'lane' or tags['cycleway:both'] == 'lane' or tags['cycleway:left'] == 'lane' or tags['cycleway:right'] == 'lane' or tags.cycleway == 'share_busway'
+    return tags.cycleway == 'lane' or tags['cycleway:both'] == 'lane' or tags['cycleway:left'] == 'lane' or tags['cycleway:right'] == 'lane' or tags.cycleway == 'share_busway' or tags['cycleway:both'] == 'share_busway' or tags['cycleway:left'] == 'share_busway' or tags['cycleway:right'] == 'share_busway'
 end
 
 function M.is_street_with_separate_cycling_lane_on_sidewalk(tags)
@@ -76,22 +76,52 @@ function M.is_extra_marked_separate_cycling_lane_on_sidewalk(tags)
     return ( tags.highway == 'cycleway' and tags.cycleway == 'sidepath' ) or ( tags.highway == 'path' and tags.path == 'sidepath'  and tags.bicycle == 'designated' )
 end
 
+function M.is_cycling_or_bus_lane_in_opposite_direction(tags)
+    return tags.cycleway == 'opposite_share_busway' or tags['cycleway:left'] == 'opposite_share_busway' or tags['cycleway:right'] == 'opposite_share_busway' or ( tags['oneway:bicycle'] == 'no' and ( tags['cycleway:left'] == 'share_busway' or tags['cycleway:right'] == 'share_busway' or tags['cycleway:left'] == 'lane' or tags['cycleway:right'] == 'lane' ) and ( tags['cycleway:left:oneway'] == '-1' or tags['cycleway:right:oneway'] == '-1' ) )
+end
+
+function M.is_cycling_lane_on_sidewalk_in_opposite_direction(tags)
+    return tags.cycleway == 'opposite_track' or tags['cycleway:left'] == 'opposite_track' or tags['cycleway:right'] == 'opposite_track' or ( tags['oneway:bicycle'] == 'no' and ( ( tags['cycleway:left'] == 'track' ) or ( tags['cycleway:right'] == 'track' ) ) and ( ( tags['cycleway:left:oneway'] == '-1' ) or ( tags['cycleway:right:oneway']  == '-1' ) ) )
+end
+
+function M.is_cycling_in_opposite_direction_allowed(tags)
+    return tags['oneway:bicycle'] == 'no'
+end
+
 function M.get_infrastructure_type(tags) 
     if M.is_street_or_way_with_cycling_forbidden(tags) then 
         return 'street_or_way_with_cycling_forbidden'
     elseif M.is_cycleroad(tags) then
         return 'cycleroad'
     elseif M.is_street(tags) then
-        if M.is_oneway(tags) then
-            return 'one-way_street'
-        else 
+        if M.is_oneway(tags) then 
+            if M.is_street_with_separate_cycling_or_bus_lane(tags) then
+                if M.is_cycling_or_bus_lane_in_opposite_direction(tags) then
+                    return 'ows_with_sep_cyc_or_bus_lane_in_oppo_dir'
+                else
+                    return 'ows_with_sep_cyc_or_bus_lane'
+                end
+            elseif M.is_street_with_separate_cycling_lane_on_sidewalk(tags) then
+                if M.is_cycling_lane_on_sidewalk_in_opposite_direction(tags) then
+                    return 'ows_with_sep_cyc_lane_on_sw_in_oppo_dir'
+                else
+                    return 'ows_with_sep_cyc_lane_on_sw'
+                end
+            else
+                if M.is_cycling_in_opposite_direction_allowed(tags) then 
+                    return 'ows_without_cyc_infra_with_cyc_in_oppo_dir'
+                else
+                    return 'ows_without_cyc_infra'
+                end
+            end
+        else
             if M.is_street_with_separate_cycling_or_bus_lane(tags) then
                 return 'street_with_separate_cycling_or_bus_lane'
             elseif M.is_street_with_separate_cycling_lane_on_sidewalk(tags) then
                 return 'street_with_separate_cycling_lane_on_sidewalk'
             elseif M.is_street_with_shared_cycling_lane_on_carriageway(tags) then 
                 return 'street_with_shared_cycling_lane_on_carriageway'
-            else 
+            else
                 return 'street_without_cycling_infrastructure'
             end
         end

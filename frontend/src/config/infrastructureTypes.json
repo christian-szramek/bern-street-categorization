@@ -5,63 +5,88 @@
     "minZoom": 1
   },
   {
-    "name": "one-way_street",
-    "color": "#FC8D59",
+    "name": "ows_with_sep_cyc_or_bus_lane",
+    "color": "#6A3D9A",
     "minZoom": 1
   },
   {
-    "name": "street_with_separate_cycling_or_bus_lane",
-    "color": "#1A9850",
+    "name": "ows_with_sep_cyc_or_bus_lane_in_oppo_dir",
+    "color": "#7B4AB2",
     "minZoom": 1
   },
   {
-    "name": "street_with_separate_cycling_lane_on_sidewalk",
-    "color": "#66BD63",
+    "name": "ows_with_sep_cyc_lane_on_sw",
+    "color": "#8E5CC6",
     "minZoom": 1
   },
   {
-    "name": "separate_cycling_lane_on_sidewalk",
-    "color": "#33A02C",
-    "minZoom": 15
+    "name": "ows_with_sep_cyc_lane_on_sw_in_oppo_dir",
+    "color": "#9F6FD9",
+    "minZoom": 1
   },
   {
-    "name": "street_with_shared_cycling_lane_on_carriageway",
-    "color": "#A6D96A",
+    "name": "ows_without_cyc_infra",
+    "color": "#5E2A84",
+    "minZoom": 1
+  },
+  {
+    "name": "ows_without_cyc_infra_with_cyc_in_oppo_dir",
+    "color": "#B084EB",
     "minZoom": 1
   },
   {
     "name": "street_without_cycling_infrastructure",
-    "color": "#762A83",
+    "color": "#4A1486",
+    "minZoom": 1
+  },
+  {
+    "name": "street_with_separate_cycling_or_bus_lane",
+    "color": "#1B9E77",
+    "minZoom": 1
+  },
+  {
+    "name": "street_with_separate_cycling_lane_on_sidewalk",
+    "color": "#27AE60",
+    "minZoom": 1
+  },
+  {
+    "name": "separate_cycling_lane_on_sidewalk",
+    "color": "#2ECC71",
+    "minZoom": 15
+  },
+  {
+    "name": "street_with_shared_cycling_lane_on_carriageway",
+    "color": "#52BE80",
     "minZoom": 1
   },
   {
     "name": "cycleroad",
-    "color": "#E7298A",
+    "color": "#229954",
     "minZoom": 15
   },
   {
     "name": "cycleway",
-    "color": "#006837",
+    "color": "#145A32",
     "minZoom": 15
   },
   {
     "name": "cycleway_multiuse",
-    "color": "#00A6CA",
+    "color": "#7DCEA0",
     "minZoom": 15
   },
   {
     "name": "pedestrian",
-    "color": "#ABD9E9",
+    "color": "#1F78B4",
     "minZoom": 16
   },
   {
     "name": "pedestrian_with_cycling_allowed",
-    "color": "#2C7BB6",
+    "color": "#2E86C1",
     "minZoom": 16
   },
   {
     "name": "bridleway",
-    "color": "#8C510A",
+    "color": "#5DADE2",
     "minZoom": 16
   },
   {
