@@ -157,21 +157,21 @@ function M.get_infrastructure_type(tags)
         if M.is_oneway(tags) then 
             if M.is_street_with_separate_cycling_or_bus_lane(tags) then
                 if M.is_cycling_or_bus_lane_in_opposite_direction(tags) then
-                    return 'ows_with_sep_cyc_or_bus_lane_in_oppo_dir'
+                    return M.get_lanes(tags) .. '_l_ows_with_sep_cyc_or_bus_lane_in_oppo_dir'
                 else
-                    return 'ows_with_sep_cyc_or_bus_lane'
+                    return M.get_lanes(tags) .. '_l_ows_with_sep_cyc_or_bus_lane'
                 end
             elseif M.is_street_with_separate_cycling_lane_on_sidewalk(tags) then
                 if M.is_cycling_lane_on_sidewalk_in_opposite_direction(tags) then
-                    return 'ows_with_sep_cyc_lane_on_sw_in_oppo_dir'
+                    return M.get_lanes(tags) .. '_l_ows_with_sep_cyc_lane_on_sw_in_oppo_dir'
                 else
-                    return 'ows_with_sep_cyc_lane_on_sw'
+                    return M.get_lanes(tags) .. '_l_ows_with_sep_cyc_lane_on_sw'
                 end
             else
                 if M.is_cycling_in_opposite_direction_allowed(tags) then 
-                    return 'ows_without_cyc_infra_with_cyc_in_oppo_dir'
+                    return M.get_lanes(tags) .. '_l_ows_without_cyc_infra_with_cyc_in_oppo_dir'
                 else
-                    return 'ows_without_cyc_infra'
+                    return M.get_lanes(tags) .. '_l_ows_without_cyc_infra'
                 end
             end
         else
