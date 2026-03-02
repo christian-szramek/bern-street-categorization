@@ -128,11 +128,31 @@ function M.is_cycleway_both_sides(tags)
     return tags['cycleway:both'] ~= nil
 end
 
+function M.get_lanes(tags)
+    if (tags.lanes == '2') then 
+        return '2'
+    elseif (tags.lanes == '3') then 
+        return '3'
+    elseif (tags.lanes == '4') then 
+        return '4'
+    elseif (tags.lanes == '5') then 
+        return '5'
+    elseif (tags.lanes == '6') then 
+        return '6'
+    elseif (tags.lanes == '7') then 
+        return '7'
+    elseif (tags.lanes == '8') then 
+        return '8'
+    else 
+       return '1'
+    end
+end
+
 function M.get_infrastructure_type(tags)
     if M.is_cycleroad(tags) then
         return 'cycleroad'
     elseif M.is_car(tags) then 
-        return 'street_with_cycling_forbidden'
+        return M.get_lanes(tags) .. '_l_street_with_cycling_forbidden'
     elseif M.is_street(tags) then
         if M.is_oneway(tags) then 
             if M.is_street_with_separate_cycling_or_bus_lane(tags) then
@@ -157,16 +177,16 @@ function M.get_infrastructure_type(tags)
         else
             if M.is_street_with_separate_cycling_or_bus_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then 
-                    return 'street_with_separate_cycling_or_bus_lane_both_sides'
+                    return M.get_lanes(tags) .. '_l_street_with_separate_cycling_or_bus_lane_both_sides'
                 else
-                    return 'street_with_separate_cycling_or_bus_lane_one_side'
+                    return M.get_lanes(tags) .. '_l_street_with_separate_cycling_or_bus_lane_one_side'
                 end
             elseif M.is_street_with_separate_cycling_lane_on_sidewalk(tags) then
-                return 'street_with_separate_cycling_lane_on_sidewalk'
+                return M.get_lanes(tags) .. '_l_street_with_separate_cycling_lane_on_sidewalk'
             elseif M.is_street_with_shared_cycling_lane_on_carriageway(tags) then 
-                return 'street_with_shared_cycling_lane_on_carriageway'
-            else
-                return 'street_without_cycling_infrastructure'
+                return M.get_lanes(tags) ..  '_l_street_with_shared_cycling_lane_on_carriageway'
+            else            
+                return M.get_lanes(tags) .. '_l_street_without_cycling_infrastructure'
             end
         end
     elseif M.is_pedestrian(tags) then
