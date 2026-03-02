@@ -1,9 +1,22 @@
 <script setup>
+import { computed } from "vue";
+
 const props = defineProps({
   infrastructureTypes: {
     type: Array,
     required: true,
   },
+});
+
+const filteredInfrastructureTypes = computed(() => {
+  return props.infrastructureTypes
+    .filter(it => !it.name.includes("_l_") || it.name.includes("1_l_"))
+    .map(it => {
+      return {
+        color: it.color,
+        name: it.displayName,
+      };
+    });
 });
 </script>
 
@@ -12,7 +25,7 @@ const props = defineProps({
     <v-card title="Legend" elevation="6" rounded="lg" class="legend-card">
       <v-card-text class="pa-3">
         <div
-          v-for="type in infrastructureTypes"
+          v-for="type in filteredInfrastructureTypes"
           :key="type.name"
           class="legend-item"
         >
