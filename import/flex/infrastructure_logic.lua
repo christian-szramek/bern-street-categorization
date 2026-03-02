@@ -12,8 +12,8 @@ function M.is_area(tags)
     return tags.area == 'yes'
 end
 
-function M.is_street_or_way_with_cycling_forbidden(tags)
-    return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'busway' or tags.bicycle == 'no'
+function M.is_car(tags)
+    return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'busway'
 end
 
 function M.is_street(tags)
@@ -22,10 +22,6 @@ end
 
 function M.is_pedestrian(tags)
     return tags.highway == 'pedestrian' or tags.highway == 'footway' or tags.highway == 'steps' or tags.highway == 'via_ferrata' or tags.footway == 'sidewalk' or tags.footway == 'crossing' or tags.footway == 'traffic_island'
-end
-
-function M.is_bridleway(tags)
-    return tags.highway == 'bridleway'
 end
 
 function M.is_cycleway(tags) 
@@ -53,7 +49,27 @@ function M.is_mofa_allowed(tags)
 end
 
 function M.is_bicycle_allowed(tags)
-    return tags.bicycle == 'yes'
+    return tags.bicycle == 'yes' or tags.bicycle == 'designated'
+end
+
+function M.is_motor_vehicle_allowed(tags)
+    return tags.motor_vehicle == 'yes'
+end
+
+function M.is_foot_forbidden(tags)
+    return tags.foot == 'no'
+end
+
+function M.is_bicycle_forbidden(tags)
+    return tags.bicycle == 'no'
+end
+
+function M.is_horse_forbidden(tags)
+    return tags.horse == 'no'
+end
+
+function M.is_motor_vehicle_forbidden(tags)
+    return tags.motor_vehicle == 'no'
 end
 
 function M.is_oneway(tags)
@@ -73,7 +89,7 @@ function M.is_street_with_shared_cycling_lane_on_carriageway(tags)
 end
 
 function M.is_extra_marked_separate_cycling_lane_on_sidewalk(tags)
-    return ( tags.highway == 'cycleway' and tags.cycleway == 'sidepath' ) or ( tags.highway == 'path' and tags.path == 'sidepath'  and tags.bicycle == 'designated' )
+    return ( tags.highway == 'cycleway' and tags.cycleway == 'sidepath' ) or ( tags.highway == 'path' and ( tags.path == 'sidepath' or tags.is_sidepath == 'yes' ) and tags.bicycle == 'designated' )
 end
 
 function M.is_cycling_or_bus_lane_in_opposite_direction(tags)
@@ -88,11 +104,31 @@ function M.is_cycling_in_opposite_direction_allowed(tags)
     return tags['oneway:bicycle'] == 'no'
 end
 
+function M.is_path(tags)
+    return tags.highway == 'path'
+end
+
+function M.is_pedestrian_only_path(tags)
+    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and M.is_bicycle_forbidden(tags) and M.is_horse_forbidden(tags) and M.is_motor_vehicle_forbidden(tags)
+end
+
+function M.is_pedestrian_and_bicycle_path(tags)
+    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_horse_forbidden(tags) and M.is_motor_vehicle_forbidden(tags)
+end
+
+function M.is_bicycle_only_path(tags)
+    return ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_foot_forbidden(tags) and M.is_horse_forbidden(tags) and M.is_motor_vehicle_forbidden(tags)
+end
+
+function M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) 
+    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_horse_forbidden(tags) and ( M.is_motor_vehicle_allowed(tags) or tags.motor_vehicle == 'permissive' )
+end
+
 function M.get_infrastructure_type(tags) 
-    if M.is_street_or_way_with_cycling_forbidden(tags) then 
-        return 'street_or_way_with_cycling_forbidden'
-    elseif M.is_cycleroad(tags) then
+    if M.is_cycleroad(tags) then
         return 'cycleroad'
+    elseif M.is_car(tags) then 
+        return 'street_with_cycling_forbidden'
     elseif M.is_street(tags) then
         if M.is_oneway(tags) then 
             if M.is_street_with_separate_cycling_or_bus_lane(tags) then
@@ -131,8 +167,6 @@ function M.get_infrastructure_type(tags)
         else
             return 'pedestrian'
         end
-    elseif M.is_bridleway(tags) then
-        return 'bridleway'
     elseif M.is_cycleway(tags) then
         if M.is_foot_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
             return 'cycleway_multiuse'
@@ -141,6 +175,18 @@ function M.get_infrastructure_type(tags)
         end                
     elseif M.is_extra_marked_separate_cycling_lane_on_sidewalk(tags) then
         return 'separate_cycling_lane_on_sidewalk'
+    elseif M.is_path(tags) then
+        if M.is_pedestrian_only_path(tags) then
+            return 'pedestrian'
+        elseif M.is_pedestrian_and_bicycle_path(tags) then
+            return 'pedestrian_with_cycling_allowed'
+        elseif M.is_bicycle_only_path(tags) then 
+            return 'cycleway'
+        elseif M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) then
+            return 'cycleway_multiuse'
+        else
+            return 'uncategorized'
+        end
     else
         return 'uncategorized'
     end

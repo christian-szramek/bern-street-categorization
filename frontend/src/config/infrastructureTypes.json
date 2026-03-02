@@ -1,6 +1,11 @@
 [
   {
-    "name": "street_or_way_with_cycling_forbidden",
+    "name": "street_with_cycling_forbidden",
+    "color": "#D73027",
+    "minZoom": 1
+  },
+  {
+    "name": "path_with_cycling_forbidden",
     "color": "#D73027",
     "minZoom": 1
   },
