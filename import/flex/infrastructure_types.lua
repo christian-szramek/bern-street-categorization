@@ -1,6 +1,7 @@
 local M = {
   { name = "street_with_cycling_forbidden" },
-  { name = "street_with_separate_cycling_or_bus_lane" },
+  { name = "street_with_separate_cycling_or_bus_lane_one_side" },
+  { name = "street_with_separate_cycling_or_bus_lane_both_sides" },
   { name = "street_with_separate_cycling_lane_on_sidewalk" },
   { name = "separate_cycling_lane_on_sidewalk" },
   { name = "street_with_shared_cycling_lane_on_carriageway" },

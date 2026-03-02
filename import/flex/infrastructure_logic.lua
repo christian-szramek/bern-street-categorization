@@ -124,7 +124,11 @@ function M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags)
     return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_horse_forbidden(tags) and ( M.is_motor_vehicle_allowed(tags) or tags.motor_vehicle == 'permissive' )
 end
 
-function M.get_infrastructure_type(tags) 
+function M.is_cycleway_both_sides(tags)
+    return tags['cycleway:both'] ~= nil
+end
+
+function M.get_infrastructure_type(tags)
     if M.is_cycleroad(tags) then
         return 'cycleroad'
     elseif M.is_car(tags) then 
@@ -152,7 +156,11 @@ function M.get_infrastructure_type(tags)
             end
         else
             if M.is_street_with_separate_cycling_or_bus_lane(tags) then
-                return 'street_with_separate_cycling_or_bus_lane'
+                if M.is_cycleway_both_sides(tags) then 
+                    return 'street_with_separate_cycling_or_bus_lane_both_sides'
+                else
+                    return 'street_with_separate_cycling_or_bus_lane_one_side'
+                end
             elseif M.is_street_with_separate_cycling_lane_on_sidewalk(tags) then
                 return 'street_with_separate_cycling_lane_on_sidewalk'
             elseif M.is_street_with_shared_cycling_lane_on_carriageway(tags) then 
