@@ -76,7 +76,7 @@ local M = {
   { name = "cycleway", area=false, node=false },
   { name = "cycleway_multiuse", area=false, node=false },
   { name = "pedestrian", area=true, node=true },
-  { name = "pedestrian_with_bicycle_allowed", area=true, node=false },
+  { name = "pedestrian_with_bicycle_allowed", area=true, node=true },
   { name = "uncategorized", area=true, node=true },
 }
 
