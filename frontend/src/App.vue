@@ -7,23 +7,29 @@ import Info from "@/components/Info.vue";
 
 import infrastructureTypes from "@/config/infrastructureTypes.json";
 
-const showInfo = ref(false);
+const isInfoShown = ref(false);
 const info = ref({});
 
-function handleInfo(e) {
+const showInfo = e => {
   info.value = e;
-  showInfo.value = true;
-}
+  isInfoShown.value = true;
+};
+
+const hideInfo = () => {
+  isInfoShown.value = false;
+  info.value = null;
+};
 </script>
 
 <template>
   <div>
     <Map
       :infrastructureTypes="infrastructureTypes"
-      @info="e => handleInfo(e)"
+      @showInfo="e => showInfo(e)"
+      @hideInfo="() => hideInfo()"
     />
     <Legend :infrastructureTypes="infrastructureTypes" />
-    <Info v-if="showInfo" :info="info" />
+    <Info v-if="isInfoShown" :info="info" />
   </div>
 </template>
 

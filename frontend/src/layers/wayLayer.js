@@ -21,7 +21,13 @@ const computeWeight = infrastructureType => {
   }
 };
 
-const getWayLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
+const getWayLayer = (
+  infrastructureType,
+  color,
+  minZoom,
+  handleMouseOver,
+  handleMouseOut,
+) => {
   const styles = {};
   styles[`public.${infrastructureType}_ways`] = _ => ({
     stroke: true,
@@ -40,6 +46,9 @@ const getWayLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
     })
     .on("mouseover", e => {
       handleMouseOver(e.layer.properties);
+    })
+    .on("mouseout", () => {
+      handleMouseOut();
     });
 };
 

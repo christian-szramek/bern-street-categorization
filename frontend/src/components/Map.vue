@@ -12,7 +12,7 @@ import { getNodes } from "@/services/nodeService";
 
 const props = defineProps(["infrastructureTypes"]);
 
-const emit = defineEmits(["info"]);
+const emit = defineEmits(["showInfo", "hideInfo"]);
 
 let map;
 
@@ -29,7 +29,11 @@ const centeredCity = ref(cities.get("berlin"));
 const extendedInfrastructureTypes = ref([]);
 
 const handleMouseOver = e => {
-  emit("info", e);
+  emit("showInfo", e);
+};
+
+const handleMouseOut = () => {
+  emit("hideInfo");
 };
 
 const removeAllNodeLayers = () => {
@@ -64,7 +68,13 @@ const loadWays = () => {
   extendedInfrastructureTypes.value
     .filter(it => it.type === "way")
     .forEach(it => {
-      it.layer = getWayLayer(it.name, it.color, handleMouseOver, it.minZoom);
+      it.layer = getWayLayer(
+        it.name,
+        it.color,
+        it.minZoom,
+        handleMouseOver,
+        handleMouseOut,
+      );
       it.layer.addTo(map);
     });
 };
