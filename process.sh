@@ -28,7 +28,7 @@ if [ "$SKIP_DOWNLOAD" == "true" ]; then
   TMP_DIR=$SAVE_DIR
 else
   # Download the OSM data
-  ./download/download.sh $TMP_DIR
+  ./download/download.sh $TMP_DIR || exit 1
 fi
 
 # Import the OSM data into the PostgreSQL database
