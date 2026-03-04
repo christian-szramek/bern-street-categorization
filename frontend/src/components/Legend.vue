@@ -1,31 +1,36 @@
 <script setup>
-import { computed } from "vue";
-
 const props = defineProps({
   infrastructureTypes: {
     type: Array,
     required: true,
   },
+  modelValue: {
+    type: Array,
+    required: true,
+  },
 });
 
-const filteredInfrastructureTypes = computed(() => {
-  return props.infrastructureTypes
-    .filter(it => !it.name.includes("_l_") || it.name.includes("1_l_"))
-    .map(it => {
-      const displayNameWithoutLanes = it.displayName.replace(
-        /^\d+-lane\s+/i,
-        "",
-      );
-      const capitalizedLegendName =
-        displayNameWithoutLanes.charAt(0).toUpperCase() +
-        displayNameWithoutLanes.slice(1);
+const emit = defineEmits(["update:modelValue"]);
 
-      return {
-        color: it.color,
-        name: capitalizedLegendName,
-      };
-    });
-});
+const isActive = typeName => {
+  return props.modelValue.includes(typeName);
+};
+
+const toggle = typeName => {
+  const updated = [...props.modelValue];
+
+  const index = updated.indexOf(typeName);
+
+  if (index > -1) {
+    // Remove infrastructure type from array if it was active before
+    updated.splice(index, 1);
+  } else {
+    // Add infrastructure type to array if it was inactive before
+    updated.push(typeName);
+  }
+
+  emit("update:modelValue", updated);
+};
 </script>
 
 <template>
@@ -33,12 +38,19 @@ const filteredInfrastructureTypes = computed(() => {
     <v-card title="Legend" elevation="6" rounded="lg" class="legend-card">
       <v-card-text class="pa-3">
         <div
-          v-for="type in filteredInfrastructureTypes"
-          :key="type.name"
+          v-for="it in infrastructureTypes"
+          :key="it.name"
           class="legend-item"
         >
-          <span class="legend-dot" :style="{ backgroundColor: type.color }" />
-          <span class="legend-label" v-text="type.name" />
+          <span
+            class="legend-dot"
+            :class="{ inactive: !isActive(it.name) }"
+            :style="{
+              backgroundColor: isActive(it.name) ? it.color : 'transparent',
+            }"
+            @click="toggle(it.name)"
+          />
+          <span class="legend-label" v-text="it.displayName" />
         </div>
       </v-card-text>
     </v-card>
@@ -61,7 +73,8 @@ const filteredInfrastructureTypes = computed(() => {
 .legend-item {
   display: flex;
   align-items: center;
-  margin-bottom: 8px;
+  margin-bottom: 6px;
+  cursor: pointer;
 }
 
 .legend-dot {
@@ -69,7 +82,18 @@ const filteredInfrastructureTypes = computed(() => {
   height: 14px;
   border-radius: 50%;
   margin-right: 10px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+  transition:
+    background-color 0.15s ease,
+    transform 0.1s ease;
+}
+
+.legend-dot:hover {
+  transform: scale(1.15);
+}
+
+.legend-dot.inactive {
+  background-color: transparent !important;
 }
 
 .legend-label {

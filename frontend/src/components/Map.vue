@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted } from "vue";
+import { ref, onMounted, onUpdated } from "vue";
 
 import L from "leaflet";
 import "leaflet.vectorgrid";
@@ -10,7 +10,7 @@ import { getAreaLayer } from "@/layers/areaLayer";
 
 import { getNodes } from "@/services/nodeService";
 
-const props = defineProps(["infrastructureTypes"]);
+const props = defineProps(["infrastructureTypes", "activeInfrastructureTypes"]);
 
 const emit = defineEmits(["showInfo", "hideInfo"]);
 
@@ -27,6 +27,7 @@ const cities = new Map()
 const centeredCity = ref(cities.get("berlin"));
 
 const extendedInfrastructureTypes = ref([]);
+const previousActiveInfrastructureTypes = ref([]);
 
 const handleMouseOver = e => {
   emit("showInfo", e);
@@ -59,8 +60,15 @@ const loadNodes = async () => {
     .filter(it => mapZoom >= it.minZoom)
     .forEach(async it => {
       const layerData = await getNodes(it.name, mapBounds);
-      it.layer = getNodeLayer(layerData, it.color, handleMouseOver);
-      it.layer.addTo(map);
+      it.layer = getNodeLayer(
+        layerData,
+        it.color,
+        handleMouseOver,
+        handleMouseOut,
+      );
+      if (isInfrastructureTypeActive(it.name)) {
+        it.layer.addTo(map);
+      }
     });
 };
 
@@ -75,7 +83,9 @@ const loadWays = () => {
         handleMouseOver,
         handleMouseOut,
       );
-      it.layer.addTo(map);
+      if (isInfrastructureTypeActive(it.name)) {
+        it.layer.addTo(map);
+      }
     });
 };
 
@@ -83,8 +93,16 @@ const loadAreas = () => {
   extendedInfrastructureTypes.value
     .filter(it => it.type === "area")
     .forEach(it => {
-      it.layer = getAreaLayer(it.name, it.color, handleMouseOver, it.minZoom);
-      it.layer.addTo(map);
+      it.layer = getAreaLayer(
+        it.name,
+        it.color,
+        it.minZoom,
+        handleMouseOver,
+        handleMouseOut,
+      );
+      if (isInfrastructureTypeActive(it.name)) {
+        it.layer.addTo(map);
+      }
     });
 };
 
@@ -96,7 +114,6 @@ const loadTiles = () => {
   }).addTo(map);
 };
 
-// Add  three layers (node, way, area) or every infrastructure type
 const extendInfrastructureTypes = () => {
   props.infrastructureTypes.forEach(it => {
     if (it.node) {
@@ -120,6 +137,47 @@ const extendInfrastructureTypes = () => {
   });
 };
 
+const isInfrastructureTypeActive = infrastructureType => {
+  return props.activeInfrastructureTypes.some(it =>
+    infrastructureType.includes(it),
+  );
+};
+
+const getUpdatedActiveInfrastructureType = (now, previous) => {
+  // if type was added
+  const added = now.find(x => !previous.includes(x));
+
+  // if type was removed
+  if (added == null) {
+    return previous.find(x => !now.includes(x));
+  }
+
+  return added;
+};
+
+const updatePreviousActiveInfrastructureTypes = () => {
+  previousActiveInfrastructureTypes.value = [
+    ...props.activeInfrastructureTypes,
+  ];
+};
+
+const updateLayers = updatedInfrastructureType => {
+  const infrastructureTypesToUpdate = extendedInfrastructureTypes.value.filter(
+    it => {
+      const nameWithoutLanes = it.name.replace(/^\d+_l_/, "");
+      return nameWithoutLanes === updatedInfrastructureType;
+    },
+  );
+
+  infrastructureTypesToUpdate.forEach(it => {
+    if (map.hasLayer(it.layer)) {
+      map.removeLayer(it.layer);
+    } else {
+      it.layer.addTo(map);
+    }
+  });
+};
+
 onMounted(() => {
   map = L.map("map").setView(centeredCity.value, 17);
 
@@ -129,10 +187,25 @@ onMounted(() => {
   loadWays();
   loadAreas();
 
+  updatePreviousActiveInfrastructureTypes();
+
   map.on("moveend", loadNodes);
 
   // For Testing
   map.on("moveend", () => console.log("Zoom level: ", map.getZoom()));
+});
+
+onUpdated(() => {
+  const updatedInfrastructureType = getUpdatedActiveInfrastructureType(
+    props.activeInfrastructureTypes,
+    previousActiveInfrastructureTypes.value,
+  );
+
+  console.log(updatedInfrastructureType);
+
+  updateLayers(updatedInfrastructureType);
+
+  updatePreviousActiveInfrastructureTypes();
 });
 </script>
 

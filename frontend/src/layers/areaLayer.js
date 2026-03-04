@@ -1,6 +1,12 @@
 const baseURL = "http://localhost:7800";
 
-const getAreaLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
+const getAreaLayer = (
+  infrastructureType,
+  color,
+  minZoom,
+  handleMouseOver,
+  handleMouseOut,
+) => {
   const styles = {};
   styles[`public.${infrastructureType}_areas`] = _ => ({
     fill: true,
@@ -21,6 +27,9 @@ const getAreaLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
     })
     .on("mouseover", e => {
       handleMouseOver(e.layer.properties);
+    })
+    .on("mouseout", e => {
+      handleMouseOut();
     });
 };
 
