@@ -76,19 +76,19 @@ function M.is_oneway(tags)
     return tags.oneway == 'yes' or tags.oneway == 'true' or tags.oneway == '1' or tags.oneway == '-1' or tags.oneway == 'reverse' or tags.oneway == 'reversible' or tags.oneway == 'alternating'
 end
 
-function M.is_street_with_separate_cycling_or_bus_lane(tags)
+function M.is_street_with_bus_bicycle_lane(tags)
     return tags.cycleway == 'lane' or tags['cycleway:both'] == 'lane' or tags['cycleway:left'] == 'lane' or tags['cycleway:right'] == 'lane' or tags.cycleway == 'share_busway' or tags['cycleway:both'] == 'share_busway' or tags['cycleway:left'] == 'share_busway' or tags['cycleway:right'] == 'share_busway'
 end
 
-function M.is_street_with_separate_cycling_lane_on_sidewalk(tags)
+function M.is_street_with_separate_bicycle_lane_one_sidewalk(tags)
     return tags.cycleway == 'track' or tags['cycleway:both'] == 'track' or tags['cycleway:left'] == 'track' or tags['cycleway:right'] == 'track' or tags.cycleway == 'separate' or tags['cycleway:both'] == 'separate' or tags['cycleway:left'] == 'separate' or tags['cycleway:right'] == 'separate'
 end
 
-function M.is_street_with_shared_cycling_lane_on_carriageway(tags)
+function M.is_street_with_shared_bicycle_lane_on_carriageway(tags)
     return tags.cycleway == 'shared_lane'
 end
 
-function M.is_extra_marked_separate_cycling_lane_on_sidewalk(tags)
+function M.is_extra_marked_separate_bicycle_lane_on_sidewalk(tags)
     return ( tags.highway == 'cycleway' and tags.cycleway == 'sidepath' ) or ( tags.highway == 'path' and ( tags.path == 'sidepath' or tags.is_sidepath == 'yes' ) and tags.bicycle == 'designated' )
 end
 
@@ -131,6 +131,10 @@ function M.get_lanes(tags)
         return '7'
     elseif (tags.lanes == '8') then 
         return '8'
+    elseif (tags.lanes == '9') then 
+        return '9'
+    elseif (tags.lanes == '10') then 
+        return '10'
     else 
        return '1'
     end
@@ -143,23 +147,23 @@ function M.get_infrastructure_type(tags)
         return M.get_lanes(tags) .. '_l_s_with_bicycle_forbidden'
     elseif M.is_street(tags) then
         if M.is_oneway(tags) then 
-            if M.is_street_with_separate_cycling_or_bus_lane(tags) then
+            if M.is_street_with_bus_bicycle_lane(tags) then
                 return M.get_lanes(tags) .. '_l_ows_with_bus_bicycle_lane'
-            elseif M.is_street_with_separate_cycling_lane_on_sidewalk(tags) then
+            elseif M.is_street_with_separate_bicycle_lane_one_sidewalk(tags) then
                 return M.get_lanes(tags) .. '_l_ows_with_separated_bicycle_lane_on_sidewalk'
             else
                 return M.get_lanes(tags) .. '_l_ows_with_no_bicycle_paths'
             end
         else
-            if M.is_street_with_separate_cycling_or_bus_lane(tags) then
+            if M.is_street_with_bus_bicycle_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then 
                     return M.get_lanes(tags) .. '_l_s_with_bus_bicycle_lane_on_both_sides'
                 else
                     return M.get_lanes(tags) .. '_l_s_with_bus_bicycle_lane_on_one_side'
                 end
-            elseif M.is_street_with_separate_cycling_lane_on_sidewalk(tags) then
+            elseif M.is_street_with_separate_bicycle_lane_one_sidewalk(tags) then
                 return M.get_lanes(tags) .. '_l_s_with_separate_bicycle_lane_on_sidewalk'
-            elseif M.is_street_with_shared_cycling_lane_on_carriageway(tags) then 
+            elseif M.is_street_with_shared_bicycle_lane_on_carriageway(tags) then 
                 return M.get_lanes(tags) ..  '_l_s_with_shared_bicycle_lane_on_carriageway'
             else            
                 return M.get_lanes(tags) .. '_l_s_with_no_bicycle_paths'
@@ -177,7 +181,7 @@ function M.get_infrastructure_type(tags)
         else
             return 'cycleway'
         end                
-    elseif M.is_extra_marked_separate_cycling_lane_on_sidewalk(tags) then
+    elseif M.is_extra_marked_separate_bicycle_lane_on_sidewalk(tags) then
         return 'separate_bicycle_lane_on_sidewalk'
     elseif M.is_path(tags) then
         if M.is_pedestrian_only_path(tags) then
