@@ -148,7 +148,11 @@ function M.get_infrastructure_type(tags)
     elseif M.is_street(tags) then
         if M.is_oneway(tags) then 
             if M.is_street_with_bus_bicycle_lane(tags) then
-                return M.get_lanes(tags) .. '_l_ows_with_bus_bicycle_lane'
+                if M.is_cycleway_both_sides(tags) then 
+                    return M.get_lanes(tags) .. '_l_ows_with_bus_bicycle_lane_on_both_sides'
+                else
+                    return M.get_lanes(tags) .. '_l_ows_with_bus_bicycle_lane_on_one_side'
+                end
             elseif M.is_street_with_separate_bicycle_lane_one_sidewalk(tags) then
                 return M.get_lanes(tags) .. '_l_ows_with_separated_bicycle_lane_on_sidewalk'
             else
