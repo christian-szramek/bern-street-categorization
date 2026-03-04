@@ -89,20 +89,24 @@ const loadTiles = () => {
 // Add  three layers (node, way, area) or every infrastructure type
 const extendInfrastructureTypes = () => {
   props.infrastructureTypes.forEach(it => {
-    extendedInfrastructureTypes.value.push({
-      ...it,
-      type: "node",
-    });
+    if (it.node) {
+      extendedInfrastructureTypes.value.push({
+        ...it,
+        type: "node",
+      });
+    }
 
     extendedInfrastructureTypes.value.push({
       ...it,
       type: "way",
     });
 
-    extendedInfrastructureTypes.value.push({
-      ...it,
-      type: "area",
-    });
+    if (it.area) {
+      extendedInfrastructureTypes.value.push({
+        ...it,
+        type: "area",
+      });
+    }
   });
 };
 
