@@ -12,9 +12,17 @@ const filteredInfrastructureTypes = computed(() => {
   return props.infrastructureTypes
     .filter(it => !it.name.includes("_l_") || it.name.includes("1_l_"))
     .map(it => {
+      const displayNameWithoutLanes = it.displayName.replace(
+        /^\d+-lane\s+/i,
+        "",
+      );
+      const capitalizedLegendName =
+        displayNameWithoutLanes.charAt(0).toUpperCase() +
+        displayNameWithoutLanes.slice(1);
+
       return {
         color: it.color,
-        name: it.displayName,
+        name: capitalizedLegendName,
       };
     });
 });
