@@ -30,38 +30,28 @@ const getWayLayer = (
 ) => {
   const weight = computeWeight(infrastructureType);
 
-  const visibleStyles = {};
-  visibleStyles[`public.${infrastructureType}_ways`] = _ => ({
-    stroke: true,
-    color: color,
-    weight: weight,
-    opacity: 1,
-    interactive: false,
-  });
-
-  const hitboxStyles = {};
-  hitboxStyles[`public.${infrastructureType}_ways`] = _ => ({
-    stroke: true,
-    color: color,
-    weight: Math.max(weight, 10),
-    opacity: 0,
-    interactive: true,
-  });
-
-  const visibleLayer = L.vectorGrid.protobuf(
-    `${baseURL}/public.${infrastructureType}_ways/{z}/{x}/{y}.pbf`,
+  const styles = {};
+  styles[`public.${infrastructureType}_ways`] = () => [
+    // visible stroke
     {
-      vectorTileLayerStyles: visibleStyles,
-      minZoom,
-      maxZoom: 19,
-      interactive: false,
+      stroke: true,
+      color: color,
+      weight: weight,
+      opacity: 1,
     },
-  );
+    // hitbox stroke
+    {
+      stroke: true,
+      color: "white",
+      weight: Math.max(weight, 5),
+      opacity: 0,
+    },
+  ];
 
-  const hitLayer = L.vectorGrid
+  const layer = L.vectorGrid
     .protobuf(`${baseURL}/public.${infrastructureType}_ways/{z}/{x}/{y}.pbf`, {
-      vectorTileLayerStyles: hitboxStyles,
-      minZoom: 15,
+      vectorTileLayerStyles: styles,
+      minZoom: minZoom,
       maxZoom: 19,
       interactive: true,
       getFeatureId: f => f.properties.id,
@@ -73,7 +63,7 @@ const getWayLayer = (
       handleMouseOut();
     });
 
-  return L.layerGroup([visibleLayer, hitLayer]);
+  return layer;
 };
 
 export { getWayLayer };
