@@ -9,8 +9,18 @@ import { getWayLayer } from "@/layers/wayLayer";
 import { getAreaLayer } from "@/layers/areaLayer";
 
 import { getNodes } from "@/services/nodeService";
+import { getNameWithoutLanes } from "../../utils/nameUtils";
 
-const props = defineProps(["infrastructureTypes", "activeInfrastructureTypes"]);
+const props = defineProps({
+  infrastructureTypes: {
+    type: Array,
+    required: true,
+  },
+  activeInfrastructureTypes: {
+    type: Array,
+    required: true,
+  },
+});
 
 const emit = defineEmits(["showInfo", "hideInfo"]);
 
@@ -163,10 +173,7 @@ const updatePreviousActiveInfrastructureTypes = () => {
 
 const updateLayers = updatedInfrastructureType => {
   const infrastructureTypesToUpdate = extendedInfrastructureTypes.value.filter(
-    it => {
-      const nameWithoutLanes = it.name.replace(/^\d+_l_/, "");
-      return nameWithoutLanes === updatedInfrastructureType;
-    },
+    it => getNameWithoutLanes(it.name) === updatedInfrastructureType,
   );
 
   infrastructureTypesToUpdate.forEach(it => {
@@ -200,8 +207,6 @@ onUpdated(() => {
     props.activeInfrastructureTypes,
     previousActiveInfrastructureTypes.value,
   );
-
-  console.log(updatedInfrastructureType);
 
   updateLayers(updatedInfrastructureType);
 

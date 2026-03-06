@@ -6,6 +6,10 @@ import Legend from "@/components/Legend.vue";
 import Info from "@/components/Info.vue";
 
 import infrastructureTypes from "@/config/infrastructureTypes.json";
+import {
+  getNameWithoutLanes,
+  getCapitalizedDisplayNameWithoutLanes,
+} from "../utils/nameUtils";
 
 const legendInfrastructureTypes = ref([]);
 const activeInfrastructureTypes = ref([]);
@@ -49,18 +53,6 @@ onBeforeMount(() => {
     }
   });
 });
-
-const getNameWithoutLanes = name => {
-  return name.replace(/^\d+_l_/, "");
-};
-
-const getCapitalizedDisplayNameWithoutLanes = name => {
-  const displayNameWithoutLanes = name.replace(/^\d+-lane\s+/i, "");
-  return (
-    displayNameWithoutLanes.charAt(0).toUpperCase() +
-    displayNameWithoutLanes.slice(1)
-  );
-};
 </script>
 
 <template>
