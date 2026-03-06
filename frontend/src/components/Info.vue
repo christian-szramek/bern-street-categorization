@@ -33,6 +33,7 @@ const filteredInfoKeys = computed(() => {
   bottom: 16px;
   left: 16px;
   z-index: 1000;
+  pointer-events: none;
 }
 
 .info-card {
