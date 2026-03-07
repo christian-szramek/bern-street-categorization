@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUpdated } from "vue";
+import { ref, onMounted, onUpdated, watch } from "vue";
 
 import L from "leaflet";
 import "leaflet.vectorgrid";
@@ -177,10 +177,14 @@ const updateLayers = updatedInfrastructureType => {
   );
 
   infrastructureTypesToUpdate.forEach(it => {
-    if (map.hasLayer(it.layer)) {
-      map.removeLayer(it.layer);
+    if (it.layer) {
+      if (map.hasLayer(it.layer)) {
+        map.removeLayer(it.layer);
+      } else {
+        it.layer.addTo(map);
+      }
     } else {
-      it.layer.addTo(map);
+      console.log("layer is null");
     }
   });
 };
@@ -196,7 +200,9 @@ onMounted(() => {
 
   updatePreviousActiveInfrastructureTypes();
 
-  map.on("moveend", loadNodes);
+  map.on("moveend", () => {
+    loadNodes();
+  });
 
   // For Testing
   map.on("moveend", () => console.log("Zoom level: ", map.getZoom()));
@@ -211,6 +217,12 @@ onUpdated(() => {
   updateLayers(updatedInfrastructureType);
 
   updatePreviousActiveInfrastructureTypes();
+});
+
+watch(extendInfrastructureTypes, () => {
+  console.log(
+    extendInfrastructureTypes.filter(it => it.name === "uncategorized"),
+  );
 });
 </script>
 
