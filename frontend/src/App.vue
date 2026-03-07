@@ -13,7 +13,6 @@ import {
 
 const legendInfrastructureTypes = ref([]);
 const activeInfrastructureTypes = ref([]);
-
 const isInfoShown = ref(false);
 const info = ref({});
 
@@ -48,7 +47,7 @@ onBeforeMount(() => {
 
   // Mark all infrastructure types as active except uncategorized
   legendInfrastructureTypes.value.forEach(it => {
-    if (it.name != "uncategorized") {
+    if (it.name != "uncategorized" && it.name != "pedestrian") {
       activeInfrastructureTypes.value.push(it.name);
     }
   });
