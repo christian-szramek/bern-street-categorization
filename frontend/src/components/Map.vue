@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUpdated, watch } from "vue";
+import { ref, onMounted, onUpdated } from "vue";
 
 import L from "leaflet";
 import "leaflet.vectorgrid";
@@ -9,7 +9,7 @@ import { getWayLayer } from "@/layers/wayLayer";
 import { getAreaLayer } from "@/layers/areaLayer";
 
 import { getNodes } from "@/services/nodeService";
-import { getNameWithoutLanes } from "../../utils/nameUtils";
+import { getNameWithoutLanes } from "@/utils/nameUtils";
 
 const props = defineProps({
   infrastructureTypes: {
