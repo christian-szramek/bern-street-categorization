@@ -58,6 +58,17 @@ const removeAllNodeLayers = () => {
     });
 };
 
+const loadNode = async (name, mapBounds, color) => {
+    const layerData = await getNodes(name, mapBounds);
+    const layer = getNodeLayer(
+      layerData,
+      color,
+      handleMouseOver,
+      handleMouseOut,
+    );
+  return layer;
+}
+
 const loadNodes = async () => {
   // Remove previous node layer to avoid duplicates
   removeAllNodeLayers();
@@ -69,13 +80,7 @@ const loadNodes = async () => {
     .filter(it => it.type === "node")
     .filter(it => mapZoom >= it.minZoom)
     .forEach(async it => {
-      const layerData = await getNodes(it.name, mapBounds);
-      it.layer = getNodeLayer(
-        layerData,
-        it.color,
-        handleMouseOver,
-        handleMouseOut,
-      );
+      it.layer = await loadNode(it.name, mapBounds, it.color)
       if (isInfrastructureTypeActive(it.name)) {
         it.layer.addTo(map);
       }
@@ -176,15 +181,18 @@ const updateLayers = updatedInfrastructureType => {
     it => getNameWithoutLanes(it.name) === updatedInfrastructureType,
   );
 
-  infrastructureTypesToUpdate.forEach(it => {
-    if (it.layer) {
-      if (map.hasLayer(it.layer)) {
-        map.removeLayer(it.layer);
-      } else {
-        it.layer.addTo(map);
-      }
+  infrastructureTypesToUpdate.forEach(async it => {
+    if (it.layer && map.hasLayer(it.layer)) {
+      map.removeLayer(it.layer);
     } else {
-      console.log("layer is null");
+      if (it.layer) {
+        it.layer.addTo(map);
+      } else {
+        if (it.type === 'node') {
+          it.layer = await loadNode(it.name, map.getBounds(), it.color)
+          it.layer.addTo(map);
+        }
+      }
     }
   });
 };
