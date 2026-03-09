@@ -65,22 +65,31 @@ onBeforeMount(() => {
 <template>
   <div class="legend-wrapper">
     <v-card title="Legend" elevation="6" rounded="lg" class="legend-card">
-      <v-card-text class="pa-3">
+      <v-card-text class="legend-content">
+
+        <div class="section-title">Infrastructure Types</div>
+
         <div
           v-for="it in legendInfrastructureTypes"
           :key="it.name"
           class="legend-item"
+          @click="toggleInfrastructureType(it.name)"
         >
           <span
             class="legend-dot"
             :class="{ inactive: !isInfrastructureTypeActive(it.name) }"
             :style="{
-              backgroundColor: isInfrastructureTypeActive(it.name) ? it.color : 'transparent',
+              backgroundColor: isInfrastructureTypeActive(it.name)
+                ? it.color
+                : 'transparent',
             }"
-            @click="toggleInfrastructureType(it.name)"
           />
-          <span class="legend-label" v-text="it.displayName" />
+
+          <span class="legend-label">
+            {{ it.displayName }}
+          </span>
         </div>
+
       </v-card-text>
     </v-card>
   </div>
@@ -95,8 +104,31 @@ onBeforeMount(() => {
 }
 
 .legend-card {
-  min-width: 180px;
+  min-width: 220px;
   backdrop-filter: blur(6px);
+}
+
+/* Same title style as Info panel */
+.legend-card :deep(.v-card-title) {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.7;
+  padding-bottom: 4px;
+}
+
+/* Same content padding behavior */
+.legend-content {
+  padding-top: 6px;
+}
+
+/* Section subtitle */
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 8px;
 }
 
 .legend-item {
@@ -111,7 +143,7 @@ onBeforeMount(() => {
   height: 14px;
   border-radius: 50%;
   margin-right: 10px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.35);
   transition:
     background-color 0.15s ease,
     transform 0.1s ease;
@@ -126,6 +158,8 @@ onBeforeMount(() => {
 }
 
 .legend-label {
-  font-size: 15px;
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.75;
 }
 </style>
