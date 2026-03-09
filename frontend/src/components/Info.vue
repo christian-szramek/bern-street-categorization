@@ -9,7 +9,8 @@ const filteredInfoKeys = computed(() => {
       !key.includes("wikipedia") &&
       !key.includes("wikimedia") &&
       !key.includes("wikidata") &&
-      !key.includes("image"),
+      !key.includes("image") &&
+      !key.includes("name:"),
   );
 });
 </script>
