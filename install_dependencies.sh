@@ -6,4 +6,7 @@ sudo apt install osmium-tool -y
 sudo apt install osm2pgsql -y
 
 # for frontend 
-# Node.js v24.12.0 (npm v11.6.2)
+sudo apt install curl -y
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.4/install.sh | bash
+nvm use 25
+source ~/.bashrc
