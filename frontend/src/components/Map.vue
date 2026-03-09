@@ -71,12 +71,10 @@ const loadNodes = async () => {
   // Remove previous node layer to avoid duplicates
   removeAllNodeLayers();
 
-  const mapZoom = map.getZoom();
   const mapBounds = map.getBounds();
 
   extendedInfrastructureTypes.value
     .filter(it => it.type === "node" && isInfrastructureTypeActive(it.name))
-    .filter(it => mapZoom >= it.minZoom)
     .forEach(async it => {
       it.layer = await loadNode(it.name, mapBounds, it.color)
       it.layer.addTo(map);
@@ -90,7 +88,6 @@ const loadWays = () => {
       it.layer = getWayLayer(
         it.name,
         it.color,
-        it.minZoom,
         handleMouseOver,
         handleMouseOut,
       );
@@ -106,7 +103,6 @@ const loadAreas = () => {
       it.layer = getAreaLayer(
         it.name,
         it.color,
-        it.minZoom,
         handleMouseOver,
         handleMouseOut,
       );
@@ -184,10 +180,10 @@ const updateLayers = updatedInfrastructureType => {
         it.layer = await loadNode(it.name, map.getBounds(), it.color)
       }
       if (it.type === 'way') {
-        it.layer = getWayLayer(it.name, it.color, it.minZoom, handleMouseOver, handleMouseOut);
+        it.layer = getWayLayer(it.name, it.color, handleMouseOver, handleMouseOut);
       }
       if (it.type === 'area') {
-        it.layer = getAreaLayer(it.name, it.color, it.minZoom, handleMouseOver, handleMouseOut);
+        it.layer = getAreaLayer(it.name, it.color, handleMouseOver, handleMouseOut);
       }
 
       it.layer.addTo(map);

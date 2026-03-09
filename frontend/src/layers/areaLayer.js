@@ -3,7 +3,6 @@ const baseURL = "http://localhost:7800";
 const getAreaLayer = (
   infrastructureType,
   color,
-  minZoom,
   handleMouseOver,
   handleMouseOut,
 ) => {
@@ -20,7 +19,7 @@ const getAreaLayer = (
   return L.vectorGrid
     .protobuf(`${baseURL}/public.${infrastructureType}_areas/{z}/{x}/{y}.pbf`, {
       vectorTileLayerStyles: styles,
-      minZoom: minZoom,
+      minZoom: 1,
       maxZoom: 19,
       interactive: true,
       getFeatureId: f => f.properties.id,

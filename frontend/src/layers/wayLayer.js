@@ -24,7 +24,6 @@ const computeWeight = infrastructureType => {
 const getWayLayer = (
   infrastructureType,
   color,
-  minZoom,
   handleMouseOver,
   handleMouseOut,
 ) => {
@@ -51,7 +50,7 @@ const getWayLayer = (
   const layer = L.vectorGrid
     .protobuf(`${baseURL}/public.${infrastructureType}_ways/{z}/{x}/{y}.pbf`, {
       vectorTileLayerStyles: styles,
-      minZoom: minZoom,
+      minZoom: 1,
       maxZoom: 19,
       interactive: true,
       getFeatureId: f => f.properties.id,
