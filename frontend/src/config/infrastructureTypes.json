@@ -576,6 +576,13 @@
       "node": false
     },
     {
+      "name": "cyclist_waiting_aid",
+      "color": "#7DCEA0",
+      "displayName": "Cyclist waiting aid",
+      "area": false,
+      "node": true
+    },
+    {
       "name": "pedestrian",
       "color": "#1F78B4",
       "displayName": "Mainly/exclusively for pedestrian",
@@ -588,6 +595,13 @@
       "displayName": "Mainly/exclusively for pedestrian with bicycle allowed",
       "area": true,
       "node": true
+    },
+    {
+      "name": "path_with_bicycle_forbidden",
+      "color": "#2E86C1",
+      "displayName": "Path with bicycle forbidden",
+      "area": false,
+      "node": false
     },
     {
       "name": "uncategorized",
