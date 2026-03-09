@@ -49,12 +49,10 @@ const handleMouseOut = () => {
 
 const removeAllNodeLayers = () => {
   extendedInfrastructureTypes.value
-    .filter(it => it.type === "node")
+    .filter(it => it.type === "node" && it.layer)
     .forEach(it => {
-      if (it.layer) {
-        map.removeLayer(it.layer);
-        it.layer = null;
-      }
+      map.removeLayer(it.layer);
+      it.layer = null;
     });
 };
 
@@ -77,19 +75,17 @@ const loadNodes = async () => {
   const mapBounds = map.getBounds();
 
   extendedInfrastructureTypes.value
-    .filter(it => it.type === "node")
+    .filter(it => it.type === "node" && isInfrastructureTypeActive(it.name))
     .filter(it => mapZoom >= it.minZoom)
     .forEach(async it => {
       it.layer = await loadNode(it.name, mapBounds, it.color)
-      if (isInfrastructureTypeActive(it.name)) {
-        it.layer.addTo(map);
-      }
+      it.layer.addTo(map);
     });
 };
 
 const loadWays = () => {
   extendedInfrastructureTypes.value
-    .filter(it => it.type === "way")
+    .filter(it => it.type === "way" && isInfrastructureTypeActive(it.name))
     .forEach(it => {
       it.layer = getWayLayer(
         it.name,
@@ -98,15 +94,14 @@ const loadWays = () => {
         handleMouseOver,
         handleMouseOut,
       );
-      if (isInfrastructureTypeActive(it.name)) {
-        it.layer.addTo(map);
-      }
+
+      it.layer.addTo(map);
     });
 };
 
 const loadAreas = () => {
   extendedInfrastructureTypes.value
-    .filter(it => it.type === "area")
+    .filter(it => it.type === "area" && isInfrastructureTypeActive(it.name))
     .forEach(it => {
       it.layer = getAreaLayer(
         it.name,
@@ -115,9 +110,8 @@ const loadAreas = () => {
         handleMouseOver,
         handleMouseOut,
       );
-      if (isInfrastructureTypeActive(it.name)) {
-        it.layer.addTo(map);
-      }
+
+      it.layer.addTo(map)      
     });
 };
 
@@ -182,17 +176,21 @@ const updateLayers = updatedInfrastructureType => {
   );
 
   infrastructureTypesToUpdate.forEach(async it => {
-    if (it.layer && map.hasLayer(it.layer)) {
+    if (it.layer) {
       map.removeLayer(it.layer);
+      it.layer = null;
     } else {
-      if (it.layer) {
-        it.layer.addTo(map);
-      } else {
-        if (it.type === 'node') {
-          it.layer = await loadNode(it.name, map.getBounds(), it.color)
-          it.layer.addTo(map);
-        }
+      if (it.type === 'node') {
+        it.layer = await loadNode(it.name, map.getBounds(), it.color)
       }
+      if (it.type === 'way') {
+        it.layer = getWayLayer(it.name, it.color, it.minZoom, handleMouseOver, handleMouseOut);
+      }
+      if (it.type === 'area') {
+        it.layer = getAreaLayer(it.name, it.color, it.minZoom, handleMouseOver, handleMouseOut);
+      }
+
+      it.layer.addTo(map);
     }
   });
 };
@@ -211,9 +209,6 @@ onMounted(() => {
   map.on("moveend", () => {
     loadNodes();
   });
-
-  // For Testing
-  map.on("moveend", () => console.log("Zoom level: ", map.getZoom()));
 });
 
 onUpdated(() => {
@@ -225,12 +220,6 @@ onUpdated(() => {
   updateLayers(updatedInfrastructureType);
 
   updatePreviousActiveInfrastructureTypes();
-});
-
-watch(extendInfrastructureTypes, () => {
-  console.log(
-    extendInfrastructureTypes.filter(it => it.name === "uncategorized"),
-  );
 });
 </script>
 
