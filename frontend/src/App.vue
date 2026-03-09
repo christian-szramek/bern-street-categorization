@@ -5,14 +5,8 @@ import Map from "@/components/Map.vue";
 import Legend from "@/components/Legend.vue";
 import Info from "@/components/Info.vue";
 
-import {
-  getNameWithoutLanes,
-  getCapitalizedDisplayNameWithoutLanes,
-} from "../utils/nameUtils";
-
 import config from "@/config/infrastructureTypes.json";
 
-const legendInfrastructureTypes = ref([]);
 const activeInfrastructureTypes = ref([]);
 const isInfoShown = ref(false);
 const info = ref({});
@@ -23,24 +17,6 @@ const handleInfo = (isShow, e) => {
 }
 
 onBeforeMount(() => {
-  // Transform displayName of infrastructure types without lanes and capitalized (without duplicates)
-  config.infrastructureTypes.forEach(it => {
-    const nameWithoutLanes = getNameWithoutLanes(it.name);
-
-    if (
-      !legendInfrastructureTypes.value.some(it => it.name === nameWithoutLanes)
-    ) {
-      const capitalizedDisplayNameWithoutLanes =
-        getCapitalizedDisplayNameWithoutLanes(it.displayName);
-
-      legendInfrastructureTypes.value.push({
-        displayName: capitalizedDisplayNameWithoutLanes,
-        name: nameWithoutLanes,
-        color: it.color,
-      });
-    }
-  });
-
   activeInfrastructureTypes.value = config.defaultActiveInfrastructureTypes;
 });
 </script>
@@ -55,9 +31,12 @@ onBeforeMount(() => {
     />
     <Legend
       v-model="activeInfrastructureTypes"
-      :infrastructureTypes="legendInfrastructureTypes"
+      :infrastructureTypes="config.infrastructureTypes"
     />
-    <Info v-if="isInfoShown" :info="info" />
+    <Info 
+      v-if="isInfoShown" 
+      :info="info" 
+    />
   </div>
 </template>
 

@@ -1,4 +1,11 @@
 <script setup>
+import { ref, onBeforeMount } from 'vue';
+
+import {
+  getNameWithoutLanes,
+  getCapitalizedDisplayNameWithoutLanes,
+} from "@/utils/nameUtils";
+
 const props = defineProps({
   infrastructureTypes: {
     type: Array,
@@ -12,25 +19,47 @@ const props = defineProps({
 
 const emit = defineEmits(["update:modelValue"]);
 
-const isActive = infrastructureType => {
+const legendInfrastructureTypes = ref([]);
+
+const isInfrastructureTypeActive = infrastructureType => {
   return props.modelValue.includes(infrastructureType);
 };
 
-const toggle = infrastructureType => {
-  const updated = [...props.modelValue];
+const toggleInfrastructureType = infrastructureType => {
+  const newActiveInfrastructureTypes = [...props.modelValue];
 
-  const index = updated.indexOf(infrastructureType);
+  const index = newActiveInfrastructureTypes.indexOf(infrastructureType);
 
   if (index > -1) {
     // Remove infrastructure type from array if it was active before
-    updated.splice(index, 1);
+    newActiveInfrastructureTypes.splice(index, 1);
   } else {
     // Add infrastructure type to array if it was inactive before
-    updated.push(infrastructureType);
+    newActiveInfrastructureTypes.push(infrastructureType);
   }
 
-  emit("update:modelValue", updated);
+  emit("update:modelValue", newActiveInfrastructureTypes);
 };
+
+onBeforeMount(() => {
+  // Transform displayName of infrastructure types without lanes and capitalized (without duplicates)
+  props.infrastructureTypes.forEach(it => {
+    const nameWithoutLanes = getNameWithoutLanes(it.name);
+
+    if (
+      !legendInfrastructureTypes.value.some(it => it.name === nameWithoutLanes)
+    ) {
+      const capitalizedDisplayNameWithoutLanes =
+        getCapitalizedDisplayNameWithoutLanes(it.displayName);
+
+      legendInfrastructureTypes.value.push({
+        displayName: capitalizedDisplayNameWithoutLanes,
+        name: nameWithoutLanes,
+        color: it.color,
+      });
+    }
+  });
+});
 </script>
 
 <template>
@@ -38,17 +67,17 @@ const toggle = infrastructureType => {
     <v-card title="Legend" elevation="6" rounded="lg" class="legend-card">
       <v-card-text class="pa-3">
         <div
-          v-for="it in infrastructureTypes"
+          v-for="it in legendInfrastructureTypes"
           :key="it.name"
           class="legend-item"
         >
           <span
             class="legend-dot"
-            :class="{ inactive: !isActive(it.name) }"
+            :class="{ inactive: !isInfrastructureTypeActive(it.name) }"
             :style="{
-              backgroundColor: isActive(it.name) ? it.color : 'transparent',
+              backgroundColor: isInfrastructureTypeActive(it.name) ? it.color : 'transparent',
             }"
-            @click="toggle(it.name)"
+            @click="toggleInfrastructureType(it.name)"
           />
           <span class="legend-label" v-text="it.displayName" />
         </div>
