@@ -50,13 +50,6 @@
       "node": false
     },
     {
-      "name": "8_l_s_with_bicycle_forbidden",
-      "color": "#D10000",
-      "displayName": "8-lane street with bicycle forbidden",
-      "area": false,
-      "node": false
-    },
-    {
       "name": "1_l_s_with_bus_bicycle_lane_on_one_side",
       "color": "#1B9E77",
       "displayName": "1-lane street with bus/bicycle lane on one side",
@@ -105,14 +98,6 @@
       "area": false,
       "node": false
     },
-    {
-      "name": "8_l_s_with_bus_bicycle_lane_on_one_side",
-      "color": "#1B9E77",
-      "displayName": "8-lane street with bus/bicycle lane on one side",
-      "area": false,
-      "node": false
-    },
-
     {
       "name": "1_l_s_with_bus_bicycle_lane_on_both_sides",
       "color": "#1B9E77",
@@ -163,13 +148,6 @@
       "node": false
     },
     {
-      "name": "8_l_s_with_bus_bicycle_lane_on_both_sides",
-      "color": "#1B9E77",
-      "displayName": "8-lane street with bus/bicycle lane on both sides",
-      "area": false,
-      "node": false
-    },
-    {
       "name": "1_l_s_with_separate_bicycle_lane_on_sidewalk",
       "color": "#27AE60",
       "displayName": "1-lane street with separate bicycle lane on sidewalk",
@@ -215,13 +193,6 @@
       "name": "7_l_s_with_separate_bicycle_lane_on_sidewalk",
       "color": "#27AE60",
       "displayName": "7-lane street with separate bicycle lane on sidewalk",
-      "area": false,
-      "node": false
-    },
-    {
-      "name": "8_l_s_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#27AE60",
-      "displayName": "8-lane street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
@@ -282,13 +253,6 @@
       "node": false
     },
     {
-      "name": "8_l_s_with_shared_bicycle_lane_on_carriageway",
-      "color": "#52BE80",
-      "displayName": "8-lane street with shared bicycle lane on carriageway",
-      "area": false,
-      "node": false
-    },
-    {
       "name": "1_l_s_with_no_bicycle_paths",
       "color": "#4A1486",
       "displayName": "1-lane street with no bicycle paths",
@@ -334,13 +298,6 @@
       "name": "7_l_s_with_no_bicycle_paths",
       "color": "#4A1486",
       "displayName": "7-lane street with no bicycle paths",
-      "area": false,
-      "node": false
-    },
-    {
-      "name": "8_l_s_with_no_bicycle_paths",
-      "color": "#4A1486",
-      "displayName": "8-lane street with no bicycle paths",
       "area": false,
       "node": false
     },
@@ -611,5 +568,27 @@
       "node": true
     }
   ],
-  "defaultActiveInfrastructureTypes": ["s_with_bus_bicycle_lane_on_one_side", "s_with_bus_bicycle_lane_on_both_sides", "s_with_separate_bicycle_lane_on_sidewalk", "separate_bicycle_lane_on_sidewalk", "s_with_shared_bicycle_lane_on_carriageway", "ows_with_bus_bicycle_lane_on_one_side", "ows_with_bus_bicycle_lane_on_both_sides", "ows_with_separate_bicycle_lane_on_sidewalk", "cycleroad", "cycleway", "cycleway_multiuse", "pedestrian_with_bicycle_allowed"]
+  "defaultActiveInfrastructureTypes": ["s_with_bus_bicycle_lane_on_one_side", "s_with_bus_bicycle_lane_on_both_sides", "s_with_separate_bicycle_lane_on_sidewalk", "separate_bicycle_lane_on_sidewalk", "s_with_shared_bicycle_lane_on_carriageway", "ows_with_bus_bicycle_lane_on_one_side", "ows_with_bus_bicycle_lane_on_both_sides", "ows_with_separate_bicycle_lane_on_sidewalk", "cycleroad", "cycleway", "cycleway_multiuse", "pedestrian_with_bicycle_allowed"],
+  "cities": [
+    {
+      "name": "Bern",
+      "latlon": [46.9481,7.4474]
+    },
+    {
+      "name": "Berlin",
+      "latlon": [52.5244,13.4105]
+    },
+    {
+      "name": "Wichita Falls",
+      "latlon": [33.9137,-98.4934]
+    },
+    {
+      "name": "Weimar",
+      "latlon": [50.9803,11.32903]
+    }
+  ],
+  "defaultCenteredCity": {
+    "name": "Berlin",
+    "latlon": [52.5244,13.4105]
+  }
 }
