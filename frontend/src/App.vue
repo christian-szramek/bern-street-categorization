@@ -5,26 +5,22 @@ import Map from "@/components/Map.vue";
 import Legend from "@/components/Legend.vue";
 import Info from "@/components/Info.vue";
 
-import infrastructureTypes from "@/config/infrastructureTypes.json";
 import {
   getNameWithoutLanes,
   getCapitalizedDisplayNameWithoutLanes,
 } from "../utils/nameUtils";
+
+import infrastructureTypes from "@/config/infrastructureTypes.json";
 
 const legendInfrastructureTypes = ref([]);
 const activeInfrastructureTypes = ref([]);
 const isInfoShown = ref(false);
 const info = ref({});
 
-const showInfo = e => {
+const handleInfo = (isShow, e) => {
+  isInfoShown.value = isShow;
   info.value = e;
-  isInfoShown.value = true;
-};
-
-const hideInfo = () => {
-  isInfoShown.value = false;
-  info.value = null;
-};
+}
 
 onBeforeMount(() => {
   // Transform displayName of infrastructure types without lanes and capitalized (without duplicates)
@@ -59,8 +55,8 @@ onBeforeMount(() => {
     <Map
       :infrastructureTypes="infrastructureTypes"
       :activeInfrastructureTypes="activeInfrastructureTypes"
-      @showInfo="e => showInfo(e)"
-      @hideInfo="() => hideInfo()"
+      @showInfo="e => handleInfo(true, e)"
+      @hideInfo="() => handleInfo(false, null)"
     />
     <Legend
       v-model="activeInfrastructureTypes"
