@@ -33,7 +33,7 @@ function M.is_cycleroad(tags)
 end
 
 function M.is_ignored(tags)
-    return tags.highway == 'mini_roundabout' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'elevator' or tags.highway == 'ladder' or tags.highway == 'corridor' or tags.highway == 'motorway_junction' or tags.highway == 'bus_stop' or tags.highway == 'cyclist_waiting_aid' or tags.highway == 'emergency_bay' or tags.highway == 'emergency_access_point' or tags.highway == 'give_way' or tags.emergency_phone ~= nil or tags.highway == 'hitchhiking' or tags.highway == 'milestone' or tags.highway == 'passing_place' or tags.highway == 'platform' or tags.highway == 'rest_area' or tags.highway == 'services'  or tags.highway == 'speed_camera' or tags.highway == 'speed_display' or tags.highway == 'stop' or tags.highway == 'street_lamp' or tags.highway == 'toll_gantry' or tags.highway == 'traffic_mirror' or tags.highway == 'traffic_signals' or tags.highway == 'trailhead' or tags.highway == 'turning_circle'
+    return tags.highway == 'proposed' or tags.highway == 'mini_roundabout' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'elevator' or tags.highway == 'ladder' or tags.highway == 'corridor' or tags.highway == 'motorway_junction' or tags.highway == 'bus_stop' or tags.highway == 'emergency_bay' or tags.highway == 'emergency_access_point' or tags.highway == 'give_way' or tags.emergency_phone ~= nil or tags.highway == 'hitchhiking' or tags.highway == 'milestone' or tags.highway == 'passing_place' or tags.highway == 'platform' or tags.highway == 'rest_area' or tags.highway == 'services'  or tags.highway == 'speed_camera' or tags.highway == 'speed_display' or tags.highway == 'stop' or tags.highway == 'street_lamp' or tags.highway == 'toll_gantry' or tags.highway == 'traffic_mirror' or tags.highway == 'traffic_signals' or tags.highway == 'trailhead' or tags.highway == 'turning_circle'
 end
 
 function M.is_foot_allowed(tags)
@@ -101,19 +101,23 @@ function M.is_pedestrian_only_path(tags)
 end
 
 function M.is_pedestrian_and_bicycle_path(tags)
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_horse_forbidden(tags) and M.is_motor_vehicle_forbidden(tags)
+    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
 function M.is_bicycle_only_path(tags)
-    return ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_foot_forbidden(tags) and M.is_horse_forbidden(tags) and M.is_motor_vehicle_forbidden(tags)
+    return ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_foot_forbidden(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
 function M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) 
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_horse_forbidden(tags) and ( M.is_motor_vehicle_allowed(tags) or tags.motor_vehicle == 'permissive' )
+    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( M.is_motor_vehicle_allowed(tags) or tags.motor_vehicle == 'permissive' )
 end
 
 function M.is_cycleway_both_sides(tags)
-    return tags['cycleway:both'] ~= nil
+    return tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no"
+end
+
+function M.is_cyclist_waiting_aid(tags)
+    return tags.highway == 'cyclist_waiting_aid'
 end
 
 function M.get_lanes(tags)
@@ -196,9 +200,13 @@ function M.get_infrastructure_type(tags)
             return 'cycleway'
         elseif M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) then
             return 'cycleway_multiuse'
+        elseif M.is_bicycle_forbidden(tags) then
+            return 'path_with_bicycle_forbidden'
         else
             return 'uncategorized'
         end
+    elseif M.is_cyclist_waiting_aid(tags) then
+        return 'cyclist_waiting_aid'
     else
         return 'uncategorized'
     end

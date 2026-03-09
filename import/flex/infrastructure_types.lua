@@ -75,8 +75,10 @@ local M = {
   { name = "cycleroad", area=false, node=false, displayName="Cycleroad" },
   { name = "cycleway", area=false, node=false, displayName="Cycleway" },
   { name = "cycleway_multiuse", area=false, node=false, displayName="Cycleway multiuse (bicycle, pedestrian, mofa, moped)" },
+  { name = "cyclist_waiting_aid", area=false, node=true, displayName="Cyclist waiting aid" },
   { name = "pedestrian", area=true, node=true, displayName="Mainly/exclusively for pedestrian" },
   { name = "pedestrian_with_bicycle_allowed", area=true, node=true, displayName="Mainly/exclusively for pedestrian with bicycle allowed" },
+  { name = "path_with_bicycle_forbidden", area=false, node=false, displayName="Path with bicycle forbidden" },
   { name = "uncategorized", area=true, node=true, displayName="Uncategorized" },
 }
 
