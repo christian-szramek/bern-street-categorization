@@ -12,21 +12,21 @@ const props = defineProps({
 
 const emit = defineEmits(["update:modelValue"]);
 
-const isActive = typeName => {
-  return props.modelValue.includes(typeName);
+const isActive = infrastructureType => {
+  return props.modelValue.includes(infrastructureType);
 };
 
-const toggle = typeName => {
+const toggle = infrastructureType => {
   const updated = [...props.modelValue];
 
-  const index = updated.indexOf(typeName);
+  const index = updated.indexOf(infrastructureType);
 
   if (index > -1) {
     // Remove infrastructure type from array if it was active before
     updated.splice(index, 1);
   } else {
     // Add infrastructure type to array if it was inactive before
-    updated.push(typeName);
+    updated.push(infrastructureType);
   }
 
   emit("update:modelValue", updated);

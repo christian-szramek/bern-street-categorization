@@ -10,7 +10,7 @@ import {
   getCapitalizedDisplayNameWithoutLanes,
 } from "../utils/nameUtils";
 
-import infrastructureTypes from "@/config/infrastructureTypes.json";
+import config from "@/config/infrastructureTypes.json";
 
 const legendInfrastructureTypes = ref([]);
 const activeInfrastructureTypes = ref([]);
@@ -24,7 +24,7 @@ const handleInfo = (isShow, e) => {
 
 onBeforeMount(() => {
   // Transform displayName of infrastructure types without lanes and capitalized (without duplicates)
-  infrastructureTypes.forEach(it => {
+  config.infrastructureTypes.forEach(it => {
     const nameWithoutLanes = getNameWithoutLanes(it.name);
 
     if (
@@ -41,19 +41,14 @@ onBeforeMount(() => {
     }
   });
 
-  // Mark all infrastructure types as active except uncategorized
-  legendInfrastructureTypes.value.forEach(it => {
-    if (it.name != "uncategorized" && it.name != "pedestrian") {
-      activeInfrastructureTypes.value.push(it.name);
-    }
-  });
+  activeInfrastructureTypes.value = config.defaultActiveInfrastructureTypes;
 });
 </script>
 
 <template>
   <div>
     <Map
-      :infrastructureTypes="infrastructureTypes"
+      :infrastructureTypes="config.infrastructureTypes"
       :activeInfrastructureTypes="activeInfrastructureTypes"
       @showInfo="e => handleInfo(true, e)"
       @hideInfo="() => handleInfo(false, null)"
