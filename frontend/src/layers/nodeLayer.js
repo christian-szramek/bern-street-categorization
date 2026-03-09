@@ -1,4 +1,4 @@
-const getNodeLayer = (data, color, handleMouseOver) => {
+const getNodeLayer = (data, color, handleMouseOver, handleMouseOut) => {
   return L.geoJSON(data, {
     pointToLayer: (_, latlng) =>
       L.circleMarker(latlng, {
@@ -12,6 +12,9 @@ const getNodeLayer = (data, color, handleMouseOver) => {
     onEachFeature: (feature, layer) => {
       layer.on("mouseover", () => {
         handleMouseOver(feature.properties.tags);
+      });
+      layer.on("mouseout", () => {
+        handleMouseOut();
       });
     },
   });

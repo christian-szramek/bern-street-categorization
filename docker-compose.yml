@@ -38,7 +38,7 @@ services:
       - pg_featureserv_cache:/cache
       - pg_featureserv_assets:/assets
   pgadmin:
-    image: dpage/pgadmin4:9.11.0
+    image: dpage/pgadmin4:9.12.0
     container_name: pgadmin4
     depends_on:
       - postgis
@@ -49,10 +49,20 @@ services:
       PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_PASSWORD}
     volumes:
       - pgadmin:/var/lib/pgadmin
+  portainer:
+    container_name: portainer
+    image: portainer/portainer-ce:sts
+    restart: always
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainer:/data
+    ports:
+      - 9443:9443
 
 volumes:
   postgis:
   pgadmin:
+  portainer:
   pg_tileserv_config:
   pg_featureserv_config:
   pg_featureserv_cache:

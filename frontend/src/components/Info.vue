@@ -4,7 +4,14 @@ import { computed } from "vue";
 const props = defineProps(["info"]);
 
 const filteredInfoKeys = computed(() => {
-  return Object.keys(props.info).filter(key => key != "infrastructure_type");
+  return Object.keys(props.info).filter(
+    key =>
+      !key.includes("wikipedia") &&
+      !key.includes("wikimedia") &&
+      !key.includes("wikidata") &&
+      !key.includes("image") &&
+      !key.includes("name:"),
+  );
 });
 </script>
 
@@ -25,8 +32,9 @@ const filteredInfoKeys = computed(() => {
 .info-wrapper {
   position: absolute;
   bottom: 16px;
-  right: 16px;
+  left: 16px;
   z-index: 1000;
+  pointer-events: none;
 }
 
 .info-card {
@@ -35,7 +43,7 @@ const filteredInfoKeys = computed(() => {
 }
 
 .info-label {
-  font-size: 15px;
+  font-size: 11px;
 }
 
 .info-item {
@@ -44,7 +52,7 @@ const filteredInfoKeys = computed(() => {
 }
 
 .info-key {
-  font-size: 15px;
+  font-size: 14px;
   font-weight: bold;
   margin-right: 12px;
   white-space: nowrap;
@@ -52,7 +60,7 @@ const filteredInfoKeys = computed(() => {
 
 .info-value {
   max-width: 200px;
-  font-size: 15px;
+  font-size: 14px;
   flex: 1;
   white-space: normal;
   word-break: break-word;

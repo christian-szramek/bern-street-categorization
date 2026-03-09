@@ -1,6 +1,12 @@
 const baseURL = "http://localhost:7800";
 
-const getAreaLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
+const getAreaLayer = (
+  infrastructureType,
+  color,
+  minZoom,
+  handleMouseOver,
+  handleMouseOut,
+) => {
   const styles = {};
   styles[`public.${infrastructureType}_areas`] = _ => ({
     fill: true,
@@ -15,12 +21,15 @@ const getAreaLayer = (infrastructureType, color, handleMouseOver, minZoom) => {
     .protobuf(`${baseURL}/public.${infrastructureType}_areas/{z}/{x}/{y}.pbf`, {
       vectorTileLayerStyles: styles,
       minZoom: minZoom,
-      maxZoom: 20,
+      maxZoom: 19,
       interactive: true,
       getFeatureId: f => f.properties.id,
     })
     .on("mouseover", e => {
       handleMouseOver(e.layer.properties);
+    })
+    .on("mouseout", e => {
+      handleMouseOut();
     });
 };
 

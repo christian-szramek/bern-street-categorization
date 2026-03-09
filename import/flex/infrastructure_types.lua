@@ -1,55 +1,89 @@
-local M = {}
-
-function M.is_highway(tags)
-    return tags.highway ~= nil
-end
-
-function M.is_area_highway(tags)
-    return tags['area:highway'] ~= nil
-end
-
-function M.is_area(tags)
-    return tags.area == 'yes'
-end
-
-function M.is_car(tags)
-    return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'busway' or tags.highway == 'motorway_junction'
-end
-
-function M.is_street(tags)
-    return tags.highway == 'primary' or tags.highway == 'primary_link' or tags.highway == 'secondary' or tags.highway == 'secondary_link' or tags.highway == 'tertiary' or tags.highway == 'tertiary_link' or tags.highway == 'unclassified' or tags.highway == 'residential' or tags.highway == 'living_street' or tags.highway == 'service' or tags.highway == 'track' or tags.highway == 'mini_roundabout'
-end
-
-function M.is_pedestrian(tags)
-    return tags.highway == 'pedestrian' or tags.highway == 'footway' or tags.highway == 'steps' or tags.highway == 'corridor' or tags.highway == 'via_ferrata' or tags.footway == 'sidewalk' or tags.footway == 'sidewalk' or tags.footway == 'crossing' or tags.footway == 'trafic_island' or tags.highway == 'elevator' or tags.highway == 'ladder'
-end
-
-function M.is_horse(tags)
-    return tags.highway == 'bridleway'
-end
-
-function M.is_cycleway(tags) 
-    return tags.highway == 'cycleway'
-end
-
-function M.is_ignored(tags)
-    return tags.highway == 'bus_stop' or tags.highway == 'cyclist_waiting_aid' or tags.highway == 'emergency_bay' or tags.highway == 'emergency_access_point' or tags.highway == 'give_way' or tags.emergency_phone ~= nil or tags.highway == 'hitchhiking' or tags.highway == 'milestone' or tags.highway == 'passing_place' or tags.highway == 'platform' or tags.highway == 'rest_area' or tags.highway == 'services'  or tags.highway == 'speed_camera' or tags.highway == 'speed_display' or tags.highway == 'stop' or tags.highway == 'street_lamp' or tags.highway == 'toll_gantry' or tags.highway == 'traffic_mirror' or tags.highway == 'traffic_signals' or tags.highway == 'trailhead' or tags.highway == 'turning_circle'
-end
-
-function M.get_infrastructure_type(tags) 
-    if M.is_car(tags) then 
-        return 'car'
-    elseif M.is_street(tags) then
-        return 'street'
-    elseif M.is_pedestrian(tags) then
-        return 'pedestrian'
-    elseif M.is_horse(tags) then
-        return 'horse'
-    elseif M.is_cycleway(tags) then
-        return 'cycleway'
-    else
-        return 'uncategorized'
-    end
-end
+local M = {
+  { name = "1_l_s_with_bicycle_forbidden", area=false, node=false },
+  { name = "2_l_s_with_bicycle_forbidden", area=false, node=false },
+  { name = "3_l_s_with_bicycle_forbidden", area=false, node=false },
+  { name = "4_l_s_with_bicycle_forbidden", area=false, node=false },
+  { name = "5_l_s_with_bicycle_forbidden", area=false, node=false },
+  { name = "6_l_s_with_bicycle_forbidden", area=false, node=false },
+  { name = "7_l_s_with_bicycle_forbidden", area=false, node=false },
+  { name = "8_l_s_with_bicycle_forbidden", area=false, node=false },
+  { name = "1_l_s_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "2_l_s_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "3_l_s_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "4_l_s_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "5_l_s_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "6_l_s_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "7_l_s_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "8_l_s_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "1_l_s_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "2_l_s_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "3_l_s_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "4_l_s_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "5_l_s_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "6_l_s_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "7_l_s_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "8_l_s_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "1_l_s_with_separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "2_l_s_with_separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "3_l_s_with_separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "4_l_s_with_separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "5_l_s_with_separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "6_l_s_with_separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "7_l_s_with_separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "8_l_s_with_separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "separate_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "1_l_s_with_shared_bicycle_lane_on_carriageway", area=false, node=false },
+  { name = "2_l_s_with_shared_bicycle_lane_on_carriageway", area=false, node=false },
+  { name = "3_l_s_with_shared_bicycle_lane_on_carriageway", area=false, node=false },
+  { name = "4_l_s_with_shared_bicycle_lane_on_carriageway", area=false, node=false },
+  { name = "5_l_s_with_shared_bicycle_lane_on_carriageway", area=false, node=false },
+  { name = "6_l_s_with_shared_bicycle_lane_on_carriageway", area=false, node=false },
+  { name = "7_l_s_with_shared_bicycle_lane_on_carriageway", area=false, node=false },
+  { name = "8_l_s_with_shared_bicycle_lane_on_carriageway", area=false, node=false },
+  { name = "1_l_s_with_no_bicycle_paths", area=true, node=false },
+  { name = "2_l_s_with_no_bicycle_paths", area=false, node=false },
+  { name = "3_l_s_with_no_bicycle_paths", area=false, node=false },
+  { name = "4_l_s_with_no_bicycle_paths", area=false, node=false },
+  { name = "5_l_s_with_no_bicycle_paths", area=false, node=false },
+  { name = "6_l_s_with_no_bicycle_paths", area=false, node=false },
+  { name = "7_l_s_with_no_bicycle_paths", area=false, node=false },
+  { name = "8_l_s_with_no_bicycle_paths", area=false, node=false },
+  { name = "1_l_ows_with_bicycle_forbidden", area=false, node=false },
+  { name = "2_l_ows_with_bicycle_forbidden", area=false, node=false },
+  { name = "3_l_ows_with_bicycle_forbidden", area=false, node=false },
+  { name = "4_l_ows_with_bicycle_forbidden", area=false, node=false },
+  { name = "5_l_ows_with_bicycle_forbidden", area=false, node=false },
+  { name = "6_l_ows_with_bicycle_forbidden", area=false, node=false },
+  { name = "1_l_ows_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "2_l_ows_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "3_l_ows_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "4_l_ows_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "5_l_ows_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "6_l_ows_with_bus_bicycle_lane_on_one_side", area=false, node=false },
+  { name = "1_l_ows_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "2_l_ows_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "3_l_ows_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "4_l_ows_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "5_l_ows_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "6_l_ows_with_bus_bicycle_lane_on_both_sides", area=false, node=false },
+  { name = "1_l_ows_with_separated_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "2_l_ows_with_separated_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "3_l_ows_with_separated_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "4_l_ows_with_separated_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "5_l_ows_with_separated_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "6_l_ows_with_separated_bicycle_lane_on_sidewalk", area=false, node=false },
+  { name = "1_l_ows_with_no_bicycle_paths", area=false, node=false },
+  { name = "2_l_ows_with_no_bicycle_paths", area=false, node=false },
+  { name = "3_l_ows_with_no_bicycle_paths", area=false, node=false },
+  { name = "4_l_ows_with_no_bicycle_paths", area=false, node=false },
+  { name = "5_l_ows_with_no_bicycle_paths", area=false, node=false },
+  { name = "6_l_ows_with_no_bicycle_paths", area=false, node=false },
+  { name = "cycleroad", area=false, node=false },
+  { name = "cycleway", area=false, node=false },
+  { name = "cycleway_multiuse", area=false, node=false },
+  { name = "pedestrian", area=true, node=true },
+  { name = "pedestrian_with_bicycle_allowed", area=true, node=true },
+  { name = "uncategorized", area=true, node=true },
+}
 
 return M

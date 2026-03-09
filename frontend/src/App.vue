@@ -1,29 +1,42 @@
 <script setup>
-import { ref } from "vue";
+import { onBeforeMount, ref } from "vue";
 
 import Map from "@/components/Map.vue";
 import Legend from "@/components/Legend.vue";
 import Info from "@/components/Info.vue";
 
-import infrastructureTypes from "@/config/infrastructureTypes.json";
+import config from "@/config/infrastructureTypes.json";
 
-const showInfo = ref(false);
+const activeInfrastructureTypes = ref([]);
+const isInfoShown = ref(false);
 const info = ref({});
 
-function handleInfo(e) {
+const handleInfo = (isShow, e) => {
+  isInfoShown.value = isShow;
   info.value = e;
-  showInfo.value = true;
 }
+
+onBeforeMount(() => {
+  activeInfrastructureTypes.value = config.defaultActiveInfrastructureTypes;
+});
 </script>
 
 <template>
   <div>
     <Map
-      :infrastructureTypes="infrastructureTypes"
-      @info="e => handleInfo(e)"
+      :infrastructureTypes="config.infrastructureTypes"
+      :activeInfrastructureTypes="activeInfrastructureTypes"
+      @showInfo="e => handleInfo(true, e)"
+      @hideInfo="() => handleInfo(false, null)"
     />
-    <Legend :infrastructureTypes="infrastructureTypes" />
-    <Info v-if="showInfo" :info="info" />
+    <Legend
+      v-model="activeInfrastructureTypes"
+      :infrastructureTypes="config.infrastructureTypes"
+    />
+    <Info 
+      v-if="isInfoShown" 
+      :info="info" 
+    />
   </div>
 </template>
 
