@@ -10,7 +10,8 @@ const filteredInfoKeys = computed(() => {
       !key.includes("wikimedia") &&
       !key.includes("wikidata") &&
       !key.includes("image") &&
-      !key.includes("name:"),
+      !key.includes("name:") &&
+      !key.includes("displayName")
   );
 });
 </script>
@@ -18,10 +19,27 @@ const filteredInfoKeys = computed(() => {
 <template>
   <div class="info-wrapper">
     <v-card title="Info" elevation="6" rounded="lg" class="info-card">
-      <v-card-text class="pa-3">
-        <div v-for="key in filteredInfoKeys" :key="key" class="info-item">
-          <span class="info-key">{{ key }} </span>
-          <span class="info-value">{{ props.info[key] }}</span>
+      <v-card-text class="info-content">
+        <div class="section">
+          <div class="section-title">Bucket</div>
+          <v-chip
+            size="small"
+            color="primary"
+            variant="tonal"
+          >
+            {{ props.info.displayName }}
+          </v-chip>
+        </div>
+        <div class="section">
+          <div class="section-title">Tags</div>
+          <div
+            v-for="key in filteredInfoKeys"
+            :key="key"
+            class="info-item"
+          >
+            <span class="info-key">{{ key }}</span>
+            <span class="info-value">{{ props.info[key] }}</span>
+          </div>
         </div>
       </v-card-text>
     </v-card>
@@ -38,32 +56,52 @@ const filteredInfoKeys = computed(() => {
 }
 
 .info-card {
-  min-width: 180px;
+  min-width: 220px;
   backdrop-filter: blur(6px);
 }
 
-.info-label {
-  font-size: 11px;
+.info-card :deep(.v-card-title) {
+  font-size: 14px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.7;
+  padding-bottom: 4px;
+}
+
+/* Reduce top padding of content */
+.info-content {
+  padding-top: 6px;
+}
+
+.section {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  opacity: 0.7;
+  margin-bottom: 6px;
 }
 
 .info-item {
   display: flex;
   align-items: flex-start;
+  margin-bottom: 3px;
 }
 
 .info-key {
-  font-size: 14px;
-  font-weight: bold;
-  margin-right: 12px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-right: 10px;
   white-space: nowrap;
+  opacity: 0.8;
 }
 
 .info-value {
-  max-width: 200px;
-  font-size: 14px;
+  font-size: 13px;
   flex: 1;
-  white-space: normal;
   word-break: break-word;
-  overflow-wrap: anywhere;
 }
 </style>
