@@ -1,4 +1,4 @@
 #!/bin/bash
 
-./reset.sh
-./process.sh
+./reset.sh || exit 1
+./process.sh || exit 1

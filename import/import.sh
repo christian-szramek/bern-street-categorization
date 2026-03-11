@@ -1,5 +1,11 @@
 #!/bin/bash
 
+source "utils.sh"
+
+check_lua_script_env_variable_exists
+check_db_variables_exist
+check_restriction_env_variable_exists
+
 WORK_DIR=$1
 TMP_DIR=$2
 

@@ -1,14 +1,10 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-# Load .env file
-if [ -f .env ]; then
-  set -a
-  source .env
-  set +a
-else
-  echo ".env file not found" >&2
-  exit 1
-fi
+source "utils.sh"
+
+load_env_variables
+check_db_variables_exist
+check_maintenance_db_env_variable_exist
 
 echo "Recreating database '${PG_DB}'..."
 
