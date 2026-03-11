@@ -1,6 +1,6 @@
-import axios from "axios";
+import axios from 'axios';
 
-const baseURL = "http://localhost:9000";
+const baseURL = 'http://localhost:9000';
 
 const getNodes = async (infrastructureType, mapBounds) => {
   const url = `${baseURL}/collections/public.${infrastructureType}_nodes/items.json?bbox=${mapBounds.getWest()},${mapBounds.getSouth()},${mapBounds.getEast()},${mapBounds.getNorth()}`;

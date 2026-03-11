@@ -1,11 +1,6 @@
-const baseURL = "http://localhost:7800";
+const baseURL = 'http://localhost:7800';
 
-const getAreaLayer = (
-  infrastructureType,
-  color,
-  handleMouseOver,
-  handleMouseOut,
-) => {
+const getAreaLayer = (infrastructureType, color, handleMouseOver, handleMouseOut) => {
   const styles = {};
   styles[`public.${infrastructureType}_areas`] = _ => ({
     fill: true,
@@ -13,7 +8,7 @@ const getAreaLayer = (
     color: color,
     weight: 1,
     fillOpacity: 0.6,
-    opacity: 1,
+    opacity: 1
   });
 
   return L.vectorGrid
@@ -22,12 +17,12 @@ const getAreaLayer = (
       minZoom: 1,
       maxZoom: 19,
       interactive: true,
-      getFeatureId: f => f.properties.id,
+      getFeatureId: f => f.properties.id
     })
-    .on("mouseover", e => {
+    .on('mouseover', e => {
       handleMouseOver(e.layer.properties);
     })
-    .on("mouseout", e => {
+    .on('mouseout', e => {
       handleMouseOut();
     });
 };

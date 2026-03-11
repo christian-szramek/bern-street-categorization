@@ -1,32 +1,27 @@
-const baseURL = "http://localhost:7800";
+const baseURL = 'http://localhost:7800';
 
 const computeWeight = infrastructureType => {
-  switch (infrastructureType.split("_")[0]) {
-    case "2":
+  switch (infrastructureType.split('_')[0]) {
+    case '2':
       return 3;
-    case "3":
+    case '3':
       return 5;
-    case "4":
+    case '4':
       return 7;
-    case "5":
+    case '5':
       return 9;
-    case "6":
+    case '6':
       return 1;
-    case "7":
+    case '7':
       return 13;
-    case "8":
+    case '8':
       return 15;
     default:
       return 1;
   }
 };
 
-const getWayLayer = (
-  infrastructureType,
-  color,
-  handleMouseOver,
-  handleMouseOut,
-) => {
+const getWayLayer = (infrastructureType, color, handleMouseOver, handleMouseOut) => {
   const weight = computeWeight(infrastructureType);
 
   const styles = {};
@@ -36,15 +31,15 @@ const getWayLayer = (
       stroke: true,
       color: color,
       weight: weight,
-      opacity: 1,
+      opacity: 1
     },
     // hitbox stroke
     {
       stroke: true,
-      color: "white",
+      color: 'white',
       weight: Math.max(weight, 5),
-      opacity: 0,
-    },
+      opacity: 0
+    }
   ];
 
   const layer = L.vectorGrid
@@ -53,12 +48,12 @@ const getWayLayer = (
       minZoom: 1,
       maxZoom: 19,
       interactive: true,
-      getFeatureId: f => f.properties.id,
+      getFeatureId: f => f.properties.id
     })
-    .on("mouseover", e => {
+    .on('mouseover', e => {
       handleMouseOver(e.layer.properties);
     })
-    .on("mouseout", () => {
+    .on('mouseout', () => {
       handleMouseOut();
     });
 
