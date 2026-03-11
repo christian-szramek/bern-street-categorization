@@ -1,17 +1,11 @@
 <script setup>
-import { computed } from "vue";
+import { computed } from 'vue';
 
-const props = defineProps(["info"]);
+const props = defineProps(['info']);
 
 const filteredInfoKeys = computed(() => {
   return Object.keys(props.info).filter(
-    key =>
-      !key.includes("wikipedia") &&
-      !key.includes("wikimedia") &&
-      !key.includes("wikidata") &&
-      !key.includes("image") &&
-      !key.includes("name:") &&
-      !key.includes("displayName")
+    (key) => !key.includes('wikipedia') && !key.includes('wikimedia') && !key.includes('wikidata') && !key.includes('image') && !key.includes('name:') && !key.includes('displayName')
   );
 });
 </script>
@@ -22,21 +16,13 @@ const filteredInfoKeys = computed(() => {
       <v-card-text class="info-content">
         <div class="section">
           <div class="section-title">Bucket</div>
-          <v-chip
-            size="small"
-            color="primary"
-            variant="tonal"
-          >
+          <v-chip size="small" color="primary" variant="tonal">
             {{ props.info.displayName }}
           </v-chip>
         </div>
         <div class="section">
           <div class="section-title">Tags</div>
-          <div
-            v-for="key in filteredInfoKeys"
-            :key="key"
-            class="info-item"
-          >
+          <div v-for="key in filteredInfoKeys" :key="key" class="info-item">
             <span class="info-key">{{ key }}</span>
             <span class="info-value">{{ props.info[key] }}</span>
           </div>
