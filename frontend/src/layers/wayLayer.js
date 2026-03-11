@@ -1,3 +1,5 @@
+import { isCyclingForbidden } from '@/utils/infrastructureTypesUtils';
+
 const baseURL = 'http://localhost:7800';
 
 const computeWeight = infrastructureType => {
@@ -31,7 +33,8 @@ const getWayLayer = (infrastructureType, color, handleMouseOver, handleMouseOut)
       stroke: true,
       color: color,
       weight: weight,
-      opacity: 1
+      opacity: 1,
+      dashArray: isCyclingForbidden(infrastructureType) ? '6,6' : null
     },
     // hitbox stroke
     {

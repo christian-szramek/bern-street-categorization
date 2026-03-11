@@ -1,3 +1,5 @@
+import { isCyclingForbidden } from '@/utils/infrastructureTypesUtils';
+
 const baseURL = 'http://localhost:7800';
 
 const getAreaLayer = (infrastructureType, color, handleMouseOver, handleMouseOut) => {
@@ -8,7 +10,8 @@ const getAreaLayer = (infrastructureType, color, handleMouseOver, handleMouseOut
     color: color,
     weight: 1,
     fillOpacity: 0.6,
-    opacity: 1
+    opacity: 1,
+    dashArray: isCyclingForbidden(infrastructureType) ? '6,6' : null
   });
 
   return L.vectorGrid
