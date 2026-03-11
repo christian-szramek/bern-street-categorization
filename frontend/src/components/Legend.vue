@@ -1,23 +1,28 @@
 <script setup>
 import { ref, onBeforeMount } from 'vue';
 
-import {
-  getNameWithoutLanes,
-  getCapitalizedDisplayNameWithoutLanes,
-} from "@/utils/nameUtils";
+import { getNameWithoutLanes, getCapitalizedDisplayNameWithoutLanes } from '@/utils/nameUtils';
 
 const props = defineProps({
   infrastructureTypes: {
     type: Array,
-    required: true,
+    required: true
   },
   modelValue: {
     type: Array,
-    required: true,
+    required: true
   },
+  cities: {
+    type: Array,
+    required: true
+  },
+  centeredCity: {
+    type: Object,
+    required: true
+  }
 });
 
-const emit = defineEmits(["update:modelValue"]);
+const emit = defineEmits(['update:modelValue', 'centeredCityChanged']);
 
 const legendInfrastructureTypes = ref([]);
 
@@ -38,7 +43,7 @@ const toggleInfrastructureType = infrastructureType => {
     newActiveInfrastructureTypes.push(infrastructureType);
   }
 
-  emit("update:modelValue", newActiveInfrastructureTypes);
+  emit('update:modelValue', newActiveInfrastructureTypes);
 };
 
 onBeforeMount(() => {
@@ -46,16 +51,13 @@ onBeforeMount(() => {
   props.infrastructureTypes.forEach(it => {
     const nameWithoutLanes = getNameWithoutLanes(it.name);
 
-    if (
-      !legendInfrastructureTypes.value.some(it => it.name === nameWithoutLanes)
-    ) {
-      const capitalizedDisplayNameWithoutLanes =
-        getCapitalizedDisplayNameWithoutLanes(it.displayName);
+    if (!legendInfrastructureTypes.value.some(it => it.name === nameWithoutLanes)) {
+      const capitalizedDisplayNameWithoutLanes = getCapitalizedDisplayNameWithoutLanes(it.displayName);
 
       legendInfrastructureTypes.value.push({
         displayName: capitalizedDisplayNameWithoutLanes,
         name: nameWithoutLanes,
-        color: it.color,
+        color: it.color
       });
     }
   });
@@ -66,22 +68,23 @@ onBeforeMount(() => {
   <div class="legend-wrapper">
     <v-card title="Legend" elevation="6" rounded="lg" class="legend-card">
       <v-card-text class="legend-content">
-
         <div class="section-title">Infrastructure Types</div>
-
-        <div
-          v-for="it in legendInfrastructureTypes"
-          :key="it.name"
-          class="legend-item"
-          @click="toggleInfrastructureType(it.name)"
-        >
+        <v-select
+          :modelValue="props.centeredCity"
+          :items="props.cities"
+          item-title="name"
+          item-value="latlon"
+          return-object
+          density="compact"
+          variant="underlined"
+          @update:modelValue="city => emit('centeredCityChanged', city)"
+        />
+        <div v-for="it in legendInfrastructureTypes" :key="it.name" class="legend-item" @click="toggleInfrastructureType(it.name)">
           <span
             class="legend-dot"
             :class="{ inactive: !isInfrastructureTypeActive(it.name) }"
             :style="{
-              backgroundColor: isInfrastructureTypeActive(it.name)
-                ? it.color
-                : 'transparent',
+              backgroundColor: isInfrastructureTypeActive(it.name) ? it.color : 'transparent'
             }"
           />
 
@@ -89,7 +92,6 @@ onBeforeMount(() => {
             {{ it.displayName }}
           </span>
         </div>
-
       </v-card-text>
     </v-card>
   </div>
@@ -143,7 +145,7 @@ onBeforeMount(() => {
   height: 14px;
   border-radius: 50%;
   margin-right: 10px;
-  box-shadow: 0 0 0 1px rgba(0,0,0,0.35);
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.35);
   transition:
     background-color 0.15s ease,
     transform 0.1s ease;

@@ -568,27 +568,40 @@
       "node": true
     }
   ],
-  "defaultActiveInfrastructureTypes": ["s_with_bus_bicycle_lane_on_one_side", "s_with_bus_bicycle_lane_on_both_sides", "s_with_separate_bicycle_lane_on_sidewalk", "separate_bicycle_lane_on_sidewalk", "s_with_shared_bicycle_lane_on_carriageway", "ows_with_bus_bicycle_lane_on_one_side", "ows_with_bus_bicycle_lane_on_both_sides", "ows_with_separate_bicycle_lane_on_sidewalk", "cycleroad", "cycleway", "cycleway_multiuse", "pedestrian_with_bicycle_allowed"],
+  "defaultActiveInfrastructureTypes": [
+    "s_with_bus_bicycle_lane_on_one_side",
+    "s_with_bus_bicycle_lane_on_both_sides",
+    "s_with_separate_bicycle_lane_on_sidewalk",
+    "separate_bicycle_lane_on_sidewalk",
+    "s_with_shared_bicycle_lane_on_carriageway",
+    "ows_with_bus_bicycle_lane_on_one_side",
+    "ows_with_bus_bicycle_lane_on_both_sides",
+    "ows_with_separate_bicycle_lane_on_sidewalk",
+    "cycleroad",
+    "cycleway",
+    "cycleway_multiuse",
+    "pedestrian_with_bicycle_allowed"
+  ],
   "cities": [
     {
       "name": "Bern",
-      "latlon": [46.9481,7.4474]
+      "latlon": [46.9481, 7.4474]
     },
     {
       "name": "Berlin",
-      "latlon": [52.5244,13.4105]
+      "latlon": [52.5244, 13.4105]
     },
     {
       "name": "Wichita Falls",
-      "latlon": [33.9137,-98.4934]
+      "latlon": [33.9137, -98.4934]
     },
     {
       "name": "Weimar",
-      "latlon": [50.9803,11.32903]
+      "latlon": [50.9803, 11.32903]
     }
   ],
   "defaultCenteredCity": {
     "name": "Berlin",
-    "latlon": [52.5244,13.4105]
+    "latlon": [52.5244, 13.4105]
   }
 }
