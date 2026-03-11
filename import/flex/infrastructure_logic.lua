@@ -12,16 +12,25 @@ function M.is_area(tags)
     return tags.area == 'yes'
 end
 
-function M.is_car(tags)
-    return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
+function M.is_car(tags, restriction)
+    if (restriction == 'CH') then
+        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
+    else
+        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
+    end
 end
 
-function M.is_street(tags)
-    return tags.highway == 'primary' or tags.highway == 'primary_link' or tags.highway == 'secondary' or tags.highway == 'secondary_link' or tags.highway == 'tertiary' or tags.highway == 'tertiary_link' or tags.highway == 'unclassified' or tags.highway == 'residential' or tags.highway == 'living_street' or tags.highway == 'service' or tags.highway == 'track'
+function M.is_street(tags, restriction)
+    if (restriction == 'CH') then
+        return tags.highway == 'primary' or tags.highway == 'primary_link' or tags.highway == 'secondary' or tags.highway == 'secondary_link' or tags.highway == 'tertiary' or tags.highway == 'tertiary_link' or tags.highway == 'unclassified' or tags.highway == 'residential' or tags.highway == 'living_street' or tags.highway == 'service' or tags.highway == 'track'
+    else 
+        return tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'primary' or tags.highway == 'primary_link' or tags.highway == 'secondary' or tags.highway == 'secondary_link' or tags.highway == 'tertiary' or tags.highway == 'tertiary_link' or tags.highway == 'unclassified' or tags.highway == 'residential' or tags.highway == 'living_street' or tags.highway == 'service' or tags.highway == 'track'
+
+    end
 end
 
 function M.is_pedestrian(tags)
-    return tags.highway == 'pedestrian' or tags.highway == 'footway' or tags.highway == 'steps' or tags.highway == 'via_ferrata' or tags.footway == 'sidewalk' or tags.footway == 'crossing' or tags.footway == 'traffic_island'
+    return tags.highway == 'pedestrian' or tags.highway == 'footway' or tags.highway == 'steps' or tags.footway == 'sidewalk' or tags.footway == 'crossing' or tags.footway == 'traffic_island'
 end
 
 function M.is_cycleway(tags) 
@@ -33,7 +42,7 @@ function M.is_cycleroad(tags)
 end
 
 function M.is_ignored(tags)
-    return tags.highway == 'proposed' or tags.highway == 'mini_roundabout' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'elevator' or tags.highway == 'ladder' or tags.highway == 'corridor' or tags.highway == 'motorway_junction' or tags.highway == 'bus_stop' or tags.highway == 'emergency_bay' or tags.highway == 'emergency_access_point' or tags.highway == 'give_way' or tags.emergency_phone ~= nil or tags.highway == 'hitchhiking' or tags.highway == 'milestone' or tags.highway == 'passing_place' or tags.highway == 'platform' or tags.highway == 'rest_area' or tags.highway == 'services'  or tags.highway == 'speed_camera' or tags.highway == 'speed_display' or tags.highway == 'stop' or tags.highway == 'street_lamp' or tags.highway == 'toll_gantry' or tags.highway == 'traffic_mirror' or tags.highway == 'traffic_signals' or tags.highway == 'trailhead' or tags.highway == 'turning_circle'
+    return tags.highway == 'via_ferrata' or tags.highway == 'proposed' or tags.highway == 'mini_roundabout' or tags.highway == 'escape' or tags.highway == 'raceway' or tags.highway == 'elevator' or tags.highway == 'ladder' or tags.highway == 'corridor' or tags.highway == 'motorway_junction' or tags.highway == 'bus_stop' or tags.highway == 'emergency_bay' or tags.highway == 'emergency_access_point' or tags.highway == 'give_way' or tags.emergency_phone ~= nil or tags.highway == 'hitchhiking' or tags.highway == 'milestone' or tags.highway == 'passing_place' or tags.highway == 'platform' or tags.highway == 'rest_area' or tags.highway == 'services'  or tags.highway == 'speed_camera' or tags.highway == 'speed_display' or tags.highway == 'stop' or tags.highway == 'street_lamp' or tags.highway == 'toll_gantry' or tags.highway == 'traffic_mirror' or tags.highway == 'traffic_signals' or tags.highway == 'trailhead' or tags.highway == 'turning_circle'
 end
 
 function M.is_foot_allowed(tags)
@@ -97,7 +106,7 @@ function M.is_path(tags)
 end
 
 function M.is_pedestrian_only_path(tags)
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and M.is_bicycle_forbidden(tags) and M.is_horse_forbidden(tags) and M.is_motor_vehicle_forbidden(tags)
+    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( tags.bicycle == nil or M.is_bicycle_forbidden(tags)) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
 function M.is_pedestrian_and_bicycle_path(tags)
@@ -144,14 +153,15 @@ function M.get_lanes(tags)
     end
 end
 
-function M.get_infrastructure_type(tags)
+function M.get_infrastructure_type(tags, restriction)
     if M.is_cycleroad(tags) then
         return 'cycleroad'
-    elseif M.is_car(tags) then 
+    elseif M.is_car(tags, restriction) then 
         return M.get_lanes(tags) .. '_l_s_with_bicycle_forbidden'
-    elseif M.is_street(tags) then
+    elseif M.is_street(tags, restriction) then
         if M.is_oneway(tags) then 
             if M.is_street_with_bus_bicycle_lane(tags) then
+                if M.is_cycleway_both_sides(tags) then
                     return M.get_lanes(tags) .. '_l_ows_with_bus_bicycle_lane_on_both_sides'
                 else
                     return M.get_lanes(tags) .. '_l_ows_with_bus_bicycle_lane_on_one_side'
@@ -177,7 +187,7 @@ function M.get_infrastructure_type(tags)
             end
         end
     elseif M.is_pedestrian(tags) then
-        if M.is_bicycle_allowed(tags) then
+        if M.is_bicycle_allowed(tags) or restriction == 'US' then
             return 'pedestrian_with_bicycle_allowed'
         else
             return 'pedestrian'
