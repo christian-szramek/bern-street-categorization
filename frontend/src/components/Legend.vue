@@ -67,9 +67,9 @@ onBeforeMount(() => {
 <template>
   <div class="legend-wrapper">
     <v-card title="Legend" elevation="6" rounded="lg" class="legend-card">
-      <v-card-text class="legend-content">
-        <div class="section-title">Infrastructure Types</div>
+      <v-card-subtitle>
         <v-select
+          class="city-select"
           :modelValue="props.centeredCity"
           :items="props.cities"
           item-title="name"
@@ -79,6 +79,9 @@ onBeforeMount(() => {
           variant="underlined"
           @update:modelValue="city => emit('centeredCityChanged', city)"
         />
+      </v-card-subtitle>
+      <v-card-text class="legend-content">
+        <div class="section-title">Infrastructure Types</div>
         <div v-for="it in legendInfrastructureTypes" :key="it.name" class="legend-item" @click="toggleInfrastructureType(it.name)">
           <span
             class="legend-dot"
@@ -110,7 +113,6 @@ onBeforeMount(() => {
   backdrop-filter: blur(6px);
 }
 
-/* Same title style as Info panel */
 .legend-card :deep(.v-card-title) {
   font-size: 14px;
   font-weight: 600;
@@ -119,12 +121,10 @@ onBeforeMount(() => {
   padding-bottom: 4px;
 }
 
-/* Same content padding behavior */
 .legend-content {
   padding-top: 6px;
 }
 
-/* Section subtitle */
 .section-title {
   font-size: 12px;
   font-weight: 600;
@@ -163,5 +163,15 @@ onBeforeMount(() => {
   font-size: 13px;
   font-weight: 600;
   opacity: 0.75;
+}
+
+.city-select :deep(.v-list-item-title) {
+  font-size: 13px;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.city-select :deep(.v-list-item) {
+  min-height: 32px;
 }
 </style>
