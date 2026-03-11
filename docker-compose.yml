@@ -22,7 +22,7 @@ services:
     ports:
       - ${PG_TILESERV_PORT}:7800
     volumes:
-      - ./docker/pg_tileserv/pg_tileserv.toml:/etc/pg_tileserv.toml
+      - ./docker/pg_tileserv_config:/config
   pg_featureserv:
     image: pramsey/pg_featureserv:20250917
     container_name: pg_featureserv
@@ -34,7 +34,7 @@ services:
     ports:
       - ${PG_FEATURESERV_PORT}:9000
     volumes:
-      - ./docker/pg_featureserv/pg_featureserv.toml:/etc/pg_featureserv.toml
+      - ./docker/pg_featureserv_config:/config
       - pg_featureserv_cache:/cache
       - pg_featureserv_assets:/assets
   pgadmin:
@@ -63,7 +63,5 @@ volumes:
   postgis:
   pgadmin:
   portainer:
-  pg_tileserv_config:
-  pg_featureserv_config:
   pg_featureserv_cache:
   pg_featureserv_assets:
