@@ -171,7 +171,7 @@ const updateLayers = updatedInfrastructureType => {
 };
 
 onMounted(() => {
-  map = L.map('map').setView(props.centeredCity.latlon, 17);
+  map = L.map('map').setView(props.centeredCity.latlon, 15);
 
   extendInfrastructureTypes();
   loadTiles();

@@ -2,567 +2,567 @@
   "infrastructureTypes": [
     {
       "name": "1_l_s_with_bicycle_forbidden",
-      "color": "#D10000",
+      "color": "#d73027",
       "displayName": "1-lane street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_s_with_bicycle_forbidden",
-      "color": "#D10000",
+      "color": "#d73027",
       "displayName": "2-lane street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_s_with_bicycle_forbidden",
-      "color": "#D10000",
+      "color": "#d73027",
       "displayName": "3-lane street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_s_with_bicycle_forbidden",
-      "color": "#D10000",
+      "color": "#d73027",
       "displayName": "4-lane street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_s_with_bicycle_forbidden",
-      "color": "#D10000",
+      "color": "#d73027",
       "displayName": "5-lane street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_s_with_bicycle_forbidden",
-      "color": "#D10000",
+      "color": "#d73027",
       "displayName": "6-lane street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "7_l_s_with_bicycle_forbidden",
-      "color": "#D10000",
+      "color": "#d73027",
       "displayName": "7-lane street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_s_with_bus_bicycle_lane_on_one_side",
-      "color": "#1B9E77",
+      "color": "#fc8d59",
       "displayName": "1-lane street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_s_with_bus_bicycle_lane_on_one_side",
-      "color": "#1B9E77",
+      "color": "#fc8d59",
       "displayName": "2-lane street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_s_with_bus_bicycle_lane_on_one_side",
-      "color": "#1B9E77",
+      "color": "#fc8d59",
       "displayName": "3-lane street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_s_with_bus_bicycle_lane_on_one_side",
-      "color": "#1B9E77",
+      "color": "#fc8d59",
       "displayName": "4-lane street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_s_with_bus_bicycle_lane_on_one_side",
-      "color": "#1B9E77",
+      "color": "#fc8d59",
       "displayName": "5-lane street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_s_with_bus_bicycle_lane_on_one_side",
-      "color": "#1B9E77",
+      "color": "#fc8d59",
       "displayName": "6-lane street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "7_l_s_with_bus_bicycle_lane_on_one_side",
-      "color": "#1B9E77",
+      "color": "#fc8d59",
       "displayName": "7-lane street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_s_with_bus_bicycle_lane_on_both_sides",
-      "color": "#1B9E77",
+      "color": "#fdae61",
       "displayName": "1-lane street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_s_with_bus_bicycle_lane_on_both_sides",
-      "color": "#1B9E77",
+      "color": "#fdae61",
       "displayName": "2-lane street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_s_with_bus_bicycle_lane_on_both_sides",
-      "color": "#1B9E77",
+      "color": "#fdae61",
       "displayName": "3-lane street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_s_with_bus_bicycle_lane_on_both_sides",
-      "color": "#1B9E77",
+      "color": "#fdae61",
       "displayName": "4-lane street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_s_with_bus_bicycle_lane_on_both_sides",
-      "color": "#1B9E77",
+      "color": "#fdae61",
       "displayName": "5-lane street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_s_with_bus_bicycle_lane_on_both_sides",
-      "color": "#1B9E77",
+      "color": "#fdae61",
       "displayName": "6-lane street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "7_l_s_with_bus_bicycle_lane_on_both_sides",
-      "color": "#1B9E77",
+      "color": "#fdae61",
       "displayName": "7-lane street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_s_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#27AE60",
+      "color": "#66bd63",
       "displayName": "1-lane street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_s_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#27AE60",
+      "color": "#66bd63",
       "displayName": "2-lane street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_s_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#27AE60",
+      "color": "#66bd63",
       "displayName": "3-lane street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_s_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#27AE60",
+      "color": "#66bd63",
       "displayName": "4-lane street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_s_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#27AE60",
+      "color": "#66bd63",
       "displayName": "5-lane street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_s_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#27AE60",
+      "color": "#66bd63",
       "displayName": "6-lane street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "7_l_s_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#27AE60",
+      "color": "#66bd63",
       "displayName": "7-lane street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "separate_bicycle_lane_on_sidewalk",
-      "color": "#2ECC71",
+      "color": "#1a9850",
       "displayName": "Separate bicycle lane on sidewalk (marked as extra way)",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_s_with_shared_bicycle_lane_on_carriageway",
-      "color": "#52BE80",
+      "color": "#fee08b",
       "displayName": "1-lane street with shared bicycle lane on carriageway",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_s_with_shared_bicycle_lane_on_carriageway",
-      "color": "#52BE80",
+      "color": "#fee08b",
       "displayName": "2-lane street with shared bicycle lane on carriageway",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_s_with_shared_bicycle_lane_on_carriageway",
-      "color": "#52BE80",
+      "color": "#fee08b",
       "displayName": "3-lane street with shared bicycle lane on carriageway",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_s_with_shared_bicycle_lane_on_carriageway",
-      "color": "#52BE80",
+      "color": "#fee08b",
       "displayName": "4-lane street with shared bicycle lane on carriageway",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_s_with_shared_bicycle_lane_on_carriageway",
-      "color": "#52BE80",
+      "color": "#fee08b",
       "displayName": "5-lane street with shared bicycle lane on carriageway",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_s_with_shared_bicycle_lane_on_carriageway",
-      "color": "#52BE80",
+      "color": "#fee08b",
       "displayName": "6-lane street with shared bicycle lane on carriageway",
       "area": false,
       "node": false
     },
     {
       "name": "7_l_s_with_shared_bicycle_lane_on_carriageway",
-      "color": "#52BE80",
+      "color": "#fee08b",
       "displayName": "7-lane street with shared bicycle lane on carriageway",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_s_with_no_bicycle_paths",
-      "color": "#4A1486",
+      "color": "#f46d43",
       "displayName": "1-lane street with no bicycle paths",
       "area": true,
       "node": false
     },
     {
       "name": "2_l_s_with_no_bicycle_paths",
-      "color": "#4A1486",
+      "color": "#f46d43",
       "displayName": "2-lane street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_s_with_no_bicycle_paths",
-      "color": "#4A1486",
+      "color": "#f46d43",
       "displayName": "3-lane street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_s_with_no_bicycle_paths",
-      "color": "#4A1486",
+      "color": "#f46d43",
       "displayName": "4-lane street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_s_with_no_bicycle_paths",
-      "color": "#4A1486",
+      "color": "#f46d43",
       "displayName": "5-lane street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_s_with_no_bicycle_paths",
-      "color": "#4A1486",
+      "color": "#f46d43",
       "displayName": "6-lane street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "7_l_s_with_no_bicycle_paths",
-      "color": "#4A1486",
+      "color": "#f46d43",
       "displayName": "7-lane street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_ows_with_bicycle_forbidden",
-      "color": "#FF2E2E",
+      "color": "#a50026",
       "displayName": "1-lane one-way street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_ows_with_bicycle_forbidden",
-      "color": "#FF2E2E",
+      "color": "#a50026",
       "displayName": "2-lane one-way street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_ows_with_bicycle_forbidden",
-      "color": "#FF2E2E",
+      "color": "#a50026",
       "displayName": "3-lane one-way street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_ows_with_bicycle_forbidden",
-      "color": "#FF2E2E",
+      "color": "#a50026",
       "displayName": "4-lane one-way street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_ows_with_bicycle_forbidden",
-      "color": "#FF2E2E",
+      "color": "#a50026",
       "displayName": "5-lane one-way street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_ows_with_bicycle_forbidden",
-      "color": "#FF2E2E",
+      "color": "#a50026",
       "displayName": "6-lane one-way street with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_ows_with_bus_bicycle_lane_on_one_side",
-      "color": "#6A3D9A",
+      "color": "#fdae61",
       "displayName": "1-lane one-way street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_ows_with_bus_bicycle_lane_on_one_side",
-      "color": "#6A3D9A",
+      "color": "#fdae61",
       "displayName": "2-lane one-way street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_ows_with_bus_bicycle_lane_on_one_side",
-      "color": "#6A3D9A",
+      "color": "#fdae61",
       "displayName": "3-lane one-way street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_ows_with_bus_bicycle_lane_on_one_side",
-      "color": "#6A3D9A",
+      "color": "#fdae61",
       "displayName": "4-lane one-way street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_ows_with_bus_bicycle_lane_on_one_side",
-      "color": "#6A3D9A",
+      "color": "#fdae61",
       "displayName": "5-lane one-way street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_ows_with_bus_bicycle_lane_on_one_side",
-      "color": "#6A3D9A",
+      "color": "#fdae61",
       "displayName": "6-lane one-way street with bus/bicycle lane on one side",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_ows_with_bus_bicycle_lane_on_both_sides",
-      "color": "#6A3D9A",
+      "color": "#ffd92f",
       "displayName": "1-lane one-way street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_ows_with_bus_bicycle_lane_on_both_sides",
-      "color": "#6A3D9A",
+      "color": "#ffd92f",
       "displayName": "2-lane one-way street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_ows_with_bus_bicycle_lane_on_both_sides",
-      "color": "#6A3D9A",
+      "color": "#ffd92f",
       "displayName": "3-lane one-way street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_ows_with_bus_bicycle_lane_on_both_sides",
-      "color": "#6A3D9A",
+      "color": "#ffd92f",
       "displayName": "4-lane one-way street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_ows_with_bus_bicycle_lane_on_both_sides",
-      "color": "#6A3D9A",
+      "color": "#ffd92f",
       "displayName": "5-lane one-way street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_ows_with_bus_bicycle_lane_on_both_sides",
-      "color": "#6A3D9A",
+      "color": "#ffd92f",
       "displayName": "6-lane one-way street with bus/bicycle lane on both sides",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_ows_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#8E5CC6",
+      "color": "#4daf4a",
       "displayName": "1-lane one-way street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_ows_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#8E5CC6",
+      "color": "#4daf4a",
       "displayName": "2-lane one-way street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_ows_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#8E5CC6",
+      "color": "#4daf4a",
       "displayName": "3-lane one-way street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_ows_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#8E5CC6",
+      "color": "#4daf4a",
       "displayName": "4-lane one-way street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_ows_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#8E5CC6",
+      "color": "#4daf4a",
       "displayName": "5-lane one-way street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_ows_with_separate_bicycle_lane_on_sidewalk",
-      "color": "#8E5CC6",
+      "color": "#4daf4a",
       "displayName": "6-lane one-way street with separate bicycle lane on sidewalk",
       "area": false,
       "node": false
     },
     {
       "name": "1_l_ows_with_no_bicycle_paths",
-      "color": "#5E2A84",
+      "color": "#d53e4f",
       "displayName": "1-lane one-way street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "2_l_ows_with_no_bicycle_paths",
-      "color": "#5E2A84",
+      "color": "#d53e4f",
       "displayName": "2-lane one-way street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "3_l_ows_with_no_bicycle_paths",
-      "color": "#5E2A84",
+      "color": "#d53e4f",
       "displayName": "3-lane one-way street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "4_l_ows_with_no_bicycle_paths",
-      "color": "#5E2A84",
+      "color": "#d53e4f",
       "displayName": "4-lane one-way street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "5_l_ows_with_no_bicycle_paths",
-      "color": "#5E2A84",
+      "color": "#d53e4f",
       "displayName": "5-lane one-way street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "6_l_ows_with_no_bicycle_paths",
-      "color": "#5E2A84",
+      "color": "#d53e4f",
       "displayName": "6-lane one-way street with no bicycle paths",
       "area": false,
       "node": false
     },
     {
       "name": "cycleroad",
-      "color": "#229954",
+      "color": "#1f78b4",
       "displayName": "Cycleroad",
       "area": false,
       "node": false
     },
     {
       "name": "cycleway",
-      "color": "#145A32",
+      "color": "#2c7fb8",
       "displayName": "Cycleway",
       "area": false,
       "node": false
     },
     {
       "name": "cycleway_multiuse",
-      "color": "#7DCEA0",
+      "color": "#41b6c4",
       "displayName": "Cycleway multiuse (bicycle, pedestrian, mofa, moped)",
       "area": false,
       "node": false
     },
     {
       "name": "cyclist_waiting_aid",
-      "color": "#7DCEA0",
+      "color": "#984ea3",
       "displayName": "Cyclist waiting aid",
       "area": false,
       "node": true
     },
     {
       "name": "pedestrian",
-      "color": "#1F78B4",
+      "color": "#8c510a",
       "displayName": "Mainly/exclusively for pedestrian",
       "area": true,
       "node": true
     },
     {
       "name": "pedestrian_with_bicycle_allowed",
-      "color": "#2E86C1",
+      "color": "#bf812d",
       "displayName": "Mainly/exclusively for pedestrian with bicycle allowed",
       "area": true,
       "node": true
     },
     {
       "name": "path_with_bicycle_forbidden",
-      "color": "#2E86C1",
+      "color": "#b2182b",
       "displayName": "Path with bicycle forbidden",
       "area": false,
       "node": false
     },
     {
       "name": "uncategorized",
-      "color": "#BDBDBD",
+      "color": "#9e9e9e",
       "displayName": "Uncategorized",
       "area": true,
       "node": true
