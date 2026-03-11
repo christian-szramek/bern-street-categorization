@@ -1,15 +1,18 @@
 print('osm2pgsql version: ' .. osm2pgsql.version)
 
-local restrictions = os.getenv("RESTRICTIONS")
-
-if restrictions then
-    print("Use restrictions according to:", restrictions)
-else
-    error("Environment variable RESTRICTIONS is not set!")
-end
-
 local infrastructure_logic = dofile('./import/flex/infrastructure_logic.lua')
 local infrastructure_types = dofile('./import/flex/infrastructure_types.lua')
+local restriction = os.getenv("RESTRICTION")
+
+if restriction then
+    if not (restriction == 'CH' or restriction == 'DE' or restriction == 'US') then
+        error("Unknown restriction: " .. restriction .. ". Set it to CH, DE or US.")
+    end
+
+    print("Use restriction according to:", restriction)
+else
+    error("Environment variable RESTRICTION is not set!")
+end
 
 local tables = {
     nodes = {},
@@ -51,6 +54,14 @@ local function get_display_name(name)
     return nil
 end
 
+local function print_feature_tags(tags) 
+    print("Feature tags:")
+
+    for k, v in pairs(tags) do
+        print("  " .. k .. " = " .. v)
+    end
+end
+
 for _, entry in ipairs(infrastructure_types) do
     create_tables_for_infrastructure_type(entry.name, entry.area, entry.node, entry.displayName)
 end
@@ -58,7 +69,7 @@ end
 function osm2pgsql.process_node(object)
     if infrastructure_logic.is_highway(object.tags) and not infrastructure_logic.is_ignored(object.tags) then
 
-        local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags)
+        local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags, restriction)
         local display_name = get_display_name(infrastructure_type)
         local target_table = tables.nodes[infrastructure_type]
 
@@ -70,10 +81,7 @@ function osm2pgsql.process_node(object)
             })
         else
             print("Node table does not exist for infrastructure type: " .. tostring(infrastructure_type))
-            print("Feature tags:")
-            for k, v in pairs(object.tags) do
-                print("  " .. k .. " = " .. v)
-            end
+            print_feature_tags(object.tags)
         end
     end
 end
@@ -81,7 +89,7 @@ end
 function osm2pgsql.process_way(object)
     if infrastructure_logic.is_highway(object.tags) and not infrastructure_logic.is_ignored(object.tags) then
 
-        local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags)
+        local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags, restriction)
         local display_name = get_display_name(infrastructure_type)
 
         if infrastructure_logic.is_area(object.tags) then
@@ -95,10 +103,7 @@ function osm2pgsql.process_way(object)
                 })
             else 
                 print("Area table does not exist for infrastructure type: " .. tostring(infrastructure_type))
-                print("Feature tags:")
-                for k, v in pairs(object.tags) do
-                    print("  " .. k .. " = " .. v)
-                end
+                print_feature_tags(object.tags)
             end
         else 
             local target_table = tables.ways[infrastructure_type]
@@ -111,10 +116,7 @@ function osm2pgsql.process_way(object)
                 })
             else
                 print("Way table does not exist for infrastructure type: " .. tostring(infrastructure_type))
-                print("Feature tags:")
-                for k, v in pairs(object.tags) do
-                    print("  " .. k .. " = " .. v)
-                end
+                print_feature_tags(object.tags)
             end
         end
     end
@@ -123,7 +125,7 @@ end
 function osm2pgsql.process_relation(object)
     if infrastructure_logic.is_highway(object.tags) and not infrastructure_logic.is_ignored(object.tags) then
 
-        local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags)
+        local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags, restriction)
         local display_name = get_display_name(infrastructure_type)
         local target_table = tables.ways[infrastructure_type]
 
@@ -135,10 +137,7 @@ function osm2pgsql.process_relation(object)
             })
         else 
             print("Area table does not exist for infrastructure type: " .. tostring(infrastructure_type))
-            print("Feature tags:")
-            for k, v in pairs(object.tags) do
-                print("  " .. k .. " = " .. v)
-            end
+            print_feature_tags(object.tags)
         end
     end
 end
