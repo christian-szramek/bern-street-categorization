@@ -72,7 +72,7 @@ local M = {
   { name = "4_l_ows_with_no_bic_paths", area=false, node=false, displayName="4-lane one-way street with no bicycle paths" },
   { name = "5_l_ows_with_no_bic_paths", area=false, node=false, displayName="5-lane one-way street with no bicycle paths" },
   { name = "6_l_ows_with_no_bic_paths", area=false, node=false, displayName="6-lane one-way street with no bicycle paths" },
-  { name = "cycleroad", area=false, node=false, displayName="Cycleroad" },
+  { name = "bic_road", area=false, node=false, displayName="Bicycle road" },
   { name = "cycleway", area=false, node=false, displayName="Cycleway" },
   { name = "cycleway_multiuse", area=false, node=false, displayName="Cycleway multiuse (bicycle, pedestrian, mofa, moped)" },
   { name = "cyclist_waiting_aid", area=false, node=true, displayName="Cyclist waiting aid" },

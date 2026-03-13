@@ -37,7 +37,7 @@ function M.is_cycleway(tags)
     return tags.highway == 'cycleway' and tags.cycleway ~= 'sidepath'
 end
 
-function M.is_cycleroad(tags)
+function M.is_bicycle_road(tags)
     return tags.bicycle_road == 'yes'
 end
 
@@ -154,8 +154,8 @@ function M.get_lanes(tags)
 end
 
 function M.get_infrastructure_type(tags, restriction)
-    if M.is_cycleroad(tags) then
-        return 'cycleroad'
+    if M.is_bicycle_road(tags) then
+        return 'bic_road'
     elseif M.is_car(tags, restriction) then 
         return M.get_lanes(tags) .. '_l_s_with_bic_forbidden'
     elseif M.is_street(tags, restriction) then

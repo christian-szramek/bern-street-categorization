@@ -512,9 +512,9 @@
       "node": false
     },
     {
-      "name": "cycleroad",
+      "name": "bic_road",
       "color": "#1f78b4",
-      "displayName": "Cycleroad",
+      "displayName": "Bicycle road",
       "area": false,
       "node": false
     },
@@ -577,7 +577,7 @@
     "ows_with_bus_bic_lane_on_one_side",
     "ows_with_bus_bic_lane_on_both_sides",
     "ows_with_sep_bic_lane_on_sidewalk",
-    "cycleroad",
+    "bic_road",
     "cycleway",
     "cycleway_multiuse",
     "pedestrian_with_bic_allowed"
