@@ -2,7 +2,9 @@ print('osm2pgsql version: ' .. osm2pgsql.version)
 
 local infrastructure_logic = dofile('./import/flex/infrastructure_logic.lua')
 local infrastructure_types = dofile('./import/flex/infrastructure_types.lua')
+
 local restriction = os.getenv("RESTRICTION")
+local city = os.getenv("CITY")
 
 if restriction then
     if not (restriction == 'CH' or restriction == 'DE' or restriction == 'US') then
@@ -14,6 +16,10 @@ else
     error("Environment variable RESTRICTION is not set!")
 end
 
+if not city  or city == '' then
+    error("Environment variable CITY is not set!")
+end
+
 local tables = {
     nodes = {},
     ways = {},
@@ -23,21 +29,21 @@ local tables = {
 local function create_tables_for_infrastructure_type(name, area, node, displayName)
 
     if (node) then
-        tables.nodes[name] = osm2pgsql.define_node_table(name .. '_nodes', {
+        tables.nodes[name] = osm2pgsql.define_node_table(string.lower(city) .. '_' .. name .. '_nodes', {
             { column = 'tags', type = 'jsonb' },
             { column = 'geom', type = 'point', not_null = true },
             { column = 'displayName', type = 'text' }
         })
     end
 
-    tables.ways[name] = osm2pgsql.define_way_table(name .. '_ways', {
+    tables.ways[name] = osm2pgsql.define_way_table(string.lower(city) .. '_' .. name .. '_ways', {
         { column = 'tags', type = 'jsonb' },
         { column = 'geom', type = 'linestring', not_null = true },
         { column = 'displayName', type = 'text' }
     })
 
     if (area) then
-        tables.areas[name] = osm2pgsql.define_area_table(name .. '_areas', {
+        tables.areas[name] = osm2pgsql.define_area_table(string.lower(city) .. '_' .. name .. '_areas', {
             { column = 'tags', type = 'jsonb' },
             { column = 'geom', type = 'geometry', not_null = true },
             { column = 'displayName', type = 'text' }
