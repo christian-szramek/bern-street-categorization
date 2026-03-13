@@ -73,7 +73,7 @@ const loadAllNodeLayers = async () => {
     });
 };
 
-const loadWays = () => {
+const loadAllWayLayers = () => {
   extendedInfrastructureTypes.value
     .filter(it => it.type === 'way' && isInfrastructureTypeActive(it.name))
     .forEach(it => {
@@ -170,7 +170,7 @@ const updateLayers = updatedInfrastructureType => {
 
 const loadAllLayers = () => {
   loadAllNodeLayers();
-  loadWays();
+  loadAllWayLayers();
   loadAreas();
 };
 
@@ -194,7 +194,7 @@ onMounted(() => {
   updatePreviousCenteredCity();
 
   map.on('moveend', () => {
-    loadNodes();
+    loadAllNodeLayers();
   });
 });
 
