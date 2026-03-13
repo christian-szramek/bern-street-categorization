@@ -2,8 +2,8 @@ import axios from 'axios';
 
 const baseURL = 'http://localhost:9000';
 
-const getNodes = async (infrastructureType, mapBounds) => {
-  const url = `${baseURL}/collections/public.${infrastructureType}_nodes/items.json?bbox=${mapBounds.getWest()},${mapBounds.getSouth()},${mapBounds.getEast()},${mapBounds.getNorth()}`;
+const getNodes = async (city, infrastructureType, mapBounds) => {
+  const url = `${baseURL}/collections/public.${city}_${infrastructureType}_nodes/items.json?bbox=${mapBounds.getWest()},${mapBounds.getSouth()},${mapBounds.getEast()},${mapBounds.getNorth()}`;
 
   try {
     const response = await axios.get(url);

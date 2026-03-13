@@ -53,8 +53,8 @@ const removeAllNodeLayers = () => {
     });
 };
 
-const loadNode = async (name, mapBounds, color) => {
-  const layerData = await getNodes(name, mapBounds);
+const loadNode = async (infrastructureType, mapBounds, color) => {
+  const layerData = await getNodes(props.centeredCity.name, infrastructureType, mapBounds);
   const layer = getNodeLayer(layerData, color, handleMouseOver, handleMouseOut);
   return layer;
 };
@@ -77,8 +77,7 @@ const loadWays = () => {
   extendedInfrastructureTypes.value
     .filter(it => it.type === 'way' && isInfrastructureTypeActive(it.name))
     .forEach(it => {
-      it.layer = getWayLayer(it.name, it.color, handleMouseOver, handleMouseOut);
-
+      it.layer = getWayLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
       it.layer.addTo(map);
     });
 };
@@ -87,8 +86,7 @@ const loadAreas = () => {
   extendedInfrastructureTypes.value
     .filter(it => it.type === 'area' && isInfrastructureTypeActive(it.name))
     .forEach(it => {
-      it.layer = getAreaLayer(it.name, it.color, handleMouseOver, handleMouseOut);
-
+      it.layer = getAreaLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
       it.layer.addTo(map);
     });
 };
@@ -159,10 +157,10 @@ const updateLayers = updatedInfrastructureType => {
         it.layer = await loadNode(it.name, map.getBounds(), it.color);
       }
       if (it.type === 'way') {
-        it.layer = getWayLayer(it.name, it.color, handleMouseOver, handleMouseOut);
+        it.layer = getWayLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
       }
       if (it.type === 'area') {
-        it.layer = getAreaLayer(it.name, it.color, handleMouseOver, handleMouseOut);
+        it.layer = getAreaLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
       }
 
       it.layer.addTo(map);

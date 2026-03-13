@@ -2,9 +2,9 @@ import { isCyclingForbidden } from '@/utils/infrastructureTypesUtils';
 
 const baseURL = 'http://localhost:7800';
 
-const getAreaLayer = (infrastructureType, color, handleMouseOver, handleMouseOut) => {
+const getAreaLayer = (city, infrastructureType, color, handleMouseOver, handleMouseOut) => {
   const styles = {};
-  styles[`public.${infrastructureType}_areas`] = _ => ({
+  styles[`public.${city}_${infrastructureType}_areas`] = _ => ({
     fill: true,
     fillColor: color,
     color: color,
@@ -15,7 +15,7 @@ const getAreaLayer = (infrastructureType, color, handleMouseOver, handleMouseOut
   });
 
   return L.vectorGrid
-    .protobuf(`${baseURL}/public.${infrastructureType}_areas/{z}/{x}/{y}.pbf`, {
+    .protobuf(`${baseURL}/public.${city}_${infrastructureType}_areas/{z}/{x}/{y}.pbf`, {
       vectorTileLayerStyles: styles,
       minZoom: 1,
       maxZoom: 19,
