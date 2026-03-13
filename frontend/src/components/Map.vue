@@ -168,14 +168,27 @@ const updateLayers = updatedInfrastructureType => {
   });
 };
 
+const loadAllLayers = () => {
+  loadNodes();
+  loadWays();
+  loadAreas();
+};
+
+const removeAllLayers = () => {
+  extendedInfrastructureTypes.value
+    .filter(it => it.layer)
+    .forEach(it => {
+      map.removeLayer(it.layer);
+      it.layer = null;
+    });
+};
+
 onMounted(() => {
   map = L.map('map').setView(props.centeredCity.latlon, 15);
 
   extendInfrastructureTypes();
   loadTiles();
-  loadNodes();
-  loadWays();
-  loadAreas();
+  loadAllLayers();
 
   updatePreviousActiveInfrastructureTypes();
   updatePreviousCenteredCity();
@@ -186,16 +199,18 @@ onMounted(() => {
 });
 
 onUpdated(() => {
-  // update displayed infrastructure types
-  const updatedInfrastructureType = getUpdatedActiveInfrastructureType(props.activeInfrastructureTypes, previousActiveInfrastructureTypes.value);
-
-  if (updatedInfrastructureType) {
-    updateLayers(updatedInfrastructureType);
-  }
-
-  // update centered city
   if (props.centeredCity !== previousCenteredCity.value) {
+    // update centered city
+    removeAllLayers();
     map.setView(props.centeredCity.latlon);
+    loadAllLayers();
+  } else {
+    // update displayed infrastructure types
+    const updatedInfrastructureType = getUpdatedActiveInfrastructureType(props.activeInfrastructureTypes, previousActiveInfrastructureTypes.value);
+
+    if (updatedInfrastructureType) {
+      updateLayers(updatedInfrastructureType);
+    }
   }
 
   updatePreviousActiveInfrastructureTypes();
