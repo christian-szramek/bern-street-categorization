@@ -82,7 +82,7 @@ const loadAllWayLayers = () => {
     });
 };
 
-const loadAreas = () => {
+const loadAllAreaLayers = () => {
   extendedInfrastructureTypes.value
     .filter(it => it.type === 'area' && isInfrastructureTypeActive(it.name))
     .forEach(it => {
@@ -171,7 +171,7 @@ const updateLayers = updatedInfrastructureType => {
 const loadAllLayers = () => {
   loadAllNodeLayers();
   loadAllWayLayers();
-  loadAreas();
+  loadAllAreaLayers();
 };
 
 const removeAllLayers = () => {
