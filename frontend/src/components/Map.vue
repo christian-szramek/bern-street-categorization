@@ -91,7 +91,7 @@ const loadAllAreaLayers = () => {
     });
 };
 
-const loadTiles = () => {
+const loadBaseMapLayer = () => {
   L.tileLayer(tilesURL, {
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
     maxZoom: 19
@@ -168,13 +168,13 @@ const updateLayers = updatedInfrastructureType => {
   });
 };
 
-const loadAllLayers = () => {
+const loadAllDataLayers = () => {
   loadAllNodeLayers();
   loadAllWayLayers();
   loadAllAreaLayers();
 };
 
-const removeAllLayers = () => {
+const removeAllDataLayers = () => {
   extendedInfrastructureTypes.value
     .filter(it => it.layer)
     .forEach(it => {
@@ -187,8 +187,8 @@ onMounted(() => {
   map = L.map('map').setView(props.centeredCity.latlon, 15);
 
   extendInfrastructureTypes();
-  loadTiles();
-  loadAllLayers();
+  loadBaseMapLayer();
+  loadAllDataLayers();
 
   updatePreviousActiveInfrastructureTypes();
   updatePreviousCenteredCity();
@@ -201,9 +201,9 @@ onMounted(() => {
 onUpdated(() => {
   if (props.centeredCity !== previousCenteredCity.value) {
     // update centered city
-    removeAllLayers();
+    removeAllDataLayers();
     map.setView(props.centeredCity.latlon);
-    loadAllLayers();
+    loadAllDataLayers();
   } else {
     // update displayed infrastructure types
     const updatedInfrastructureType = getUpdatedActiveInfrastructureType(props.activeInfrastructureTypes, previousActiveInfrastructureTypes.value);
