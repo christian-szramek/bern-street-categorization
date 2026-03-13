@@ -57,7 +57,9 @@ onBeforeMount(() => {
       legendInfrastructureTypes.value.push({
         displayName: capitalizedDisplayNameWithoutLanes,
         name: nameWithoutLanes,
-        color: it.color
+        color: it.color,
+        image: `/images/infrastructureTypes/${nameWithoutLanes}.jpg`,
+        description: it.description
       });
     }
   });
@@ -66,7 +68,7 @@ onBeforeMount(() => {
 
 <template>
   <div class="legend-wrapper">
-    <v-card title="Legend" elevation="6" rounded="lg" class="legend-card">
+    <v-card title="Legend" elevation="6" rounded="md" class="legend-card">
       <v-card-subtitle>
         <v-select
           class="city-select"
@@ -80,20 +82,29 @@ onBeforeMount(() => {
         />
       </v-card-subtitle>
       <v-card-text class="legend-content">
-        <div class="section-title">Infrastructure Types</div>
-        <div v-for="it in legendInfrastructureTypes" :key="it.name" class="legend-item" @click="toggleInfrastructureType(it.name)">
-          <span
-            class="legend-dot"
-            :class="{ inactive: !isInfrastructureTypeActive(it.name) }"
-            :style="{
-              backgroundColor: isInfrastructureTypeActive(it.name) ? it.color : 'transparent'
-            }"
-          />
+        <div class="section-title" v-text="'Infrastructure Types'" />
+        <v-tooltip v-for="it in legendInfrastructureTypes" :key="it.name" location="left" content-class="tooltip-content" offset="33">
+          <template v-slot:activator="{ props }">
+            <div v-bind="props" class="legend-item" @click="toggleInfrastructureType(it.name)">
+              <span
+                class="legend-dot"
+                :class="{ inactive: !isInfrastructureTypeActive(it.name) }"
+                :style="{
+                  backgroundColor: isInfrastructureTypeActive(it.name) ? it.color : 'transparent'
+                }"
+              />
+              <span class="legend-label" v-text="it.displayName" />
+            </div>
+          </template>
 
-          <span class="legend-label">
-            {{ it.displayName }}
-          </span>
-        </div>
+          <v-card elevation="4" rounded="md" class="hover-card">
+            <v-img :src="it.image" height="180" cover />
+            <v-card-text>
+              <div class="hover-title" v-text="it.displayName" />
+              <div class="hover-description" v-text="it.description" />
+            </v-card-text>
+          </v-card>
+        </v-tooltip>
       </v-card-text>
     </v-card>
   </div>
@@ -172,5 +183,26 @@ onBeforeMount(() => {
 
 .city-select :deep(.v-list-item) {
   min-height: 32px;
+}
+
+.hover-card {
+  width: 240px;
+}
+
+.hover-title {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+  opacity: 0.75;
+}
+
+.hover-description {
+  font-size: 12px;
+  opacity: 0.75;
+}
+
+:deep(.tooltip-content) {
+  padding: 0 !important;
+  margin: 0 !important;
 }
 </style>
