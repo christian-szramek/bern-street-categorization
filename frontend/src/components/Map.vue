@@ -53,13 +53,13 @@ const removeAllNodeLayers = () => {
     });
 };
 
-const loadNode = async (infrastructureType, mapBounds, color) => {
+const loadNodeLayer = async (infrastructureType, mapBounds, color) => {
   const layerData = await getNodes(props.centeredCity.name, infrastructureType, mapBounds);
   const layer = getNodeLayer(layerData, color, handleMouseOver, handleMouseOut);
   return layer;
 };
 
-const loadNodes = async () => {
+const loadAllNodeLayers = async () => {
   // Remove previous node layer to avoid duplicates
   removeAllNodeLayers();
 
@@ -68,7 +68,7 @@ const loadNodes = async () => {
   extendedInfrastructureTypes.value
     .filter(it => it.type === 'node' && isInfrastructureTypeActive(it.name))
     .forEach(async it => {
-      it.layer = await loadNode(it.name, mapBounds, it.color);
+      it.layer = await loadNodeLayer(it.name, mapBounds, it.color);
       it.layer.addTo(map);
     });
 };
@@ -154,7 +154,7 @@ const updateLayers = updatedInfrastructureType => {
       it.layer = null;
     } else {
       if (it.type === 'node') {
-        it.layer = await loadNode(it.name, map.getBounds(), it.color);
+        it.layer = await loadNodeLayer(it.name, map.getBounds(), it.color);
       }
       if (it.type === 'way') {
         it.layer = getWayLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
@@ -169,7 +169,7 @@ const updateLayers = updatedInfrastructureType => {
 };
 
 const loadAllLayers = () => {
-  loadNodes();
+  loadAllNodeLayers();
   loadWays();
   loadAreas();
 };
