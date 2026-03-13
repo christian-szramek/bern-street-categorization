@@ -58,7 +58,7 @@ function M.is_mofa_allowed(tags)
 end
 
 function M.is_bicycle_allowed(tags)
-    return tags.bicycle == 'yes' or tags.bicycle == 'designated'
+    return tags.bicycle == 'yes' or tags.bicycle == 'designated' or tags.bicycle == 'permissive'
 end
 
 function M.is_motor_vehicle_allowed(tags)
@@ -110,15 +110,15 @@ function M.is_pedestrian_only_path(tags)
 end
 
 function M.is_pedestrian_and_bicycle_path(tags)
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
+    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and M.is_bicycle_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
 function M.is_bicycle_only_path(tags)
-    return ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and M.is_foot_forbidden(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
+    return M.is_bicycle_allowed(tags) and M.is_foot_forbidden(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
 function M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) 
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( M.is_bicycle_allowed(tags) or tags.bicycle == 'permissive' ) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( M.is_motor_vehicle_allowed(tags) or tags.motor_vehicle == 'permissive' )
+    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and M.is_bicycle_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( M.is_motor_vehicle_allowed(tags) or tags.motor_vehicle == 'permissive' )
 end
 
 function M.is_cycleway_both_sides(tags)
