@@ -72,8 +72,7 @@ onBeforeMount(() => {
           class="city-select"
           :modelValue="props.centeredCity"
           :items="props.cities"
-          item-title="name"
-          item-value="latlon"
+          item-title="displayName"
           return-object
           density="compact"
           variant="underlined"

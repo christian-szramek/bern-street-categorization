@@ -23,11 +23,11 @@ const computeWeight = infrastructureType => {
   }
 };
 
-const getWayLayer = (infrastructureType, color, handleMouseOver, handleMouseOut) => {
+const getWayLayer = (city, infrastructureType, color, handleMouseOver, handleMouseOut) => {
   const weight = computeWeight(infrastructureType);
 
   const styles = {};
-  styles[`public.${infrastructureType}_ways`] = () => [
+  styles[`public.${city}_${infrastructureType}_ways`] = () => [
     // visible stroke
     {
       stroke: true,
@@ -46,7 +46,7 @@ const getWayLayer = (infrastructureType, color, handleMouseOver, handleMouseOut)
   ];
 
   const layer = L.vectorGrid
-    .protobuf(`${baseURL}/public.${infrastructureType}_ways/{z}/{x}/{y}.pbf`, {
+    .protobuf(`${baseURL}/public.${city}_${infrastructureType}_ways/{z}/{x}/{y}.pbf`, {
       vectorTileLayerStyles: styles,
       minZoom: 1,
       maxZoom: 19,

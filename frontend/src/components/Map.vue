@@ -36,68 +36,20 @@ const extendedInfrastructureTypes = ref([]);
 const previousActiveInfrastructureTypes = ref([]);
 const previousCenteredCity = ref(null);
 
+const updatePreviousActiveInfrastructureTypes = () => {
+  previousActiveInfrastructureTypes.value = [...props.activeInfrastructureTypes];
+};
+
+const updatePreviousCenteredCity = () => {
+  previousCenteredCity.value = props.centeredCity;
+};
+
 const handleMouseOver = e => {
   emit('showInfo', e);
 };
 
 const handleMouseOut = () => {
   emit('hideInfo');
-};
-
-const removeAllNodeLayers = () => {
-  extendedInfrastructureTypes.value
-    .filter(it => it.type === 'node' && it.layer)
-    .forEach(it => {
-      map.removeLayer(it.layer);
-      it.layer = null;
-    });
-};
-
-const loadNode = async (name, mapBounds, color) => {
-  const layerData = await getNodes(name, mapBounds);
-  const layer = getNodeLayer(layerData, color, handleMouseOver, handleMouseOut);
-  return layer;
-};
-
-const loadNodes = async () => {
-  // Remove previous node layer to avoid duplicates
-  removeAllNodeLayers();
-
-  const mapBounds = map.getBounds();
-
-  extendedInfrastructureTypes.value
-    .filter(it => it.type === 'node' && isInfrastructureTypeActive(it.name))
-    .forEach(async it => {
-      it.layer = await loadNode(it.name, mapBounds, it.color);
-      it.layer.addTo(map);
-    });
-};
-
-const loadWays = () => {
-  extendedInfrastructureTypes.value
-    .filter(it => it.type === 'way' && isInfrastructureTypeActive(it.name))
-    .forEach(it => {
-      it.layer = getWayLayer(it.name, it.color, handleMouseOver, handleMouseOut);
-
-      it.layer.addTo(map);
-    });
-};
-
-const loadAreas = () => {
-  extendedInfrastructureTypes.value
-    .filter(it => it.type === 'area' && isInfrastructureTypeActive(it.name))
-    .forEach(it => {
-      it.layer = getAreaLayer(it.name, it.color, handleMouseOver, handleMouseOut);
-
-      it.layer.addTo(map);
-    });
-};
-
-const loadTiles = () => {
-  L.tileLayer(tilesURL, {
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
-    maxZoom: 19
-  }).addTo(map);
 };
 
 const extendInfrastructureTypes = () => {
@@ -123,6 +75,75 @@ const extendInfrastructureTypes = () => {
   });
 };
 
+const loadNodeLayer = async (infrastructureType, mapBounds, color) => {
+  const layerData = await getNodes(props.centeredCity.name, infrastructureType, mapBounds);
+  const layer = getNodeLayer(layerData, color, handleMouseOver, handleMouseOut);
+  return layer;
+};
+
+const loadAllNodeLayers = async () => {
+  // Remove previous node layer to avoid duplicates
+  removeAllNodeLayers();
+
+  const mapBounds = map.getBounds();
+
+  extendedInfrastructureTypes.value
+    .filter(it => it.type === 'node' && isInfrastructureTypeActive(it.name))
+    .forEach(async it => {
+      it.layer = await loadNodeLayer(it.name, mapBounds, it.color);
+      it.layer.addTo(map);
+    });
+};
+
+const removeAllNodeLayers = () => {
+  extendedInfrastructureTypes.value
+    .filter(it => it.type === 'node' && it.layer)
+    .forEach(it => {
+      map.removeLayer(it.layer);
+      it.layer = null;
+    });
+};
+
+const loadAllWayLayers = () => {
+  extendedInfrastructureTypes.value
+    .filter(it => it.type === 'way' && isInfrastructureTypeActive(it.name))
+    .forEach(it => {
+      it.layer = getWayLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
+      it.layer.addTo(map);
+    });
+};
+
+const loadAllAreaLayers = () => {
+  extendedInfrastructureTypes.value
+    .filter(it => it.type === 'area' && isInfrastructureTypeActive(it.name))
+    .forEach(it => {
+      it.layer = getAreaLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
+      it.layer.addTo(map);
+    });
+};
+
+const loadAllDataLayers = () => {
+  loadAllNodeLayers();
+  loadAllWayLayers();
+  loadAllAreaLayers();
+};
+
+const removeAllDataLayers = () => {
+  extendedInfrastructureTypes.value
+    .filter(it => it.layer)
+    .forEach(it => {
+      map.removeLayer(it.layer);
+      it.layer = null;
+    });
+};
+
+const loadBaseMapLayer = () => {
+  L.tileLayer(tilesURL, {
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+    maxZoom: 19
+  }).addTo(map);
+};
+
 const isInfrastructureTypeActive = infrastructureType => {
   return props.activeInfrastructureTypes.some(it => infrastructureType.includes(it));
 };
@@ -139,15 +160,7 @@ const getUpdatedActiveInfrastructureType = (now, previous) => {
   return added;
 };
 
-const updatePreviousActiveInfrastructureTypes = () => {
-  previousActiveInfrastructureTypes.value = [...props.activeInfrastructureTypes];
-};
-
-const updatePreviousCenteredCity = () => {
-  previousCenteredCity.value = props.centeredCity;
-};
-
-const updateLayers = updatedInfrastructureType => {
+const updateDataLayers = updatedInfrastructureType => {
   const infrastructureTypesToUpdate = extendedInfrastructureTypes.value.filter(it => getNameWithoutLanes(it.name) === updatedInfrastructureType);
 
   infrastructureTypesToUpdate.forEach(async it => {
@@ -156,13 +169,13 @@ const updateLayers = updatedInfrastructureType => {
       it.layer = null;
     } else {
       if (it.type === 'node') {
-        it.layer = await loadNode(it.name, map.getBounds(), it.color);
+        it.layer = await loadNodeLayer(it.name, map.getBounds(), it.color);
       }
       if (it.type === 'way') {
-        it.layer = getWayLayer(it.name, it.color, handleMouseOver, handleMouseOut);
+        it.layer = getWayLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
       }
       if (it.type === 'area') {
-        it.layer = getAreaLayer(it.name, it.color, handleMouseOver, handleMouseOut);
+        it.layer = getAreaLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
       }
 
       it.layer.addTo(map);
@@ -174,30 +187,30 @@ onMounted(() => {
   map = L.map('map').setView(props.centeredCity.latlon, 15);
 
   extendInfrastructureTypes();
-  loadTiles();
-  loadNodes();
-  loadWays();
-  loadAreas();
+  loadBaseMapLayer();
+  loadAllDataLayers();
 
   updatePreviousActiveInfrastructureTypes();
   updatePreviousCenteredCity();
 
   map.on('moveend', () => {
-    loadNodes();
+    loadAllNodeLayers();
   });
 });
 
 onUpdated(() => {
-  // update displayed infrastructure types
-  const updatedInfrastructureType = getUpdatedActiveInfrastructureType(props.activeInfrastructureTypes, previousActiveInfrastructureTypes.value);
-
-  if (updatedInfrastructureType) {
-    updateLayers(updatedInfrastructureType);
-  }
-
-  // update centered city
   if (props.centeredCity !== previousCenteredCity.value) {
+    // update centered city
+    removeAllDataLayers();
     map.setView(props.centeredCity.latlon);
+    loadAllDataLayers();
+  } else {
+    // update displayed infrastructure types
+    const updatedInfrastructureType = getUpdatedActiveInfrastructureType(props.activeInfrastructureTypes, previousActiveInfrastructureTypes.value);
+
+    if (updatedInfrastructureType) {
+      updateDataLayers(updatedInfrastructureType);
+    }
   }
 
   updatePreviousActiveInfrastructureTypes();
