@@ -1,5 +1,5 @@
 local lxp = require("lxp")
-local infrastructure_logic = dofile('./infrastructure_logic.lua')
+local infrastructure_logic = dofile('../infrastructure_logic.lua')
 
 -- Helper test function
 
