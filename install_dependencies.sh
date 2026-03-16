@@ -9,6 +9,9 @@ sudo apt install osm2pgsql -y
 sudo apt install lua5.3
 sudo apt install liblua5.3-dev
 sudo apt install luarocks
+sudo apt install libexpat1-dev
+luarocks install luaexpat
+# Add eval "$(luarocks path)" to .bashrc and source it
 
 # for frontend 
 sudo apt install curl -y
