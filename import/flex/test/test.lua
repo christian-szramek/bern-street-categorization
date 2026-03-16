@@ -74,6 +74,7 @@ function execute_all_tests_for_city(city, restriction)
 end
 
 -- Tests for Bern
+execute_all_tests_for_city('bern', 'CH')
 
 -- Tests for Berlin
 execute_all_tests_for_city('berlin', 'DE')
