@@ -1,0 +1,21 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001864 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="159482052" visible="true" version="14" changeset="167738774" timestamp="2025-06-17T13:26:26Z" user="fmc_4" uid="22898403">
+		<nd ref="29219469"/>
+		<nd ref="11394452585"/>
+		<nd ref="7286123367"/>
+		<nd ref="3655997134"/>
+		<nd ref="31153801"/>
+		<tag k="delivery:conditional" v="yes @ (Mo-Fr 07:00-11:00)"/>
+		<tag k="foot" v="yes"/>
+		<tag k="highway" v="pedestrian"/>
+		<tag k="lit" v="yes"/>
+		<tag k="name" v="Poststraße"/>
+		<tag k="parking:both" v="no"/>
+		<tag k="postal_code" v="10178"/>
+		<tag k="surface" v="sett"/>
+		<tag k="vehicle" v="destination"/>
+		<tag k="wikidata" v="Q2106308"/>
+		<tag k="wikimedia_commons" v="Category:Poststraße (Berlin-Mitte)"/>
+		<tag k="wikipedia" v="de:Poststraße (Berlin)"/>
+	</way>
+</osm>

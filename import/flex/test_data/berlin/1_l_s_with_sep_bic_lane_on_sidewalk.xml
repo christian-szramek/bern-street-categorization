@@ -1,0 +1,26 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001831 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="997408179" visible="true" version="37" changeset="174075847" timestamp="2025-11-01T18:38:32Z" user="fmc_6" uid="23034323">
+		<nd ref="9713985067"/>
+		<nd ref="268981757"/>
+		<nd ref="9713985068"/>
+		<tag k="check_date:cycleway" v="2024-12-31"/>
+		<tag k="cycleway:both" v="separate"/>
+		<tag k="foot" v="use_sidepath"/>
+		<tag k="highway" v="secondary"/>
+		<tag k="lane_markings" v="no"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxspeed" v="50"/>
+		<tag k="name" v="Oranienstraße"/>
+		<tag k="name:etymology:wikidata" v="Q155483"/>
+		<tag k="name:ru" v="Ораниенштрассе"/>
+		<tag k="note" v="Übergeordnete Straße, Stufe III"/>
+		<tag k="parking:both" v="lane"/>
+		<tag k="parking:both:fee" v="no"/>
+		<tag k="parking:both:orientation" v="parallel"/>
+		<tag k="postal_code" v="10969"/>
+		<tag k="sidewalk:both" v="separate"/>
+		<tag k="source:width" v="ARCore"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="width" v="12.4"/>
+	</way>
+</osm>

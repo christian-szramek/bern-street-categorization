@@ -1,0 +1,38 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001883 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="1101407447" visible="true" version="9" changeset="177533117" timestamp="2026-01-21T17:23:45Z" user="fmc_3" uid="22897978">
+		<nd ref="26724522"/>
+		<nd ref="10281845830"/>
+		<nd ref="10281845835"/>
+		<tag k="cycleway:both" v="lane"/>
+		<tag k="cycleway:both:buffer:both" v="no"/>
+		<tag k="cycleway:both:lane" v="advisory"/>
+		<tag k="cycleway:both:marking:both" v="dashed_line"/>
+		<tag k="cycleway:both:oneway" v="yes"/>
+		<tag k="cycleway:both:surface" v="asphalt"/>
+		<tag k="cycleway:both:surface:colour" v="none"/>
+		<tag k="cycleway:both:traffic_sign" v="none"/>
+		<tag k="cycleway:both:width" v="1.5"/>
+		<tag k="foot" v="use_sidepath"/>
+		<tag k="highway" v="secondary"/>
+		<tag k="lane_markings" v="yes"/>
+		<tag k="lanes" v="2"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxspeed" v="50"/>
+		<tag k="name" v="Perleberger Straße"/>
+		<tag k="name:etymology:wikidata" v="Q498540"/>
+		<tag k="oneway" v="yes"/>
+		<tag k="parking:both" v="lane"/>
+		<tag k="parking:both:fee" v="yes"/>
+		<tag k="parking:both:fee:conditional" v="no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)"/>
+		<tag k="parking:both:markings" v="yes"/>
+		<tag k="parking:both:orientation" v="parallel"/>
+		<tag k="parking:right:surface" v="sett"/>
+		<tag k="postal_code" v="10559"/>
+		<tag k="sidewalk:both" v="separate"/>
+		<tag k="smoothness" v="good"/>
+		<tag k="source:cycleway:both:width" v="Luftbild 2025"/>
+		<tag k="source:maxspeed" v="DE:urban"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="wikidata" v="Q56062282"/>
+	</way>
+</osm>

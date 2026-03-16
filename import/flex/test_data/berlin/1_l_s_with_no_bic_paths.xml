@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002050 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="1113398428" visible="true" version="5" changeset="153990936" timestamp="2024-07-15T21:54:20Z" user="Supaplex030" uid="418040">
+		<nd ref="12056174945"/>
+		<nd ref="29784650"/>
+		<nd ref="5960124757"/>
+		<nd ref="5960124760"/>
+		<nd ref="29784670"/>
+		<tag k="cycleway:both" v="no"/>
+		<tag k="foot" v="use_sidepath"/>
+		<tag k="highway" v="tertiary"/>
+		<tag k="lane_markings" v="no"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxspeed" v="50"/>
+		<tag k="name" v="Ebertystraße"/>
+		<tag k="name:etymology:wikidata" v="Q1288532"/>
+		<tag k="note:de" v="Eduard Eberty (*1804;†1894) Berliner Stadtsyndicus"/>
+		<tag k="parking:both" v="lane"/>
+		<tag k="parking:both:fee" v="no"/>
+		<tag k="parking:both:orientation" v="parallel"/>
+		<tag k="postal_code" v="10249"/>
+		<tag k="sidewalk:both" v="separate"/>
+		<tag k="smoothness" v="excellent"/>
+		<tag k="source:width" v="ALKIS"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="width" v="11"/>
+		<tag k="wikidata" v="Q81069755"/>
+	</way>
+</osm>

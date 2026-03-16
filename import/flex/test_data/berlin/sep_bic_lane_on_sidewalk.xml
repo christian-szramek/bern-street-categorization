@@ -1,0 +1,55 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002076 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="246086794" visible="true" version="26" changeset="174082526" timestamp="2025-11-01T22:32:03Z" user="fmc_6" uid="23034323">
+		<nd ref="11272151000"/>
+		<nd ref="11272151168"/>
+		<nd ref="2065983938"/>
+		<nd ref="11272151008"/>
+		<nd ref="11272151007"/>
+		<nd ref="7673377898"/>
+		<nd ref="2850661664"/>
+		<nd ref="11272130615"/>
+		<nd ref="2850661667"/>
+		<nd ref="7673183455"/>
+		<nd ref="2850661654"/>
+		<nd ref="11272130614"/>
+		<nd ref="2850661647"/>
+		<nd ref="11272130613"/>
+		<nd ref="2850661649"/>
+		<nd ref="2850661665"/>
+		<nd ref="8828165934"/>
+		<nd ref="2850661669"/>
+		<nd ref="11272150719"/>
+		<nd ref="11272150717"/>
+		<nd ref="11272150716"/>
+		<nd ref="11272150718"/>
+		<nd ref="7771037258"/>
+		<nd ref="2850661666"/>
+		<nd ref="2850661668"/>
+		<nd ref="9349695764"/>
+		<nd ref="11272150681"/>
+		<nd ref="7407493094"/>
+		<nd ref="11272150630"/>
+		<nd ref="11272150629"/>
+		<nd ref="11272150625"/>
+		<nd ref="2850661653"/>
+		<tag k="bicycle" v="designated"/>
+		<tag k="cycleway:surface" v="asphalt"/>
+		<tag k="cycleway:width" v="1.5"/>
+		<tag k="foot" v="designated"/>
+		<tag k="footway:surface" v="paving_stones"/>
+		<tag k="footway:width" v="2.5"/>
+		<tag k="highway" v="path"/>
+		<tag k="is_sidepath" v="yes"/>
+		<tag k="is_sidepath:of" v="secondary"/>
+		<tag k="is_sidepath:of:name" v="Columbiadamm"/>
+		<tag k="lit" v="yes"/>
+		<tag k="oneway:bicycle" v="yes"/>
+		<tag k="segregated" v="yes"/>
+		<tag k="smoothness" v="excellent"/>
+		<tag k="source:cycleway:width" v="Luftbild 2025"/>
+		<tag k="source:width" v="Luftbild 2025"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="traffic_sign" v="none"/>
+		<tag k="width" v="4"/>
+	</way>
+</osm>

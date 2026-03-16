@@ -1,0 +1,22 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001770 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="306147869" visible="true" version="8" changeset="154143704" timestamp="2024-07-19T13:25:52Z" user="Supaplex030" uid="418040">
+		<nd ref="2375813996"/>
+		<nd ref="12010630128"/>
+		<nd ref="12063222815"/>
+		<nd ref="3109784517"/>
+		<nd ref="262065498"/>
+		<nd ref="617766695"/>
+		<nd ref="12007572704"/>
+		<nd ref="560578492"/>
+		<nd ref="12007345339"/>
+		<nd ref="277418053"/>
+		<tag k="bicycle" v="designated"/>
+		<tag k="foot" v="designated"/>
+		<tag k="highway" v="path"/>
+		<tag k="lit" v="no"/>
+		<tag k="name" v="Kiehnwerderallee"/>
+		<tag k="segregated" v="no"/>
+		<tag k="smoothness" v="intermediate"/>
+		<tag k="surface" v="asphalt"/>
+	</way>
+</osm>

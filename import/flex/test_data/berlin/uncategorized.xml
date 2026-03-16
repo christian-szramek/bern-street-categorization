@@ -1,0 +1,11 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2528126 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="1330601756" visible="true" version="1" changeset="158731891" timestamp="2024-11-04T09:30:54Z" user="Weasel-Wiesel" uid="2414126">
+		<nd ref="12311574609"/>
+		<nd ref="12311574610"/>
+		<nd ref="12311574611"/>
+		<nd ref="12311574612"/>
+		<tag k="highway" v="path"/>
+		<tag k="informal" v="yes"/>
+		<tag k="surface" v="ground"/>
+	</way>
+</osm>

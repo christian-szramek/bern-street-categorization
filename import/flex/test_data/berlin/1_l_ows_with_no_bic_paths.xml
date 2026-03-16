@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001983 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="91569856" visible="true" version="18" changeset="130633811" timestamp="2022-12-29T08:55:55Z" user="Supaplex030" uid="418040">
+		<nd ref="7271665179"/>
+		<nd ref="1860618694"/>
+		<nd ref="8383009987"/>
+		<nd ref="1860618702"/>
+		<nd ref="1860618720"/>
+		<nd ref="1860618728"/>
+		<nd ref="10006709243"/>
+		<nd ref="1063817205"/>
+		<nd ref="9700189629"/>
+		<tag k="cycleway:both" v="no"/>
+		<tag k="highway" v="residential"/>
+		<tag k="lane_markings" v="no"/>
+		<tag k="lanes" v="1"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxspeed" v="50"/>
+		<tag k="name" v="Langenbeckstraße"/>
+		<tag k="name:etymology:wikidata" v="Q66339"/>
+		<tag k="name:etymology:wikipedia" v="de:Bernhard von Langenbeck"/>
+		<tag k="oneway" v="yes"/>
+		<tag k="parking:both" v="no"/>
+		<tag k="postal_code" v="10249"/>
+		<tag k="sidewalk" v="both"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="width" v="3.8"/>
+	</way>
+</osm>

@@ -1,0 +1,37 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001839 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="338616240" visible="true" version="27" changeset="179144026" timestamp="2026-02-27T18:29:23Z" user="Lutz" uid="121460">
+		<nd ref="313467315"/>
+		<nd ref="3651880147"/>
+		<nd ref="1860618778"/>
+		<nd ref="8367626074"/>
+		<nd ref="29270295"/>
+		<tag k="bicycle" v="optional_sidepath"/>
+		<tag k="check_date" v="2024-12-22"/>
+		<tag k="cycleway:left" v="no"/>
+		<tag k="cycleway:right" v="separate"/>
+		<tag k="dual_carriageway" v="yes"/>
+		<tag k="fixme" v="Seit 9. KW 2026 scheint der Radweg durch die Baustelle gesperrt zu sein."/>
+		<tag k="foot" v="use_sidepath"/>
+		<tag k="highway" v="cycleway"/>
+		<tag k="lanes" v="3"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxspeed" v="50"/>
+		<tag k="name" v="Petersburger Straße"/>
+		<tag k="name:etymology:wikidata" v="Q656"/>
+		<tag k="note" v="Seit Herbst 2024 wegen Bauarbeiten Vollsperrung."/>
+		<tag k="old_name:1822-1874" v="Communicationsweg"/>
+		<tag k="old_name:1874-1947" v="Petersburger Straße"/>
+		<tag k="old_name:1947-1991" v="Bersarinstraße"/>
+		<tag k="oneway" v="yes"/>
+		<tag k="parking:left" v="no"/>
+		<tag k="parking:right" v="separate"/>
+		<tag k="postal_code" v="10249"/>
+		<tag k="ref" v="B 96a"/>
+		<tag k="sidewalk:left" v="no"/>
+		<tag k="sidewalk:right" v="separate"/>
+		<tag k="smoothness" v="good"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="wikidata" v="Q2079588"/>
+		<tag k="wikipedia" v="de:Petersburger_Straße"/>
+	</way>
+</osm>

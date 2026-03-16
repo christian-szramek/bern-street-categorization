@@ -1,0 +1,11 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001703 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="1192370279" visible="true" version="3" changeset="173685335" timestamp="2025-10-23T17:26:18Z" user="Traffikant" uid="21727746">
+		<nd ref="11068941946"/>
+		<nd ref="11068941945"/>
+		<tag k="foot" v="designated"/>
+		<tag k="footway" v="traffic_island"/>
+		<tag k="highway" v="path"/>
+		<tag k="lit" v="yes"/>
+		<tag k="surface" v="paving_stones"/>
+	</way>
+</osm>

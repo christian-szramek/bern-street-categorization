@@ -1,0 +1,21 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002066 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="1181864567" visible="true" version="4" changeset="178716182" timestamp="2026-02-18T09:51:32Z" user="thom_bike_bln" uid="4974073">
+		<nd ref="11404856454"/>
+		<nd ref="11404856456"/>
+		<nd ref="321735463"/>
+		<nd ref="11404856460"/>
+		<nd ref="11404856457"/>
+		<nd ref="11404856458"/>
+		<nd ref="8091644560"/>
+		<nd ref="2512672085"/>
+		<tag k="footway" v="sidewalk"/>
+		<tag k="highway" v="footway"/>
+		<tag k="is_sidepath" v="yes"/>
+		<tag k="is_sidepath:of" v="primary"/>
+		<tag k="is_sidepath:of:name" v="Landsberger Allee"/>
+		<tag k="lit" v="yes"/>
+		<tag k="postal_code" v="10249"/>
+		<tag k="smoothness" v="good"/>
+		<tag k="surface" v="paving_stones"/>
+	</way>
+</osm>

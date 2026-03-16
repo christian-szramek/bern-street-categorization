@@ -1,0 +1,55 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001703 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="137699977" visible="true" version="18" changeset="176010192" timestamp="2025-12-16T15:07:33Z" user="FMC-Henri" uid="22902669">
+		<nd ref="1510075981"/>
+		<nd ref="175651225"/>
+		<nd ref="175651226"/>
+		<nd ref="262318899"/>
+		<nd ref="2948017902"/>
+		<nd ref="175651229"/>
+		<nd ref="2948017901"/>
+		<nd ref="175651230"/>
+		<nd ref="175651231"/>
+		<nd ref="1419193211"/>
+		<nd ref="1419193208"/>
+		<nd ref="175651234"/>
+		<nd ref="175651236"/>
+		<nd ref="1419193137"/>
+		<nd ref="1419193135"/>
+		<nd ref="1419193134"/>
+		<nd ref="989201584"/>
+		<nd ref="175651237"/>
+		<nd ref="286492979"/>
+		<nd ref="283017408"/>
+		<nd ref="1419193126"/>
+		<nd ref="1419193125"/>
+		<nd ref="175651239"/>
+		<nd ref="1419193124"/>
+		<nd ref="1419193123"/>
+		<nd ref="1419193122"/>
+		<nd ref="175651240"/>
+		<nd ref="175649021"/>
+		<nd ref="1419193120"/>
+		<nd ref="1419193119"/>
+		<nd ref="175649023"/>
+		<nd ref="175649024"/>
+		<nd ref="8698675757"/>
+		<nd ref="8698675758"/>
+		<nd ref="283017407"/>
+		<tag k="bicycle" v="designated"/>
+		<tag k="foot" v="designated"/>
+		<tag k="highway" v="path"/>
+		<tag k="is_sidepath" v="no"/>
+		<tag k="lit" v="no"/>
+		<tag k="mapillary" v="999701817869104"/>
+		<tag k="oneway" v="no"/>
+		<tag k="segregated" v="no"/>
+		<tag k="smoothness" v="excellent"/>
+		<tag k="source:traffic_sign:mapillary" v="116443127435381"/>
+		<tag k="source:width" v="Messung aus Luftbild mittels JOSM-measurement-Plugin: Berlin/Geoportal DOP20RGB (2024)"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="surface:colour" v="none"/>
+		<tag k="traffic_sign" v="DE:240"/>
+		<tag k="width" v="4.5"/>
+		<tag k="winter_service" v="no"/>
+	</way>
+</osm>
