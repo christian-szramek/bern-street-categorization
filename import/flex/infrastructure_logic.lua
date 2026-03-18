@@ -118,7 +118,7 @@ function M.is_bicycle_only_path(tags)
 end
 
 function M.is_bicycle_path_with_pedestrian_or_mofa_or_moped_allowed(tags) 
-    return M.is_bicycle_allowed(tags) and M.is_foot_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or tags.M.is_motor_vehicle_allowed(tags) )
+    return M.is_bicycle_allowed(tags) and M.is_foot_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_allowed(tags) )
 end
 
 function M.is_cycleway_both_sides(tags)
@@ -127,6 +127,10 @@ end
 
 function M.is_cyclist_waiting_aid(tags)
     return tags.highway == 'cyclist_waiting_aid'
+end
+
+function M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags)
+    return M.is_street_with_bus_bicycle_lane(tags) and M.is_street_with_separate_bicycle_lane_on_sidewalk(tags)
 end
 
 function M.get_lanes(tags)
@@ -169,7 +173,11 @@ function M.get_infrastructure_type(tags, restriction)
         if M.is_oneway(tags) then 
             if M.is_street_with_bus_bicycle_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then
-                    return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
+                    if M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags) then
+                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_and_bic_on_sw'
+                    else
+                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
+                    end
                 else
                     return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_one_side'
                 end
@@ -180,8 +188,12 @@ function M.get_infrastructure_type(tags, restriction)
             end
         else
             if M.is_street_with_bus_bicycle_lane(tags) then
-                if M.is_cycleway_both_sides(tags) then 
-                    return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_both_sides'
+                if M.is_cycleway_both_sides(tags) then
+                    if M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags) then
+                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_and_bic_on_sw'
+                    else
+                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_both_sides'
+                    end
                 else
                     return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_one_side'
                 end
