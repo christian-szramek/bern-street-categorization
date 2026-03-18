@@ -14,9 +14,9 @@ end
 
 function M.is_car(tags, restriction)
     if (restriction == 'CH') then
-        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
+        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway' or ( M.is_street(tags, restriction) and M.is_bicycle_forbidden(tags) )
     else
-        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
+        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway' or ( M.is_street(tags, restriction) and M.is_bicycle_forbidden(tags) )
     end
 end
 
@@ -94,7 +94,7 @@ function M.is_street_with_separate_bicycle_lane_on_sidewalk(tags)
 end
 
 function M.is_street_with_shared_bicycle_lane_on_carriageway(tags)
-    return tags.cycleway == 'shared_lane'
+    return tags.cycleway == 'shared_lane' or tags['cycleway:both'] == 'shared_lane' or tags['cycleway:left'] == 'shared_lane' or tags['cycleway:right'] == 'shared_lane'
 end
 
 function M.is_extra_marked_separate_bicycle_lane_on_sidewalk(tags)
