@@ -212,11 +212,15 @@ function M.get_infrastructure_type(tags, restriction)
             return 'pedestrian'
         end
     elseif M.is_cycleway(tags) then
-        if M.is_foot_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
-            return 'cycleway_multiuse'
+        if tags.cycleway == 'sidepath' or tags.is_sidepath == 'yes' then
+            return 'sep_bic_lane_on_sidewalk'
         else
-            return 'cycleway'
-        end                
+            if M.is_foot_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
+                return 'cycleway_multiuse'
+            else
+                return 'cycleway'
+            end
+        end
     elseif M.is_extra_marked_separate_bicycle_lane_on_sidewalk(tags) then
         return 'sep_bic_lane_on_sidewalk'
     elseif M.is_path(tags) then
