@@ -1,5 +1,5 @@
 local M = {
-  { name = "1_l_s_with_bic_forbidden", area=false, node=false, displayName="1-lane street with bicycle forbidden" },
+  { name = "1_l_s_with_bic_forbidden", area=true, node=false, displayName="1-lane street with bicycle forbidden" },
   { name = "2_l_s_with_bic_forbidden", area=false, node=false, displayName="2-lane street with bicycle forbidden" },
   { name = "3_l_s_with_bic_forbidden", area=false, node=false, displayName="3-lane street with bicycle forbidden" },
   { name = "4_l_s_with_bic_forbidden", area=false, node=false, displayName="4-lane street with bicycle forbidden" },
