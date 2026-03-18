@@ -1,0 +1,27 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002081 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="48891852" visible="true" version="11" changeset="100228254" timestamp="2021-03-01T20:42:35Z" user="TromPete" uid="52437">
+<nd ref="3002833813"/>
+<nd ref="623891232"/>
+<nd ref="256078700"/>
+<nd ref="618013412"/>
+<nd ref="618013410"/>
+<nd ref="256078703"/>
+<nd ref="618013403"/>
+<nd ref="256078702"/>
+<nd ref="487074437"/>
+<nd ref="618013401"/>
+<nd ref="254005768"/>
+<nd ref="620033242"/>
+<nd ref="623891225"/>
+<nd ref="618013399"/>
+<nd ref="254021013"/>
+<tag k="highway" v="residential"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Dammweg"/>
+<tag k="oneway" v="yes"/>
+<tag k="sidewalk" v="right"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

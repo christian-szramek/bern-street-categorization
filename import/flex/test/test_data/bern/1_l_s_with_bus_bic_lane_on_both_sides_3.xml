@@ -1,0 +1,26 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001857 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="67484509" visible="true" version="25" changeset="157049779" timestamp="2024-09-24T17:19:07Z" user="SaschaBrawer" uid="92877">
+<nd ref="30884221"/>
+<nd ref="811421069"/>
+<nd ref="811421168"/>
+<nd ref="33117196"/>
+<nd ref="811812410"/>
+<nd ref="811811900"/>
+<nd ref="4998109452"/>
+<nd ref="561383781"/>
+<nd ref="12197454293"/>
+<nd ref="6264291310"/>
+<nd ref="1108026537"/>
+<nd ref="6264291309"/>
+<nd ref="304407626"/>
+<tag k="cycleway" v="lane"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Länggassstrasse"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire" v="yes"/>
+</way>
+</osm>

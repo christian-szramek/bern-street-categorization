@@ -1,0 +1,24 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002053 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="39236051" visible="true" version="11" changeset="123548243" timestamp="2022-07-13T07:15:26Z" user="Zutter73" uid="4467785">
+<nd ref="470035187"/>
+<nd ref="2918662174"/>
+<nd ref="2918662179"/>
+<nd ref="2918662181"/>
+<nd ref="470035188"/>
+<nd ref="2918662176"/>
+<tag k="bicycle" v="no"/>
+<tag k="foot" v="no"/>
+<tag k="highway" v="trunk"/>
+<tag k="horse" v="no"/>
+<tag k="lanes" v="2"/>
+<tag k="layer" v="-1"/>
+<tag k="maxspeed" v="60"/>
+<tag k="motorroad" v="yes"/>
+<tag k="name" v="Neufeldtunnel"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="A1T"/>
+<tag k="surface" v="asphalt"/>
+<tag k="tunnel" v="yes"/>
+<tag k="tunnel:name" v="Neufeld"/>
+</way>
+</osm>

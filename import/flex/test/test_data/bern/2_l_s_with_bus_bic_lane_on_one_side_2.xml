@@ -1,0 +1,44 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="200213225" visible="true" version="11" changeset="146308375" timestamp="2024-01-16T07:05:32Z" user="mottiger" uid="7504544">
+<nd ref="13375679"/>
+<nd ref="3536978659"/>
+<nd ref="3864172609"/>
+<nd ref="3864172627"/>
+<nd ref="3864172640"/>
+<nd ref="3864172656"/>
+<nd ref="3536978649"/>
+<nd ref="3864172806"/>
+<nd ref="3536978620"/>
+<nd ref="3864172834"/>
+<nd ref="13375680"/>
+<nd ref="3536978680"/>
+<nd ref="3864172874"/>
+<nd ref="3536978664"/>
+<nd ref="3536978624"/>
+<nd ref="3536978651"/>
+<nd ref="566447689"/>
+<nd ref="10625142219"/>
+<nd ref="3536978668"/>
+<nd ref="1092006443"/>
+<nd ref="3864172954"/>
+<nd ref="3536978621"/>
+<nd ref="13375681"/>
+<nd ref="3536978672"/>
+<nd ref="1092006408"/>
+<nd ref="3864172992"/>
+<nd ref="3864172995"/>
+<nd ref="3864173004"/>
+<nd ref="566447691"/>
+<tag k="cycleway:left" v="lane"/>
+<tag k="cycleway:left:lane" v="advisory"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="80"/>
+<tag k="name" v="Neue Murtenstrasse"/>
+<tag k="name:etymology:wikidata" v="Q68283"/>
+<tag k="ref" v="1;10"/>
+<tag k="sidewalk" v="no"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

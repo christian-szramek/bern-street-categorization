@@ -1,0 +1,54 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001955 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="37231307" visible="true" version="6" changeset="164289310" timestamp="2025-03-30T14:08:39Z" user="hubeat" uid="457265">
+<nd ref="9426611855"/>
+<nd ref="9426611884"/>
+<nd ref="9426611883"/>
+<nd ref="9426611887"/>
+<nd ref="9426611888"/>
+<nd ref="9426611889"/>
+<nd ref="9426611890"/>
+<nd ref="433637055"/>
+<nd ref="9426611870"/>
+<nd ref="9426611869"/>
+<nd ref="9426611868"/>
+<nd ref="9426611871"/>
+<nd ref="9426611873"/>
+<nd ref="9426611867"/>
+<nd ref="9426611872"/>
+<nd ref="9426611874"/>
+<nd ref="9426611877"/>
+<nd ref="9426611881"/>
+<nd ref="9426611876"/>
+<nd ref="9426611880"/>
+<nd ref="9426611879"/>
+<nd ref="9426611878"/>
+<nd ref="9426611875"/>
+<nd ref="9426611882"/>
+<nd ref="433637054"/>
+<nd ref="9426611900"/>
+<nd ref="9426611899"/>
+<nd ref="9426611898"/>
+<nd ref="433637053"/>
+<nd ref="9426611897"/>
+<nd ref="9426611896"/>
+<nd ref="433637052"/>
+<nd ref="9426611895"/>
+<nd ref="9426611894"/>
+<nd ref="9426611893"/>
+<nd ref="9426611892"/>
+<nd ref="9426611891"/>
+<nd ref="433637051"/>
+<nd ref="9426611909"/>
+<nd ref="9426611901"/>
+<nd ref="9426611902"/>
+<nd ref="9426611903"/>
+<nd ref="9426611904"/>
+<nd ref="9426611906"/>
+<nd ref="9426611905"/>
+<nd ref="9426611907"/>
+<nd ref="9426611908"/>
+<tag k="highway" v="path"/>
+<tag k="informal" v="yes"/>
+<tag k="surface" v="unpaved"/>
+</way>
+</osm>

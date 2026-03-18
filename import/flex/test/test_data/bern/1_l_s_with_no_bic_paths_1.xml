@@ -1,0 +1,25 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="225399179" visible="true" version="21" changeset="103988086" timestamp="2021-05-02T10:26:50Z" user="habi" uid="15671">
+<nd ref="2622690516"/>
+<nd ref="5200495643"/>
+<nd ref="2612948522"/>
+<nd ref="59632663"/>
+<nd ref="2612946298"/>
+<nd ref="2516443651"/>
+<nd ref="495396815"/>
+<nd ref="5200609693"/>
+<nd ref="2611982997"/>
+<nd ref="2516441883"/>
+<nd ref="489963983"/>
+<nd ref="8538742195"/>
+<nd ref="495317270"/>
+<tag k="highway" v="residential"/>
+<tag k="image" v="https://commons.wikimedia.org/wiki/File:Strassenschild_Hallwylstrasse.jpg"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Hallwylstrasse"/>
+<tag k="name:etymology:wikidata" v="Q118091"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

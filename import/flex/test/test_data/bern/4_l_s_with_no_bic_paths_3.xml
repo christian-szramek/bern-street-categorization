@@ -1,0 +1,19 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001880 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="59355694" visible="true" version="11" changeset="160453235" timestamp="2024-12-20T23:27:24Z" user="freaktechnik" uid="69557">
+<nd ref="736181575"/>
+<nd ref="5516493673"/>
+<nd ref="11079298140"/>
+<nd ref="11079298139"/>
+<nd ref="11079298138"/>
+<nd ref="5516493674"/>
+<nd ref="736181094"/>
+<nd ref="736181101"/>
+<nd ref="5516493669"/>
+<nd ref="736181367"/>
+<tag k="highway" v="service"/>
+<tag k="lanes" v="4"/>
+<tag k="service" v="driveway"/>
+<tag k="turn:lanes:backward" v="left;slight_right|slight_right"/>
+<tag k="turn:lanes:forward" v="left|right"/>
+</way>
+</osm>

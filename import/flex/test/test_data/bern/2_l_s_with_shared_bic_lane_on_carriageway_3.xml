@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001703 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="585349949" visible="true" version="10" changeset="174679326" timestamp="2025-11-15T09:43:35Z" user="Sara Newmountain" uid="20047347">
+<nd ref="452965041"/>
+<nd ref="2279326223"/>
+<nd ref="3920912"/>
+<nd ref="2279326232"/>
+<nd ref="562622876"/>
+<nd ref="2279326248"/>
+<nd ref="562622877"/>
+<nd ref="31554922"/>
+<nd ref="306255273"/>
+<nd ref="3920913"/>
+<nd ref="562623003"/>
+<nd ref="562623004"/>
+<nd ref="562622770"/>
+<nd ref="562622800"/>
+<nd ref="6086481734"/>
+<tag k="cycleway:both" v="shared_lane"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Aargauerstalden"/>
+<tag k="oneway" v="no"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

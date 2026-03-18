@@ -1,0 +1,50 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001883 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="44278347" visible="true" version="25" changeset="165812453" timestamp="2025-05-04T17:58:11Z" user="ctr_corner" uid="14755627">
+<nd ref="2278027911"/>
+<nd ref="452965033"/>
+<nd ref="12652910804"/>
+<nd ref="7447119923"/>
+<nd ref="1380874461"/>
+<nd ref="452965032"/>
+<nd ref="7633079704"/>
+<nd ref="3373749909"/>
+<nd ref="562622863"/>
+<nd ref="3373749914"/>
+<nd ref="15425798"/>
+<nd ref="562622822"/>
+<nd ref="7633079701"/>
+<nd ref="15425799"/>
+<nd ref="562622671"/>
+<nd ref="452965031"/>
+<nd ref="484734385"/>
+<nd ref="31554932"/>
+<nd ref="484734387"/>
+<nd ref="452965029"/>
+<nd ref="484734389"/>
+<nd ref="2281025002"/>
+<nd ref="484734431"/>
+<nd ref="452965028"/>
+<nd ref="484734393"/>
+<nd ref="279893304"/>
+<nd ref="484734395"/>
+<nd ref="484734381"/>
+<nd ref="484734396"/>
+<nd ref="454589204"/>
+<nd ref="2245063104"/>
+<nd ref="484734399"/>
+<nd ref="2245063118"/>
+<nd ref="287013856"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="shared_lane"/>
+<tag k="destination:forward" v="Interlaken"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Grosser Muristalden"/>
+<tag k="oneway" v="no"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire" v="yes"/>
+</way>
+</osm>

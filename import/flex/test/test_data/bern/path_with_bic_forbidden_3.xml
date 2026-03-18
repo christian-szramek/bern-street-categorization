@@ -1,0 +1,32 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754285 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1060529934" visible="true" version="4" changeset="154829149" timestamp="2024-08-04T20:20:33Z" user="habi" uid="15671">
+<nd ref="894113841"/>
+<nd ref="894113836"/>
+<nd ref="894113862"/>
+<nd ref="894113809"/>
+<nd ref="5106073703"/>
+<nd ref="894113812"/>
+<nd ref="894113799"/>
+<nd ref="894113837"/>
+<nd ref="12092451757"/>
+<nd ref="12092451756"/>
+<nd ref="5106073655"/>
+<nd ref="894113839"/>
+<nd ref="5106073656"/>
+<nd ref="12092451755"/>
+<nd ref="5106073652"/>
+<nd ref="894113794"/>
+<nd ref="894113828"/>
+<nd ref="894113863"/>
+<nd ref="894113866"/>
+<nd ref="894113819"/>
+<nd ref="894113851"/>
+<nd ref="894163434"/>
+<nd ref="894113801"/>
+<tag k="bicycle" v="no"/>
+<tag k="colour" v="red"/>
+<tag k="highway" v="path"/>
+<tag k="surface" v="asphalt"/>
+<tag k="width" v="4"/>
+</way>
+</osm>

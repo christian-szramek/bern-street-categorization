@@ -1,0 +1,13 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001939 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="691029034" visible="true" version="5" changeset="154829149" timestamp="2024-08-04T20:20:33Z" user="habi" uid="15671">
+<nd ref="894163429"/>
+<nd ref="12092451748"/>
+<nd ref="9754205366"/>
+<nd ref="894163432"/>
+<tag k="bicycle" v="no"/>
+<tag k="highway" v="path"/>
+<tag k="paving_stones:shape" v="zigzag"/>
+<tag k="surface" v="paving_stones"/>
+<tag k="vehicle" v="private"/>
+</way>
+</osm>

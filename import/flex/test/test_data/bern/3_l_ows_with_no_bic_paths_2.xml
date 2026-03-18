@@ -1,0 +1,16 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="23584525" visible="true" version="16" changeset="160924824" timestamp="2025-01-02T20:22:09Z" user="Alfonso RG" uid="3313579">
+<nd ref="255392723"/>
+<nd ref="3166725147"/>
+<nd ref="12469602586"/>
+<nd ref="7262425178"/>
+<nd ref="452965179"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="3"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Laubeggstrasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="6"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

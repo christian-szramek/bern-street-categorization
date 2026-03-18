@@ -1,0 +1,20 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001883 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="706626514" visible="true" version="6" changeset="168229385" timestamp="2025-06-28T14:25:02Z" user="sheldonelectric" uid="936280">
+<nd ref="12959433665"/>
+<nd ref="6636986478"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="cycleway:right:lane" v="advisory"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Schwarztorstrasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="oneway:bicycle" v="no"/>
+<tag k="ref" v="12"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

@@ -1,0 +1,36 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754285 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="558460732" visible="true" version="13" changeset="166877497" timestamp="2025-05-28T13:56:07Z" user="mottiger" uid="7504544">
+<nd ref="5385398294"/>
+<nd ref="11998849396"/>
+<nd ref="11998849407"/>
+<nd ref="11998849400"/>
+<nd ref="271792443"/>
+<nd ref="5189186211"/>
+<nd ref="267790741"/>
+<nd ref="2355815043"/>
+<nd ref="6139180895"/>
+<nd ref="5189186214"/>
+<nd ref="3514998518"/>
+<nd ref="211097547"/>
+<nd ref="890772554"/>
+<nd ref="717554239"/>
+<nd ref="890036336"/>
+<nd ref="31147828"/>
+<nd ref="890036232"/>
+<nd ref="568183234"/>
+<nd ref="803273299"/>
+<nd ref="3022034633"/>
+<nd ref="12871104179"/>
+<nd ref="416103271"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Bremgartenstrasse"/>
+<tag k="name:etymology:wikidata" v="Q68185"/>
+<tag k="sidewalk" v="both"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

@@ -1,0 +1,22 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1863033 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="50055270" visible="true" version="23" changeset="145100366" timestamp="2023-12-14T07:57:47Z" user="Ronny Standtke" uid="65804">
+<nd ref="987003894"/>
+<nd ref="635723037"/>
+<nd ref="4663118628"/>
+<nd ref="3199062518"/>
+<nd ref="3199062517"/>
+<nd ref="635730087"/>
+<tag k="destination" v="Belp;Köniz;Zentrum;Gurten"/>
+<tag k="destination:symbol" v="airport;tent_site"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="mapillary" v="301050868124775"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Eigerstrasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="survey:date" v="2016-04-25"/>
+</way>
+</osm>

@@ -1,0 +1,20 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2528126 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="160247839" visible="true" version="15" changeset="165814117" timestamp="2025-05-04T18:35:51Z" user="ctr_corner" uid="14755627">
+<nd ref="275702446"/>
+<nd ref="3219125554"/>
+<nd ref="3219125551"/>
+<nd ref="3219125544"/>
+<nd ref="6132244029"/>
+<nd ref="3196542543"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Thunstrasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="10"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

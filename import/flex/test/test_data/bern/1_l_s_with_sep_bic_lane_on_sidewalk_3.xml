@@ -1,0 +1,18 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002050 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="759036248" visible="true" version="1" changeset="78940593" timestamp="2019-12-27T20:19:40Z" user="keujfl839237" uid="3078118">
+<nd ref="890036364"/>
+<nd ref="568183395"/>
+<nd ref="568183396"/>
+<nd ref="1907310699"/>
+<nd ref="568183397"/>
+<nd ref="568183322"/>
+<nd ref="890036410"/>
+<tag k="cycleway" v="separate"/>
+<tag k="highway" v="secondary"/>
+<tag k="junction" v="roundabout"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="60"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

@@ -1,0 +1,20 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001845 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1415473411" visible="true" version="1" changeset="169077074" timestamp="2025-07-17T19:12:26Z" user="habi" uid="15671">
+<nd ref="1220005749"/>
+<nd ref="1220005697"/>
+<nd ref="1220005807"/>
+<nd ref="718484540"/>
+<nd ref="5318352383"/>
+<nd ref="5318352384"/>
+<nd ref="10308658480"/>
+<nd ref="5044154876"/>
+<tag k="cycleway:surface" v="asphalt"/>
+<tag k="foot" v="designated"/>
+<tag k="footway:surface" v="asphalt"/>
+<tag k="highway" v="cycleway"/>
+<tag k="lit" v="yes"/>
+<tag k="name" v="Ladenwandweg"/>
+<tag k="segregated" v="yes"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

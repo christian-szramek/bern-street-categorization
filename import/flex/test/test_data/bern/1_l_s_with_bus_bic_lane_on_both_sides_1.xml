@@ -1,0 +1,29 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002066 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="172645205" visible="true" version="28" changeset="176193663" timestamp="2025-12-20T19:24:20Z" user="Piagno" uid="8542221">
+<nd ref="270961550"/>
+<nd ref="275422296"/>
+<nd ref="2254995005"/>
+<nd ref="34482229"/>
+<nd ref="2049612169"/>
+<nd ref="1215752574"/>
+<nd ref="477576967"/>
+<nd ref="460277628"/>
+<nd ref="2283478681"/>
+<nd ref="270961521"/>
+<nd ref="2283628740"/>
+<nd ref="270724287"/>
+<nd ref="2536319154"/>
+<nd ref="5778443868"/>
+<tag k="cycleway:both" v="lane"/>
+<tag k="destination:backward" v="Zentrum Nord"/>
+<tag k="destination:symbol:backward" v="covered_parking"/>
+<tag k="highway" v="secondary"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Muristrasse"/>
+<tag k="name:etymology:wikidata" v="Q69765"/>
+<tag k="sidewalk" v="both"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

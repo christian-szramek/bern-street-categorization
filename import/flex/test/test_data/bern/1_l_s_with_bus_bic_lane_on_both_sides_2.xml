@@ -1,0 +1,17 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002066 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="385402046" visible="true" version="14" changeset="171906641" timestamp="2025-09-14T09:10:59Z" user="Piagno" uid="8542221">
+<nd ref="314425618"/>
+<nd ref="2529750776"/>
+<nd ref="8337170668"/>
+<nd ref="622512295"/>
+<nd ref="3887485065"/>
+<tag k="cycleway:both" v="lane"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lane_markings" v="no"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Stauffacherstrasse"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

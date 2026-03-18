@@ -1,0 +1,22 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001770 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="116025746" visible="true" version="15" changeset="169420635" timestamp="2025-07-24T20:30:01Z" user="twttr_" uid="23126549">
+<nd ref="4412319655"/>
+<nd ref="286879691"/>
+<nd ref="252793428"/>
+<nd ref="5323334745"/>
+<nd ref="679115158"/>
+<nd ref="5323334747"/>
+<nd ref="132704531"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Zieglerstrasse"/>
+<tag k="name:etymology:wikidata" v="Q1504124"/>
+<tag k="ref" v="10"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire:backward" v="yes"/>
+</way>
+</osm>

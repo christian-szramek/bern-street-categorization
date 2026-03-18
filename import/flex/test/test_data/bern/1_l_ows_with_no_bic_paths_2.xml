@@ -1,0 +1,21 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001845 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="23455682" visible="true" version="9" changeset="132164568" timestamp="2023-02-06T16:11:49Z" user="JP4523" uid="16879839">
+<nd ref="254021016"/>
+<nd ref="618013339"/>
+<nd ref="618013323"/>
+<nd ref="618013320"/>
+<nd ref="618013322"/>
+<nd ref="618013321"/>
+<nd ref="2962172250"/>
+<nd ref="618013337"/>
+<nd ref="254021018"/>
+<nd ref="254021020"/>
+<tag k="highway" v="residential"/>
+<tag k="lanes" v="1"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Nordweg"/>
+<tag k="oneway" v="yes"/>
+<tag k="sidewalk" v="both"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

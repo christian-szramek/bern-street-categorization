@@ -1,0 +1,25 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="4989746" visible="true" version="22" changeset="172819686" timestamp="2025-10-04T07:59:37Z" user="vmicho" uid="1849074">
+<nd ref="565092349"/>
+<nd ref="13192094637"/>
+<nd ref="893878959"/>
+<nd ref="893878970"/>
+<nd ref="2918237481"/>
+<nd ref="1870973148"/>
+<nd ref="2918237495"/>
+<nd ref="893878944"/>
+<tag k="bicycle" v="no"/>
+<tag k="foot" v="no"/>
+<tag k="hgv" v="no"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="4"/>
+<tag k="lanes:backward" v="3"/>
+<tag k="lanes:forward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Kleine Westtangente"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="left|through|right"/>
+<tag k="turn:lanes:forward" v="none"/>
+</way>
+</osm>

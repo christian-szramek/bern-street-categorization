@@ -1,0 +1,16 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="536404831" visible="true" version="6" changeset="103972412" timestamp="2021-05-01T20:01:52Z" user="chatelao" uid="338449">
+<nd ref="5196340634"/>
+<nd ref="5196424268"/>
+<nd ref="6292350944"/>
+<nd ref="5196424267"/>
+<nd ref="2515208717"/>
+<nd ref="2515208889"/>
+<tag k="footway" v="sidewalk"/>
+<tag k="highway" v="footway"/>
+<tag k="lit" v="yes"/>
+<tag k="name" v="Thormannstrasse"/>
+<tag k="name:etymology:wikidata" v="Q24037842"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

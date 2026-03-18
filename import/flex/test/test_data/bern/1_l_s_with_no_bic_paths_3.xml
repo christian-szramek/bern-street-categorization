@@ -1,0 +1,14 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001883 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="40992518" visible="true" version="7" changeset="57122602" timestamp="2018-03-12T19:43:57Z" user="keujfl839237" uid="3078118">
+<nd ref="59632675"/>
+<nd ref="2623627967"/>
+<nd ref="5200427341"/>
+<nd ref="59632676"/>
+<tag k="highway" v="residential"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Museumstrasse"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>
