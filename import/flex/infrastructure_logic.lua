@@ -122,7 +122,12 @@ function M.is_bicycle_path_with_pedestrian_or_mofa_or_moped_allowed(tags)
 end
 
 function M.is_cycleway_both_sides(tags)
-    return ( tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no" ) or ( tags['cycleway:left'] ~= nil and tags['cycleway:right'] ~= nil and tags['cycleway:left'] ~= 'no' and tags['cycleway:right'] ~= 'no' )
+    if tags.oneway == 'yes' then
+        return ( tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no" ) or ( tags['cycleway:left'] ~= nil and tags['cycleway:right'] ~= nil and tags['cycleway:left'] ~= 'no' and tags['cycleway:right'] ~= 'no' )
+    else 
+        return (tags.cycleway ~= nil) or  ( tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no" ) or ( tags['cycleway:left'] ~= nil and tags['cycleway:right'] ~= nil and tags['cycleway:left'] ~= 'no' and tags['cycleway:right'] ~= 'no' )
+    end
+    
 end
 
 function M.is_cyclist_waiting_aid(tags)
