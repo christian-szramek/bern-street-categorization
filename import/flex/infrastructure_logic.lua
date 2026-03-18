@@ -46,7 +46,7 @@ function M.is_ignored(tags)
 end
 
 function M.is_foot_allowed(tags)
-    return tags.foot == 'yes' or tags.foot == 'designated'
+    return tags.foot == 'yes' or tags.foot == 'designated' or tags.foot == 'permissive'
 end
 
 function M.is_moped_allowed(tags)
@@ -62,7 +62,7 @@ function M.is_bicycle_allowed(tags)
 end
 
 function M.is_motor_vehicle_allowed(tags)
-    return tags.motor_vehicle == 'yes'
+    return tags.motor_vehicle == 'yes' or tags.motor_vehicle == 'permissive'
 end
 
 function M.is_foot_forbidden(tags)
@@ -106,23 +106,23 @@ function M.is_path(tags)
 end
 
 function M.is_pedestrian_only_path(tags)
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( tags.bicycle == nil or M.is_bicycle_forbidden(tags)) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
+    return M.is_foot_allowed(tags) and ( tags.bicycle == nil or M.is_bicycle_forbidden(tags)) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
-function M.is_pedestrian_and_bicycle_path(tags)
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and M.is_bicycle_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
+function M.is_pedestrian_path_with_bicycle_allowed(tags)
+    return M.is_foot_allowed(tags) and M.is_bicycle_allowed(tags) and tags.bicycle ~= 'designated' and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
 function M.is_bicycle_only_path(tags)
-    return M.is_bicycle_allowed(tags) and M.is_foot_forbidden(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
+    return M.is_bicycle_allowed(tags) and ( tags.foot == nil or M.is_foot_forbidden(tags) ) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
-function M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) 
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and M.is_bicycle_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( M.is_motor_vehicle_allowed(tags) or tags.motor_vehicle == 'permissive' )
+function M.is_bicycle_path_with_pedestrian_or_mofa_or_moped_allowed(tags) 
+    return M.is_bicycle_allowed(tags) and M.is_foot_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or tags.M.is_motor_vehicle_allowed(tags) )
 end
 
 function M.is_cycleway_both_sides(tags)
-    return tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no"
+    return ( tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no" ) or ( tags['cycleway:left'] ~= nil and tags['cycleway:right'] ~= nil and tags['cycleway:left'] ~= 'no' and tags['cycleway:right'] ~= 'no' )
 end
 
 function M.is_cyclist_waiting_aid(tags)
@@ -130,7 +130,9 @@ function M.is_cyclist_waiting_aid(tags)
 end
 
 function M.get_lanes(tags)
-    if (tags.lanes == '2') then 
+    if (tags.lanes == '1') then 
+        return '1'
+    elseif (tags.lanes == '2') then 
         return '2'
     elseif (tags.lanes == '3') then 
         return '3'
@@ -149,7 +151,12 @@ function M.get_lanes(tags)
     elseif (tags.lanes == '10') then 
         return '10'
     else 
-       return '1'
+        if (tags['lanes:forward'] ~= nil and tags['lanes:backward'] ~= nil) then
+            lanes = tonumber(tags['lanes:forward']) + tonumber(tags['lanes:backward'])
+            return tostring(lanes)
+        else
+            return '1'
+        end
     end
 end
 
@@ -203,11 +210,11 @@ function M.get_infrastructure_type(tags, restriction)
     elseif M.is_path(tags) then
         if M.is_pedestrian_only_path(tags) then
             return 'pedestrian'
-        elseif M.is_pedestrian_and_bicycle_path(tags) then
+        elseif M.is_pedestrian_path_with_bicycle_allowed(tags) then
             return 'pedestrian_with_bic_allowed'
         elseif M.is_bicycle_only_path(tags) then 
             return 'cycleway'
-        elseif M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) then
+        elseif M.is_bicycle_path_with_pedestrian_or_mofa_or_moped_allowed(tags) then
             return 'cycleway_multiuse'
         elseif M.is_bicycle_forbidden(tags) then
             return 'path_with_bic_forbidden'
