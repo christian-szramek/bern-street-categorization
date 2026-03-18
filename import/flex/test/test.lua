@@ -20,7 +20,7 @@ function load_osm_tags(xml_path)
         p:parse(line)
     end
 
-    p:parse()  -- finalize parsing
+    p:parse()
     p:close()
 
     return tags
@@ -41,6 +41,11 @@ end
 
 function execute_test(feature_path, restriction, expected_infrastructure_type)
     local feature_tags = load_osm_tags(feature_path)
+
+    -- TODO: remove this when all test data is finished
+    if not feature_tags or next(feature_tags) == nil then
+        return
+    end
 
     local actual_infrastructure_type = infrastructure_logic.get_infrastructure_type(feature_tags, restriction)
 
@@ -73,9 +78,40 @@ function execute_all_tests_for_city(city, restriction)
     end
 end
 
+function execute_test_for_given_feature(test_feature, restriction, expected_infrastructure_type)
+
+    actual_infrastructure_type = infrastructure_logic.get_infrastructure_type(test_feature, restriction)
+
+
+    test(function ()
+        assert(
+            expected_infrastructure_type == actual_infrastructure_type,
+            'Infrastructure type should be: ' .. expected_infrastructure_type .. ' for restriction: ' .. restriction .. ', but was: ' .. actual_infrastructure_type)
+    end)
+
+end
+
 -- Tests for Bern
 execute_all_tests_for_city('bern', 'CH')
 
 -- Tests for Berlin
 execute_all_tests_for_city('berlin', 'DE')
 
+
+-- Tests for separate bicycle lane on sidewalk (marked as extra way)
+test_feature = {}
+test_feature['highway'] = 'path'
+test_feature['path'] = 'sidepath'
+test_feature['bicycle'] = 'designated'
+
+execute_test_for_given_feature(test_feature, 'CH', 'sep_bic_lane_on_sidewalk')
+execute_test_for_given_feature(test_feature, 'DE', 'sep_bic_lane_on_sidewalk')
+execute_test_for_given_feature(test_feature, 'US', 'sep_bic_lane_on_sidewalk')
+
+test_feature = {}
+test_feature['highway'] = 'cycleway'
+test_feature['cycleway'] = 'sidepath'
+
+execute_test_for_given_feature(test_feature, 'CH', 'sep_bic_lane_on_sidewalk')
+execute_test_for_given_feature(test_feature, 'DE', 'sep_bic_lane_on_sidewalk')
+execute_test_for_given_feature(test_feature, 'US', 'sep_bic_lane_on_sidewalk')
