@@ -1,0 +1,31 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="561878178" visible="true" version="5" changeset="159315659" timestamp="2024-11-19T09:32:15Z" user="Simsalasim" uid="18830552">
+<nd ref="31599657"/>
+<nd ref="379521064"/>
+<nd ref="665097907"/>
+<nd ref="3207236471"/>
+<nd ref="3207234333"/>
+<nd ref="3207234340"/>
+<nd ref="3207234345"/>
+<nd ref="3207234339"/>
+<nd ref="665097908"/>
+<nd ref="379520961"/>
+<tag k="cycleway" v="lane"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:backward" v="1"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="mofa:backward" v="yes"/>
+<tag k="motor_vehicle:backward" v="destination"/>
+<tag k="name" v="Effingerstrasse"/>
+<tag k="name:etymology:wikidata" v="Q1296211"/>
+<tag k="name:source" v="http://archives-quickaccess.ch/bbb/lexikon/2617"/>
+<tag k="psv:backward" v="yes"/>
+<tag k="ref" v="12"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

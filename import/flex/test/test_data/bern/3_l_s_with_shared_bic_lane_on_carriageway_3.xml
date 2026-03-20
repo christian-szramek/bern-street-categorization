@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001831 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="570658232" visible="true" version="7" changeset="169918350" timestamp="2025-08-03T18:01:52Z" user="somebody_else" uid="13793896">
+<nd ref="276072727"/>
+<nd ref="6270098930"/>
+<nd ref="485830507"/>
+<nd ref="71823166"/>
+<nd ref="71823169"/>
+<nd ref="6270097660"/>
+<nd ref="633156160"/>
+<nd ref="6270097661"/>
+<nd ref="10611885896"/>
+<nd ref="6270097672"/>
+<nd ref="10611885895"/>
+<nd ref="6270097673"/>
+<nd ref="5406087033"/>
+<tag k="cycleway:both" v="shared_lane"/>
+<tag k="highway" v="residential"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:backward" v="1"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="maxspeed:type" v="sign"/>
+<tag k="name" v="Frischingstrasse"/>
+<tag k="sidewalk" v="both"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>
