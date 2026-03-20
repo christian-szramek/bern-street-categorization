@@ -179,7 +179,7 @@ function M.get_infrastructure_type(tags, restriction)
             if M.is_street_with_bus_bicycle_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then
                     if M.is_bus_bicycle_lane_on_one_side_and_separate_bicycle_lane_on_sidepath(tags) then
-                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_and_sep_bic_lane_on_sp'
+                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_and_sep_bic_on_sp'
                     else
                         return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
                     end
@@ -195,7 +195,7 @@ function M.get_infrastructure_type(tags, restriction)
             if M.is_street_with_bus_bicycle_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then
                     if M.is_bus_bicycle_lane_on_one_side_and_separate_bicycle_lane_on_sidepath(tags) then
-                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_and_sep_bic_lane_on_sp'
+                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_and_sep_bic_on_sp'
                     else
                         return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_both_sides'
                     end
