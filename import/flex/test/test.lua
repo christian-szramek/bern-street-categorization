@@ -42,11 +42,6 @@ end
 function execute_test(feature_path, restriction, expected_infrastructure_type)
     local feature_tags = load_osm_tags(feature_path)
 
-    -- TODO: remove this when all test data is finished
-    if not feature_tags or next(feature_tags) == nil then
-        return
-    end
-
     local actual_infrastructure_type = infrastructure_logic.get_infrastructure_type(feature_tags, restriction)
 
     if actual_infrastructure_type ~= expected_infrastructure_type then
