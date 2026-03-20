@@ -1,0 +1,34 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001983 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="465418104" visible="true" version="20" changeset="173996362" timestamp="2025-10-30T21:36:42Z" user="thom_bike_bln" uid="4974073">
+		<nd ref="5751302183"/>
+		<nd ref="13271186665"/>
+		<nd ref="1983333477"/>
+		<nd ref="1983333478"/>
+		<nd ref="994386037"/>
+		<nd ref="9804718448"/>
+		<nd ref="4363544509"/>
+		<nd ref="9804718447"/>
+		<nd ref="674514652"/>
+		<tag k="bicycle" v="yes"/>
+		<tag k="cycleway:both" v="lane"/>
+		<tag k="cycleway:both:lane" v="exclusive"/>
+		<tag k="cycleway:both:separation" v="bollard"/>
+		<tag k="embedded_rails" v="tram"/>
+		<tag k="foot" v="use_sidepath"/>
+		<tag k="highway" v="tertiary"/>
+		<tag k="lanes" v="2"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxspeed" v="30"/>
+		<tag k="name" v="Invalidenstraße"/>
+		<tag k="name:etymology:wikidata" v="Q1671654"/>
+		<tag k="oneway" v="no"/>
+		<tag k="parking:both" v="no"/>
+		<tag k="postal_code" v="10115"/>
+		<tag k="sidewalk:both" v="separate"/>
+		<tag k="smoothness" v="good"/>
+		<tag k="source:maxspeed" v="DE:urban"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="wikidata" v="Q463414"/>
+		<tag k="wikipedia" v="de:Invalidenstraße (Berlin)"/>
+	</way>
+</osm>

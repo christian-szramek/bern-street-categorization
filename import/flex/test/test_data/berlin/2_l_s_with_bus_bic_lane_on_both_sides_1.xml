@@ -1,0 +1,30 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002042 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="1395743534" visible="true" version="1" changeset="167697008" timestamp="2025-06-16T14:19:06Z" user="fmc_1" uid="22889001">
+		<nd ref="12919464190"/>
+		<nd ref="8457297289"/>
+		<nd ref="409493260"/>
+		<nd ref="12866984036"/>
+		<nd ref="12919464192"/>
+		<tag k="cycleway:left" v="lane"/>
+		<tag k="cycleway:left:lane" v="advisory"/>
+		<tag k="cycleway:right" v="lane"/>
+		<tag k="cycleway:right:lane" v="exclusive"/>
+		<tag k="foot" v="use_sidepath"/>
+		<tag k="highway" v="tertiary"/>
+		<tag k="lanes" v="2"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxspeed" v="50"/>
+		<tag k="name" v="Gartenstraße"/>
+		<tag k="parking:left" v="lane"/>
+		<tag k="parking:left:fee" v="yes"/>
+		<tag k="parking:left:fee:conditional" v="no @ (Mo-Fr 00:00-09:00,20:00-24:00; Sa 00:00-09:00,18:00-24:00; Su)"/>
+		<tag k="parking:left:markings" v="yes"/>
+		<tag k="parking:left:orientation" v="parallel"/>
+		<tag k="parking:right" v="no"/>
+		<tag k="postal_code" v="13355"/>
+		<tag k="sidewalk:both" v="separate"/>
+		<tag k="smoothness" v="good"/>
+		<tag k="source:maxspeed" v="DE:urban"/>
+		<tag k="surface" v="asphalt"/>
+	</way>
+</osm>

@@ -1,0 +1,18 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002076 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="569029613" visible="true" version="2" changeset="131521304" timestamp="2023-01-20T19:56:33Z" user="Ronny Standtke" uid="65804">
+<nd ref="255621861"/>
+<nd ref="1599413068"/>
+<nd ref="275691126"/>
+<tag k="destination:forward" v="Zoo"/>
+<tag k="highway" v="residential"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Aegertenstrasse"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="left|through;right"/>
+</way>
+</osm>

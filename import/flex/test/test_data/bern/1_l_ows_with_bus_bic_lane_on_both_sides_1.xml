@@ -1,0 +1,30 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002071 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="26758252" visible="true" version="19" changeset="160400273" timestamp="2024-12-19T15:44:35Z" user="Ronny Standtke" uid="65804">
+<nd ref="2957079084"/>
+<nd ref="2957079085"/>
+<nd ref="2957079075"/>
+<nd ref="2957079091"/>
+<nd ref="2957079106"/>
+<nd ref="2957079094"/>
+<nd ref="2957079099"/>
+<nd ref="2212720964"/>
+<nd ref="276073177"/>
+<nd ref="2212720970"/>
+<nd ref="440156052"/>
+<nd ref="5451449255"/>
+<nd ref="1021865"/>
+<nd ref="286879708"/>
+<tag k="cycleway:left" v="opposite_lane"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Sulgeneckstrasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="oneway:bicycle" v="no"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="width" v="7.5"/>
+</way>
+</osm>

@@ -1,0 +1,39 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002042 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="678708832" visible="true" version="7" changeset="174081236" timestamp="2025-11-01T21:37:04Z" user="fmc_6" uid="23034323">
+		<nd ref="6355008328"/>
+		<nd ref="6355008232"/>
+		<nd ref="6355008329"/>
+		<nd ref="6355008322"/>
+		<nd ref="6355008321"/>
+		<nd ref="6355008320"/>
+		<nd ref="6355008319"/>
+		<nd ref="6355008318"/>
+		<nd ref="6355008317"/>
+		<nd ref="6355008316"/>
+		<nd ref="6355008315"/>
+		<nd ref="6355008314"/>
+		<nd ref="6355008313"/>
+		<nd ref="6355008312"/>
+		<nd ref="6355008311"/>
+		<nd ref="6355008310"/>
+		<nd ref="6355008309"/>
+		<nd ref="6355008308"/>
+		<nd ref="8834378271"/>
+		<nd ref="10723324247"/>
+		<nd ref="8834378268"/>
+		<nd ref="10723324248"/>
+		<nd ref="10723324249"/>
+		<nd ref="6355008306"/>
+		<nd ref="6355008305"/>
+		<nd ref="6355008304"/>
+		<nd ref="10723324250"/>
+		<nd ref="6355008303"/>
+		<tag k="bicycle" v="no"/>
+		<tag k="highway" v="path"/>
+		<tag k="informal" v="yes"/>
+		<tag k="lit" v="no"/>
+		<tag k="source:width" v="Luftbild 2025"/>
+		<tag k="surface" v="ground"/>
+		<tag k="width" v="0.5"/>
+	</way>
+</osm>

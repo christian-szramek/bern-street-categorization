@@ -1,0 +1,64 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754285 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="23633764" visible="true" version="24" changeset="108914413" timestamp="2021-07-31T01:58:40Z" user="mjulius" uid="7412">
+<nd ref="255405347"/>
+<nd ref="624587"/>
+<nd ref="5187434793"/>
+<nd ref="5184641651"/>
+<nd ref="5187434795"/>
+<nd ref="2532959"/>
+<nd ref="5187434797"/>
+<nd ref="255405348"/>
+<nd ref="5184641649"/>
+<nd ref="3346739453"/>
+<nd ref="5184641647"/>
+<nd ref="624586"/>
+<nd ref="5184641641"/>
+<nd ref="5184641645"/>
+<nd ref="5184641643"/>
+<nd ref="255405349"/>
+<nd ref="5184641640"/>
+<nd ref="5184641638"/>
+<nd ref="1505761397"/>
+<nd ref="5184641634"/>
+<nd ref="5184641636"/>
+<nd ref="5184641632"/>
+<nd ref="255405115"/>
+<nd ref="5184641628"/>
+<nd ref="5184641630"/>
+<nd ref="8964538920"/>
+<nd ref="255405116"/>
+<nd ref="5184641625"/>
+<nd ref="3346739451"/>
+<nd ref="5184641623"/>
+<nd ref="1505761396"/>
+<nd ref="8964538918"/>
+<nd ref="255405113"/>
+<nd ref="5187434799"/>
+<nd ref="255405114"/>
+<nd ref="5187435029"/>
+<nd ref="5184641622"/>
+<nd ref="255405086"/>
+<nd ref="8964359116"/>
+<nd ref="2532954"/>
+<nd ref="5187435025"/>
+<nd ref="254516405"/>
+<nd ref="5187435023"/>
+<nd ref="5187434801"/>
+<nd ref="255405075"/>
+<nd ref="5187435022"/>
+<nd ref="254386000"/>
+<tag k="bridge" v="yes"/>
+<tag k="bridge:name" v="Felsenauviadukt"/>
+<tag k="highway" v="motorway"/>
+<tag k="int_ref" v="E 25;E 27"/>
+<tag k="lanes" v="3"/>
+<tag k="layer" v="2"/>
+<tag k="lit" v="no"/>
+<tag k="maxspeed" v="80"/>
+<tag k="name" v="Felsenauviadukt"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="A1"/>
+<tag k="surface" v="asphalt"/>
+<tag k="toll" v="yes"/>
+</way>
+</osm>

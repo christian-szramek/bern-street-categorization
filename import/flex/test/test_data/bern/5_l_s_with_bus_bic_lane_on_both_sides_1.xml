@@ -1,0 +1,19 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002066 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="667913239" visible="true" version="4" changeset="160453207" timestamp="2024-12-20T23:26:23Z" user="freaktechnik" uid="69557">
+<nd ref="6254174661"/>
+<nd ref="736181443"/>
+<nd ref="731199789"/>
+<tag k="cycleway" v="lane"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lanes:psv:backward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Murtenstrasse"/>
+<tag k="ref" v="1;10"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:forward" v="left|through"/>
+</way>
+</osm>

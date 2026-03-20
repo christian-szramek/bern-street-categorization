@@ -1,0 +1,30 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001880 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="116648001" visible="true" version="27" changeset="164346855" timestamp="2025-03-31T19:57:49Z" user="dafadllyn" uid="7494825">
+<nd ref="1314537912"/>
+<nd ref="10650064033"/>
+<nd ref="506223228"/>
+<nd ref="506223229"/>
+<nd ref="10650064059"/>
+<nd ref="3726633316"/>
+<nd ref="1907262113"/>
+<nd ref="10650064069"/>
+<nd ref="3726633311"/>
+<nd ref="10650064080"/>
+<nd ref="1907262109"/>
+<nd ref="10650064040"/>
+<nd ref="10650062404"/>
+<nd ref="10650063989"/>
+<nd ref="506223244"/>
+<tag k="bridge" v="yes"/>
+<tag k="cycleway:both" v="lane"/>
+<tag k="cycleway:both:lane" v="advisory"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="2"/>
+<tag k="layer" v="1"/>
+<tag k="lit" v="no"/>
+<tag k="maxspeed" v="60"/>
+<tag k="name" v="Halenbrücke"/>
+<tag k="sidewalk:left" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

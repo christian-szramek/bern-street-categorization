@@ -1,0 +1,15 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001857 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="653723627" visible="true" version="3" changeset="155151472" timestamp="2024-08-12T14:15:04Z" user="ydrgbjo" uid="65044">
+<nd ref="3124605660"/>
+<nd ref="474371069"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lanes" v="2"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Elfenstrasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|right"/>
+<tag k="wikidata" v="Q128914014"/>
+</way>
+</osm>

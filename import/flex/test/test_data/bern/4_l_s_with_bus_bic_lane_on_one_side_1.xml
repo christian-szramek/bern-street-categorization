@@ -1,0 +1,22 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001845 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="25463644" visible="true" version="20" changeset="158755683" timestamp="2024-11-04T20:15:33Z" user="dafadllyn" uid="7494825">
+<nd ref="1671605885"/>
+<nd ref="1858374275"/>
+<nd ref="9711477331"/>
+<nd ref="12312672978"/>
+<nd ref="5351552432"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="destination:forward" v="Zürich;Basel"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="4"/>
+<tag k="lanes:backward" v="3"/>
+<tag k="lanes:forward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Belpstrasse"/>
+<tag k="ref" v="12"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire:backward" v="yes"/>
+<tag k="turn:lanes:backward" v="left;through|right|right"/>
+</way>
+</osm>

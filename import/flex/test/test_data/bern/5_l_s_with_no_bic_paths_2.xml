@@ -1,0 +1,18 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754338 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1116817904" visible="true" version="1" changeset="129315940" timestamp="2022-11-24T09:41:10Z" user="habi" uid="15671">
+<nd ref="10213972875"/>
+<nd ref="741107040"/>
+<nd ref="3177981035"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Laupenstrasse"/>
+<tag k="ref" v="1;12"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire" v="yes"/>
+<tag k="turn:lanes:forward" v="left|through|through;right"/>
+</way>
+</osm>

@@ -1,0 +1,17 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001962 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="23586279" visible="true" version="37" changeset="159513774" timestamp="2024-11-23T20:39:06Z" user="mjulius" uid="7412">
+<nd ref="624585"/>
+<nd ref="255410244"/>
+<nd ref="889505857"/>
+<nd ref="255410245"/>
+<nd ref="497661105"/>
+<nd ref="889505431"/>
+<tag k="destination" v="Bern-Neufeld;Bremgarten"/>
+<tag k="highway" v="motorway_link"/>
+<tag k="lanes" v="1"/>
+<tag k="maxheight" v="below_default"/>
+<tag k="maxspeed" v="80"/>
+<tag k="oneway" v="yes"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

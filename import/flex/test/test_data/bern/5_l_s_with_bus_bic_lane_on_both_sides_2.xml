@@ -1,0 +1,19 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001946 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="48162953" visible="true" version="13" changeset="81631524" timestamp="2020-02-29T22:19:16Z" user="nurdafur" uid="3172019">
+<nd ref="611658079"/>
+<nd ref="564721065"/>
+<nd ref="611658071"/>
+<nd ref="611658066"/>
+<nd ref="611658063"/>
+<nd ref="3469926598"/>
+<tag k="cycleway" v="lane"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:backward" v="3"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Winkelriedstrasse"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire" v="yes"/>
+</way>
+</osm>

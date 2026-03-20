@@ -1,0 +1,23 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302690 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="48846008" visible="true" version="19" changeset="149299716" timestamp="2024-03-29T08:10:20Z" user="x_fma_x" uid="131561">
+<nd ref="255620969"/>
+<nd ref="7061582194"/>
+<tag k="bridge" v="yes"/>
+<tag k="cycleway" v="lane"/>
+<tag k="cycleway:lane" v="exclusive"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:backward" v="1"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="layer" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="maxweight:signed" v="no"/>
+<tag k="name" v="Lorrainebrücke"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire" v="yes"/>
+<tag k="turn:lanes:forward" v="through|right"/>
+<tag k="wikidata" v="Q1870395"/>
+</way>
+</osm>

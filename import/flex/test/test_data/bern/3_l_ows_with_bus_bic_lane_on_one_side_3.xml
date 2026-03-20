@@ -1,0 +1,26 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002050 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1118859710" visible="true" version="4" changeset="175119200" timestamp="2025-11-25T16:51:26Z" user="habi" uid="15671">
+<nd ref="725887557"/>
+<nd ref="10232732140"/>
+<nd ref="10232732141"/>
+<nd ref="725887467"/>
+<nd ref="4989786985"/>
+<nd ref="3903416059"/>
+<tag k="bicycle:lanes" v="yes|no|designated|no"/>
+<tag k="cycleway" v="lane"/>
+<tag k="cycleway:lane" v="exclusive"/>
+<tag k="cycleway:lanes" v="no|no|lane|no"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="maxspeed:type" v="CH:urban"/>
+<tag k="name" v="Bremgartenstrasse"/>
+<tag k="name:etymology:wikidata" v="Q68185"/>
+<tag k="oneway" v="yes"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through|through|right"/>
+<tag k="vehicle:lanes" v="yes|yes|no|yes"/>
+</way>
+</osm>

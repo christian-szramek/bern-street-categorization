@@ -1,0 +1,23 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001758 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="48124533" visible="true" version="8" changeset="172577903" timestamp="2025-09-28T17:41:16Z" user="vmicho" uid="1849074">
+<nd ref="1069158595"/>
+<nd ref="3458002067"/>
+<nd ref="2615186745"/>
+<nd ref="3458002068"/>
+<nd ref="611658116"/>
+<nd ref="611658114"/>
+<nd ref="611658126"/>
+<nd ref="611658127"/>
+<nd ref="611658128"/>
+<nd ref="614844589"/>
+<nd ref="559110399"/>
+<nd ref="13178091634"/>
+<nd ref="13178091637"/>
+<nd ref="11357856286"/>
+<nd ref="559110419"/>
+<tag k="highway" v="service"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="turn:lanes:forward" v="left|slight_left|right"/>
+</way>
+</osm>

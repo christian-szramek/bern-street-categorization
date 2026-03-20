@@ -1,0 +1,18 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002081 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="4886824" visible="true" version="35" changeset="165812047" timestamp="2025-05-04T17:48:02Z" user="ctr_corner" uid="14755627">
+<nd ref="21378488"/>
+<nd ref="2049612181"/>
+<nd ref="488053479"/>
+<nd ref="488053462"/>
+<nd ref="478658009"/>
+<nd ref="2252948976"/>
+<nd ref="2299540798"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="highway" v="secondary"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Muristrasse"/>
+<tag k="name:etymology:wikidata" v="Q69765"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

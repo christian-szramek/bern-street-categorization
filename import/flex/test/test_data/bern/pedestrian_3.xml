@@ -1,0 +1,13 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302690 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="536413955" visible="true" version="3" changeset="103905454" timestamp="2021-04-30T10:38:07Z" user="orycteropus1" uid="10240271">
+<nd ref="5194851020"/>
+<nd ref="5196412109"/>
+<tag k="footway" v="sidewalk"/>
+<tag k="highway" v="footway"/>
+<tag k="image" v="https://commons.wikimedia.org/wiki/File:Denzlerstrasse_Strassenschild.jpg"/>
+<tag k="lit" v="yes"/>
+<tag k="name" v="Denzlerstrasse"/>
+<tag k="name:etymology:wikidata" v="Q18816421"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

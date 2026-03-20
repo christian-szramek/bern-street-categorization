@@ -1,0 +1,20 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754282 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="75652078" visible="true" version="8" changeset="116826499" timestamp="2022-01-31T14:36:36Z" user="habi" uid="15671">
+<nd ref="893128921"/>
+<nd ref="4740760267"/>
+<nd ref="4740760265"/>
+<nd ref="4740760266"/>
+<nd ref="893129008"/>
+<nd ref="4740760247"/>
+<nd ref="4740760264"/>
+<nd ref="9463367929"/>
+<nd ref="893129044"/>
+<tag k="cycleway:right" v="track"/>
+<tag k="highway" v="primary"/>
+<tag k="maxspeed" v="60"/>
+<tag k="name" v="Tiefenaustrasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="1;12"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

@@ -1,0 +1,32 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001939 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="42675095" visible="true" version="11" changeset="172976470" timestamp="2025-10-07T20:15:44Z" user="Traffikant" uid="21727746">
+		<nd ref="487673623"/>
+		<nd ref="533639226"/>
+		<nd ref="533639225"/>
+		<nd ref="533639227"/>
+		<nd ref="12703349435"/>
+		<nd ref="533639229"/>
+		<nd ref="533639232"/>
+		<nd ref="12703349434"/>
+		<nd ref="533639233"/>
+		<nd ref="533639237"/>
+		<nd ref="12703349433"/>
+		<nd ref="533639235"/>
+		<nd ref="533639236"/>
+		<nd ref="12703349432"/>
+		<nd ref="487689287"/>
+		<tag k="destination:backward" v="Dresden;Magdeburg;Leipzig;Wilmersdorf;Flughafen"/>
+		<tag k="destination:colour:backward" v=";;;;white"/>
+		<tag k="destination:forward" v="Kaiserdamm Süd"/>
+		<tag k="destination:ref:backward" v="A 100"/>
+		<tag k="destination:symbol:backward" v=";;;;airport"/>
+		<tag k="highway" v="motorway_link"/>
+		<tag k="lanes:backward" v="1"/>
+		<tag k="lanes:forward" v="1"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxheight" v="default"/>
+		<tag k="maxspeed" v="60"/>
+		<tag k="oneway" v="no"/>
+		<tag k="urban" v="yes"/>
+	</way>
+</osm>

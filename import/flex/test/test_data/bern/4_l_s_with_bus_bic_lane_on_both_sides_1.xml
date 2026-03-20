@@ -1,0 +1,16 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002066 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="219927154" visible="true" version="8" changeset="132943005" timestamp="2023-02-23T20:48:14Z" user="jce70" uid="11713151">
+<nd ref="1092005946"/>
+<nd ref="566447184"/>
+<tag k="bicycle" v="yes"/>
+<tag k="cycleway:both" v="lane"/>
+<tag k="cycleway:both:lane" v="advisory"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="4"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="60"/>
+<tag k="name" v="Niederbottigenstrasse"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

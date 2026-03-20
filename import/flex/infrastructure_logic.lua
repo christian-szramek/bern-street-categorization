@@ -14,9 +14,9 @@ end
 
 function M.is_car(tags, restriction)
     if (restriction == 'CH') then
-        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
+        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway' or ( M.is_street(tags, restriction) and M.is_bicycle_forbidden(tags) )
     else
-        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
+        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway' or ( M.is_street(tags, restriction) and M.is_bicycle_forbidden(tags) )
     end
 end
 
@@ -46,7 +46,7 @@ function M.is_ignored(tags)
 end
 
 function M.is_foot_allowed(tags)
-    return tags.foot == 'yes' or tags.foot == 'designated'
+    return tags.foot == 'yes' or tags.foot == 'designated' or tags.foot == 'permissive'
 end
 
 function M.is_moped_allowed(tags)
@@ -62,7 +62,7 @@ function M.is_bicycle_allowed(tags)
 end
 
 function M.is_motor_vehicle_allowed(tags)
-    return tags.motor_vehicle == 'yes'
+    return tags.motor_vehicle == 'yes' or tags.motor_vehicle == 'permissive'
 end
 
 function M.is_foot_forbidden(tags)
@@ -94,7 +94,7 @@ function M.is_street_with_separate_bicycle_lane_on_sidewalk(tags)
 end
 
 function M.is_street_with_shared_bicycle_lane_on_carriageway(tags)
-    return tags.cycleway == 'shared_lane'
+    return tags.cycleway == 'shared_lane' or tags['cycleway:both'] == 'shared_lane' or tags['cycleway:left'] == 'shared_lane' or tags['cycleway:right'] == 'shared_lane'
 end
 
 function M.is_extra_marked_separate_bicycle_lane_on_sidewalk(tags)
@@ -106,31 +106,42 @@ function M.is_path(tags)
 end
 
 function M.is_pedestrian_only_path(tags)
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and ( tags.bicycle == nil or M.is_bicycle_forbidden(tags)) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
+    return M.is_foot_allowed(tags) and ( tags.bicycle == nil or M.is_bicycle_forbidden(tags)) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
-function M.is_pedestrian_and_bicycle_path(tags)
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and M.is_bicycle_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
+function M.is_pedestrian_path_with_bicycle_allowed(tags)
+    return M.is_foot_allowed(tags) and M.is_bicycle_allowed(tags) and tags.bicycle ~= 'designated' and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
 function M.is_bicycle_only_path(tags)
-    return M.is_bicycle_allowed(tags) and M.is_foot_forbidden(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
+    return M.is_bicycle_allowed(tags) and ( tags.foot == nil or M.is_foot_forbidden(tags) ) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_forbidden(tags) )
 end
 
-function M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) 
-    return ( M.is_foot_allowed(tags) or tags.foot == 'permissive' ) and M.is_bicycle_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( M.is_motor_vehicle_allowed(tags) or tags.motor_vehicle == 'permissive' )
+function M.is_bicycle_path_with_pedestrian_or_mofa_or_moped_allowed(tags) 
+    return M.is_bicycle_allowed(tags) and M.is_foot_allowed(tags) and ( tags.horse == nil or M.is_horse_forbidden(tags) ) and ( tags.motor_vehicle == nil or M.is_motor_vehicle_allowed(tags) )
 end
 
 function M.is_cycleway_both_sides(tags)
-    return tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no"
+    if tags.oneway == 'yes' then
+        return ( tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no" ) or ( tags['cycleway:left'] ~= nil and tags['cycleway:right'] ~= nil and tags['cycleway:left'] ~= 'no' and tags['cycleway:right'] ~= 'no' )
+    else 
+        return (tags.cycleway ~= nil) or  ( tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no" ) or ( tags['cycleway:left'] ~= nil and tags['cycleway:right'] ~= nil and tags['cycleway:left'] ~= 'no' and tags['cycleway:right'] ~= 'no' )
+    end
+    
 end
 
 function M.is_cyclist_waiting_aid(tags)
     return tags.highway == 'cyclist_waiting_aid'
 end
 
+function M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags)
+    return M.is_street_with_bus_bicycle_lane(tags) and M.is_street_with_separate_bicycle_lane_on_sidewalk(tags)
+end
+
 function M.get_lanes(tags)
-    if (tags.lanes == '2') then 
+    if (tags.lanes == '1') then 
+        return '1'
+    elseif (tags.lanes == '2') then 
         return '2'
     elseif (tags.lanes == '3') then 
         return '3'
@@ -149,7 +160,12 @@ function M.get_lanes(tags)
     elseif (tags.lanes == '10') then 
         return '10'
     else 
-       return '1'
+        if (tags['lanes:forward'] ~= nil and tags['lanes:backward'] ~= nil) then
+            lanes = tonumber(tags['lanes:forward']) + tonumber(tags['lanes:backward'])
+            return tostring(lanes)
+        else
+            return '1'
+        end
     end
 end
 
@@ -162,7 +178,11 @@ function M.get_infrastructure_type(tags, restriction)
         if M.is_oneway(tags) then 
             if M.is_street_with_bus_bicycle_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then
-                    return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
+                    if M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags) then
+                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_and_bic_on_sw'
+                    else
+                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
+                    end
                 else
                     return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_one_side'
                 end
@@ -173,8 +193,12 @@ function M.get_infrastructure_type(tags, restriction)
             end
         else
             if M.is_street_with_bus_bicycle_lane(tags) then
-                if M.is_cycleway_both_sides(tags) then 
-                    return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_both_sides'
+                if M.is_cycleway_both_sides(tags) then
+                    if M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags) then
+                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_and_bic_on_sw'
+                    else
+                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_both_sides'
+                    end
                 else
                     return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_one_side'
                 end
@@ -193,21 +217,25 @@ function M.get_infrastructure_type(tags, restriction)
             return 'pedestrian'
         end
     elseif M.is_cycleway(tags) then
-        if M.is_foot_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
-            return 'cycleway_multiuse'
+        if tags.cycleway == 'sidepath' or tags.is_sidepath == 'yes' then
+            return 'sep_bic_lane_on_sidewalk'
         else
-            return 'cycleway'
-        end                
+            if M.is_foot_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
+                return 'cycleway_multiuse'
+            else
+                return 'cycleway'
+            end
+        end
     elseif M.is_extra_marked_separate_bicycle_lane_on_sidewalk(tags) then
         return 'sep_bic_lane_on_sidewalk'
     elseif M.is_path(tags) then
         if M.is_pedestrian_only_path(tags) then
             return 'pedestrian'
-        elseif M.is_pedestrian_and_bicycle_path(tags) then
+        elseif M.is_pedestrian_path_with_bicycle_allowed(tags) then
             return 'pedestrian_with_bic_allowed'
         elseif M.is_bicycle_only_path(tags) then 
             return 'cycleway'
-        elseif M.is_pedestrian_and_bicycle_and_mofa_or_moped_path(tags) then
+        elseif M.is_bicycle_path_with_pedestrian_or_mofa_or_moped_allowed(tags) then
             return 'cycleway_multiuse'
         elseif M.is_bicycle_forbidden(tags) then
             return 'path_with_bic_forbidden'

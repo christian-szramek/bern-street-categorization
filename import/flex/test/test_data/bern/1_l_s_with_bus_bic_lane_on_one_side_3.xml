@@ -1,0 +1,16 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001831 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="890980058" visible="true" version="1" changeset="96773735" timestamp="2021-01-01T14:33:17Z" user="ianmccallahan" uid="358807">
+<nd ref="8280939529"/>
+<nd ref="281428236"/>
+<nd ref="1475860948"/>
+<nd ref="1112868285"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="highway" v="residential"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Burgunderstrasse"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

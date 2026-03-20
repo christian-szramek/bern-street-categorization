@@ -1,0 +1,20 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2528126 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="536759234" visible="true" version="8" changeset="163283211" timestamp="2025-03-06T12:20:16Z" user="Tungmar" uid="427807">
+<nd ref="2258102764"/>
+<nd ref="5198965992"/>
+<nd ref="12640727677"/>
+<nd ref="5258082775"/>
+<nd ref="9560381840"/>
+<nd ref="5258082752"/>
+<nd ref="5198965978"/>
+<tag k="cycleway" v="lane"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="60"/>
+<tag k="name" v="Eymattstrasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

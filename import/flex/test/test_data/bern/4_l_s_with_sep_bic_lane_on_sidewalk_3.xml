@@ -1,0 +1,23 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2527219 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="4817433" visible="true" version="36" changeset="165878776" timestamp="2025-05-06T07:59:16Z" user="habi" uid="15671">
+<nd ref="5387427270"/>
+<nd ref="491084683"/>
+<tag k="avz" v="88"/>
+<tag k="bus:lanes" v="designated|no|no|designated"/>
+<tag k="busway" v="lane"/>
+<tag k="cs_dir:backward" v="2"/>
+<tag k="cs_dir:forward" v="1"/>
+<tag k="cycleway:both" v="separate"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="4"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:bus" v="1"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Kirchenfeldstrasse"/>
+<tag k="ref" v="10"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

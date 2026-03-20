@@ -1,0 +1,18 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754339 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="742674473" visible="true" version="3" changeset="146252146" timestamp="2024-01-14T16:56:47Z" user="mottiger" uid="7504544">
+<nd ref="6952450179"/>
+<nd ref="559434535"/>
+<nd ref="559434676"/>
+<nd ref="279002724"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Ostermundigenstrasse"/>
+<tag k="name:etymology:wikidata" v="Q69682"/>
+<tag k="ref" v="234"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

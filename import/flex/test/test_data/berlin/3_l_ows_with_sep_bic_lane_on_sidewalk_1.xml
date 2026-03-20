@@ -1,0 +1,34 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002081 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="4782481" visible="true" version="39" changeset="144931424" timestamp="2023-12-09T11:18:17Z" user="StefanHRT" uid="10961311">
+		<nd ref="9924605811"/>
+		<nd ref="9924605809"/>
+		<nd ref="4377672286"/>
+		<nd ref="2845478621"/>
+		<tag k="bicycle" v="optional_sidepath"/>
+		<tag k="cycleway:left" v="no"/>
+		<tag k="cycleway:right" v="separate"/>
+		<tag k="dual_carriageway" v="yes"/>
+		<tag k="foot" v="use_sidepath"/>
+		<tag k="highway" v="primary"/>
+		<tag k="lanes" v="3"/>
+		<tag k="lit" v="yes"/>
+		<tag k="maxspeed" v="50"/>
+		<tag k="name" v="Petersburger Straße"/>
+		<tag k="name:etymology:wikidata" v="Q656"/>
+		<tag k="old_name:1822-1874" v="Communicationsweg"/>
+		<tag k="old_name:1874-1947" v="Petersburger Straße"/>
+		<tag k="old_name:1947-1991" v="Bersarinstraße"/>
+		<tag k="oneway" v="yes"/>
+		<tag k="parking:left" v="no"/>
+		<tag k="parking:right" v="separate"/>
+		<tag k="postal_code" v="10249"/>
+		<tag k="ref" v="B 96a"/>
+		<tag k="shoulder" v="no"/>
+		<tag k="sidewalk:left" v="no"/>
+		<tag k="sidewalk:right" v="separate"/>
+		<tag k="smoothness" v="good"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="wikidata" v="Q2079588"/>
+		<tag k="wikipedia" v="de:Petersburger_Straße"/>
+	</way>
+</osm>

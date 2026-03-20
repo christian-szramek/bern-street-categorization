@@ -1,0 +1,21 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001816 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="122977868" visible="true" version="19" changeset="174517226" timestamp="2025-11-11T15:32:36Z" user="mottiger" uid="7504544">
+<nd ref="270973573"/>
+<nd ref="13006139107"/>
+<nd ref="2062782177"/>
+<nd ref="2339002837"/>
+<nd ref="477576810"/>
+<nd ref="506818262"/>
+<nd ref="270973574"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="destination:forward" v="PHBern"/>
+<tag k="highway" v="residential"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="1"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Buchserstrasse"/>
+<tag k="name:etymology:wikidata" v="Q329490"/>
+<tag k="turn:lanes:backward" v="left;through|right"/>
+</way>
+</osm>

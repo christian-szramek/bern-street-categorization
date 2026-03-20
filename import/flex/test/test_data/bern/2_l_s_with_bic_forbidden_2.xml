@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002042 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="37012309" visible="true" version="14" changeset="108914413" timestamp="2021-07-31T01:58:40Z" user="mjulius" uid="7412">
+<nd ref="255405461"/>
+<nd ref="3864248331"/>
+<nd ref="5184641672"/>
+<nd ref="255405462"/>
+<nd ref="497661116"/>
+<nd ref="3864248334"/>
+<nd ref="3864248333"/>
+<nd ref="3864248332"/>
+<nd ref="3864248330"/>
+<nd ref="3864248329"/>
+<nd ref="255405466"/>
+<nd ref="8964538928"/>
+<nd ref="255405467"/>
+<nd ref="3864248316"/>
+<nd ref="255405468"/>
+<nd ref="3864248313"/>
+<nd ref="255405469"/>
+<tag k="highway" v="motorway_link"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="no"/>
+<tag k="maxspeed" v="80"/>
+<tag k="oneway" v="yes"/>
+<tag k="surface" v="asphalt"/>
+<tag k="toll" v="yes"/>
+</way>
+</osm>

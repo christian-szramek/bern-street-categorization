@@ -1,0 +1,23 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001758 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="974996812" visible="true" version="5" changeset="141204107" timestamp="2023-09-13T10:59:42Z" user="DomFlc" uid="6599277">
+<nd ref="3161175170"/>
+<nd ref="2066153230"/>
+<nd ref="276053796"/>
+<tag k="cycleway:both" v="lane"/>
+<tag k="cycleway:both:lane" v="advisory"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Bundesgasse"/>
+<tag k="oneway" v="yes"/>
+<tag k="oneway:bicycle" v="no"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:forward" v="left|through|through"/>
+<tag k="wikidata" v="Q1006038"/>
+<tag k="wikipedia" v="de:Bundesgasse"/>
+</way>
+</osm>

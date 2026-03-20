@@ -1,0 +1,34 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001773 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="38589360" visible="true" version="41" changeset="169894123" timestamp="2025-08-03T09:12:04Z" user="mottiger" uid="7504544">
+<nd ref="265618072"/>
+<nd ref="2354518425"/>
+<nd ref="2339009282"/>
+<nd ref="2085227316"/>
+<nd ref="559433611"/>
+<nd ref="274986944"/>
+<nd ref="2339009283"/>
+<nd ref="559433613"/>
+<nd ref="274986945"/>
+<nd ref="274986946"/>
+<nd ref="275422329"/>
+<nd ref="559888286"/>
+<nd ref="2293072778"/>
+<nd ref="274986947"/>
+<nd ref="275650395"/>
+<nd ref="559433646"/>
+<nd ref="21378495"/>
+<nd ref="2354518409"/>
+<nd ref="559433662"/>
+<nd ref="2585802030"/>
+<nd ref="275650387"/>
+<nd ref="2405053989"/>
+<tag k="cycleway:both" v="lane"/>
+<tag k="highway" v="primary"/>
+<tag k="lane_markings" v="yes"/>
+<tag k="lanes" v="2"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Laubeggstrasse"/>
+<tag k="ref" v="6"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

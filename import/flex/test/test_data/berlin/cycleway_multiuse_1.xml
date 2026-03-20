@@ -1,0 +1,22 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001880 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+	<way id="715711019" visible="true" version="10" changeset="174835192" timestamp="2025-11-18T22:00:41Z" user="fmc_10" uid="23268127">
+		<nd ref="11426089350"/>
+		<nd ref="6726205152"/>
+		<nd ref="5486306396"/>
+		<tag k="bicycle" v="yes"/>
+		<tag k="cycleway" v="link"/>
+		<tag k="foot" v="yes"/>
+		<tag k="highway" v="cycleway"/>
+		<tag k="incline" v="0%"/>
+		<tag k="is_sidepath" v="no"/>
+		<tag k="lit" v="yes"/>
+		<tag k="name" v="Falckensteinstraße"/>
+		<tag k="name:etymology:wikidata" v="Q65489"/>
+		<tag k="oneway" v="no"/>
+		<tag k="segregated" v="no"/>
+		<tag k="smoothness" v="good"/>
+		<tag k="source:width" v="ALKIS"/>
+		<tag k="surface" v="asphalt"/>
+		<tag k="width" v="5.5"/>
+	</way>
+</osm>

@@ -1,0 +1,29 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001831 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="58591660" visible="true" version="19" changeset="179890802" timestamp="2026-03-15T10:21:00Z" user="sha123-321" uid="23941069">
+<nd ref="725887616"/>
+<nd ref="725887421"/>
+<nd ref="255758434"/>
+<nd ref="725887472"/>
+<nd ref="6205691481"/>
+<tag k="bicycle:lanes" v="no|designated|no|no"/>
+<tag k="bridge" v="yes"/>
+<tag k="cycleway" v="lane"/>
+<tag k="cycleway:lane" v="exclusive"/>
+<tag k="cycleway:lanes" v="no|lane|no|no"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="4"/>
+<tag k="layer" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="maxspeed:type" v="CH:urban"/>
+<tag k="maxweight:signed" v="no"/>
+<tag k="name" v="Murtenstrasse"/>
+<tag k="name:etymology:wikidata" v="Q68283"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="1;10"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|left|through|through;right"/>
+<tag k="vehicle:lanes" v="yes|no|yes|yes"/>
+</way>
+</osm>
