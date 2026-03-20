@@ -1,0 +1,21 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754285 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="442269538" visible="true" version="8" changeset="144067392" timestamp="2023-11-15T20:14:32Z" user="Ronny Standtke" uid="65804">
+<nd ref="4399620024"/>
+<nd ref="5351552425"/>
+<nd ref="5328088830"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="destination:backward" v="Fribourg;Interlaken"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Belpstrasse"/>
+<tag k="ref" v="12"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire:backward" v="yes"/>
+<tag k="turn:lanes:backward" v="left;through|right"/>
+<tag k="turn:lanes:forward" v="left|right|right"/>
+</way>
+</osm>

@@ -1,0 +1,20 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001773 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1265102103" visible="true" version="2" changeset="165813660" timestamp="2025-05-04T18:25:19Z" user="ctr_corner" uid="14755627">
+<nd ref="11752551268"/>
+<nd ref="635723078"/>
+<tag k="bridge" v="yes"/>
+<tag k="bus:lanes:forward" v="no|designated"/>
+<tag k="busway:right" v="lane"/>
+<tag k="cycleway:both" v="separate"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="4"/>
+<tag k="layer" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Monbijoubrücke"/>
+<tag k="ref" v="10"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="through|merge_to_left"/>
+</way>
+</osm>

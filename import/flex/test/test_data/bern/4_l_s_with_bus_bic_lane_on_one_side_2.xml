@@ -1,0 +1,19 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302690 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="509946427" visible="true" version="10" changeset="142400332" timestamp="2023-10-10T16:02:48Z" user="jce70" uid="11713151">
+<nd ref="5005335927"/>
+<nd ref="4990083090"/>
+<nd ref="727672028"/>
+<nd ref="255758805"/>
+<tag k="cycleway:lane:right" v="exclusive"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lanes" v="4"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Bahnstrasse"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:forward" v="left|through|right"/>
+</way>
+</osm>

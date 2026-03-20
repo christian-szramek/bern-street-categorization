@@ -1,0 +1,21 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002076 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1395760170" visible="true" version="1" changeset="167700845" timestamp="2025-06-16T15:43:56Z" user="habi" uid="15671">
+<nd ref="14384534"/>
+<nd ref="278789664"/>
+<nd ref="5729122313"/>
+<nd ref="255381699"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Worbstrasse"/>
+<tag k="name:etymology:wikidata" v="Q69732"/>
+<tag k="oneway" v="yes"/>
+<tag k="oneway:bicycle" v="no"/>
+<tag k="ref" v="10"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through"/>
+</way>
+</osm>

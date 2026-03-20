@@ -1,0 +1,16 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002066 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1156619534" visible="true" version="1" changeset="134023967" timestamp="2023-03-23T13:48:03Z" user="habi" uid="15671">
+<nd ref="6123853871"/>
+<nd ref="4740760269"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Neubrückstrasse"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="trolley_wire" v="yes"/>
+</way>
+</osm>
