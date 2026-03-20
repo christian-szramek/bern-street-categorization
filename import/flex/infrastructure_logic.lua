@@ -89,7 +89,7 @@ function M.is_street_with_bus_bicycle_lane(tags)
     return tags.cycleway == 'lane' or tags['cycleway:both'] == 'lane' or tags['cycleway:left'] == 'lane' or tags['cycleway:right'] == 'lane' or tags.cycleway == 'share_busway' or tags['cycleway:both'] == 'share_busway' or tags['cycleway:left'] == 'share_busway' or tags['cycleway:right'] == 'share_busway'
 end
 
-function M.is_street_with_separate_bicycle_lane_on_sidewalk(tags)
+function M.is_street_with_separate_bicycle_lane_on_sidepath(tags)
     return tags.cycleway == 'track' or tags['cycleway:both'] == 'track' or tags['cycleway:left'] == 'track' or tags['cycleway:right'] == 'track' or tags.cycleway == 'separate' or tags['cycleway:both'] == 'separate' or tags['cycleway:left'] == 'separate' or tags['cycleway:right'] == 'separate'
 end
 
@@ -97,7 +97,7 @@ function M.is_street_with_shared_bicycle_lane_on_carriageway(tags)
     return tags.cycleway == 'shared_lane' or tags['cycleway:both'] == 'shared_lane' or tags['cycleway:left'] == 'shared_lane' or tags['cycleway:right'] == 'shared_lane'
 end
 
-function M.is_extra_marked_separate_bicycle_lane_on_sidewalk(tags)
+function M.is_extra_marked_separate_bicycle_lane_on_sidepath(tags)
     return ( tags.highway == 'cycleway' and tags.cycleway == 'sidepath' ) or ( tags.highway == 'path' and ( tags.path == 'sidepath' or tags.is_sidepath == 'yes' ) and tags.bicycle == 'designated' )
 end
 
@@ -134,8 +134,8 @@ function M.is_cyclist_waiting_aid(tags)
     return tags.highway == 'cyclist_waiting_aid'
 end
 
-function M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags)
-    return M.is_street_with_bus_bicycle_lane(tags) and M.is_street_with_separate_bicycle_lane_on_sidewalk(tags)
+function M.is_bus_bicycle_lane_on_one_side_and_separate_bicycle_lane_on_sidepath(tags)
+    return M.is_street_with_bus_bicycle_lane(tags) and M.is_street_with_separate_bicycle_lane_on_sidepath(tags)
 end
 
 function M.get_lanes(tags)
@@ -178,32 +178,32 @@ function M.get_infrastructure_type(tags, restriction)
         if M.is_oneway(tags) then 
             if M.is_street_with_bus_bicycle_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then
-                    if M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags) then
-                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_and_bic_on_sw'
+                    if M.is_bus_bicycle_lane_on_one_side_and_separate_bicycle_lane_on_sidepath(tags) then
+                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_and_sep_bic_lane_on_sp'
                     else
                         return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
                     end
                 else
                     return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_one_side'
                 end
-            elseif M.is_street_with_separate_bicycle_lane_on_sidewalk(tags) then
-                return M.get_lanes(tags) .. '_l_ows_with_sep_bic_lane_on_sidewalk'
+            elseif M.is_street_with_separate_bicycle_lane_on_sidepath(tags) then
+                return M.get_lanes(tags) .. '_l_ows_with_sep_bic_lane_on_sp'
             else
                 return M.get_lanes(tags) .. '_l_ows_with_no_bic_paths'
             end
         else
             if M.is_street_with_bus_bicycle_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then
-                    if M.is_bus_bicyle_lane_on_one_side_and_bicycle_lane_on_sidewalk_on_other_side(tags) then
-                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_and_bic_on_sw'
+                    if M.is_bus_bicycle_lane_on_one_side_and_separate_bicycle_lane_on_sidepath(tags) then
+                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_and_sep_bic_lane_on_sp'
                     else
                         return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_both_sides'
                     end
                 else
                     return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_one_side'
                 end
-            elseif M.is_street_with_separate_bicycle_lane_on_sidewalk(tags) then
-                return M.get_lanes(tags) .. '_l_s_with_sep_bic_lane_on_sidewalk'
+            elseif M.is_street_with_separate_bicycle_lane_on_sidepath(tags) then
+                return M.get_lanes(tags) .. '_l_s_with_sep_bic_lane_on_sp'
             elseif M.is_street_with_shared_bicycle_lane_on_carriageway(tags) then 
                 return M.get_lanes(tags) ..  '_l_s_with_shared_bic_lane_on_carriageway'
             else            
@@ -218,7 +218,7 @@ function M.get_infrastructure_type(tags, restriction)
         end
     elseif M.is_cycleway(tags) then
         if tags.cycleway == 'sidepath' or tags.is_sidepath == 'yes' then
-            return 'sep_bic_lane_on_sidewalk'
+            return 'sep_bic_lane_on_sp'
         else
             if M.is_foot_allowed(tags) or M.is_moped_allowed(tags) or M.is_mofa_allowed(tags) then
                 return 'cycleway_multiuse'
@@ -226,8 +226,8 @@ function M.get_infrastructure_type(tags, restriction)
                 return 'cycleway'
             end
         end
-    elseif M.is_extra_marked_separate_bicycle_lane_on_sidewalk(tags) then
-        return 'sep_bic_lane_on_sidewalk'
+    elseif M.is_extra_marked_separate_bicycle_lane_on_sidepath(tags) then
+        return 'sep_bic_lane_on_sp'
     elseif M.is_path(tags) then
         if M.is_pedestrian_only_path(tags) then
             return 'pedestrian'
