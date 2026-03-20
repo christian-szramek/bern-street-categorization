@@ -93,20 +93,20 @@ execute_all_tests_for_city('bern', 'CH')
 execute_all_tests_for_city('berlin', 'DE')
 
 
--- Tests for separate bicycle lane on sidewalk (marked as extra way)
+-- Tests for separate bicycle lane on sidepath (marked as extra way)
 test_feature = {}
 test_feature['highway'] = 'path'
 test_feature['path'] = 'sidepath'
 test_feature['bicycle'] = 'designated'
 
-execute_test_for_given_feature(test_feature, 'CH', 'sep_bic_lane_on_sidewalk')
-execute_test_for_given_feature(test_feature, 'DE', 'sep_bic_lane_on_sidewalk')
-execute_test_for_given_feature(test_feature, 'US', 'sep_bic_lane_on_sidewalk')
+execute_test_for_given_feature(test_feature, 'CH', 'sep_bic_lane_on_sp')
+execute_test_for_given_feature(test_feature, 'DE', 'sep_bic_lane_on_sp')
+execute_test_for_given_feature(test_feature, 'US', 'sep_bic_lane_on_sp')
 
 test_feature = {}
 test_feature['highway'] = 'cycleway'
 test_feature['cycleway'] = 'sidepath'
 
-execute_test_for_given_feature(test_feature, 'CH', 'sep_bic_lane_on_sidewalk')
-execute_test_for_given_feature(test_feature, 'DE', 'sep_bic_lane_on_sidewalk')
-execute_test_for_given_feature(test_feature, 'US', 'sep_bic_lane_on_sidewalk')
+execute_test_for_given_feature(test_feature, 'CH', 'sep_bic_lane_on_sp')
+execute_test_for_given_feature(test_feature, 'DE', 'sep_bic_lane_on_sp')
+execute_test_for_given_feature(test_feature, 'US', 'sep_bic_lane_on_sp')
