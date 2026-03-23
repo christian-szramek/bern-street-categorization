@@ -12,11 +12,9 @@ local function create_ways(city, name)
 CREATE TABLE IF NOT EXISTS public.%s_%s_ways (
     way_id BIGINT,
     tags JSONB,
+    display_name TEXT,
     geom geometry(LineString, 3857) NOT NULL
 );
-
-CREATE INDEX IF NOT EXISTS %s_%s_ways_geom_idx
-ON public.%s_%s_ways USING GIST (geom);
 
 ]], city, name, city, name, city, name)
 end
@@ -26,11 +24,9 @@ local function create_nodes(city, name)
 CREATE TABLE IF NOT EXISTS public.%s_%s_nodes (
     node_id BIGINT,
     tags JSONB,
+    display_name TEXT,
     geom geometry(Point, 3857) NOT NULL
 );
-
-CREATE INDEX IF NOT EXISTS %s_%s_nodes_geom_idx
-ON public.%s_%s_nodes USING GIST (geom);
 
 ]], city, name, city, name, city, name)
 end
@@ -40,11 +36,9 @@ local function create_areas(city, name)
 CREATE TABLE IF NOT EXISTS public.%s_%s_areas (
     area_id BIGINT,
     tags JSONB,
+    display_name TEXT,
     geom geometry(Geometry, 3857) NOT NULL
 );
-
-CREATE INDEX IF NOT EXISTS %s_%s_areas_geom_idx
-ON public.%s_%s_areas USING GIST (geom);
 
 ]], city, name, city, name, city, name)
 end
