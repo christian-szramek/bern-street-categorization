@@ -11,6 +11,13 @@ function load_env_variables {
     fi
 }
 
+function check_test_env_variable_exist {
+    if [ -z "$TEST" ]; then
+        echo "TEST enviroment variable is not set or empty"
+        exit 1
+    fi
+}
+
 function check_region_url_env_variable_exists {
     if [ -z "$REGION_URL" ]; then
         echo "REGION_URL enviroment variable is not set or empty"
