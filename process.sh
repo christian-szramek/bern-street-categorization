@@ -3,10 +3,22 @@
 source "utils.sh"
 
 load_env_variables
+check_test_env_variable_exist
 
 # Delete the tmp directory if exists and create an empty one
 WORK_DIR=$(pwd)
 TMP_DIR=$WORK_DIR/tmp
+
+
+# if test osm.pbf should be processed
+if [ "$TEST" = "true" ]; then
+  echo "Processing the test data"
+  
+  export CITY="BERN"
+  export RESTRICTION="CH"
+  ./import/import.sh $WORK_DIR $WORK_DIR/import/flex/test/test_data
+  exit 0
+fi
 
 rm -rf "$TMP_DIR"
 

@@ -23,10 +23,12 @@
 
 #### Completeness
 
-- 1. Download all highways with overpass API
-- 2. Filter out highway elements that shouldn't be displayed (nodes, highway:area)
-- 3. Verify that every element is displayed in the Web UI
-- 4. Verify that every element has an infrastructure_type property
+##### Test Data without highway key
+
+- Node: 2284200952
+- Way: 1077730959
+- Way with area=yes: 312781570
+- Relation: 9252024
 
 #### Portability
 
