@@ -32,21 +32,21 @@ local function create_tables_for_infrastructure_type(name, area, node, displayNa
         tables.nodes[name] = osm2pgsql.define_node_table(string.lower(city) .. '_' .. name .. '_nodes', {
             { column = 'tags', type = 'jsonb' },
             { column = 'geom', type = 'point', not_null = true },
-            { column = 'displayName', type = 'text' }
+            { column = 'display_name', type = 'text' }
         })
     end
 
     tables.ways[name] = osm2pgsql.define_way_table(string.lower(city) .. '_' .. name .. '_ways', {
         { column = 'tags', type = 'jsonb' },
         { column = 'geom', type = 'linestring', not_null = true },
-        { column = 'displayName', type = 'text' }
+        { column = 'display_name', type = 'text' }
     })
 
     if (area) then
         tables.areas[name] = osm2pgsql.define_area_table(string.lower(city) .. '_' .. name .. '_areas', {
             { column = 'tags', type = 'jsonb' },
             { column = 'geom', type = 'geometry', not_null = true },
-            { column = 'displayName', type = 'text' }
+            { column = 'display_name', type = 'text' }
         })
     end
 end
@@ -76,14 +76,13 @@ function osm2pgsql.process_node(object)
     if infrastructure_logic.is_highway(object.tags) and not infrastructure_logic.is_ignored(object.tags) then
 
         local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags, restriction)
-        local display_name = get_display_name(infrastructure_type)
         local target_table = tables.nodes[infrastructure_type]
 
         if target_table then
             target_table:insert({
                 tags = object.tags,
-                geom = object:as_point(),
-                displayName = display_name 
+                display_name = get_display_name(infrastructure_type),
+                geom = object:as_point()
             })
         else
             print("Node table does not exist for infrastructure type: " .. tostring(infrastructure_type))
@@ -96,7 +95,6 @@ function osm2pgsql.process_way(object)
     if infrastructure_logic.is_highway(object.tags) and not infrastructure_logic.is_ignored(object.tags) then
 
         local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags, restriction)
-        local display_name = get_display_name(infrastructure_type)
 
         if infrastructure_logic.is_area(object.tags) then
             local target_table = tables.areas[infrastructure_type]
@@ -104,8 +102,8 @@ function osm2pgsql.process_way(object)
             if target_table then 
                 tables.areas[infrastructure_type]:insert({
                     tags = object.tags,
-                    geom = object:as_polygon(),
-                    displayName = display_name 
+                    display_name = get_display_name(infrastructure_type),
+                    geom = object:as_polygon()
                 })
             else 
                 print("Area table does not exist for infrastructure type: " .. tostring(infrastructure_type))
@@ -117,8 +115,8 @@ function osm2pgsql.process_way(object)
             if target_table then
                 tables.ways[infrastructure_type]:insert({
                     tags = object.tags,
-                    geom = object:as_linestring(),
-                    displayName = display_name 
+                    display_name = get_display_name(infrastructure_type),
+                    geom = object:as_linestring()
                 })
             else
                 print("Way table does not exist for infrastructure type: " .. tostring(infrastructure_type))
@@ -132,14 +130,13 @@ function osm2pgsql.process_relation(object)
     if infrastructure_logic.is_highway(object.tags) and not infrastructure_logic.is_ignored(object.tags) then
 
         local infrastructure_type = infrastructure_logic.get_infrastructure_type(object.tags, restriction)
-        local display_name = get_display_name(infrastructure_type)
         local target_table = tables.ways[infrastructure_type]
 
         if target_table then 
             tables.areas[infrastructure_type]:insert({
                 tags = object.tags,
-                geom = object:as_multipolygon(),
-                displayName = display_name 
+                display_name = get_display_name(infrastructure_type),
+                geom = object:as_multipolygon()
             })
         else 
             print("Area table does not exist for infrastructure type: " .. tostring(infrastructure_type))

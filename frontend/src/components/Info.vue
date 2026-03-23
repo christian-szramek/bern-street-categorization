@@ -17,7 +17,7 @@ const filteredInfoKeys = computed(() => {
         <div class="section">
           <div class="section-title">Bucket</div>
           <v-chip size="small" color="primary" variant="tonal">
-            {{ props.info.displayName }}
+            {{ props.info.display_name }}
           </v-chip>
         </div>
         <div class="section">
