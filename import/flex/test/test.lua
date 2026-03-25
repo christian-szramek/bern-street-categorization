@@ -3,7 +3,7 @@ local infrastructure_logic = dofile('../infrastructure_logic.lua')
 
 -- Helper test function
 
-function load_osm_tags(xml_path)
+function load_osm_tags(path)
     local tags = {}
 
     local callbacks = {}
@@ -16,7 +16,7 @@ function load_osm_tags(xml_path)
 
     local p = lxp.new(callbacks)
 
-    for line in io.lines(xml_path) do
+    for line in io.lines(path) do
         p:parse(line)
     end
 
@@ -63,7 +63,7 @@ function execute_all_tests_for_city(city, restriction)
 
     for file in io.popen('ls "' .. directory .. '"'):lines() do
         if file:match("%.xml$") then
-            local name = file:gsub("%.xml$", "")
+            local name = file:gsub("%.osm$", "")
             name = name:gsub("_%d+$", "")
 
             local path = directory .. "/" .. file
