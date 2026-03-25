@@ -13,7 +13,7 @@ const getNodeLayer = (data, color, handleMouseOver, handleMouseOut) => {
       layer.on('mouseover', () => {
         handleMouseOver({
           ...feature.properties.tags,
-          displayName: feature.properties.displayName
+          display_name: feature.properties.display_name
         });
       });
       layer.on('mouseout', () => {
