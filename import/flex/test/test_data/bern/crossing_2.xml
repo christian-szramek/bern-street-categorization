@@ -1,0 +1,8 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2527219 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<node id="3339477472" visible="true" version="5" changeset="169420585" timestamp="2025-07-24T20:28:21Z" user="Ti-one" uid="332316" lat="46.9436797" lon="7.4341495">
+<tag k="crossing" v="unmarked"/>
+<tag k="crossing:island" v="no"/>
+<tag k="highway" v="crossing"/>
+<tag k="tactile_paving" v="no"/>
+</node>
+</osm>
