@@ -1,6 +1,6 @@
 import { isCyclingForbidden } from '@/utils/infrastructureTypesUtils';
 
-const baseURL = 'http://localhost:7800';
+const baseURL = import.meta.env.VITE_TILE_SERVER_URL;
 
 const computeWeight = infrastructureType => {
   switch (infrastructureType.split('_')[0]) {

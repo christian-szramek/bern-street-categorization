@@ -30,7 +30,7 @@ const emit = defineEmits(['showInfo', 'hideInfo']);
 
 let map;
 
-const tilesURL = 'https://tile.openstreetmap.org/{z}/{x}/{y}.png';
+const tilesURL = import.meta.env.VITE_BASE_MAP_URL;
 
 const extendedInfrastructureTypes = ref([]);
 const previousActiveInfrastructureTypes = ref([]);
