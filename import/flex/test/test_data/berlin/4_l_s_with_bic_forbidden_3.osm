@@ -1,0 +1,17 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001816 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="460168026" visible="true" version="4" changeset="140864069" timestamp="2023-09-05T18:44:38Z" user="JeroenvanderGun" uid="11963177">
+<nd ref="16541572"/>
+<nd ref="267180943"/>
+<tag k="destination" v="Wedding;Beusselstraße"/>
+<tag k="highway" v="motorway"/>
+<tag k="lanes" v="4"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="80"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="A 100"/>
+<tag k="reg_name" v="Berliner Stadtring"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="none|none|none|merge_to_left"/>
+<tag k="urban" v="yes"/>
+</way>
+</osm>

@@ -1,0 +1,29 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001758 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="24886851" visible="true" version="10" changeset="172976470" timestamp="2025-10-07T20:15:44Z" user="Traffikant" uid="21727746">
+<nd ref="267380339"/>
+<nd ref="10923670428"/>
+<nd ref="26750511"/>
+<nd ref="10923670427"/>
+<nd ref="267380297"/>
+<nd ref="267380298"/>
+<nd ref="10923670426"/>
+<nd ref="267380299"/>
+<nd ref="484089"/>
+<nd ref="10923670425"/>
+<nd ref="107298768"/>
+<nd ref="26800044"/>
+<tag k="destination" v="Dresden;Magdeburg;Leipzig;Wilmersdorf;Flughafen;Zentrum"/>
+<tag k="destination:colour" v=";;;;white;white"/>
+<tag k="destination:ref" v="A 100"/>
+<tag k="destination:symbol" v=";;;;airport;centre"/>
+<tag k="highway" v="motorway"/>
+<tag k="lanes" v="4"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="80"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="A 100"/>
+<tag k="reg_name" v="Berliner Stadtring"/>
+<tag k="surface" v="asphalt"/>
+<tag k="urban" v="yes"/>
+</way>
+</osm>

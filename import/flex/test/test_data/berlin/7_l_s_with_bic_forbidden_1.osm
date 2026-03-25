@@ -1,0 +1,29 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002081 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="30808323" visible="true" version="17" changeset="140893971" timestamp="2023-09-06T12:43:30Z" user="JeroenvanderGun" uid="11963177">
+<nd ref="29272980"/>
+<nd ref="1940272216"/>
+<tag k="bicycle" v="no"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="no"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="7"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="moped" v="yes"/>
+<tag k="name" v="Heerstraße"/>
+<tag k="name:etymology:wikidata" v="Q6857854"/>
+<tag k="name:etymology:wikipedia" v="de:Militärstraße"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="14055"/>
+<tag k="ref" v="B 2;B 5"/>
+<tag k="sidewalk:left" v="separate"/>
+<tag k="sidewalk:right" v="no"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="none|none|slight_right"/>
+<tag k="turn:lanes:forward" v="none|none|right"/>
+<tag k="wikidata" v="Q94863"/>
+<tag k="wikipedia" v="de:Heerstraße (Berlin)"/>
+<tag k="zone:traffic" v="DE:urban"/>
+</way>
+</osm>
