@@ -689,6 +689,14 @@
       "node": true
     },
     {
+      "name": "crossing",
+      "color": "#bf812d",
+      "displayName": "Crossing (bicycle, pedestrian, horserider)",
+      "description": "Crossings of streets for cyclists, pedestrians and horseriders.",
+      "area": false,
+      "node": true
+    },
+    {
       "name": "path_with_bic_forbidden",
       "color": "#b2182b",
       "displayName": "Path with bicycle forbidden or unsuited",

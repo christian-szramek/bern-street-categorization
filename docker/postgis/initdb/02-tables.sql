@@ -4356,6 +4356,82 @@ CREATE TABLE IF NOT EXISTS public.weimar_pedestrian_with_bic_allowed_areas (
 
 
 -- =========================================
+-- bern | crossing
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_crossing_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS public.bern_crossing_nodes (
+    node_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(Point, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | crossing
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_crossing_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS public.berlin_crossing_nodes (
+    node_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(Point, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | crossing
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_crossing_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_crossing_nodes (
+    node_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(Point, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | crossing
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_crossing_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS public.weimar_crossing_nodes (
+    node_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(Point, 3857) NOT NULL
+);
+
+
+-- =========================================
 -- bern | path_with_bic_forbidden
 -- =========================================
 
