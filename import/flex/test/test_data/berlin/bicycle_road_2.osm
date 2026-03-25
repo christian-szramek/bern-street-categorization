@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1863033 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="981295184" visible="true" version="12" changeset="179997756" timestamp="2026-03-17T10:29:15Z" user="fmc_3" uid="22897978">
+<nd ref="9077192741"/>
+<nd ref="9077192740"/>
+<tag k="bicycle" v="designated"/>
+<tag k="bicycle_road" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="residential"/>
+<tag k="lane_markings" v="no"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Choriner Straße"/>
+<tag k="name:etymology:wikidata" v="Q586072"/>
+<tag k="parking:left" v="separate"/>
+<tag k="parking:right" v="lane"/>
+<tag k="parking:right:fee" v="yes"/>
+<tag k="parking:right:fee:conditional" v="no @ (Mo-Sa 00:00-09:00,22:00-24:00; Su)"/>
+<tag k="parking:right:orientation" v="parallel"/>
+<tag k="parking:right:zone" v="41"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:width" v="ARCore"/>
+<tag k="surface" v="asphalt"/>
+<tag k="traffic_sign" v="DE:244.1,1020-30"/>
+<tag k="vehicle" v="destination"/>
+<tag k="width" v="11.2"/>
+</way>
+</osm>
