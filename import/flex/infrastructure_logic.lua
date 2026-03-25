@@ -138,6 +138,10 @@ function M.is_bus_bicycle_lane_on_one_side_and_separate_bicycle_lane_on_sidepath
     return M.is_street_with_bus_bicycle_lane(tags) and M.is_street_with_separate_bicycle_lane_on_sidepath(tags)
 end
 
+function M.is_crossing(tags)
+    return tags.highway == 'crossing'
+end
+
 function M.get_lanes(tags)
     if (tags.lanes == '1') then 
         return '1'
@@ -244,6 +248,8 @@ function M.get_infrastructure_type(tags, restriction)
         end
     elseif M.is_cyclist_waiting_aid(tags) then
         return 'cyclist_waiting_aid'
+    elseif M.is_crossing(tags) then
+        return 'crossing'
     else
         return 'uncategorized'
     end
