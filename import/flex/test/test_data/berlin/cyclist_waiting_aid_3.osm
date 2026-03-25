@@ -1,0 +1,10 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001939 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<node id="8701749195" visible="true" version="3" changeset="156968335" timestamp="2024-09-22T20:26:59Z" user="kartograph" uid="17304" lat="52.5515704" lon="13.4300511">
+<tag k="count" v="2"/>
+<tag k="footrest" v="yes"/>
+<tag k="handrest" v="yes"/>
+<tag k="highway" v="cyclist_waiting_aid"/>
+<tag k="material" v="metal"/>
+<tag k="side" v="right"/>
+</node>
+</osm>
