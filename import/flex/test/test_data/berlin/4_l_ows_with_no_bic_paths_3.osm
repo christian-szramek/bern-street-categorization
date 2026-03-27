@@ -1,0 +1,25 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002071 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1136651933" visible="true" version="7" changeset="171684027" timestamp="2025-09-09T12:32:09Z" user="fmc_3" uid="22897978">
+<nd ref="1617500942"/>
+<nd ref="11026536850"/>
+<nd ref="13130875304"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="4"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Habelschwerdter Allee"/>
+<tag k="name:etymology:wikidata" v="Q991022"/>
+<tag k="name:etymology:wikipedia" v="de:Bystrzyca Kłodzka"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="parking:right:restriction" v="no_parking"/>
+<tag k="postal_code" v="14195"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through|none|none"/>
+</way>
+</osm>
