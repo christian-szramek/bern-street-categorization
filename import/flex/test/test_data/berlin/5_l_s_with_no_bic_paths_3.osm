@@ -1,0 +1,22 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001845 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="4719084" visible="true" version="31" changeset="171168048" timestamp="2025-08-29T07:15:37Z" user="fmc_2" uid="22897704">
+<nd ref="30739602"/>
+<nd ref="3949690693"/>
+<nd ref="34660450"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Daimlerstraße"/>
+<tag k="name:etymology:wikidata" v="Q57098"/>
+<tag k="note" v="Übergeordnete Straße, Stufe III"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="12277"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="intermediate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>
