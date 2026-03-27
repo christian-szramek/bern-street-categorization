@@ -1,0 +1,41 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754285 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1199295115" visible="true" version="6" changeset="180349614" timestamp="2026-03-24T11:42:34Z" user="fmc_Supaplex030" uid="23761190">
+<nd ref="11123678115"/>
+<nd ref="12920981061"/>
+<nd ref="11040453125"/>
+<tag k="cycleway:left" v="share_busway"/>
+<tag k="cycleway:left:oneway" v="yes"/>
+<tag k="cycleway:left:surface" v="asphalt"/>
+<tag k="cycleway:left:surface:colour" v="none"/>
+<tag k="cycleway:left:width" v="4"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="6"/>
+<tag k="lanes:backward" v="3"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lanes:psv:backward" v="1"/>
+<tag k="lanes:psv:forward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Fennstraße"/>
+<tag k="name:etymology:wikidata" v="Q20826048"/>
+<tag k="oneway" v="no"/>
+<tag k="parking:left" v="lane"/>
+<tag k="parking:left:fee" v="no"/>
+<tag k="parking:left:markings" v="yes"/>
+<tag k="parking:left:orientation" v="parallel"/>
+<tag k="parking:left:restriction:conditional" v="no_stopping @ (Mo-Sa 06:00-19:00)"/>
+<tag k="parking:left:restriction:reason" v="bus_lane"/>
+<tag k="parking:right" v="no"/>
+<tag k="postal_code" v="13353"/>
+<tag k="psv:lanes:backward:conditional" v="yes|yes|designated@(Mo-Sa 06:00-19:00)"/>
+<tag k="psv:lanes:forward:conditional" v="yes|yes|designated@(Mo-Sa 06:00-19:00)"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:left:width" v="Luftbild 2025"/>
+<tag k="source:maxspeed" v="DE:urban"/>
+<tag k="surface" v="asphalt"/>
+<tag k="zone:traffic" v="DE:urban"/>
+</way>
+</osm>

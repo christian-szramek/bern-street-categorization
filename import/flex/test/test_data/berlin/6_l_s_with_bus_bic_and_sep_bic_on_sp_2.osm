@@ -1,0 +1,41 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002081 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="29565645" visible="true" version="32" changeset="171074478" timestamp="2025-08-27T11:10:34Z" user="fmc_8" uid="23034332">
+<nd ref="3846358224"/>
+<nd ref="621479066"/>
+<nd ref="301145202"/>
+<nd ref="301145203"/>
+<nd ref="3846358227"/>
+<tag k="access:lanes:backward" v="yes|yes|no"/>
+<tag k="access:lanes:forward" v="yes|yes|no"/>
+<tag k="bus:lanes:backward" v="yes|yes|designated"/>
+<tag k="bus:lanes:forward" v="yes|yes|designated"/>
+<tag k="cycleway:left" v="lane"/>
+<tag k="cycleway:left:buffer:both" v="no"/>
+<tag k="cycleway:left:lane" v="advisory"/>
+<tag k="cycleway:left:mapillary" v="6472559696188412"/>
+<tag k="cycleway:left:marking:left" v="dashed_line"/>
+<tag k="cycleway:left:marking:right" v="no"/>
+<tag k="cycleway:left:oneway" v="yes"/>
+<tag k="cycleway:left:surface" v="asphalt"/>
+<tag k="cycleway:left:surface:colour" v="none"/>
+<tag k="cycleway:left:traffic_sign" v="none"/>
+<tag k="cycleway:left:width" v="1.6"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes:backward" v="3"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lanes:psv:backward" v="1"/>
+<tag k="lanes:psv:forward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Lankwitzer Straße"/>
+<tag k="name:etymology:wikidata" v="Q671474"/>
+<tag k="parking:both" v="no"/>
+<tag k="parking:both:restriction" v="no_stopping"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:left:width" v="infra3D"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:forward" v="through|none|none"/>
+</way>
+</osm>

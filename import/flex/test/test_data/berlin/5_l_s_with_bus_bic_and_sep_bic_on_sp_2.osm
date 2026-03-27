@@ -1,0 +1,40 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001845 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="71001582" visible="true" version="27" changeset="174010787" timestamp="2025-10-31T09:14:23Z" user="mueschel" uid="616774">
+<nd ref="26906450"/>
+<nd ref="9538547474"/>
+<nd ref="343314979"/>
+<nd ref="9538547473"/>
+<nd ref="3953989063"/>
+<nd ref="3953989062"/>
+<nd ref="26906449"/>
+<tag k="access:lanes:forward" v="||no"/>
+<tag k="bicycle:lanes:forward" v="yes|use_sidepath|designated"/>
+<tag k="bus:lanes:forward" v="||yes"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="cycleway:right:lane" v="exclusive"/>
+<tag k="cycleway:right:traffic_sign" v="DE:237,1026-32"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:bus:forward" v="1"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Unter den Eichen"/>
+<tag k="name:etymology:wikidata" v="Q12004"/>
+<tag k="name:etymology:wikipedia" v="de:Eichen"/>
+<tag k="note" v="In Richtung Westen breiter Radstreifen mit Freigabe für Linienverkehr"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="12203"/>
+<tag k="ref" v="B 1"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:forward" v="left|none|none"/>
+<tag k="vehicle:lanes:forward" v="yes|yes|no"/>
+<tag k="wikidata" v="Q2497110"/>
+<tag k="zone:traffic" v="DE:urban"/>
+</way>
+</osm>

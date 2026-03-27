@@ -1,0 +1,42 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754282 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="28812707" visible="true" version="34" changeset="174553017" timestamp="2025-11-12T10:48:31Z" user="fmc_8" uid="23034332">
+<nd ref="27554983"/>
+<nd ref="316777467"/>
+<tag k="bicycle:forward" v="optional_sidepath"/>
+<tag k="bridge" v="yes"/>
+<tag k="bridge:name" v="Oderstraßenbrücke"/>
+<tag k="cycleway:left" v="lane"/>
+<tag k="cycleway:left:buffer:both" v="no"/>
+<tag k="cycleway:left:lane" v="advisory"/>
+<tag k="cycleway:left:mapillary" v="1738591623435380"/>
+<tag k="cycleway:left:marking:left" v="dashed_line"/>
+<tag k="cycleway:left:marking:right" v="no"/>
+<tag k="cycleway:left:surface" v="asphalt"/>
+<tag k="cycleway:left:traffic_sign" v="none"/>
+<tag k="cycleway:left:traffic_sign:mapillary" v="2428902350823855"/>
+<tag k="cycleway:left:width" v="1.5"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="residential"/>
+<tag k="lane_markings" v="no"/>
+<tag k="layer" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="maxweight:signed" v="no"/>
+<tag k="name" v="Oderstraße"/>
+<tag k="name:etymology:wikidata" v="Q552"/>
+<tag k="name:etymology:wikipedia" v="de:Oder"/>
+<tag k="oneway" v="no"/>
+<tag k="parking:left" v="no"/>
+<tag k="parking:left:restriction" v="no_stopping"/>
+<tag k="parking:right" v="separate"/>
+<tag k="postal_code" v="12099"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:left:width" v="Luftbild 2025"/>
+<tag k="source:width" v="ALKIS"/>
+<tag k="surface" v="asphalt"/>
+<tag k="width" v="6"/>
+<tag k="width:effective" v="4.5"/>
+</way>
+</osm>
