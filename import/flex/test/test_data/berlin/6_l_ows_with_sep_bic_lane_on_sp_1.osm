@@ -1,0 +1,36 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001770 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="29277837" visible="true" version="39" changeset="140893971" timestamp="2023-09-06T12:43:30Z" user="JeroenvanderGun" uid="11963177">
+<nd ref="29272976"/>
+<nd ref="527332344"/>
+<nd ref="4513891413"/>
+<nd ref="390043094"/>
+<nd ref="26905405"/>
+<nd ref="16541469"/>
+<tag k="bicycle" v="use_sidepath"/>
+<tag k="bus:lanes" v="yes|yes|yes|yes|yes|designated"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="primary"/>
+<tag k="junction" v="circular"/>
+<tag k="lanes" v="6"/>
+<tag k="lanes:bus" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Theodor-Heuss-Platz"/>
+<tag k="name:etymology:wikidata" v="Q2594"/>
+<tag k="old_name:1906-1933" v="Reichskanzlerplatz"/>
+<tag k="old_name:1933-1945" v="Adolf-Hitler-Platz"/>
+<tag k="old_name:1947-1963" v="Reichskanzlerplatz"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="14052"/>
+<tag k="ref" v="B 2;B 5"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="slight_left|slight_left|slight_left;slight_right|slight_right|slight_right|none"/>
+<tag k="zone:traffic" v="DE:urban"/>
+</way>
+</osm>

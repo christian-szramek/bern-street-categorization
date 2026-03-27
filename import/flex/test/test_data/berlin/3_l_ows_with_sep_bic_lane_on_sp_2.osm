@@ -1,44 +1,27 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001955 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<way id="1465102569" visible="true" version="1" changeset="176944437" timestamp="2026-01-07T13:12:25Z" user="fmc_3" uid="22897978">
-<nd ref="13437738906"/>
-<nd ref="1343913755"/>
-<nd ref="270964430"/>
-<nd ref="270964434"/>
-<nd ref="13437738907"/>
-<tag k="bicycle" v="use_sidepath"/>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001758 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1442171165" visible="true" version="2" changeset="174597053" timestamp="2025-11-13T10:07:28Z" user="FMC-Henri" uid="22902669">
+<nd ref="29858046"/>
+<nd ref="5696367590"/>
 <tag k="cycleway:left" v="no"/>
 <tag k="cycleway:right" v="separate"/>
-<tag k="foot" v="use_sidepath"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="no"/>
 <tag k="highway" v="primary"/>
 <tag k="lanes" v="3"/>
 <tag k="lit" v="yes"/>
+<tag k="loc_name" v="TVO"/>
 <tag k="maxspeed" v="50"/>
-<tag k="name" v="Straße des 17. Juni"/>
-<tag k="name:etymology:wikidata" v="Q157682"/>
-<tag k="name:etymology:wikipedia" v="de:Aufstand vom 17. Juni 1953"/>
-<tag k="name:he" v="רחוב 17 ביוני"/>
-<tag k="name:ja" v="6月17日通り"/>
-<tag k="name:pl" v="ulica 17 Czerwca"/>
-<tag k="name:ru" v="Улица 17 Июня"/>
-<tag k="name:zh" v="六月十七日大街"/>
+<tag k="name" v="Märkische Allee"/>
+<tag k="name:etymology:wikidata" v="Q148499"/>
+<tag k="old_name" v="Heinrich-Rau-Straße"/>
 <tag k="oneway" v="yes"/>
-<tag k="parking:left" v="no"/>
-<tag k="parking:left:reason" v="dual_carriage"/>
-<tag k="parking:right" v="street_side"/>
-<tag k="parking:right:access" v="no"/>
-<tag k="parking:right:fee" v="no"/>
-<tag k="parking:right:markings" v="yes"/>
-<tag k="parking:right:motorcar" v="designated"/>
-<tag k="parking:right:orientation" v="parallel"/>
-<tag k="ref" v="B 2;B 5"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="12681"/>
+<tag k="ref" v="B 158"/>
 <tag k="shoulder" v="no"/>
-<tag k="sidewalk:left" v="no"/>
-<tag k="sidewalk:right" v="separate"/>
+<tag k="sidewalk" v="no"/>
 <tag k="smoothness" v="good"/>
 <tag k="surface" v="asphalt"/>
-<tag k="wikidata" v="Q317094"/>
-<tag k="wikimedia_commons" v="Category:Straße des 17. Juni (Berlin)"/>
-<tag k="wikipedia" v="de:Straße des 17. Juni"/>
-<tag k="zone:traffic" v="DE:urban"/>
+<tag k="wikidata" v="Q1957427"/>
 </way>
 </osm>
