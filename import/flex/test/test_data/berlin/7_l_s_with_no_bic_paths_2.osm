@@ -1,13 +1,12 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002071 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<way id="22955115" visible="true" version="29" changeset="154479245" timestamp="2024-07-27T11:50:58Z" user="klnkengi" uid="10121078">
-<nd ref="29272979"/>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302690 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="397859392" visible="true" version="12" changeset="154479245" timestamp="2024-07-27T11:50:58Z" user="klnkengi" uid="10121078">
 <nd ref="3724189396"/>
-<tag k="bridge" v="yes"/>
+<nd ref="78510453"/>
+<nd ref="282909028"/>
 <tag k="highway" v="primary"/>
 <tag k="lanes" v="7"/>
 <tag k="lit" v="yes"/>
 <tag k="maxspeed" v="50"/>
-<tag k="maxweight:signed" v="no"/>
 <tag k="motorroad" v="yes"/>
 <tag k="name" v="Heerstraße"/>
 <tag k="name:etymology:wikidata" v="Q6857854"/>
