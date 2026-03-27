@@ -14,9 +14,9 @@ end
 
 function M.is_car(tags, restriction)
     if (restriction == 'CH') then
-        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway' or ( M.is_street(tags, restriction) and M.is_bicycle_forbidden(tags) )
+        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'trunk' or tags.highway == 'trunk_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
     else
-        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway' or ( M.is_street(tags, restriction) and M.is_bicycle_forbidden(tags) )
+        return tags.highway == 'motorway' or tags.highway == 'motorway_link' or tags.highway == 'bus_guideway' or tags.highway == 'busway'
     end
 end
 
