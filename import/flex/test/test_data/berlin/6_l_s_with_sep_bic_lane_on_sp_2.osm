@@ -1,0 +1,34 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001955 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="332164879" visible="true" version="18" changeset="144125897" timestamp="2023-11-17T07:34:28Z" user="StefanHRT" uid="10961311">
+<nd ref="673035739"/>
+<nd ref="3792950683"/>
+<nd ref="26934659"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="destination:forward" v="Reinickendorf;Wedding"/>
+<tag k="destination:ref:to:forward" v="B 96"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="horse" v="no"/>
+<tag k="lane_markings" v="yes"/>
+<tag k="lanes" v="6"/>
+<tag k="lanes:backward" v="4"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="lanes:psv:backward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxheight" v="default"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Perleberger Straße"/>
+<tag k="name:etymology:wikidata" v="Q498540"/>
+<tag k="oneway" v="no"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="10557"/>
+<tag k="psv:lanes:backward:conditional" v="yes|yes|yes|designated@(Mo-Sa 06:00-19:00)"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:maxspeed" v="DE:urban"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="left|left|none|none"/>
+<tag k="wikidata" v="Q56062282"/>
+</way>
+</osm>

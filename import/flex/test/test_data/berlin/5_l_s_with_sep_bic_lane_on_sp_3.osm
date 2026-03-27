@@ -1,0 +1,29 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001857 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="35154389" visible="true" version="30" changeset="144195535" timestamp="2023-11-19T03:47:12Z" user="StefanHRT" uid="10961311">
+<nd ref="8633594734"/>
+<nd ref="8633594735"/>
+<nd ref="26904679"/>
+<nd ref="1092585555"/>
+<nd ref="4513891395"/>
+<nd ref="2395458023"/>
+<nd ref="79812803"/>
+<tag k="bicycle" v="optional_sidepath"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="5"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Masurenallee"/>
+<tag k="name:etymology:wikidata" v="Q815834"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="14055"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+<tag k="wikidata" v="Q1252965"/>
+</way>
+</osm>

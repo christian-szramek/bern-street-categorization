@@ -1,0 +1,36 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001758 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="666317537" visible="true" version="15" changeset="174652111" timestamp="2025-11-14T14:57:37Z" user="Traffikant" uid="21727746">
+<nd ref="27431838"/>
+<nd ref="3612453895"/>
+<nd ref="6238212996"/>
+<nd ref="10566171473"/>
+<nd ref="1675108857"/>
+<nd ref="6238212997"/>
+<nd ref="3887567765"/>
+<nd ref="256077333"/>
+<tag k="bicycle" v="optional_sidepath"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right:conditional" v="share_busway @ (05:00-19:00)"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="cycleway:right:traffic_sign" v="DE:245,1022-10,1024-14,1026-30,1042-33[05:00-19:00]"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lane_markings" v="yes"/>
+<tag k="lanes" v="6"/>
+<tag k="lanes:psv:forward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Columbiadamm"/>
+<tag k="name:etymology:wikidata" v="Q815800"/>
+<tag k="name:etymology:wikipedia" v="de:Wright-Bellanca WB-2"/>
+<tag k="parking:both" v="no"/>
+<tag k="parking:both:restriction" v="no_stopping"/>
+<tag k="postal_code" v="10965"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="left|through|none"/>
+<tag k="wikidata" v="Q1112613"/>
+<tag k="wikipedia" v="de:Columbiadamm"/>
+</way>
+</osm>
