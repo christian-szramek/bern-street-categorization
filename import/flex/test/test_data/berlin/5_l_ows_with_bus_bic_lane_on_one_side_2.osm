@@ -1,0 +1,38 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="335393888" visible="true" version="18" changeset="173224393" timestamp="2025-10-13T12:09:46Z" user="Traffikant" uid="21727746">
+<nd ref="4382361821"/>
+<nd ref="2790337802"/>
+<nd ref="26762962"/>
+<tag k="bus:lanes" v="yes|yes|yes|designated|yes"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="cycleway:right:lane" v="advisory"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="cycleway:right:separation:left" v="no"/>
+<tag k="cycleway:right:surface" v="asphalt"/>
+<tag k="cycleway:right:surface:colour" v="red"/>
+<tag k="cycleway:right:traffic_sign" v="none"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:bus" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Hardenbergstraße"/>
+<tag k="name:etymology:wikidata" v="Q213645"/>
+<tag k="name:etymology:wikipedia" v="de:Karl August von Hardenberg"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="parking:both:reason" v="junction"/>
+<tag k="placement" v="right_of:2"/>
+<tag k="postal_code" v="10623"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through|through|none|right"/>
+<tag k="vehicle:lanes" v="yes|yes|yes|no|yes"/>
+<tag k="wikidata" v="Q212275"/>
+<tag k="wikipedia" v="de:Hardenbergstraße"/>
+</way>
+</osm>
