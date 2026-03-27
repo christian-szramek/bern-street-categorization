@@ -214,6 +214,8 @@ function M.get_infrastructure_type(tags, restriction)
                 return M.get_lanes(tags) .. '_l_s_with_no_bic_paths'
             end
         end
+    elseif M.is_extra_marked_separate_bicycle_lane_on_sidepath(tags) then
+        return 'sep_bic_lane_on_sp'
     elseif M.is_pedestrian(tags) then
         if M.is_bicycle_allowed(tags) or restriction == 'US' then
             return 'pedestrian_with_bic_allowed'
@@ -230,8 +232,6 @@ function M.get_infrastructure_type(tags, restriction)
                 return 'cycleway'
             end
         end
-    elseif M.is_extra_marked_separate_bicycle_lane_on_sidepath(tags) then
-        return 'sep_bic_lane_on_sp'
     elseif M.is_path(tags) then
         if M.is_pedestrian_only_path(tags) then
             return 'pedestrian'
