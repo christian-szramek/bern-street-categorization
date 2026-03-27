@@ -62,7 +62,7 @@ function execute_all_tests_for_city(city, restriction)
     local directory = "./test_data/" .. city 
 
     for file in io.popen('ls "' .. directory .. '"'):lines() do
-        if file:match("%.xml$") then
+        if file:match("%.osm$") then
             local name = file:gsub("%.osm$", "")
             name = name:gsub("_%d+$", "")
 
