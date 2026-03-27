@@ -1,30 +1,27 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001857 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<way id="1420375864" visible="true" version="7" changeset="177852106" timestamp="2026-01-29T14:58:24Z" user="fmc_Supaplex030" uid="23761190">
-<nd ref="13051869293"/>
-<nd ref="4911287119"/>
-<tag k="bicycle" v="designated"/>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001831 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="22278168" visible="true" version="40" changeset="175199588" timestamp="2025-11-27T13:56:24Z" user="fmc_5" uid="22898413">
+<nd ref="1863123370"/>
+<nd ref="11221094414"/>
+<nd ref="13197509958"/>
+<nd ref="9885748166"/>
+<nd ref="13336162204"/>
+<tag k="bicycle" v="yes"/>
 <tag k="cycleway:left" v="no"/>
 <tag k="cycleway:right" v="shared_lane"/>
-<tag k="cycleway:right:lane" v="pictogram"/>
-<tag k="cycleway:right:oneway" v="yes"/>
-<tag k="cycleway:right:surface" v="asphalt"/>
-<tag k="cycleway:right:traffic_sign" v="none"/>
-<tag k="highway" v="service"/>
+<tag k="cycleway:right:surface" v="paving_stones"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="residential"/>
+<tag k="lane_markings" v="no"/>
 <tag k="lit" v="yes"/>
-<tag k="oneway" v="yes"/>
-<tag k="oneway:bicycle" v="yes"/>
-<tag k="operator:type" v="government"/>
-<tag k="parking:left" v="no"/>
-<tag k="parking:left:restriction" v="no_stopping"/>
-<tag k="parking:right" v="lane"/>
-<tag k="parking:right:fee" v="no"/>
-<tag k="parking:right:orientation" v="parallel"/>
-<tag k="parking:right:restriction:conditional" v="no_stopping @ (Sa-Su 07:00-19:00)"/>
-<tag k="service" v="parking_aisle"/>
-<tag k="smoothness" v="good"/>
-<tag k="source" v="survey"/>
-<tag k="source:width" v="aerial imagery"/>
-<tag k="surface" v="asphalt"/>
-<tag k="width" v="5.5"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Lauffener Straße"/>
+<tag k="name:etymology:wikidata" v="Q525720"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="12459"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="source:width" v="ARCore"/>
+<tag k="surface" v="sett"/>
+<tag k="width" v="5.9"/>
 </way>
 </osm>
