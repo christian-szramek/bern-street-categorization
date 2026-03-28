@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUpdated } from 'vue';
+import { ref, onMounted, onUpdated, watch } from 'vue';
 
 import L from 'leaflet';
 import 'leaflet.vectorgrid';
@@ -33,16 +33,6 @@ let map;
 const tilesURL = import.meta.env.VITE_BASE_MAP_URL;
 
 const extendedInfrastructureTypes = ref([]);
-const previousActiveInfrastructureTypes = ref([]);
-const previousCenteredCity = ref(null);
-
-const updatePreviousActiveInfrastructureTypes = () => {
-  previousActiveInfrastructureTypes.value = [...props.activeInfrastructureTypes];
-};
-
-const updatePreviousCenteredCity = () => {
-  previousCenteredCity.value = props.centeredCity;
-};
 
 const handleMouseOver = e => {
   emit('showInfo', e);
@@ -190,32 +180,30 @@ onMounted(async () => {
   loadBaseMapLayer();
   await loadAllDataLayers();
 
-  updatePreviousActiveInfrastructureTypes();
-  updatePreviousCenteredCity();
-
   map.on('moveend', async () => {
     await loadAllNodeLayers();
   });
 });
 
-onUpdated(async () => {
-  if (props.centeredCity !== previousCenteredCity.value) {
-    // update centered city
+watch(
+  () => props.centeredCity,
+  async (newCenteredCity, _) => {
     removeAllDataLayers();
-    map.setView(props.centeredCity.latlon);
+    map.setView(newCenteredCity.latlon);
     await loadAllDataLayers();
   }
+);
 
-  // update displayed infrastructure types
-  const updatedInfrastructureType = getUpdatedActiveInfrastructureType(props.activeInfrastructureTypes, previousActiveInfrastructureTypes.value);
+watch(
+  () => props.activeInfrastructureTypes,
+  async (newActiveInfrastructureTypes, oldActiveInfrastructureTypes) => {
+    const updatedInfrastructureType = getUpdatedActiveInfrastructureType(newActiveInfrastructureTypes, oldActiveInfrastructureTypes);
 
-  if (updatedInfrastructureType) {
-    await updateDataLayers(updatedInfrastructureType);
+    if (updatedInfrastructureType) {
+      await updateDataLayers(updatedInfrastructureType);
+    }
   }
-
-  updatePreviousActiveInfrastructureTypes();
-  updatePreviousCenteredCity();
-});
+);
 </script>
 
 <template>
