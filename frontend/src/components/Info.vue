@@ -11,7 +11,8 @@ const filteredInfoKeys = computed(() => {
       !key.includes('old_name') &&
       !key.includes('taxi') &&
       !key.includes('fee') &&
-      !key.includes('mappilary') &&
+      !key.includes('mapillary') &&
+      !key.includes('postal_code') &&
       !key.includes('wikipedia') &&
       !key.includes('wikimedia') &&
       !key.includes('wikidata') &&
