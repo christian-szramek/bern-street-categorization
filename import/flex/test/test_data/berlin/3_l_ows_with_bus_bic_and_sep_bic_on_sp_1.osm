@@ -1,0 +1,36 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002076 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="335487070" visible="true" version="32" changeset="174100980" timestamp="2025-11-02T12:46:29Z" user="Traffikant" uid="21727746">
+<nd ref="3425957818"/>
+<nd ref="1870081902"/>
+<nd ref="1729360252"/>
+<nd ref="6638695363"/>
+<nd ref="5930812879"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="share_busway"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="cycleway:right:traffic_sign" v="none"/>
+<tag k="cycleway:right:width" v="3"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="primary"/>
+<tag k="image" v="https://commons.wikimedia.org/wiki/File:TiergartenSch%C3%B6nebergerUfer.jpg"/>
+<tag k="lanes" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxheight" v="default"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Schöneberger Ufer"/>
+<tag k="name:etymology:wikidata" v="Q313189"/>
+<tag k="name:etymology:wikipedia" v="de:Berlin-Schöneberg"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="10785"/>
+<tag k="ref" v="B 96"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:right:width" v="Luftbild 2025"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through|none"/>
+<tag k="wikidata" v="Q22296084"/>
+<tag k="wikimedia_commons" v="Category:Schöneberger Ufer (Berlin)"/>
+<tag k="zone:traffic" v="DE:urban"/>
+</way>
+</osm>

@@ -1,0 +1,29 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302690 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1460822154" visible="true" version="2" changeset="180003485" timestamp="2026-03-17T12:00:35Z" user="fmc_3" uid="22897978">
+<nd ref="13398311285"/>
+<nd ref="3933855818"/>
+<nd ref="3185200558"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:backward" v="3"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Torstraße"/>
+<tag k="parking:left" v="lane"/>
+<tag k="parking:left:fee" v="yes"/>
+<tag k="parking:left:fee:conditional" v="no @ (Mo-Fr 00:00-11:00; Sa-Su 00:00-09:00)"/>
+<tag k="parking:left:orientation" v="parallel"/>
+<tag k="parking:left:restriction:conditional" v="loading_only @ (Mo-Fr 07:00-11:00)"/>
+<tag k="parking:left:zone" v="29;38"/>
+<tag k="parking:right" v="no"/>
+<tag k="parking:right:restriction" v="no_stopping"/>
+<tag k="postal_code" v="10115"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="left|none|none"/>
+</way>
+</osm>

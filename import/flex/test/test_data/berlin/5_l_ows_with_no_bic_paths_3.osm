@@ -1,0 +1,33 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002042 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="323528046" visible="true" version="16" changeset="154678741" timestamp="2024-08-01T07:28:03Z" user="momabebra" uid="9508237">
+<nd ref="1092585522"/>
+<nd ref="26745976"/>
+<nd ref="1092585661"/>
+<nd ref="268113977"/>
+<nd ref="26745977"/>
+<nd ref="1092585541"/>
+<nd ref="268113978"/>
+<nd ref="268113979"/>
+<nd ref="4006475802"/>
+<nd ref="313374095"/>
+<nd ref="9031101905"/>
+<nd ref="26745939"/>
+<tag k="bicycle" v="no"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="foot" v="no"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="5"/>
+<tag k="lit" v="yes"/>
+<tag k="maxheight" v="default"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Halenseestraße"/>
+<tag k="name:etymology:wikidata" v="Q1570872"/>
+<tag k="name:ja" v="ハーレンゼー通り"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="shoulder" v="no"/>
+<tag k="sidewalk" v="no"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|left|through|through|through;right"/>
+</way>
+</osm>

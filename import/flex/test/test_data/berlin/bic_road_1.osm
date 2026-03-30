@@ -1,0 +1,39 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001939 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="717177006" visible="true" version="17" changeset="180298472" timestamp="2026-03-23T10:50:06Z" user="fmc_3" uid="22897978">
+<nd ref="10572303253"/>
+<nd ref="5236117755"/>
+<nd ref="10878011530"/>
+<nd ref="10878011528"/>
+<nd ref="9218258846"/>
+<nd ref="196748327"/>
+<nd ref="25954557"/>
+<tag k="bicycle" v="designated"/>
+<tag k="bicycle_road" v="yes"/>
+<tag k="buffer:both" v="0.7"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="residential"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="marking:both" v="dashed_line"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Linienstraße"/>
+<tag k="name:etymology:wikidata" v="Q88272"/>
+<tag k="oneway" v="yes"/>
+<tag k="oneway:bicycle" v="no"/>
+<tag k="parking:both" v="lane"/>
+<tag k="parking:both:fee" v="no"/>
+<tag k="parking:both:markings" v="yes"/>
+<tag k="parking:both:orientation" v="parallel"/>
+<tag k="parking:both:restriction:conditional" v="no_parking @ (09:00-24:00); none @ residents"/>
+<tag k="parking:both:zone" v="29"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:maxspeed" v="DE:bicycle_road"/>
+<tag k="source:width" v="infra3D"/>
+<tag k="surface" v="asphalt"/>
+<tag k="traffic_sign" v="DE:244.1,1020-30"/>
+<tag k="vehicle" v="destination"/>
+<tag k="width" v="4"/>
+<tag k="wikidata" v="Q1826733"/>
+</way>
+</osm>

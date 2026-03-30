@@ -1,0 +1,43 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001962 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1082762757" visible="true" version="8" changeset="175809988" timestamp="2025-12-11T16:01:59Z" user="fmc_5" uid="22898413">
+<nd ref="321323054"/>
+<nd ref="11337154718"/>
+<nd ref="3436038753"/>
+<tag k="bicycle:forward" v="use_sidepath"/>
+<tag k="cycleway:left" v="lane"/>
+<tag k="cycleway:left:buffer:left" v="no"/>
+<tag k="cycleway:left:buffer:right" v="0.6"/>
+<tag k="cycleway:left:lane" v="advisory"/>
+<tag k="cycleway:left:marking:both" v="dashed_line"/>
+<tag k="cycleway:left:oneway" v="yes"/>
+<tag k="cycleway:left:surface" v="asphalt"/>
+<tag k="cycleway:left:surface:colour" v="none"/>
+<tag k="cycleway:left:traffic_mode:right" v="parking"/>
+<tag k="cycleway:left:traffic_sign" v="none"/>
+<tag k="cycleway:left:width" v="1.5"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="6"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="4"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Storkower Straße"/>
+<tag k="name:etymology:wikidata" v="Q586991"/>
+<tag k="parking:left" v="street_side"/>
+<tag k="parking:left:access" v="no"/>
+<tag k="parking:left:bus" v="designated"/>
+<tag k="parking:left:fee" v="no"/>
+<tag k="parking:left:orientation" v="parallel"/>
+<tag k="parking:right" v="no"/>
+<tag k="postal_code" v="10369"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:left:width" v="infra3D"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:forward" v="left|||"/>
+<tag k="wikidata" v="Q32217497"/>
+<tag k="wikipedia" v="de:Storkower Straße (Berlin)"/>
+</way>
+</osm>

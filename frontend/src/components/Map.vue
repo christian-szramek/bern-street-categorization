@@ -1,5 +1,5 @@
 <script setup>
-import { ref, onMounted, onUpdated } from 'vue';
+import { ref, onMounted, onUpdated, watch } from 'vue';
 
 import L from 'leaflet';
 import 'leaflet.vectorgrid';
@@ -10,6 +10,8 @@ import { getAreaLayer } from '@/layers/areaLayer';
 
 import { getNodes } from '@/services/nodeService';
 import { getNameWithoutLanes } from '@/utils/nameUtils';
+
+const tilesURL = import.meta.env.VITE_BASE_MAP_URL;
 
 const props = defineProps({
   infrastructureTypes: {
@@ -30,19 +32,9 @@ const emit = defineEmits(['showInfo', 'hideInfo']);
 
 let map;
 
-const tilesURL = import.meta.env.VITE_BASE_MAP_URL;
+let loadVersion = 0;
 
 const extendedInfrastructureTypes = ref([]);
-const previousActiveInfrastructureTypes = ref([]);
-const previousCenteredCity = ref(null);
-
-const updatePreviousActiveInfrastructureTypes = () => {
-  previousActiveInfrastructureTypes.value = [...props.activeInfrastructureTypes];
-};
-
-const updatePreviousCenteredCity = () => {
-  previousCenteredCity.value = props.centeredCity;
-};
 
 const handleMouseOver = e => {
   emit('showInfo', e);
@@ -77,22 +69,24 @@ const extendInfrastructureTypes = () => {
 
 const loadNodeLayer = async (infrastructureType, mapBounds, color) => {
   const layerData = await getNodes(props.centeredCity.name, infrastructureType, mapBounds);
-  const layer = getNodeLayer(layerData, color, handleMouseOver, handleMouseOut);
-  return layer;
+  return getNodeLayer(layerData, color, handleMouseOver, handleMouseOut);
 };
 
-const loadAllNodeLayers = async () => {
-  // Remove previous node layer to avoid duplicates
+const loadAllNodeLayers = async version => {
   removeAllNodeLayers();
 
   const mapBounds = map.getBounds();
 
-  extendedInfrastructureTypes.value
-    .filter(it => it.type === 'node' && isInfrastructureTypeActive(it.name))
-    .forEach(async it => {
-      it.layer = await loadNodeLayer(it.name, mapBounds, it.color);
+  for (const it of extendedInfrastructureTypes.value) {
+    if (it.type === 'node' && isInfrastructureTypeActive(it.name)) {
+      const layer = await loadNodeLayer(it.name, mapBounds, it.color);
+
+      if (version !== loadVersion) return;
+
+      it.layer = layer;
       it.layer.addTo(map);
-    });
+    }
+  }
 };
 
 const removeAllNodeLayers = () => {
@@ -122,8 +116,13 @@ const loadAllAreaLayers = () => {
     });
 };
 
-const loadAllDataLayers = () => {
-  loadAllNodeLayers();
+const loadAllDataLayers = async () => {
+  const version = ++loadVersion;
+
+  await loadAllNodeLayers(version);
+
+  if (version !== loadVersion) return;
+
   loadAllWayLayers();
   loadAllAreaLayers();
 };
@@ -145,7 +144,14 @@ const loadBaseMapLayer = () => {
 };
 
 const isInfrastructureTypeActive = infrastructureType => {
-  return props.activeInfrastructureTypes.some(it => infrastructureType.includes(it));
+  return props.activeInfrastructureTypes.some(it => {
+    // handle edge case: 2_l_ows_with... contains s_with... but shouldn't
+    if (String(it).startsWith('s_')) {
+      return infrastructureType.includes('_l_' + it);
+    }
+
+    return infrastructureType.includes(it);
+  });
 };
 
 const getUpdatedActiveInfrastructureType = (now, previous) => {
@@ -160,62 +166,71 @@ const getUpdatedActiveInfrastructureType = (now, previous) => {
   return added;
 };
 
-const updateDataLayers = updatedInfrastructureType => {
+const updateDataLayers = async updatedInfrastructureType => {
+  const version = ++loadVersion;
+
   const infrastructureTypesToUpdate = extendedInfrastructureTypes.value.filter(it => getNameWithoutLanes(it.name) === updatedInfrastructureType);
 
-  infrastructureTypesToUpdate.forEach(async it => {
+  for (const it of infrastructureTypesToUpdate) {
     if (it.layer) {
       map.removeLayer(it.layer);
       it.layer = null;
     } else {
+      let layer;
+
       if (it.type === 'node') {
-        it.layer = await loadNodeLayer(it.name, map.getBounds(), it.color);
-      }
-      if (it.type === 'way') {
-        it.layer = getWayLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
-      }
-      if (it.type === 'area') {
-        it.layer = getAreaLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
+        layer = await loadNodeLayer(it.name, map.getBounds(), it.color);
+
+        if (version !== loadVersion) return;
       }
 
+      if (it.type === 'way') {
+        layer = getWayLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
+      }
+
+      if (it.type === 'area') {
+        layer = getAreaLayer(props.centeredCity.name, it.name, it.color, handleMouseOver, handleMouseOut);
+      }
+
+      it.layer = layer;
       it.layer.addTo(map);
     }
-  });
+  }
 };
 
-onMounted(() => {
+onMounted(async () => {
   map = L.map('map').setView(props.centeredCity.latlon, 15);
 
   extendInfrastructureTypes();
   loadBaseMapLayer();
-  loadAllDataLayers();
+  await loadAllDataLayers();
 
-  updatePreviousActiveInfrastructureTypes();
-  updatePreviousCenteredCity();
-
-  map.on('moveend', () => {
-    loadAllNodeLayers();
+  map.on('moveend', async () => {
+    const version = ++loadVersion;
+    await loadAllNodeLayers(version);
   });
 });
 
-onUpdated(() => {
-  if (props.centeredCity !== previousCenteredCity.value) {
-    // update centered city
+watch(
+  () => props.centeredCity,
+  async (newCenteredCity, _) => {
+    loadVersion++;
     removeAllDataLayers();
-    map.setView(props.centeredCity.latlon);
-    loadAllDataLayers();
-  } else {
-    // update displayed infrastructure types
-    const updatedInfrastructureType = getUpdatedActiveInfrastructureType(props.activeInfrastructureTypes, previousActiveInfrastructureTypes.value);
+    map.setView(newCenteredCity.latlon);
+    await loadAllDataLayers();
+  }
+);
+
+watch(
+  () => props.activeInfrastructureTypes,
+  async (newActiveInfrastructureTypes, oldActiveInfrastructureTypes) => {
+    const updatedInfrastructureType = getUpdatedActiveInfrastructureType(newActiveInfrastructureTypes, oldActiveInfrastructureTypes);
 
     if (updatedInfrastructureType) {
-      updateDataLayers(updatedInfrastructureType);
+      await updateDataLayers(updatedInfrastructureType);
     }
   }
-
-  updatePreviousActiveInfrastructureTypes();
-  updatePreviousCenteredCity();
-});
+);
 </script>
 
 <template>

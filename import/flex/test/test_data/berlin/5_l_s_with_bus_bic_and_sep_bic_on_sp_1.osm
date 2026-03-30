@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302684 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="313917246" visible="true" version="12" changeset="170719289" timestamp="2025-08-20T11:10:00Z" user="fmc_3" uid="22897978">
+<nd ref="13084227205"/>
+<nd ref="1075104330"/>
+<nd ref="3955012235"/>
+<nd ref="11254875922"/>
+<nd ref="5432283416"/>
+<nd ref="5969931837"/>
+<nd ref="10595775003"/>
+<tag k="cycleway:left" v="lane"/>
+<tag k="cycleway:left:lane" v="advisory"/>
+<tag k="cycleway:right" v="track"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Goerzallee"/>
+<tag k="name:etymology:wikidata" v="Q90200"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="14167"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="none|merge_to_left"/>
+<tag k="turn:lanes:forward" v="none|through|right"/>
+</way>
+</osm>

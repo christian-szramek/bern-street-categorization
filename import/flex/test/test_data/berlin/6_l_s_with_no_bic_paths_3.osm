@@ -1,0 +1,27 @@
+
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001955 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="4555271" visible="true" version="18" changeset="178649358" timestamp="2026-02-16T21:05:04Z" user="fmc_5" uid="22898413">
+<nd ref="26943839"/>
+<nd ref="13571121193"/>
+<tag k="bridge" v="yes"/>
+<tag k="bridge:name" v="Passenheimer Brücke"/>
+<tag k="bridge:structure" v="beam"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lanes" v="6"/>
+<tag k="layer" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="maxweight:signed" v="no"/>
+<tag k="name" v="Passenheimer Straße"/>
+<tag k="name:etymology:wikidata" v="Q1005483"/>
+<tag k="name:etymology:wikipedia" v="de:Pasym"/>
+<tag k="parking:left" v="no"/>
+<tag k="parking:right" v="lane"/>
+<tag k="parking:right:fee" v="no"/>
+<tag k="parking:right:orientation" v="parallel"/>
+<tag k="postal_code" v="14055"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

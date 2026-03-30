@@ -10,13 +10,17 @@ WORK_DIR=$(pwd)
 TMP_DIR=$WORK_DIR/tmp
 
 
-# if test osm.pbf should be processed
+# if test final.osm.pbf's should be processed
 if [ "$TEST" = "true" ]; then
   echo "Processing the test data"
   
   export CITY="BERN"
   export RESTRICTION="CH"
-  ./import/import.sh $WORK_DIR $WORK_DIR/import/flex/test/test_data
+  ./import/import.sh $WORK_DIR $WORK_DIR/import/flex/test/test_data/bern
+
+  export CITY="BERLIN"
+  export RESTRICTION="DE"
+  ./import/import.sh $WORK_DIR $WORK_DIR/import/flex/test/test_data/berlin
   exit 0
 fi
 

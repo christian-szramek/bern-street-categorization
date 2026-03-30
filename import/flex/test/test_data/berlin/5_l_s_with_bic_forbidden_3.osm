@@ -1,0 +1,19 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001962 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="66289209" visible="true" version="14" changeset="172963859" timestamp="2025-10-07T15:03:34Z" user="Traffikant" uid="21727746">
+<nd ref="271920361"/>
+<nd ref="12270730609"/>
+<nd ref="263130724"/>
+<tag k="destination" v="Hamburg;Magdeburg;Leipzig;Charlottenburg;Detmolder Straße"/>
+<tag k="destination:lanes" v="Hamburg;Magdeburg;Leipzig;Charlottenburg|Hamburg;Magdeburg;Leipzig;Charlottenburg|Hamburg;Magdeburg;Leipzig;Charlottenburg|Detmolder Straße|Detmolder Straße"/>
+<tag k="highway" v="motorway"/>
+<tag k="lanes" v="5"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="80"/>
+<tag k="oneway" v="yes"/>
+<tag k="ref" v="A 100"/>
+<tag k="reg_name" v="Berliner Stadtring"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="through|through|through|slight_right|slight_right"/>
+<tag k="urban" v="yes"/>
+</way>
+</osm>

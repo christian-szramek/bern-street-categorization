@@ -1,0 +1,22 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001770 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="322543959" visible="true" version="9" changeset="172966960" timestamp="2025-10-07T16:11:49Z" user="Traffikant" uid="21727746">
+<nd ref="26908826"/>
+<nd ref="12923759265"/>
+<nd ref="26908833"/>
+<tag k="destination" v="Hamburg;Magdeburg;Leipzig;Wilmersdorf;Zentrum;Innsbrucker Platz"/>
+<tag k="destination:lanes" v="Hamburg;Magdeburg;Leipzig;Wilmersdorf|Hamburg;Magdeburg;Leipzig;Wilmersdorf|Hamburg;Magdeburg;Leipzig;Wilmersdorf|Innsbrucker Platz|Innsbrucker Platz"/>
+<tag k="highway" v="motorway"/>
+<tag k="lanes" v="5"/>
+<tag k="lit" v="yes"/>
+<tag k="maxheight" v="default"/>
+<tag k="maxspeed" v="80"/>
+<tag k="maxspeed:variable" v="yes"/>
+<tag k="oneway" v="yes"/>
+<tag k="placement" v="middle_of:2"/>
+<tag k="ref" v="A 100"/>
+<tag k="reg_name" v="Berliner Stadtring"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="none|none|none|none|merge_to_left"/>
+<tag k="urban" v="yes"/>
+</way>
+</osm>

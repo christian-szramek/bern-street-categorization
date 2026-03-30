@@ -1,0 +1,34 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002050 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1460786454" visible="true" version="2" changeset="180003485" timestamp="2026-03-17T12:00:35Z" user="fmc_3" uid="22897978">
+<nd ref="5163668246"/>
+<nd ref="5872007526"/>
+<nd ref="5405528411"/>
+<nd ref="10773167146"/>
+<nd ref="5872007525"/>
+<nd ref="10773167135"/>
+<tag k="bicycle" v="designated"/>
+<tag k="bicycle_road" v="yes"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="residential"/>
+<tag k="lane_markings" v="yes"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Gartenstraße"/>
+<tag k="parking:both" v="street_side"/>
+<tag k="parking:both:fee" v="yes"/>
+<tag k="parking:both:fee:conditional" v="no @ (Mo-Sa 00:00-09:00,22:00-24:00; Su)"/>
+<tag k="parking:both:orientation" v="parallel"/>
+<tag k="parking:both:zone" v="38"/>
+<tag k="postal_code" v="10115"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:maxspeed" v="DE:bicycle_road"/>
+<tag k="source:width" v="Luftbild 2025"/>
+<tag k="surface" v="asphalt"/>
+<tag k="traffic_sign" v="DE:244.1,1020-30"/>
+<tag k="vehicle" v="destination"/>
+<tag k="width" v="11"/>
+</way>
+</osm>

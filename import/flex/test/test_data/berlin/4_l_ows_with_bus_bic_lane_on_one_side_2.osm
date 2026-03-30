@@ -1,0 +1,30 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001703 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="31098780" visible="true" version="32" changeset="173333374" timestamp="2025-10-15T18:33:20Z" user="fmc_6" uid="23034323">
+<nd ref="4307880731"/>
+<nd ref="1547009133"/>
+<nd ref="3837126259"/>
+<nd ref="5837758519"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="share_busway"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="4"/>
+<tag k="lanes:psv" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Johannisthaler Chaussee"/>
+<tag k="name:etymology:wikidata" v="Q655012"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="parking:left:reason" v="dual_carriage"/>
+<tag k="parking:right:reason" v="bus_lane"/>
+<tag k="postal_code" v="12351"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through||none|none"/>
+</way>
+</osm>

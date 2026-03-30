@@ -1,0 +1,44 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002066 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="31969210" visible="true" version="56" changeset="175502385" timestamp="2025-12-04T15:51:42Z" user="fmc_5" uid="22898413">
+<nd ref="20246200"/>
+<nd ref="13353645322"/>
+<nd ref="847930600"/>
+<nd ref="360837678"/>
+<nd ref="1561640061"/>
+<nd ref="1561640068"/>
+<nd ref="10966299679"/>
+<nd ref="683872399"/>
+<nd ref="847930605"/>
+<nd ref="1561640069"/>
+<nd ref="332084108"/>
+<nd ref="13353645323"/>
+<tag k="bicycle:backward" v="use_sidepath"/>
+<tag k="bicycle:forward" v="optional_sidepath"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="share_busway"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="primary"/>
+<tag k="image" v="https://commons.wikimedia.org/wiki/File:AltTeptowPuschkinallee.jpg"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:psv" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="maxspeed:type" v="DE:urban"/>
+<tag k="name" v="Puschkinallee"/>
+<tag k="name:etymology:wikidata" v="Q7200"/>
+<tag k="name:etymology:wikipedia" v="de:Alexander Sergejewitsch Puschkin"/>
+<tag k="old_name" v="Kastanienallee;Treptower Chaussee"/>
+<tag k="oneway" v="yes"/>
+<tag k="oneway:bicycle" v="no"/>
+<tag k="parking:both" v="no"/>
+<tag k="parking:both:restriction" v="no_stopping"/>
+<tag k="ref" v="B 96a"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="width:carriageway" v="9.5"/>
+<tag k="wikidata" v="Q23834460"/>
+<tag k="wikimedia_commons" v="Category:Puschkinallee (Berlin-Alt-Treptow)"/>
+</way>
+</osm>

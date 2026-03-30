@@ -1,0 +1,45 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001845 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="80706109" visible="true" version="28" changeset="177524572" timestamp="2026-01-21T14:12:38Z" user="FMC-Henri" uid="22902669">
+<nd ref="13452680249"/>
+<nd ref="5724549264"/>
+<nd ref="13114147474"/>
+<nd ref="3368174812"/>
+<nd ref="8792201907"/>
+<tag k="bicycle:lanes" v="yes|no|designated|no"/>
+<tag k="cycleway:lanes" v="no|no|lane|no"/>
+<tag k="cycleway:left" v="lane"/>
+<tag k="cycleway:left:buffer:both" v="no"/>
+<tag k="cycleway:left:lane" v="exclusive"/>
+<tag k="cycleway:left:mapillary" v="1464963951418595"/>
+<tag k="cycleway:left:marking:both" v="solid_line"/>
+<tag k="cycleway:left:oneway" v="yes"/>
+<tag k="cycleway:left:separation:left" v="vertical_panel"/>
+<tag k="cycleway:left:surface" v="asphalt"/>
+<tag k="cycleway:left:surface:colour" v="none"/>
+<tag k="cycleway:left:traffic_mode:right" v="motor_vehicle"/>
+<tag k="cycleway:left:traffic_sign" v="none"/>
+<tag k="cycleway:left:width" v="1.6"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="highway" v="tertiary"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="motorcycle" v="destination"/>
+<tag k="name" v="Bergmannstraße"/>
+<tag k="name:etymology:wikidata" v="Q32860404"/>
+<tag k="parking:both" v="no"/>
+<tag k="placement:backward" v="right_of:1"/>
+<tag k="postal_code" v="10961"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="source:cycleway:left:width" v="Luftbild 2024"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="through|right"/>
+<tag k="vehicle:lanes:backward" v="no|yes|yes"/>
+<tag k="width:lanes:backward" v="1.6||"/>
+<tag k="wikidata" v="Q820025"/>
+<tag k="wikipedia" v="de:Bergmannstraße (Berlin)"/>
+</way>
+</osm>

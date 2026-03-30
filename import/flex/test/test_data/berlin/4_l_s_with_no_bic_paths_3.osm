@@ -1,0 +1,26 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754285 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="180239842" visible="true" version="14" changeset="177859041" timestamp="2026-01-29T17:37:15Z" user="fmc_3" uid="22897978">
+<nd ref="1906766909"/>
+<nd ref="1906766910"/>
+<nd ref="2869270604"/>
+<nd ref="1906766922"/>
+<nd ref="158710656"/>
+<nd ref="1906766930"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="4"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="motorroad" v="yes"/>
+<tag k="name" v="Ernst-Ruska-Ufer"/>
+<tag k="name:etymology:wikidata" v="Q71022"/>
+<tag k="parking:both" v="no"/>
+<tag k="parking:both:markings" v="yes"/>
+<tag k="sidewalk:left" v="separate"/>
+<tag k="sidewalk:right" v="no"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

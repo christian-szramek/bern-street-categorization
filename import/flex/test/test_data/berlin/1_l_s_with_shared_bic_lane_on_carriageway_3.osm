@@ -1,0 +1,25 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002050 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1430847472" visible="true" version="1" changeset="172105584" timestamp="2025-09-18T10:38:31Z" user="fmc_3" uid="22897978">
+<nd ref="13152665341"/>
+<nd ref="8685925185"/>
+<nd ref="13152665345"/>
+<nd ref="459659156"/>
+<nd ref="6902543346"/>
+<tag k="cycleway" v="shared_lane"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lane_markings" v="no"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Olympische Straße"/>
+<tag k="name:etymology:wikidata" v="Q8150"/>
+<tag k="parking:both" v="lane"/>
+<tag k="parking:both:fee" v="no"/>
+<tag k="parking:both:orientation" v="parallel"/>
+<tag k="parking:right:restriction:conditional" v="yes"/>
+<tag k="priority_road" v="designated"/>
+<tag k="sidewalk:both" v="separate"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

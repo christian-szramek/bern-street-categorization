@@ -1,0 +1,25 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1863033 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1152249198" visible="true" version="7" changeset="170658667" timestamp="2025-08-19T09:28:09Z" user="fmc_2" uid="22897704">
+<nd ref="1096117950"/>
+<nd ref="1501638891"/>
+<nd ref="1501638888"/>
+<nd ref="27492412"/>
+<tag k="cycleway:left" v="separate"/>
+<tag k="cycleway:right" v="no"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:forward" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Kranoldplatz"/>
+<tag k="name:etymology:wikidata" v="Q1031066"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="12209"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:forward" v="left|none|none"/>
+</way>
+</osm>

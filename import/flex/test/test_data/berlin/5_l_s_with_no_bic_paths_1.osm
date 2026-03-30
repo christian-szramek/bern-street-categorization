@@ -1,0 +1,32 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="161535820" visible="true" version="13" changeset="149378865" timestamp="2024-03-31T08:24:11Z" user="momabebra" uid="9508237">
+<nd ref="1735082725"/>
+<nd ref="5784709288"/>
+<nd ref="26759804"/>
+<tag k="bicycle" v="no"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="foot" v="no"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="5"/>
+<tag k="lanes:backward" v="2"/>
+<tag k="lanes:both_ways" v="1"/>
+<tag k="lanes:forward" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="motorroad" v="yes"/>
+<tag k="name" v="Heerstraße"/>
+<tag k="name:etymology:wikidata" v="Q6857854"/>
+<tag k="name:etymology:wikipedia" v="de:Militärstraße"/>
+<tag k="note" v="Wechselrichtungszeichen für alle Spuren, wird i.d.R. aber nur für die mittlere verwendet"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="14055"/>
+<tag k="ref" v="B 2;B 5"/>
+<tag k="shoulder" v="no"/>
+<tag k="sidewalk" v="no"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+<tag k="wikidata" v="Q94863"/>
+<tag k="wikipedia" v="de:Heerstraße (Berlin)"/>
+<tag k="zone:traffic" v="DE:urban"/>
+</way>
+</osm>

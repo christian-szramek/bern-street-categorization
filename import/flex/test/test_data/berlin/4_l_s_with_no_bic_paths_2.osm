@@ -1,0 +1,34 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754282 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="31343609" visible="true" version="22" changeset="172583522" timestamp="2025-09-28T20:17:12Z" user="fmc_5" uid="22898413">
+<nd ref="86049391"/>
+<nd ref="6304909788"/>
+<nd ref="3239724399"/>
+<nd ref="292916893"/>
+<tag k="bicycle" v="no"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="destination:colour:forward" v=";white"/>
+<tag k="destination:colour:lanes:backward" v="|;white|;white"/>
+<tag k="destination:forward" v="Gosen;Müggelheim"/>
+<tag k="destination:lanes:backward" v="|Treptow;Altstadt Köpenick|Hellersdorf;Friedrichshagen"/>
+<tag k="foot" v="no"/>
+<tag k="hazmat:water" v="no"/>
+<tag k="highway" v="secondary"/>
+<tag k="lane_markings" v="yes"/>
+<tag k="lanes" v="4"/>
+<tag k="lanes:backward" v="3"/>
+<tag k="lanes:forward" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Müggelheimer Damm"/>
+<tag k="name:etymology:wikidata" v="Q644380"/>
+<tag k="note" v="Übergeordnete Straße, Stufe II"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="12557"/>
+<tag k="shoulder" v="no"/>
+<tag k="sidewalk" v="no"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes:backward" v="left|through|right"/>
+<tag k="wikidata" v="Q73521254"/>
+</way>
+</osm>

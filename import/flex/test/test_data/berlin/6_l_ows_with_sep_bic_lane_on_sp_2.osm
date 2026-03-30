@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002076 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1311315167" visible="true" version="3" changeset="178403907" timestamp="2026-02-11T12:08:30Z" user="fmc_3" uid="22897978">
+<nd ref="1876468344"/>
+<nd ref="10567768956"/>
+<tag k="bicycle" v="use_sidepath"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="destination" v="Unter den Linden"/>
+<tag k="destination:colour" v="white"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="6"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Spandauer Straße"/>
+<tag k="name:etymology:wikidata" v="Q158083"/>
+<tag k="note" v="Übergeordnete Straße, Stufe I"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="10178"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+<tag k="wikidata" v="Q2306673"/>
+<tag k="wikipedia" v="de:Spandauer Straße"/>
+</way>
+</osm>
