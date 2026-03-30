@@ -68,7 +68,7 @@ local M = {
   { name = "pedestrian", area=true, node=true, displayName="Mainly/exclusively for pedestrian" },
   { name = "pedestrian_with_bic_allowed", area=true, node=true, displayName="Mainly/exclusively for pedestrian with bicycle allowed" },
   { name = "crossing", area=false, node=true, displayName="Crossing (bicycle, pedestrian, horserider)" },
-  { name = "path_with_bic_forbidden", area=false, node=false, displayName="Path with bicycle forbidden" },
+  { name = "path_with_bic_forbidden", area=false, node=false, displayName="Path with bicycle forbidden or unsuited" },
   { name = "uncategorized", area=true, node=true, displayName="Uncategorized" },
 }
 
