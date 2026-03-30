@@ -5,7 +5,19 @@ const props = defineProps(['info']);
 
 const filteredInfoKeys = computed(() => {
   return Object.keys(props.info).filter(
-    key => !key.includes('wikipedia') && !key.includes('wikimedia') && !key.includes('wikidata') && !key.includes('image') && !key.includes('name:') && !key.includes('display_name')
+    key =>
+      !key.includes('source') &&
+      !key.includes('note') &&
+      !key.includes('old_name') &&
+      !key.includes('taxi') &&
+      !key.includes('fee') &&
+      !key.includes('mappilary') &&
+      !key.includes('wikipedia') &&
+      !key.includes('wikimedia') &&
+      !key.includes('wikidata') &&
+      !key.includes('image') &&
+      !key.includes('name:') &&
+      !key.includes('display_name')
   );
 });
 </script>
