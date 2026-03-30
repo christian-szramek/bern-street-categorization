@@ -144,7 +144,14 @@ const loadBaseMapLayer = () => {
 };
 
 const isInfrastructureTypeActive = infrastructureType => {
-  return props.activeInfrastructureTypes.some(it => infrastructureType.includes(it));
+  return props.activeInfrastructureTypes.some(it => {
+    // handle edge case: 2_l_ows_with... contains s_with... but shouldn't
+    if (String(it).startsWith('s_')) {
+      return infrastructureType.includes('_l_' + it);
+    }
+
+    return infrastructureType.includes(it);
+  });
 };
 
 const getUpdatedActiveInfrastructureType = (now, previous) => {
