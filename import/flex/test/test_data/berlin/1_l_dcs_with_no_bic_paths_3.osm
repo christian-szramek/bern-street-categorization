@@ -1,0 +1,34 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001845 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1453077995" visible="true" version="1" changeset="175023257" timestamp="2025-11-23T12:17:02Z" user="fmc_5" uid="22898413">
+<nd ref="13326023018"/>
+<nd ref="8662312738"/>
+<nd ref="2855739036"/>
+<nd ref="10676507103"/>
+<nd ref="150731135"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="maxspeed:conditional" v="30 @ (22:00-06:00)"/>
+<tag k="name" v="Grünauer Straße"/>
+<tag k="name:etymology:wikidata" v="Q269622"/>
+<tag k="name:etymology:wikipedia" v="de:Alt-Kölln"/>
+<tag k="note" v="Übergeordnete Straße, Stufe II"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:left" v="no"/>
+<tag k="parking:left:restriction" v="no_stopping"/>
+<tag k="parking:right" v="lane"/>
+<tag k="parking:right:access" v="yes"/>
+<tag k="parking:right:fee" v="no"/>
+<tag k="parking:right:maxstay:conditional" v="1 hour @ (Mo-Fr 09:00-19:00, Sa 09:00-14:00)"/>
+<tag k="parking:right:orientation" v="parallel"/>
+<tag k="postal_code" v="12557"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

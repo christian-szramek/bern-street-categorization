@@ -1,0 +1,26 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2860860 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1410900688" visible="true" version="1" changeset="168308296" timestamp="2025-06-30T12:47:54Z" user="fmc_5" uid="22898413">
+<nd ref="2283018697"/>
+<nd ref="86950004"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="residential"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="maxspeed:type" v="DE:zone30"/>
+<tag k="name" v="Zühlsdorfer Straße"/>
+<tag k="name:etymology:wikidata" v="Q2605532"/>
+<tag k="name:etymology:wikipedia" v="de:Zühlsdorf"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="12679"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:maxspeed" v="DE:zone30"/>
+<tag k="surface" v="asphalt"/>
+<tag k="traffic_sign" v="DE:274.1"/>
+<tag k="zone:maxspeed" v="DE:30"/>
+</way>
+</osm>
