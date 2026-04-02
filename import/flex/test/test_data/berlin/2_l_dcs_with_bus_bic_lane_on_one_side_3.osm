@@ -1,0 +1,41 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2528126 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="354089981" visible="true" version="21" changeset="180561180" timestamp="2026-03-28T22:08:32Z" user="behris" uid="9663640">
+<nd ref="385430972"/>
+<nd ref="443066889"/>
+<nd ref="3656890813"/>
+<nd ref="11259921871"/>
+<nd ref="3598653348"/>
+<nd ref="1597984720"/>
+<nd ref="3656890811"/>
+<nd ref="3656890810"/>
+<nd ref="7676264013"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="cycleway:right:bicycle" v="designated"/>
+<tag k="cycleway:right:lane" v="exclusive"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="cycleway:right:separation:left" v="vertical_panel"/>
+<tag k="cycleway:right:surface" v="asphalt"/>
+<tag k="cycleway:right:traffic_sign" v="DE:237"/>
+<tag k="cycleway:right:width" v="1.6"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Adlergestell"/>
+<tag k="name:etymology:wikidata" v="Q487843"/>
+<tag k="name:etymology:wikipedia" v="de:Schneise"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="ref" v="B 96a"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="sidewalk:right:surface" v="paving_stones"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:right:width" v="Luftbild 2025"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through|none"/>
+<tag k="wikidata" v="Q358363"/>
+<tag k="wikipedia" v="de:Adlergestell"/>
+</way>
+</osm>

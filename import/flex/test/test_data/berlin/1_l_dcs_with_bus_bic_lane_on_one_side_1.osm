@@ -1,0 +1,36 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (754339 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1157627075" visible="true" version="5" changeset="178377005" timestamp="2026-02-10T20:07:32Z" user="fmc_5" uid="22898413">
+<nd ref="10765646261"/>
+<nd ref="10765646262"/>
+<nd ref="9598462068"/>
+<nd ref="11232980797"/>
+<nd ref="11232980786"/>
+<nd ref="12769348002"/>
+<nd ref="12769348004"/>
+<nd ref="11232980799"/>
+<nd ref="10765646267"/>
+<nd ref="12769348003"/>
+<nd ref="9598462065"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="unclassified"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Karl-Ziegler-Straße"/>
+<tag k="name:etymology:wikidata" v="Q76624"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:left" v="no"/>
+<tag k="parking:left:reason" v="dual_carriage"/>
+<tag k="parking:right" v="no"/>
+<tag k="postal_code" v="12489"/>
+<tag k="sidewalk" v="separate"/>
+<tag k="sidewalk:smoothness" v="intermediate"/>
+<tag k="sidewalk:surface" v="paving_stones"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="width" v="3"/>
+<tag k="wikidata" v="Q100701382"/>
+</way>
+</osm>
