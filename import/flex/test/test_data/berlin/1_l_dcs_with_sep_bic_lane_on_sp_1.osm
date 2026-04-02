@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302690 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1014284315" visible="true" version="9" changeset="180376469" timestamp="2026-03-24T21:16:07Z" user="fmc_5" uid="22898413">
+<nd ref="1839590460"/>
+<nd ref="4760204432"/>
+<nd ref="3979162593"/>
+<tag k="bicycle" v="optional_sidepath"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Landsberger Chaussee"/>
+<tag k="name:etymology:wikidata" v="Q442339"/>
+<tag k="name:etymology:wikipedia" v="de:Altlandsberg"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:left" v="no"/>
+<tag k="parking:left:reason" v="dual_carriage"/>
+<tag k="parking:right" v="separate"/>
+<tag k="postal_code" v="12627"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>
