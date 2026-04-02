@@ -433,30 +433,6 @@
       "node": false
     },
     {
-      "name": "1_l_dcs_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#4daf4a",
-      "displayName": "1-lane dual carriage street with bus/bicycle lane and separate bicycle lane on sidepath",
-      "description": "One-way streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
-      "area": false,
-      "node": false
-    },
-    {
-      "name": "2_l_dcs_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#4daf4a",
-      "displayName": "2-lane dual carriage street with bus/bicycle lane and separate bicycle lane on sidepath",
-      "description": "One-way streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
-      "area": false,
-      "node": false
-    },
-    {
-      "name": "3_l_dcs_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#4daf4a",
-      "displayName": "3-lane dual carriage street with bus/bicycle lane and separate bicycle lane on sidepath",
-      "description": "One-way streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
-      "area": false,
-      "node": false
-    },
-    {
       "name": "1_l_dcs_with_no_bic_paths",
       "color": "#d53e4f",
       "displayName": "1-lane dual carriage street with no bicycle paths",
@@ -755,7 +731,6 @@
     "dcs_with_bus_bic_lane_on_one_side",
     "dcs_with_bus_bic_lane_on_both_sides",
     "dcs_with_sep_bic_lane_on_sp",
-    "dcs_with_bus_bic_and_sep_bic_on_sp",
     "ows_with_bus_bic_lane_on_one_side",
     "ows_with_bus_bic_lane_on_both_sides",
     "ows_with_sep_bic_lane_on_sp",
