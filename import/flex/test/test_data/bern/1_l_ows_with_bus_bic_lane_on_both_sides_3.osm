@@ -1,30 +1,19 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001832 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<way id="26758252" visible="true" version="19" changeset="160400273" timestamp="2024-12-19T15:44:35Z" user="Ronny Standtke" uid="65804">
-<nd ref="2957079084"/>
-<nd ref="2957079085"/>
-<nd ref="2957079075"/>
-<nd ref="2957079091"/>
-<nd ref="2957079106"/>
-<nd ref="2957079094"/>
-<nd ref="2957079099"/>
-<nd ref="2212720964"/>
-<nd ref="276073177"/>
-<nd ref="2212720970"/>
-<nd ref="440156052"/>
-<nd ref="5451449255"/>
-<nd ref="1021865"/>
-<nd ref="286879708"/>
-<tag k="cycleway:left" v="opposite_lane"/>
-<tag k="cycleway:right" v="lane"/>
-<tag k="highway" v="tertiary"/>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2527219 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="37766457" visible="true" version="19" changeset="176785590" timestamp="2026-01-03T15:06:36Z" user="Ti-one" uid="332316">
+<nd ref="13892365"/>
+<nd ref="2961297238"/>
+<nd ref="6974852231"/>
+<tag k="cycleway:both" v="lane"/>
+<tag k="cycleway:both:lane" v="advisory"/>
+<tag k="highway" v="residential"/>
+<tag k="lane_markings" v="yes"/>
 <tag k="lanes" v="1"/>
 <tag k="lit" v="yes"/>
-<tag k="maxspeed" v="30"/>
-<tag k="name" v="Sulgeneckstrasse"/>
+<tag k="name" v="Aarbergergasse"/>
 <tag k="oneway" v="yes"/>
 <tag k="oneway:bicycle" v="no"/>
-<tag k="sidewalk" v="separate"/>
 <tag k="surface" v="asphalt"/>
-<tag k="width" v="7.5"/>
+<tag k="trolley_wire" v="yes"/>
+<tag k="wikidata" v="Q301057"/>
 </way>
 </osm>
