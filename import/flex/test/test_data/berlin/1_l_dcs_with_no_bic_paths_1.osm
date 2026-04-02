@@ -1,0 +1,23 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001939 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="4702229" visible="true" version="56" changeset="174597266" timestamp="2025-11-13T10:12:58Z" user="FMC-Henri" uid="22902669">
+<nd ref="29858472"/>
+<nd ref="29858458"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="no"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Mehrower Allee"/>
+<tag k="name:etymology:wikidata" v="Q1917571"/>
+<tag k="old_name" v="Otto-Winzer-Straße"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="12687"/>
+<tag k="shoulder" v="no"/>
+<tag k="sidewalk" v="no"/>
+<tag k="smoothness" v="good"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

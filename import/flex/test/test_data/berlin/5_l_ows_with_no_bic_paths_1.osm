@@ -1,30 +1,28 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002053 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<way id="490356863" visible="true" version="21" changeset="176895870" timestamp="2026-01-06T10:24:13Z" user="fmc_10" uid="23268127">
-<nd ref="5496919143"/>
-<nd ref="3880706586"/>
-<nd ref="26763054"/>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1847943 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="332573582" visible="true" version="17" changeset="170378239" timestamp="2025-08-13T09:16:56Z" user="fmc_3" uid="22897978">
+<nd ref="615977974"/>
+<nd ref="8977971367"/>
+<nd ref="30784456"/>
+<nd ref="8977971366"/>
+<nd ref="3402004181"/>
+<nd ref="272738428"/>
+<tag k="bicycle" v="use_sidepath"/>
 <tag k="cycleway:both" v="no"/>
-<tag k="dual_carriageway" v="yes"/>
-<tag k="foot" v="use_sidepath"/>
+<tag k="foot" v="no"/>
 <tag k="highway" v="secondary"/>
 <tag k="lanes" v="5"/>
-<tag k="lanes:psv" v="1"/>
 <tag k="lit" v="yes"/>
-<tag k="maxspeed" v="30"/>
-<tag k="name" v="Joachimsthaler Straße"/>
-<tag k="name:etymology:wikidata" v="Q1690674"/>
-<tag k="name:etymology:wikipedia" v="de:Joachimsthalsches Gymnasium"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Altstädter Ring"/>
+<tag k="name:etymology:wikidata" v="Q445600"/>
 <tag k="oneway" v="yes"/>
 <tag k="parking:both" v="no"/>
-<tag k="postal_code" v="10623"/>
-<tag k="psv:lanes" v="yes|designated|yes|yes|yes"/>
-<tag k="sidewalk:left" v="no"/>
-<tag k="sidewalk:right" v="separate"/>
-<tag k="smoothness" v="excellent"/>
+<tag k="parking:left:reason" v="dual_carriage"/>
+<tag k="parking:right:reason" v="turn_lane"/>
+<tag k="postal_code" v="13597"/>
+<tag k="sidewalk" v="no"/>
+<tag k="source:maxspeed" v="sign"/>
 <tag k="surface" v="asphalt"/>
-<tag k="turn:lanes" v="left|left|through|none|none"/>
-<tag k="vehicle:lanes" v="yes|no|yes|yes|yes"/>
-<tag k="wikidata" v="Q1514497"/>
-<tag k="wikipedia" v="de:Joachimsthaler Straße"/>
+<tag k="turn:lanes" v="through|through|through;slight_right|slight_right|slight_right"/>
 </way>
 </osm>

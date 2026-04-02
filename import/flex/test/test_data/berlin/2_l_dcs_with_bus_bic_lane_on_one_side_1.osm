@@ -1,0 +1,33 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001845 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="908292029" visible="true" version="11" changeset="168258896" timestamp="2025-06-29T10:21:22Z" user="fmc_5" uid="22898413">
+<nd ref="29885054"/>
+<nd ref="11780349767"/>
+<nd ref="4172036103"/>
+<nd ref="2019634190"/>
+<nd ref="29858107"/>
+<nd ref="4172036099"/>
+<nd ref="29858106"/>
+<nd ref="3088842409"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="cycleway:right:lane" v="exclusive"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="no"/>
+<tag k="highway" v="primary"/>
+<tag k="lane_markings" v="yes"/>
+<tag k="lanes" v="2"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="60"/>
+<tag k="name" v="Landsberger Allee"/>
+<tag k="name:etymology:wikidata" v="Q442339"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="parking:both:restriction" v="no_stopping"/>
+<tag k="postal_code" v="12679"/>
+<tag k="sidewalk:both" v="no"/>
+<tag k="smoothness" v="intermediate"/>
+<tag k="surface" v="concrete"/>
+<tag k="wikidata" v="Q317582"/>
+<tag k="wikipedia" v="de:Landsberger Allee"/>
+</way>
+</osm>

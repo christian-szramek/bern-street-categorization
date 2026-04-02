@@ -1,0 +1,28 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (3049224 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1231901307" visible="true" version="8" changeset="151982090" timestamp="2024-05-29T10:44:24Z" user="kartograph" uid="17304">
+<nd ref="6167436405"/>
+<nd ref="6167436409"/>
+<nd ref="11426573714"/>
+<nd ref="27433426"/>
+<tag k="cycleway:both" v="lane"/>
+<tag k="cycleway:both:lane" v="advisory"/>
+<tag k="cycleway:left:oneway" v="-1"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="30"/>
+<tag k="name" v="Halskestraße"/>
+<tag k="name:etymology:wikidata" v="Q68353"/>
+<tag k="oneway" v="yes"/>
+<tag k="oneway:bicycle" v="no"/>
+<tag k="parking:both" v="no"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="excellent"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|none|none"/>
+<tag k="wikidata" v="Q2402049"/>
+</way>
+</osm>

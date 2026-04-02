@@ -1980,6 +1980,918 @@ CREATE TABLE IF NOT EXISTS public.weimar_7_l_s_with_no_bic_paths_ways (
 
 
 -- =========================================
+-- bern | 1_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_1_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 1_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_1_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 1_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_1_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 1_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_1_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 2_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_2_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 2_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_2_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 2_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_2_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 2_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_2_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 3_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_3_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 3_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_3_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 3_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_3_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 3_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_3_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 4_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_4_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 4_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_4_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 4_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_4_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 4_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_4_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 5_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_5_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 5_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_5_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 5_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_5_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 5_l_dcs_with_bus_bic_lane_on_one_side
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_5_l_dcs_with_bus_bic_lane_on_one_side_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 1_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_1_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 1_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_1_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 1_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_1_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 1_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_1_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 2_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_2_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 2_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_2_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 2_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_2_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 2_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_2_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 3_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_3_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 3_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_3_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 3_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_3_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 3_l_dcs_with_bus_bic_lane_on_both_sides
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_3_l_dcs_with_bus_bic_lane_on_both_sides_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 1_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_1_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 1_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_1_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 1_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_1_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 1_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_1_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 2_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_2_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 2_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_2_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 2_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_2_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 2_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_2_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 3_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_3_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 3_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_3_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 3_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_3_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 3_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_3_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 4_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_4_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 4_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_4_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 4_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_4_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 4_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_4_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 5_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_5_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 5_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_5_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 5_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_5_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 5_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_5_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 6_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_6_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 6_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_6_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 6_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_6_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 6_l_dcs_with_sep_bic_lane_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_6_l_dcs_with_sep_bic_lane_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 1_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_1_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 1_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_1_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 1_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_1_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 1_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_1_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 2_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_2_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 2_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_2_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 2_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_2_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 2_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_2_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 3_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_3_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 3_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_3_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 3_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_3_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 3_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_3_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 4_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_4_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 4_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_4_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 4_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_4_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 4_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_4_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- bern | 5_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_5_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 5_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_5_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 5_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_5_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 5_l_dcs_with_no_bic_paths
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_5_l_dcs_with_no_bic_paths_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
 -- bern | 1_l_ows_with_bus_bic_lane_on_one_side
 -- =========================================
 

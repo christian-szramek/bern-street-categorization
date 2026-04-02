@@ -1,0 +1,42 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2860860 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1370680774" visible="true" version="6" changeset="178679662" timestamp="2026-02-17T13:14:02Z" user="fmc_Supaplex030" uid="23761190">
+<nd ref="1518864796"/>
+<nd ref="11097943591"/>
+<nd ref="4359739811"/>
+<nd ref="13006239286"/>
+<nd ref="3872867869"/>
+<nd ref="1518864800"/>
+<nd ref="29122675"/>
+<tag k="bicycle" v="optional_sidepath"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="share_busway"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="cycleway:right:surface" v="asphalt"/>
+<tag k="cycleway:right:traffic_sign" v="DE:245,1022-10"/>
+<tag k="cycleway:right:width" v="2.7"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="3"/>
+<tag k="lanes:psv" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Buckower Damm"/>
+<tag k="name:etymology:wikidata" v="Q644410"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:left" v="no"/>
+<tag k="parking:left:reason" v="dual_carriage"/>
+<tag k="parking:right" v="lane"/>
+<tag k="parking:right:fee" v="no"/>
+<tag k="parking:right:orientation" v="parallel"/>
+<tag k="parking:right:restriction:conditional" v="no_stopping @ (Mo-Fr 06:00-09:00; Sa 09:00-14:00)"/>
+<tag k="parking:right:restriction:reason:conditional" v="bus_lane @ (Mo-Fr 06:00-09:00; Sa 09:00-14:00)"/>
+<tag k="postal_code" v="12349"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:right:width" v="Luftbild 2024"/>
+<tag k="source:traffic_sign:mapillary" v="2953986654890817"/>
+<tag k="surface" v="asphalt"/>
+</way>
+</osm>

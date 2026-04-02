@@ -1,40 +1,24 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001831 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<way id="318210360" visible="true" version="20" changeset="174210760" timestamp="2025-11-04T19:50:05Z" user="fmc_3" uid="22897978">
-<nd ref="1383533461"/>
-<nd ref="3433831692"/>
-<nd ref="1976653173"/>
-<nd ref="8252463548"/>
-<nd ref="552384763"/>
-<tag k="bicycle" v="designated"/>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1847943 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="25394871" visible="true" version="23" changeset="170378239" timestamp="2025-08-13T09:16:56Z" user="fmc_3" uid="22897978">
+<nd ref="272738428"/>
+<nd ref="7701926323"/>
+<nd ref="26759668"/>
+<tag k="bicycle" v="use_sidepath"/>
 <tag k="cycleway:left" v="no"/>
 <tag k="cycleway:right" v="separate"/>
-<tag k="destination:colour:lanes" v="|white;white|white;white|white;white|white;white;white"/>
-<tag k="destination:lanes" v="Köpenick|Schönefeld;Grünau|Schönefeld;Grünau|Schönefeld;Grünau|Altglienicke"/>
-<tag k="destination:ref:lanes" v="|B 96a|B 96a|B 96a|"/>
-<tag k="destination:ref:to:lanes" v="|A 117|A 117|A 117|"/>
-<tag k="destination:symbol:lanes" v="|airport;|airport;|airport;|"/>
-<tag k="destination:symbol:to:lanes" v="|motorway|motorway|motorway|"/>
-<tag k="destination:to:lanes" v="|Dresden|Dresden|Dresden|"/>
-<tag k="dual_carriageway" v="yes"/>
-<tag k="foot" v="designated"/>
-<tag k="highway" v="primary"/>
+<tag k="highway" v="secondary"/>
 <tag k="lanes" v="5"/>
 <tag k="lit" v="yes"/>
 <tag k="maxspeed" v="50"/>
-<tag k="name" v="Adlergestell"/>
-<tag k="name:etymology:wikidata" v="Q487843"/>
-<tag k="name:etymology:wikipedia" v="de:Schneise"/>
+<tag k="name" v="Altstädter Ring"/>
+<tag k="name:etymology:wikidata" v="Q445600"/>
 <tag k="oneway" v="yes"/>
 <tag k="parking:both" v="no"/>
-<tag k="parking:right:restriction" v="no_stopping"/>
-<tag k="ref" v="B 96a"/>
-<tag k="segregated" v="no"/>
-<tag k="sidewalk" v="right"/>
-<tag k="smoothness" v="good"/>
+<tag k="parking:left:reason" v="dual_carriage"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="source:maxspeed" v="sign"/>
 <tag k="surface" v="asphalt"/>
-<tag k="traffic_sign" v="DE:240"/>
-<tag k="turn:lanes" v="left|through|through|through|right"/>
-<tag k="wikidata" v="Q358363"/>
-<tag k="wikipedia" v="de:Adlergestell"/>
+<tag k="turn:lanes" v="through|through|through;slight_right|slight_right|slight_right"/>
 </way>
 </osm>

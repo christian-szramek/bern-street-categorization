@@ -1,0 +1,32 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302690 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1441835070" visible="true" version="3" changeset="174578442" timestamp="2025-11-12T21:28:44Z" user="fmc_10" uid="23268127">
+<nd ref="3979162657"/>
+<nd ref="13230018906"/>
+<nd ref="5071284462"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="crossing"/>
+<tag k="cycleway:right:mapillary" v="818114407493491"/>
+<tag k="cycleway:right:marking:both" v="dashed_line"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="cycleway:right:surface" v="asphalt"/>
+<tag k="cycleway:right:surface:colour" v="red"/>
+<tag k="cycleway:right:traffic_sign" v="none"/>
+<tag k="cycleway:right:width" v="1.3"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="primary"/>
+<tag k="lane_markings" v="yes"/>
+<tag k="lanes" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Landsberger Chaussee"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:right:width" v="Luftbild 2024"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through|through;right"/>
+</way>
+</osm>

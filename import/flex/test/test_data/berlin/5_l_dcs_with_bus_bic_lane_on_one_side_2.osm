@@ -1,0 +1,34 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (1863033 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="175579520" visible="true" version="22" changeset="140890264" timestamp="2023-09-06T11:18:07Z" user="JeroenvanderGun" uid="11963177">
+<nd ref="29123432"/>
+<nd ref="10665910669"/>
+<nd ref="10665910668"/>
+<nd ref="10665910667"/>
+<nd ref="595039027"/>
+<nd ref="3274025415"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="lane"/>
+<tag k="cycleway:right:lane" v="advisory"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="primary"/>
+<tag k="lanes" v="5"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Mollstraße"/>
+<tag k="name:etymology:wikidata" v="Q118916"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="10178"/>
+<tag k="priority_road" v="yes_unposted"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:maxspeed" v="DE:urban"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|left|through|through|through"/>
+<tag k="wikidata" v="Q1606884"/>
+<tag k="wikipedia" v="de:Mollstraße"/>
+<tag k="zone:traffic" v="DE:urban"/>
+</way>
+</osm>

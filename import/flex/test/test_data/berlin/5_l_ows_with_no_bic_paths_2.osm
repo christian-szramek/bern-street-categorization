@@ -1,33 +1,40 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001816 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<way id="1413017273" visible="true" version="3" changeset="174597053" timestamp="2025-11-13T10:07:28Z" user="FMC-Henri" uid="22902669">
-<nd ref="12985482607"/>
-<nd ref="312370453"/>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2528126 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="61820398" visible="true" version="32" changeset="172732398" timestamp="2025-10-02T05:36:00Z" user="Amul" uid="5340634">
+<nd ref="21487171"/>
+<nd ref="982330834"/>
+<nd ref="8977088997"/>
+<nd ref="27011225"/>
+<nd ref="342813075"/>
+<nd ref="8977089003"/>
+<nd ref="1337618621"/>
+<tag k="bicycle" v="use_sidepath"/>
 <tag k="cycleway:both" v="no"/>
-<tag k="dual_carriageway" v="yes"/>
 <tag k="foot" v="use_sidepath"/>
 <tag k="highway" v="primary"/>
+<tag k="image" v="https://commons.wikimedia.org/wiki/File:Siegess%C3%A4ule-Berlin-Tiergarten.jpg"/>
+<tag k="junction" v="circular"/>
 <tag k="lanes" v="5"/>
 <tag k="lit" v="yes"/>
-<tag k="loc_name" v="TVO"/>
-<tag k="maxspeed" v="60"/>
-<tag k="name" v="Märkische Allee"/>
-<tag k="name:etymology:wikidata" v="Q148499"/>
-<tag k="old_name" v="Heinrich-Rau-Straße"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Großer Stern"/>
+<tag k="name:etymology:wikidata" v="Q1678403"/>
+<tag k="name:etymology:wikipedia" v="de:Jagdstern"/>
+<tag k="name:ja" v="グローサー・シュテルン"/>
+<tag k="note" v="no roundabout: incoming traffic has priority, ring traffic has to give_way"/>
 <tag k="oneway" v="yes"/>
-<tag k="oneway:bicycle" v="yes"/>
-<tag k="parking:left" v="no"/>
-<tag k="parking:right" v="lane"/>
-<tag k="parking:right:access" v="yes"/>
-<tag k="parking:right:fee" v="no"/>
-<tag k="parking:right:orientation" v="parallel"/>
-<tag k="postal_code" v="12679"/>
-<tag k="ref" v="B 158"/>
+<tag k="parking:both" v="no"/>
+<tag k="placement" v="middle_of:3"/>
+<tag k="ref" v="B 2;B 5"/>
 <tag k="shoulder" v="no"/>
-<tag k="sidewalk:left" v="no"/>
-<tag k="sidewalk:right" v="separate"/>
+<tag k="sidewalk:left" v="separate"/>
+<tag k="sidewalk:right" v="no"/>
 <tag k="smoothness" v="good"/>
 <tag k="surface" v="asphalt"/>
-<tag k="turn:lanes" v="reverse||||"/>
-<tag k="wikidata" v="Q1957427"/>
+<tag k="transit:lanes" v="continue|continue|continue;leave|leave|leave"/>
+<tag k="turn:lanes" v="through|through|through;slight_right|slight_right|slight_right"/>
+<tag k="wikidata" v="Q564929"/>
+<tag k="wikimedia_commons" v="Category:Großer Stern (Berlin-Tiergarten)"/>
+<tag k="wikipedia" v="de:Großer Stern"/>
+<tag k="zone:traffic" v="DE:urban"/>
 </way>
 </osm>

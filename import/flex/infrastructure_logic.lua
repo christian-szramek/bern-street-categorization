@@ -127,7 +127,6 @@ function M.is_cycleway_both_sides(tags)
     else 
         return (tags.cycleway ~= nil) or  ( tags['cycleway:both'] ~= nil and tags['cycleway:both'] ~= "no" ) or ( tags['cycleway:left'] ~= nil and tags['cycleway:right'] ~= nil and tags['cycleway:left'] ~= 'no' and tags['cycleway:right'] ~= 'no' )
     end
-    
 end
 
 function M.is_cyclist_waiting_aid(tags)
@@ -140,6 +139,10 @@ end
 
 function M.is_crossing(tags)
     return tags.highway == 'crossing'
+end
+
+function M.is_dual_carriageway(tags)
+    return tags.dual_carriageway == 'yes'
 end
 
 function M.get_lanes(tags)
@@ -183,17 +186,37 @@ function M.get_infrastructure_type(tags, restriction)
             if M.is_street_with_bus_bicycle_lane(tags) then
                 if M.is_cycleway_both_sides(tags) then
                     if M.is_bus_bicycle_lane_on_one_side_and_separate_bicycle_lane_on_sidepath(tags) then
-                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_and_sep_bic_on_sp'
+                        if M.is_dual_carriageway(tags) then
+                            return M.get_lanes(tags) .. '_l_dcs_with_bus_bic_and_sep_bic_on_sp'
+                        else
+                            return M.get_lanes(tags) .. '_l_ows_with_bus_bic_and_sep_bic_on_sp'
+                        end
                     else
-                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
+                        if M.is_dual_carriageway(tags) then
+                            return M.get_lanes(tags) .. '_l_dcs_with_bus_bic_lane_on_both_sides'
+                        else
+                            return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
+                        end
                     end
                 else
-                    return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_one_side'
+                    if M.is_dual_carriageway(tags) then
+                        return M.get_lanes(tags) .. '_l_dcs_with_bus_bic_lane_on_one_side'
+                    else
+                        return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_one_side'
+                    end
                 end
             elseif M.is_street_with_separate_bicycle_lane_on_sidepath(tags) then
-                return M.get_lanes(tags) .. '_l_ows_with_sep_bic_lane_on_sp'
+                if M.is_dual_carriageway(tags) then
+                    return M.get_lanes(tags) .. '_l_dcs_with_sep_bic_lane_on_sp'
+                else
+                    return M.get_lanes(tags) .. '_l_ows_with_sep_bic_lane_on_sp'
+                end
             else
-                return M.get_lanes(tags) .. '_l_ows_with_no_bic_paths'
+                if M.is_dual_carriageway(tags) then 
+                    return M.get_lanes(tags) .. '_l_dcs_with_no_bic_paths'
+                else
+                    return M.get_lanes(tags) .. '_l_ows_with_no_bic_paths'
+                end
             end
         else
             if M.is_street_with_bus_bicycle_lane(tags) then
