@@ -1,0 +1,26 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2002071 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1101187162" visible="true" version="5" changeset="167659495" timestamp="2025-06-15T16:42:44Z" user="fmc_5" uid="22898413">
+<nd ref="4307624658"/>
+<nd ref="4198189334"/>
+<tag k="bicycle" v="use_sidepath"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="3"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Stendaler Straße"/>
+<tag k="name:etymology:wikidata" v="Q7082"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:left" v="no"/>
+<tag k="parking:left:restriction" v="no_stopping"/>
+<tag k="parking:right" v="no"/>
+<tag k="parking:right:restriction" v="no_stopping"/>
+<tag k="postal_code" v="12627"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="through|through|right"/>
+</way>
+</osm>
