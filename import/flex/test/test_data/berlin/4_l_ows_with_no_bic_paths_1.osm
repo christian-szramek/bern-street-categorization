@@ -1,0 +1,37 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302690 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="490356855" visible="true" version="39" changeset="171632753" timestamp="2025-09-08T12:35:57Z" user="fmc_9" uid="23035092">
+<nd ref="5496919144"/>
+<nd ref="3880706585"/>
+<nd ref="26762956"/>
+<tag k="cycleway:both" v="no"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="lanes" v="4"/>
+<tag k="lanes:psv" v="1"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Kurfürstendamm"/>
+<tag k="name:el" v="Κούρφιρστενταμ"/>
+<tag k="name:etymology:wikidata" v="Q22722"/>
+<tag k="name:etymology:wikipedia" v="de:Kurfürst"/>
+<tag k="name:he" v="קורפירסטנדאם"/>
+<tag k="name:ru" v="Курфюрстендамм"/>
+<tag k="name:sr" v="Курфирстендам"/>
+<tag k="name:uk" v="Курфюрстендамм"/>
+<tag k="name:zh" v="选帝侯大街"/>
+<tag k="note" v="Ergänzungsstraße mit besonderer Bedeutung"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="10719"/>
+<tag k="psv:lanes" v="yes|yes|designated|yes"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source" v="Stadtentwicklungsverwaltung, Abt. VII: "Übergeordnetes Straßennetz""/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|through|none|right"/>
+<tag k="vehicle:lanes" v="yes|yes|no|yes"/>
+<tag k="wikidata" v="Q160272"/>
+<tag k="wikipedia" v="de:Kurfürstendamm"/>
+</way>
+</osm>
