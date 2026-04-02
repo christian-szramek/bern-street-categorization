@@ -150,7 +150,8 @@ const isInfrastructureTypeActive = infrastructureType => {
       return infrastructureType.includes('_l_' + it);
     }
 
-    return infrastructureType.includes(it);
+    // second condition is needed for cases like infrastructureType = cycleway_multiuse and it = cycleway
+    return infrastructureType.includes(it) && !infrastructureType.includes(it + '_');
   });
 };
 
