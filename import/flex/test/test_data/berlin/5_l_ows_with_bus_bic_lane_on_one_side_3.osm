@@ -1,0 +1,38 @@
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2860857 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="1394173373" visible="true" version="3" changeset="176308762" timestamp="2025-12-23T13:35:08Z" user="fmc_10" uid="23268127">
+<nd ref="12905963364"/>
+<nd ref="635777523"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="share_busway"/>
+<tag k="cycleway:right:oneway" v="yes"/>
+<tag k="cycleway:right:traffic_sign" v="DE:245,1022-10"/>
+<tag k="cycleway:right:width" v="3.1"/>
+<tag k="destination:colour:lanes" v=";white|;white|||"/>
+<tag k="destination:lanes" v="Friedrichshain;Zentrum|Friedrichshain;Zentrum|Weißensee;Hohenschönhausen|Weißensee;Hohenschönhausen|Weißensee;Hohenschönhausen;Marzahn"/>
+<tag k="destination:ref:lanes" v=";B 1;B 5|;B 1;B 5|||;B 1;B 5"/>
+<tag k="destination:ref:to:lanes" v="||||A 10"/>
+<tag k="destination:symbol:to:lanes" v="||||motorway"/>
+<tag k="destination:to:lanes" v="||||Frankfurt (Oder)"/>
+<tag k="foot" v="use_sidepath"/>
+<tag k="highway" v="secondary"/>
+<tag k="image" v="https://commons.wikimedia.org/wiki/File:Am_Tierpark,_Berlin,_201-306.JPG"/>
+<tag k="lanes" v="5"/>
+<tag k="lit" v="yes"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Am Tierpark"/>
+<tag k="name:etymology:wikidata" v="Q702771"/>
+<tag k="name:etymology:wikipedia" v="de:Tierpark Berlin"/>
+<tag k="oneway" v="yes"/>
+<tag k="parking:both" v="no"/>
+<tag k="postal_code" v="10315"/>
+<tag k="sidewalk:left" v="no"/>
+<tag k="sidewalk:right" v="separate"/>
+<tag k="smoothness" v="good"/>
+<tag k="source:cycleway:right:traffic_sign:mapillary" v="963996675456554"/>
+<tag k="source:cycleway:right:width" v="Luftbild 2024"/>
+<tag k="surface" v="asphalt"/>
+<tag k="turn:lanes" v="left|left|through|through|through;right"/>
+<tag k="wikidata" v="Q69657776"/>
+<tag k="wikimedia_commons" v="Category:Am Tierpark (Berlin-Friedrichsfelde)"/>
+</way>
+</osm>
