@@ -2,7 +2,7 @@
   "infrastructureTypes": [
     {
       "name": "1_l_s_with_bic_forbidden",
-      "color": "#D73027",
+      "color": "#D32F2F",
       "displayName": "1-lane street with bicycle forbidden",
       "description": "Streets on which riding a bicycle is not permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -10,7 +10,7 @@
     },
     {
       "name": "2_l_s_with_bic_forbidden",
-      "color": "#D73027",
+      "color": "#D32F2F",
       "displayName": "2-lane street with bicycle forbidden",
       "description": "Streets on which riding a bicycle is not permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -18,7 +18,7 @@
     },
     {
       "name": "3_l_s_with_bic_forbidden",
-      "color": "#D73027",
+      "color": "#D32F2F",
       "displayName": "3-lane street with bicycle forbidden",
       "description": "Streets on which riding a bicycle is not permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -26,7 +26,7 @@
     },
     {
       "name": "4_l_s_with_bic_forbidden",
-      "color": "#D73027",
+      "color": "#D32F2F",
       "displayName": "4-lane street with bicycle forbidden",
       "description": "Streets on which riding a bicycle is not permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -34,7 +34,7 @@
     },
     {
       "name": "5_l_s_with_bic_forbidden",
-      "color": "#D73027",
+      "color": "#D32F2F",
       "displayName": "5-lane street with bicycle forbidden",
       "description": "Streets on which riding a bicycle is not permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -42,7 +42,7 @@
     },
     {
       "name": "1_l_s_with_bus_bic_lane_on_one_side",
-      "color": "#FEE08B",
+      "color": "#1E88E5",
       "displayName": "1-lane street with bus/bicycle lane on one side",
       "description": "Streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -50,7 +50,7 @@
     },
     {
       "name": "2_l_s_with_bus_bic_lane_on_one_side",
-      "color": "#FEE08B",
+      "color": "#1E88E5",
       "displayName": "2-lane street with bus/bicycle lane on one side",
       "description": "Streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -58,7 +58,7 @@
     },
     {
       "name": "3_l_s_with_bus_bic_lane_on_one_side",
-      "color": "#FEE08B",
+      "color": "#1E88E5",
       "displayName": "3-lane street with bus/bicycle lane on one side",
       "description": "Streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -66,7 +66,7 @@
     },
     {
       "name": "4_l_s_with_bus_bic_lane_on_one_side",
-      "color": "#FEE08B",
+      "color": "#1E88E5",
       "displayName": "4-lane street with bus/bicycle lane on one side",
       "description": "Streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -74,7 +74,7 @@
     },
     {
       "name": "5_l_s_with_bus_bic_lane_on_one_side",
-      "color": "#FEE08B",
+      "color": "#1E88E5",
       "displayName": "5-lane street with bus/bicycle lane on one side",
       "description": "Streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -82,7 +82,7 @@
     },
     {
       "name": "1_l_s_with_bus_bic_lane_on_both_sides",
-      "color": "#FFD54F",
+      "color": "#42A5F5",
       "displayName": "1-lane street with bus/bicycle lane on both sides",
       "description": "Streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -90,7 +90,7 @@
     },
     {
       "name": "2_l_s_with_bus_bic_lane_on_both_sides",
-      "color": "#FFD54F",
+      "color": "#42A5F5",
       "displayName": "2-lane street with bus/bicycle lane on both sides",
       "description": "Streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -98,7 +98,7 @@
     },
     {
       "name": "3_l_s_with_bus_bic_lane_on_both_sides",
-      "color": "#FFD54F",
+      "color": "#42A5F5",
       "displayName": "3-lane street with bus/bicycle lane on both sides",
       "description": "Streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -106,7 +106,7 @@
     },
     {
       "name": "4_l_s_with_bus_bic_lane_on_both_sides",
-      "color": "#FFD54F",
+      "color": "#42A5F5",
       "displayName": "4-lane street with bus/bicycle lane on both sides",
       "description": "Streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -114,7 +114,7 @@
     },
     {
       "name": "5_l_s_with_bus_bic_lane_on_both_sides",
-      "color": "#FFD54F",
+      "color": "#42A5F5",
       "displayName": "5-lane street with bus/bicycle lane on both sides",
       "description": "Streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -122,7 +122,7 @@
     },
     {
       "name": "6_l_s_with_bus_bic_lane_on_both_sides",
-      "color": "#FFD54F",
+      "color": "#42A5F5",
       "displayName": "6-lane street with bus/bicycle lane on both sides",
       "description": "Streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -130,7 +130,7 @@
     },
     {
       "name": "1_l_s_with_sep_bic_lane_on_sp",
-      "color": "#4DB6AC",
+      "color": "#64B5F6",
       "displayName": "1-lane street with separate bicycle lane on sidepath",
       "description": "Streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -138,7 +138,7 @@
     },
     {
       "name": "2_l_s_with_sep_bic_lane_on_sp",
-      "color": "#4DB6AC",
+      "color": "#64B5F6",
       "displayName": "2-lane street with separate bicycle lane on sidepath",
       "description": "Streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -146,7 +146,7 @@
     },
     {
       "name": "3_l_s_with_sep_bic_lane_on_sp",
-      "color": "#4DB6AC",
+      "color": "#64B5F6",
       "displayName": "3-lane street with separate bicycle lane on sidepath",
       "description": "Streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -154,7 +154,7 @@
     },
     {
       "name": "4_l_s_with_sep_bic_lane_on_sp",
-      "color": "#4DB6AC",
+      "color": "#64B5F6",
       "displayName": "4-lane street with separate bicycle lane on sidepath",
       "description": "Streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -162,7 +162,7 @@
     },
     {
       "name": "5_l_s_with_sep_bic_lane_on_sp",
-      "color": "#4DB6AC",
+      "color": "#64B5F6",
       "displayName": "5-lane street with separate bicycle lane on sidepath",
       "description": "Streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -170,7 +170,7 @@
     },
     {
       "name": "6_l_s_with_sep_bic_lane_on_sp",
-      "color": "#4DB6AC",
+      "color": "#64B5F6",
       "displayName": "6-lane street with separate bicycle lane on sidepath",
       "description": "Streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -178,7 +178,7 @@
     },
     {
       "name": "7_l_s_with_sep_bic_lane_on_sp",
-      "color": "#4DB6AC",
+      "color": "#64B5F6",
       "displayName": "7-lane street with separate bicycle lane on sidepath",
       "description": "Streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -186,7 +186,7 @@
     },
     {
       "name": "1_l_s_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#F6C445",
+      "color": "#90CAF9",
       "displayName": "1-lane street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "Streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -194,7 +194,7 @@
     },
     {
       "name": "2_l_s_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#F6C445",
+      "color": "#90CAF9",
       "displayName": "2-lane street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "Streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -202,7 +202,7 @@
     },
     {
       "name": "3_l_s_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#F6C445",
+      "color": "#90CAF9",
       "displayName": "3-lane street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "Streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -210,7 +210,7 @@
     },
     {
       "name": "4_l_s_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#F6C445",
+      "color": "#90CAF9",
       "displayName": "4-lane street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "Streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -218,7 +218,7 @@
     },
     {
       "name": "5_l_s_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#F6C445",
+      "color": "#90CAF9",
       "displayName": "5-lane street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "Streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -226,7 +226,7 @@
     },
     {
       "name": "6_l_s_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#F6C445",
+      "color": "#90CAF9",
       "displayName": "7-lane street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "Streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -234,7 +234,7 @@
     },
     {
       "name": "sep_bic_lane_on_sp",
-      "color": "#80CBC4",
+      "color": "#00C853",
       "displayName": "Separate bicycle lane on sidepath (marked as extra way)",
       "description": "A separated bicycle lane on the sidepath that is not marked as part of the street, but as an extra way. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street.",
       "area": false,
@@ -242,7 +242,7 @@
     },
     {
       "name": "1_l_s_with_shared_bic_lane_on_carriageway",
-      "color": "#FDAE61",
+      "color": "#1976D2",
       "displayName": "1-lane street with shared bicycle lane on carriageway",
       "description": "Streets with a shared bicycle lane on the carriageway. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -250,7 +250,7 @@
     },
     {
       "name": "2_l_s_with_shared_bic_lane_on_carriageway",
-      "color": "#FDAE61",
+      "color": "#1976D2",
       "displayName": "2-lane street with shared bicycle lane on carriageway",
       "description": "Streets with a shared bicycle lane on the carriageway. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -258,7 +258,7 @@
     },
     {
       "name": "3_l_s_with_shared_bic_lane_on_carriageway",
-      "color": "#FDAE61",
+      "color": "#1976D2",
       "displayName": "3-lane street with shared bicycle lane on carriageway",
       "description": "Streets with a shared bicycle lane on the carriageway. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -266,7 +266,7 @@
     },
     {
       "name": "1_l_s_with_no_bic_paths",
-      "color": "#616161",
+      "color": "#0D47A1",
       "displayName": "1-lane street with no bicycle paths",
       "description": "Streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": true,
@@ -274,7 +274,7 @@
     },
     {
       "name": "2_l_s_with_no_bic_paths",
-      "color": "#616161",
+      "color": "#0D47A1",
       "displayName": "2-lane street with no bicycle paths",
       "description": "Streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -282,7 +282,7 @@
     },
     {
       "name": "3_l_s_with_no_bic_paths",
-      "color": "#616161",
+      "color": "#0D47A1",
       "displayName": "3-lane street with no bicycle paths",
       "description": "Streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -290,7 +290,7 @@
     },
     {
       "name": "4_l_s_with_no_bic_paths",
-      "color": "#616161",
+      "color": "#0D47A1",
       "displayName": "4-lane street with no bicycle paths",
       "description": "Streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -298,7 +298,7 @@
     },
     {
       "name": "5_l_s_with_no_bic_paths",
-      "color": "#616161",
+      "color": "#0D47A1",
       "displayName": "5-lane street with no bicycle paths",
       "description": "Streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -306,7 +306,7 @@
     },
     {
       "name": "6_l_s_with_no_bic_paths",
-      "color": "#616161",
+      "color": "#0D47A1",
       "displayName": "6-lane street with no bicycle paths",
       "description": "Streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -314,7 +314,7 @@
     },
     {
       "name": "7_l_s_with_no_bic_paths",
-      "color": "#616161",
+      "color": "#0D47A1",
       "displayName": "7-lane street with no bicycle paths",
       "description": "Streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -322,7 +322,7 @@
     },
     {
       "name": "1_l_ows_with_bus_bic_lane_on_one_side",
-      "color": "#5AB4AC",
+      "color": "#F57C00",
       "displayName": "1-lane one-way street with bus/bicycle lane on one side",
       "description": "One-way streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -330,7 +330,7 @@
     },
     {
       "name": "2_l_ows_with_bus_bic_lane_on_one_side",
-      "color": "#5AB4AC",
+      "color": "#F57C00",
       "displayName": "2-lane one-way street with bus/bicycle lane on one side",
       "description": "One-way streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -338,7 +338,7 @@
     },
     {
       "name": "3_l_ows_with_bus_bic_lane_on_one_side",
-      "color": "#5AB4AC",
+      "color": "#F57C00",
       "displayName": "3-lane one-way street with bus/bicycle lane on one side",
       "description": "One-way streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -346,7 +346,7 @@
     },
     {
       "name": "4_l_ows_with_bus_bic_lane_on_one_side",
-      "color": "#5AB4AC",
+      "color": "#F57C00",
       "displayName": "4-lane one-way street with bus/bicycle lane on one side",
       "description": "One-way streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -354,7 +354,7 @@
     },
     {
       "name": "5_l_ows_with_bus_bic_lane_on_one_side",
-      "color": "#5AB4AC",
+      "color": "#F57C00",
       "displayName": "5-lane one-way street with bus/bicycle lane on one side",
       "description": "One-way streets with a bus or bicycle lane on one side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -362,7 +362,7 @@
     },
     {
       "name": "1_l_ows_with_bus_bic_lane_on_both_sides",
-      "color": "#2B8CBE",
+      "color": "#FB8C00",
       "displayName": "1-lane one-way street with bus/bicycle lane on both sides",
       "description": "One-way streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -370,7 +370,7 @@
     },
     {
       "name": "2_l_ows_with_bus_bic_lane_on_both_sides",
-      "color": "#2B8CBE",
+      "color": "#FB8C00",
       "displayName": "2-lane one-way street with bus/bicycle lane on both sides",
       "description": "One-way streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -378,7 +378,7 @@
     },
     {
       "name": "3_l_ows_with_bus_bic_lane_on_both_sides",
-      "color": "#2B8CBE",
+      "color": "#FB8C00",
       "displayName": "3-lane one-way street with bus/bicycle lane on both sides",
       "description": "One-way streets with a bus or bicycle lane on both sides. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -386,7 +386,7 @@
     },
     {
       "name": "1_l_ows_with_sep_bic_lane_on_sp",
-      "color": "#7BCCC4",
+      "color": "#FFA726",
       "displayName": "1-lane one-way street with separate bicycle lane on sidepath",
       "description": "One-way streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -394,7 +394,7 @@
     },
     {
       "name": "2_l_ows_with_sep_bic_lane_on_sp",
-      "color": "#7BCCC4",
+      "color": "#FFA726",
       "displayName": "2-lane one-way street with separate bicycle lane on sidepath",
       "description": "One-way streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -402,7 +402,7 @@
     },
     {
       "name": "3_l_ows_with_sep_bic_lane_on_sp",
-      "color": "#7BCCC4",
+      "color": "#FFA726",
       "displayName": "3-lane one-way street with separate bicycle lane on sidepath",
       "description": "One-way streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -410,7 +410,7 @@
     },
     {
       "name": "4_l_ows_with_sep_bic_lane_on_sp",
-      "color": "#7BCCC4",
+      "color": "#FFA726",
       "displayName": "4-lane one-way street with separate bicycle lane on sidepath",
       "description": "One-way streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -418,7 +418,7 @@
     },
     {
       "name": "5_l_ows_with_sep_bic_lane_on_sp",
-      "color": "#7BCCC4",
+      "color": "#FFA726",
       "displayName": "5-lane one-way street with separate bicycle lane on sidepath",
       "description": "One-way streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -426,7 +426,7 @@
     },
     {
       "name": "6_l_ows_with_sep_bic_lane_on_sp",
-      "color": "#7BCCC4",
+      "color": "#FFA726",
       "displayName": "6-lane one-way street with separate bicycle lane on sidepath",
       "description": "One-way streets with a separated bicycle lane on the sidepath. It is physically separated by curbs, parking lots, grass verges, trees or other barrier and runs parallel to the street. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -434,7 +434,7 @@
     },
     {
       "name": "1_l_ows_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#43A2CA",
+      "color": "#FFB74D",
       "displayName": "1-lane one-way street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "One-way streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -442,7 +442,7 @@
     },
     {
       "name": "2_l_ows_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#43A2CA",
+      "color": "#FFB74D",
       "displayName": "2-lane one-way street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "One-way streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -450,7 +450,7 @@
     },
     {
       "name": "3_l_ows_with_bus_bic_and_sep_bic_on_sp",
-      "color": "#43A2CA",
+      "color": "#FFB74D",
       "displayName": "3-lane one-way street with bus/bicycle lane and separate bicycle lane on sidepath",
       "description": "One-way streets with a bus/bicycle lane on one side and a separate bicycle lane on sidepath on the other side. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -458,7 +458,7 @@
     },
     {
       "name": "1_l_ows_with_no_bic_paths",
-      "color": "#37474F",
+      "color": "#E65100",
       "displayName": "1-lane one-way street with no bicycle paths",
       "description": "One-way streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -466,7 +466,7 @@
     },
     {
       "name": "2_l_ows_with_no_bic_paths",
-      "color": "#37474F",
+      "color": "#E65100",
       "displayName": "2-lane one-way street with no bicycle paths",
       "description": "One-way streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -474,7 +474,7 @@
     },
     {
       "name": "3_l_ows_with_no_bic_paths",
-      "color": "#37474F",
+      "color": "#E65100",
       "displayName": "3-lane one-way street with no bicycle paths",
       "description": "One-way streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -482,7 +482,7 @@
     },
     {
       "name": "4_l_ows_with_no_bic_paths",
-      "color": "#37474F",
+      "color": "#E65100",
       "displayName": "4-lane one-way street with no bicycle paths",
       "description": "One-way streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -490,7 +490,7 @@
     },
     {
       "name": "5_l_ows_with_no_bic_paths",
-      "color": "#37474F",
+      "color": "#E65100",
       "displayName": "5-lane one-way street with no bicycle paths",
       "description": "One-way streets with no dedicated cycling infrastructure, but riding a bicycle is legally permitted. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
       "area": false,
@@ -498,7 +498,7 @@
     },
     {
       "name": "bic_road",
-      "color": "#1A9850",
+      "color": "#2E7D32",
       "displayName": "Bicycle road",
       "description": "Streets designated for bicycles.",
       "area": false,
@@ -506,7 +506,7 @@
     },
     {
       "name": "cycleway",
-      "color": "#66BD63",
+      "color": "#43A047",
       "displayName": "Cycleway",
       "description": "Cycleways are dedicated cycling infrastructure that is physically separated from streets. Unlike bicycle lanes on sidepaths, they do not need to run parallel to a street.",
       "area": false,
@@ -514,7 +514,7 @@
     },
     {
       "name": "cycleway_multiuse",
-      "color": "#A6D96A",
+      "color": "#66BB6A",
       "displayName": "Cycleway multiuse",
       "description": "Cycleways that can also be used by pedestrians, mofas and mopeds. Cycleways are dedicated cycling infrastructure that is physically separated from streets. Unlike bicycle lanes on sidepaths, they do not need to run parallel to a road.",
       "area": false,
@@ -522,7 +522,7 @@
     },
     {
       "name": "cyclist_waiting_aid",
-      "color": "#D9EF8B",
+      "color": "#00838F",
       "displayName": "Cyclist waiting aid",
       "description": "Places where cyclists should wait at a traffic light with the possibility to rest a foot or arm on while waiting at the traffic light.",
       "area": false,
@@ -530,7 +530,7 @@
     },
     {
       "name": "pedestrian",
-      "color": "#2166AC",
+      "color": "#6A1B9A",
       "displayName": "Mainly/exclusively for pedestrian",
       "description": "Streets and areas mainly or exclusively meant for pedestrians.",
       "area": true,
@@ -538,7 +538,7 @@
     },
     {
       "name": "pedestrian_with_bic_allowed",
-      "color": "#67A9CF",
+      "color": "#AB47BC",
       "displayName": "Mainly/exclusively for pedestrian with bicycle allowed",
       "description": "Streets and areas mainly or exclusively meant for pedestrians, where it's also allowed to ride a bicycle.",
       "area": true,
@@ -546,7 +546,7 @@
     },
     {
       "name": "crossing",
-      "color": "#8C510A",
+      "color": "#6D4C41",
       "displayName": "Crossing (bicycle, pedestrian, horserider)",
       "description": "Crossings of streets for cyclists, pedestrians and horseriders.",
       "area": false,
