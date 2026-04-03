@@ -264,8 +264,6 @@ function M.get_infrastructure_type(tags, restriction)
             return 'cycleway'
         elseif M.is_bicycle_path_with_pedestrian_or_mofa_or_moped_allowed(tags) then
             return 'cycleway_multiuse'
-        elseif M.is_bicycle_forbidden(tags) then
-            return 'path_with_bic_forbidden'
         else
             return 'uncategorized'
         end
