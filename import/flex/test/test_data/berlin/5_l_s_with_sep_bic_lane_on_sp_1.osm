@@ -1,33 +1,40 @@
-<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (302684 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
-<way id="4421116" visible="true" version="40" changeset="174082324" timestamp="2025-11-01T22:22:39Z" user="fmc_6" uid="23034323">
-<nd ref="12209100946"/>
-<nd ref="4279774164"/>
-<nd ref="6146111734"/>
-<tag k="cycleway" v="separate"/>
-<tag k="cycleway:both:width" v="1.5"/>
-<tag k="foot" v="use_sidepath"/>
-<tag k="highway" v="secondary"/>
-<tag k="image" v="https://commons.wikimedia.org/wiki/File:WestendSpandauerDamm-2.jpg"/>
+<osm version="0.6" generator="openstreetmap-cgimap 2.1.0 (2001831 spike-08.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+<way id="318210360" visible="true" version="20" changeset="174210760" timestamp="2025-11-04T19:50:05Z" user="fmc_3" uid="22897978">
+<nd ref="1383533461"/>
+<nd ref="3433831692"/>
+<nd ref="1976653173"/>
+<nd ref="8252463548"/>
+<nd ref="552384763"/>
+<tag k="bicycle" v="designated"/>
+<tag k="cycleway:left" v="no"/>
+<tag k="cycleway:right" v="separate"/>
+<tag k="destination:colour:lanes" v="|white;white|white;white|white;white|white;white;white"/>
+<tag k="destination:lanes" v="Köpenick|Schönefeld;Grünau|Schönefeld;Grünau|Schönefeld;Grünau|Altglienicke"/>
+<tag k="destination:ref:lanes" v="|B 96a|B 96a|B 96a|"/>
+<tag k="destination:ref:to:lanes" v="|A 117|A 117|A 117|"/>
+<tag k="destination:symbol:lanes" v="|airport;|airport;|airport;|"/>
+<tag k="destination:symbol:to:lanes" v="|motorway|motorway|motorway|"/>
+<tag k="destination:to:lanes" v="|Dresden|Dresden|Dresden|"/>
+<tag k="dual_carriageway" v="yes"/>
+<tag k="foot" v="designated"/>
+<tag k="highway" v="primary"/>
 <tag k="lanes" v="5"/>
-<tag k="lanes:backward" v="2"/>
-<tag k="lanes:forward" v="3"/>
 <tag k="lit" v="yes"/>
-<tag k="maxspeed" v="30"/>
-<tag k="name" v="Spandauer Damm"/>
-<tag k="name:etymology:wikidata" v="Q569827"/>
-<tag k="name:etymology:wikipedia" v="de:Berlin-Spandau"/>
+<tag k="maxspeed" v="50"/>
+<tag k="name" v="Adlergestell"/>
+<tag k="name:etymology:wikidata" v="Q487843"/>
+<tag k="name:etymology:wikipedia" v="de:Schneise"/>
+<tag k="oneway" v="yes"/>
 <tag k="parking:both" v="no"/>
 <tag k="parking:right:restriction" v="no_stopping"/>
-<tag k="postal_code" v="14059"/>
-<tag k="sidewalk:both" v="separate"/>
+<tag k="ref" v="B 96a"/>
+<tag k="segregated" v="no"/>
+<tag k="sidewalk" v="right"/>
 <tag k="smoothness" v="good"/>
-<tag k="source:cycleway:both:width" v="Luftbild 2025"/>
-<tag k="source:width" v="aerial imagery"/>
 <tag k="surface" v="asphalt"/>
-<tag k="turn:lanes:forward" v="left|through|none"/>
-<tag k="width" v="18"/>
-<tag k="wikidata" v="Q1772995"/>
-<tag k="wikimedia_commons" v="Category:Spandauer Damm (Berlin-Westend)"/>
-<tag k="wikipedia" v="de:Spandauer Damm"/>
+<tag k="traffic_sign" v="DE:240"/>
+<tag k="turn:lanes" v="left|through|through|through|right"/>
+<tag k="wikidata" v="Q358363"/>
+<tag k="wikipedia" v="de:Adlergestell"/>
 </way>
 </osm>
