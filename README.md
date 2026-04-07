@@ -4,11 +4,11 @@
 
 The goal of this tool is to automatically categorize OSM street segments into predefined infrastructure buckets and visualize them in a web application. It is part of a bachelor thesis and can process the cities Bern, Berlin, Weimar and Wichita Falls.
 
-The processing part of the tool mainly consists of two steps. The downloading of the required OSM data and the filtering, categorization and storing of the street segments inside a database. These steps are performed for each city that is configured in the .env file.
+The processing part of the tool mainly consists of two steps. The downloading of the required OSM data and the filtering, categorization and storing of the street segments inside a database. These steps are performed for each city that is configured in the .env file. If the E2E test should be executed the download steps gets skipped and the test data for Bern and Berlin get processed. For more information check the [test documentation.](import/flex/test/README.md)
 
 ![Street Processing Flow](utils/assets/Street_Processing_Flow.png)
 
-First the latest OSM data gets downloaded from [Geofabrik](https://www.geofabrik.de/) for the given city. If the city has no dedicated download endpoint, the next bigger area is downloaded and afterwards only the city data is extracted using the [Osmium Tool](https://osmcode.org/osmium-tool/) and the city boundary (OSM relation).
+First the latest OSM data gets downloaded from [Geofabrik](https://www.geofabrik.de/) for the given city. If the city has no dedicated download endpoint, the next bigger area is downloaded and the city data is extracted using the [Osmium Tool](https://osmcode.org/osmium-tool/) and the city boundary (OSM relation).
 
 ![OSM Download Flow](utils/assets/OSM_Download_Flow.png)
 
