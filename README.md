@@ -41,12 +41,11 @@ foo@bar:~$ sudo apt install osm2pgsql
 
 1. Create a `.env` file based on the `.env.example` in the root project directory
 
-- If youu want to add a new city:
-  - Find URL for OSM file at [Geofabrik](https://download.geofabrik.de/)
-    - If you find the city directly add this URL to ...\_REGION_URL
-    - If you cannot find it directly, add the URL of the next bigger region in ...REGION_URL and then the OpenStreetMap city boundary relation in the ...BOUNDARIES_URL like this: https://www.openstreetmap.org/api/0.6/relation/1682378/full
-  - Add the restriction variable ...RESTRICTION according to the country the city is part of (currently CH, DE and US are implemented)
-  - Finally add the city name in the CITIES=... initialization
+#### Adding a new city
+1. If you find the OSM file of the city directly at [Geofabrik](https://download.geofabrik.de/) add this to a new _EXAMPLE_REGION_URL_ variable
+2. If not, add the next bigger area from [Geofabrik](https://download.geofabrik.de/) to this variable and add the OpenStreetMap city boundary relation in the EXAMPLE_BOUNDARIES_URL like this: https://www.openstreetmap.org/api/0.6/relation/1682378/full
+3. Add the restriction variable EXAMPLE_RESTRICTION according to the country the city is part of (currently CH, DE and US are implemented)
+4. Add the city name to the CITIES variable
 
 ### Database and Backend Startup
 
