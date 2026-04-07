@@ -25,13 +25,6 @@ function check_region_url_env_variable_exists {
     fi
 }
 
-function check_lua_script_env_variable_exists {
-    if [ -z "$LUA_SCRIPT" ]; then
-        echo "LUA_SCRIPT enviroment variable is not set or empty"
-        exit 1
-    fi
-}
-
 function check_restriction_env_variable_exists {
     if [ -z "$RESTRICTION" ]; then
         echo "RESTRICTION enviroment variable is not set or empty"
