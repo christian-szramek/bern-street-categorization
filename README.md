@@ -2,7 +2,7 @@
 
 ## Description
 
-The goal of this tool is to automatically categorize OpenStreetMap street segments into predefined buckets and visualize them in a web application. It is part of a bachelor thesis and can process the cities Bern, Berlin, Weimar and Wichita Falls.
+The goal of this tool is to automatically categorize OpenStreetMap street segments into predefined infrastructure buckets and visualize them in a web application. It is part of a bachelor thesis and can process the cities Bern, Berlin, Weimar and Wichita Falls.
 
 ![Screenshot of the Frontend](utils/assets/Frontend_Screenshot.png)
 
