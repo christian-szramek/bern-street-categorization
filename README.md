@@ -6,18 +6,12 @@ The goal of this tool is to automatically categorize OpenStreetMap street segmen
 
 This monorepo consists of multiple projects and directories:
 
-- docker:
-  - Configuration and initialization files that are mounted to the Docker containers
-- download:
-  - Script to download and crop the OpenStreetMap street segments
-- frontend:
-  - Code for the street segment visualization
-- import:
-  - Scripts for categorizing the street segments and storing them inside the database
-- jupyter_notebook:
-  - Python Jupyter Notebook to analyse the processed street segments
-- utils:
-  - Helper scripts to prepare the E2E test data and generate the database startup script based on the configured infrastructure types
+- **docker**: Configuration and initialization files that are mounted to the Docker containers
+- **download**: Script to download and crop the OpenStreetMap street segments
+- **frontend**: Code for the street segment visualization
+- **import**: Scripts for categorizing the street segments and storing them inside the database
+- **jupyter_notebook**: Python Jupyter Notebook to analyse the processed street segments
+- **utils**: Helper scripts to prepare the E2E test data and generate the database startup script based on the configured infrastructure types
 
 ## Usage
 
