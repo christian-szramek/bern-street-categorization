@@ -32,6 +32,7 @@ local M = {
   { name = "1_l_s_with_shared_bic_lane_on_carriageway", area=false, node=false, displayName="1-lane street with shared bicycle lane on carriageway" },
   { name = "2_l_s_with_shared_bic_lane_on_carriageway", area=false, node=false, displayName="2-lane street with shared bicycle lane on carriageway" },
   { name = "3_l_s_with_shared_bic_lane_on_carriageway", area=false, node=false, displayName="3-lane street with shared bicycle lane on carriageway" },
+  { name = "4_l_s_with_shared_bic_lane_on_carriageway", area=false, node=false, displayName="4-lane street with shared bicycle lane on carriageway" },
   { name = "1_l_s_with_no_bic_paths", area=true, node=false, displayName="1-lane street with no bicycle paths" },
   { name = "2_l_s_with_no_bic_paths", area=false, node=false, displayName="2-lane street with no bicycle paths" },
   { name = "3_l_s_with_no_bic_paths", area=false, node=false, displayName="3-lane street with no bicycle paths" },

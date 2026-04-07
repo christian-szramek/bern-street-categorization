@@ -265,6 +265,14 @@
       "node": false
     },
     {
+      "name": "4_l_s_with_shared_bic_lane_on_carriageway",
+      "color": "#1976D2",
+      "displayName": "4-lane street with shared bicycle lane on carriageway",
+      "description": "Streets with a shared bicycle lane on the carriageway. The number of lanes is visualized by the line weight and becomes visible when hovering the street.",
+      "area": false,
+      "node": false
+    },
+    {
       "name": "1_l_s_with_no_bic_paths",
       "color": "#0D47A1",
       "displayName": "1-lane street with no bicycle paths",

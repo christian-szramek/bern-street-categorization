@@ -1616,6 +1616,54 @@ CREATE TABLE IF NOT EXISTS public.weimar_3_l_s_with_shared_bic_lane_on_carriagew
 
 
 -- =========================================
+-- bern | 4_l_s_with_shared_bic_lane_on_carriageway
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_4_l_s_with_shared_bic_lane_on_carriageway_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 4_l_s_with_shared_bic_lane_on_carriageway
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_4_l_s_with_shared_bic_lane_on_carriageway_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 4_l_s_with_shared_bic_lane_on_carriageway
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_4_l_s_with_shared_bic_lane_on_carriageway_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 4_l_s_with_shared_bic_lane_on_carriageway
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_4_l_s_with_shared_bic_lane_on_carriageway_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
 -- bern | 1_l_s_with_no_bic_paths
 -- =========================================
 
