@@ -66,10 +66,14 @@ sudo apt install osm2pgsql
 ```sh
 docker compose up -d
 ```
-If this fails with error: `failed to bind host port 0.0.0.0:5432/tcp: address already in use` stop the preinstalled PostgreSQL database like this and execute the command again:
+If this fails with error: `failed to bind host port 0.0.0.0:5432/tcp: address already in use` stop and disable the preinstalled PostgreSQL database like this and execute the command again:
 ```sh
 sudo systemctl postgresql stop
 ```
+```sh
+sudo systemctl postgresql disable
+```
+Or change the `PG_PORT` variable so something else e.g.: _5433_
 
 ### Street Processing Execution
 
