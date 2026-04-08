@@ -17,22 +17,22 @@ cd jupyter_notebook
 virtualenv venv
 ```
 
-3. Active the virtual environment:
+4. Active the virtual environment:
 
 ```sh
 source venv/bin/activate
 ```
 
-3. Install the dependencies:
+5. Install the dependencies:
 
 ```sh
 pip install -r requirements.txt
 ```
 
-4. Start the Python Jupyter Notebook:
+6. Start the Python Jupyter Notebook:
 
 ```sh
 jupyter notebook
 ```
 
-5. Open the Python Jupyter Notebook in the browser e.g.: _http://localhost:8888/notebooks/bern-street-categorization.ipynb_
+7. Open the Python Jupyter Notebook in the browser e.g.: _http://localhost:8888/notebooks/bern-street-categorization.ipynb_
