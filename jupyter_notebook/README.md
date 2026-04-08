@@ -1,6 +1,6 @@
 # Python Jupyter Notebook Setup
 
-1. Install and setup the dependencies:
+1. Install and setup Python:
 
 ```sh
 sudo apt install python3 python3-pip python3-venv
@@ -12,10 +12,10 @@ sudo apt install python3 python3-pip python3-venv
 cd jupyter_notebook
 ```
 
-3. Active the virtual environment:
+3. Active the virtual environment and install the dependencies:
 
 ```sh
-source .venv/bin/activate
+python -m venv env source env/bin/activate
 ```
 
 4. Start the Python Jupyter Notebook:
