@@ -69,14 +69,6 @@ cp .env.example .env
 ```sh
 docker compose up -d
 ```
-If this fails with error: `failed to bind host port 0.0.0.0:5432/tcp: address already in use` stop and disable the preinstalled PostgreSQL database like this and execute the command again:
-```sh
-sudo systemctl stop postgresql
-```
-```sh
-sudo systemctl disable postgresql
-```
-Or change the `PG_PORT` variable to something else e.g.: _5433_
 
 ### Street Processing Execution
 
