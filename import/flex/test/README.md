@@ -5,41 +5,29 @@
 1. Install and setup the unit test dependencies:
 
 ```sh
-sudo apt install lua5.3
+sudo apt install lua5.3 liblua5.3-dev luarocks libexpat1-dev
 ```
 
 ```sh
-sudo apt install liblua5.3-dev
+sudo luarocks install luaexpat
 ```
 
-```sh
-sudo apt install luarocks
-```
-
-```sh
-sudo apt install libexpat1-dev
-```
-
-```sh
-luarocks install luaexpat
-```
-
-2. Add the following to the .bashrc:
+2. Add the following to the end of the .bashrc:
 
 ```text
 eval "$(luarocks path)"
 ```
 
-3. Navigate to the unit test directory:
-
-```sh
-cd import/flex/test
-```
-
-4. Source the .bashrc:
+3. Source the .bashrc:
 
 ```sh
 source ~/.bashrc
+```
+
+4. Navigate to the unit test directory:
+
+```sh
+cd import/flex/test
 ```
 
 5. Execute the tests:
