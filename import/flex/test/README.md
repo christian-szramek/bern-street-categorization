@@ -5,23 +5,23 @@
 1. Install and setup the unit test dependencies:
 
 ```sh
-foo@bar:~$ sudo apt install lua5.3
+sudo apt install lua5.3
 ```
 
 ```sh
-foo@bar:~$ sudo apt install liblua5.3-dev
+sudo apt install liblua5.3-dev
 ```
 
 ```sh
-foo@bar:~$ sudo apt install luarocks
+sudo apt install luarocks
 ```
 
 ```sh
-foo@bar:~$ sudo apt install libexpat1-dev
+sudo apt install libexpat1-dev
 ```
 
 ```sh
-foo@bar:~$ luarocks install luaexpat
+luarocks install luaexpat
 ```
 
 2. Add the following to the .bashrc:
@@ -33,19 +33,19 @@ eval "$(luarocks path)"
 3. Navigate to the unit test directory:
 
 ```sh
-foo@bar:~$ cd import/flex/test
+cd import/flex/test
 ```
 
 4. Source the .bashrc:
 
 ```sh
-foo@bar:~$ source ~/.bashrc
+source ~/.bashrc
 ```
 
 5. Execute the tests:
 
 ```sh
-foo@bar:~$ ./luarocks test
+./luarocks test
 ```
 
 ## E2E Test
