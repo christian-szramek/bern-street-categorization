@@ -35,7 +35,7 @@ This monorepo consists of multiple projects and directories:
 
 - Ubuntu 24.04.04 LTS with the latest updates
 - curl 8.5.0
-- Docker 29.3.1 with Docker Compose ([Installation guide](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository))
+- Docker 29.3.1 with Docker Compose and possibility to execute docker as a non-root user ([Installation guide](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository))
 - Node.js 25.8.0 ([Installation through Node Version Manager is recommended](https://github.com/nvm-sh/nvm))
 - npm 11.11.0
 
