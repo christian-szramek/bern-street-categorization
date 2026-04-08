@@ -39,8 +39,8 @@ cd import/flex/test
 ## E2E Test
 
 1. Change the `TEST` variable in the .env file to _true_
-2. Execute the `-/process.sh` script if it was never run before, otherwise execute the `./rerun.sh` script
-3. Verify that the following street segments with it's IDs are displayed correctly in the frontend. If there is a B after the ID, you have to verify this street segment in Berlin:
+2. Execute the `./process.sh` script if it was never run before, otherwise execute the `./rerun.sh` script
+3. Verify that the following street segments with it's IDs are displayed correctly in the frontend. If there is a _B_ after the ID, you have to verify this street segment in Berlin:
 
 - Street with bicycle forbidden
   - 1 lane
