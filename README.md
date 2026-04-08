@@ -56,6 +56,9 @@ sudo apt install osm2pgsql
 ### Env File Configuration
 
 1. Create a `.env` file based on the `.env.example` in the root project directory
+```sh
+cp .env.example .env
+```
 
 [To add a new city follow these instructions.](import/README.md)
 
