@@ -73,7 +73,7 @@ sudo systemctl postgresql stop
 ```sh
 sudo systemctl postgresql disable
 ```
-Or change the `PG_PORT` variable so something else e.g.: _5433_
+Or change the `PG_PORT` variable to something else e.g.: _5433_
 
 ### Street Processing Execution
 
