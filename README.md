@@ -44,13 +44,13 @@ This monorepo consists of multiple projects and directories:
 1. Install [Osmium Tool](https://osmcode.org/osmium-tool/):
 
 ```sh
-foo@bar:~$ sudo apt install osmium-tool
+sudo apt install osmium-tool
 ```
 
 2. Install [OSM2PGSQL](https://osm2pgsql.org/):
 
 ```sh
-foo@bar:~$ sudo apt install osm2pgsql
+sudo apt install osm2pgsql
 ```
 
 ### Env File Configuration
@@ -64,7 +64,11 @@ foo@bar:~$ sudo apt install osm2pgsql
 1. Start the Docker services:
 
 ```sh
-foo@bar:~$ docker compose up -d
+docker compose up -d
+```
+If this fails with error: `failed to bind host port 0.0.0.0:5432/tcp: address already in use` stop the preinstalled PostgreSQL database like this and execute the command again:
+```sh
+sudo systemctl postgresql stop
 ```
 
 ### Street Processing Execution
@@ -72,7 +76,7 @@ foo@bar:~$ docker compose up -d
 1. Execute the street segment processing with the values according to the .env file:
 
 ```sh
-foo@bar:~$ ./process.sh
+./process.sh
 ```
 
 - If you want to rerun the processing, execute the following script: `./rerun.sh`
@@ -82,19 +86,19 @@ foo@bar:~$ ./process.sh
 1. Navigate to the frontend directory:
 
 ```sh
-foo@bar:~$ cd frontend
+cd frontend
 ```
 
 2. Install the dependencies:
 
 ```sh
-foo@bar:~$ npm install
+npm install
 ```
 
 3. Start the development server:
 
 ```sh
-foo@bar:~$ npm run dev
+npm run dev
 ```
 
 4. Open the frontend in the browser e.g.: _http://localhost:5173/_
