@@ -15,7 +15,7 @@ cd jupyter_notebook
 3. Active the virtual environment and install the dependencies:
 
 ```sh
-python -m venv env source env/bin/activate
+python3 -m venv env source env/bin/activate
 ```
 
 4. Start the Python Jupyter Notebook:
