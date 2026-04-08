@@ -33,10 +33,10 @@ This monorepo consists of multiple projects and directories:
 
 ### Prerequisites
 
-- Ubuntu 24.04.04 LTS
-- Docker 29.3.1 with Docker Compose
+- Ubuntu 24.04.04 LTS with the latest updates
 - curl 8.5.0
-- Node.js 25.8.0
+- Docker 29.3.1 with Docker Compose ([Installation guide](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository))
+- Node.js 25.8.0 ([Installation through Node Version Manager is recommended](https://github.com/nvm-sh/nvm))
 - npm 11.11.0
 
 ### Installing the Dependencies
