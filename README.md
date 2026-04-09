@@ -2,23 +2,27 @@
 
 ## Description
 
-The goal of this tool is to automatically categorize OSM street segments into predefined infrastructure buckets and visualize them in a web application. It is part of a bachelor thesis and can process the cities Bern, Berlin, Weimar and Wichita Falls.
+The goal of this tool is to automatically categorize OpenStreetMap (OSM) street segments into predefined infrastructure buckets and visualize them in a web application. It is part of a bachelor thesis and can process the cities Bern, Berlin, Weimar and Wichita Falls.
 
-The processing part of the tool mainly consists of two steps. The downloading of the required OSM data and the filtering, categorization and storing of the street segments inside a database. These steps are performed for each city that is configured in the .env file. If the E2E test should be executed the download steps gets skipped and the test data for Bern and Berlin get processed. For more information check the [test documentation.](import/flex/test/README.md)
+The processing part of the tool mainly consists of two steps. The downloading of the required OSM data and the filtering, categorization and storing of the street segments inside a database. These steps are performed for each city that is declared \
+in the _.env_ file. \
+If the E2E test should be executed the download steps gets skipped and the test data for Bern and Berlin gets processed. For more information check the [test documentation.](import/flex/test/README.md)
 
 ![Street Processing Flow](utils/assets/Street_Processing_Flow.png)
 
-First the latest OSM data gets downloaded from [Geofabrik](https://www.geofabrik.de/) for the given city. If the city has no dedicated download endpoint, the next bigger area is downloaded and the city data is extracted using the [Osmium Tool](https://osmcode.org/osmium-tool/) and the city boundary (OSM relation).
+First the latest OSM data gets downloaded from [Geofabrik](https://www.geofabrik.de/) for the current city. If the city has no dedicated download endpoint, the next bigger area is downloaded and the city data is extracted using the [Osmium Tool](https://osmcode.org/osmium-tool/) and the cities boundary (OSM relation). You can set that by either setting the Geofabrik city download URL in the `REGION_URL` parameter of the _.env_ file, or the next bigger area as the `REGION_URL` and the boundary as the `BOUNDARIES_URL` parameter.
 
 ![OSM Download Flow](utils/assets/OSM_Download_Flow.png)
 
-Afterwards the needed node, way and area tables get dynamically defined for each infrastructure bucket using [OSM2PGSQL](https://osm2pgsql.org/) and a [PostgreSQL](https://www.postgresql.org/) database with the [PostGIS](https://postgis.net/) extension. Each feature of the resulting OSM data will be processed, but only street segments raceways and elevators. The result of this step are populated database tables for each city and infrastructure type e.g. bern_2_l_s_with_bus_bic_lane_on_one_side representing 2-lane two way streets with a bus or bicycle lane on one side in Bern.
+Afterwards the needed node, way and area tables get dynamically defined based on a [configuration file](import/flex/infrastructure_types.lua) for each infrastructure bucket. Each feature of the OSM dataset from the previous step will be processed, but only non-ignorable features will be stored. These include the street segments and additionally crossings and cyclist waiting aids marked as nodes and pedestrian areas. Ignored features are for example traffic signs, railways and elevators. After a feature is evaluated as non-ignorable, it's infrastructure type gets determined based on it's OSM tags. Then it gets stored in the according database table including the OSM tags, the display name of the bucket and the geometry information. Used technologies in this step are the [PostgreSQL](https://www.postgresql.org/) database with the [PostGIS](https://postgis.net/) extension and the [OSM2PGSQL](https://osm2pgsql.org/) tool. The result of this step are populated database tables e.g. _bern_2_l_s_with_bus_bic_lane_on_one_side_ representing 2-lane two way streets with a bus or bicycle lane on one side in Bern.
 
 ![Street Import Flow](utils/assets/Street_Import_Flow.png)
 
-To access the infrastructure buckets from the frontend, [pg_featureserv](https://access.crunchydata.com/documentation/pg_featureserv/latest/) and [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/) were used as Docker containers. Ways and areas are fetched as tiles and nodes were fetched as GeoJSON. The frontend was developed with [Vue.js](https://vuejs.org/) and [leaflet](https://leafletjs.com/). The street segments are vizualized in different colors and can be (de-)selected on the map by clicking the bullet point in the legend. To improve readability the lane information is abstracted in the legend, but visible when hovering the street segment. Also an example street and a description are shown when hovering the infrastructure type in the legend. The centered city can be changed using the select component in the legend.
+To access the infrastructure buckets from the frontend [pg_featureserv](https://access.crunchydata.com/documentation/pg_featureserv/latest/) and [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/) are used as Docker containers. Ways and areas are fetched as tiles and nodes are fetched as GeoJSON. The frontend was developed with [Vue.js](https://vuejs.org/) and [leaflet](https://leafletjs.com/). The street segments are vizualized in different colors and can be (de-)selected in the map by clicking the bullet point in the legend. To improve readability the lane information is abstracted in the legend, but visible when hovering the street segment. Also an example street and a description are shown when hovering the infrastructure type in the legend. The centered city can be changed using the select component in the legend.
 
 ![Screenshot of the Frontend](utils/assets/Frontend_Screenshot.png)
+
+## Repository Structure
 
 This monorepo consists of multiple projects and directories:
 
