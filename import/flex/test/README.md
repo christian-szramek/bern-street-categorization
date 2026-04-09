@@ -1,5 +1,7 @@
 # Test Setup
 
+You can perform two kind of tests. The unit tests call the _get_infrastructure_type(tags, restriction)_ function of the [infrastructure_logic.lua](../infrastructure_logic.lua) with real world street segments of Bern and Berlin for each infrastructure type. With the E2E tests you can test the whole processing flow, from creating and populating the database tables to visualizing the street segment in the frontend. Real worl street segments from Bern and Berlin for each infrastructure type were used as well to create _osm.pbf_ files like the ones that would be downloaded from Geofabrik. The expected features you can verify are listed below.
+
 ## Unit Tests
 
 1. Install and setup the unit test dependencies:
