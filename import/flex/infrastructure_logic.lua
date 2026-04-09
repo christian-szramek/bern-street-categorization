@@ -187,33 +187,33 @@ function M.get_infrastructure_type(tags, restriction)
                 if M.is_cycleway_both_sides(tags) then
                     if M.is_bus_bicycle_lane_on_one_side_and_separate_bicycle_lane_on_sidepath(tags) then
                         if M.is_dual_carriageway(tags) then
-                            return M.get_lanes(tags) .. '_l_dcs_with_bus_bic_and_sep_bic_on_sp'
+                            return M.get_lanes(tags) .. '_l_s_with_bus_bic_and_sep_bic_on_sp'
                         else
                             return M.get_lanes(tags) .. '_l_ows_with_bus_bic_and_sep_bic_on_sp'
                         end
                     else
                         if M.is_dual_carriageway(tags) then
-                            return M.get_lanes(tags) .. '_l_dcs_with_bus_bic_lane_on_both_sides'
+                            return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_both_sides'
                         else
                             return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_both_sides'
                         end
                     end
                 else
                     if M.is_dual_carriageway(tags) then
-                        return M.get_lanes(tags) .. '_l_dcs_with_bus_bic_lane_on_one_side'
+                        return M.get_lanes(tags) .. '_l_s_with_bus_bic_lane_on_one_side'
                     else
                         return M.get_lanes(tags) .. '_l_ows_with_bus_bic_lane_on_one_side'
                     end
                 end
             elseif M.is_street_with_separate_bicycle_lane_on_sidepath(tags) then
                 if M.is_dual_carriageway(tags) then
-                    return M.get_lanes(tags) .. '_l_dcs_with_sep_bic_lane_on_sp'
+                    return M.get_lanes(tags) .. '_l_s_with_sep_bic_lane_on_sp'
                 else
                     return M.get_lanes(tags) .. '_l_ows_with_sep_bic_lane_on_sp'
                 end
             else
                 if M.is_dual_carriageway(tags) then 
-                    return M.get_lanes(tags) .. '_l_dcs_with_no_bic_paths'
+                    return M.get_lanes(tags) .. '_l_s_with_no_bic_paths'
                 else
                     return M.get_lanes(tags) .. '_l_ows_with_no_bic_paths'
                 end
@@ -264,8 +264,6 @@ function M.get_infrastructure_type(tags, restriction)
             return 'cycleway'
         elseif M.is_bicycle_path_with_pedestrian_or_mofa_or_moped_allowed(tags) then
             return 'cycleway_multiuse'
-        elseif M.is_bicycle_forbidden(tags) then
-            return 'path_with_bic_forbidden'
         else
             return 'uncategorized'
         end

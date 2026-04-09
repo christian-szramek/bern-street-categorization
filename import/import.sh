@@ -2,7 +2,6 @@
 
 source "utils.sh"
 
-check_lua_script_env_variable_exists
 check_db_variables_exist
 check_restriction_env_variable_exists
 
@@ -15,7 +14,7 @@ osm2pgsql  \
 --port $PG_PORT \
 --user $PG_USER \
 --output=flex \
---style="$WORK_DIR/import/flex/$LUA_SCRIPT" \
+--style="$WORK_DIR/import/flex/all_highways_with_infrastructure_types.lua" \
 --slim \
 --drop \
 "$TMP_DIR/final.osm.pbf"
