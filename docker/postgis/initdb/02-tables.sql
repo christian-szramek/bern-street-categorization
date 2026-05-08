@@ -2844,6 +2844,54 @@ CREATE TABLE IF NOT EXISTS public.weimar_3_l_ows_with_bus_bic_and_sep_bic_on_sp_
 
 
 -- =========================================
+-- bern | 4_l_ows_with_bus_bic_and_sep_bic_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.bern_4_l_ows_with_bus_bic_and_sep_bic_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- berlin | 4_l_ows_with_bus_bic_and_sep_bic_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.berlin_4_l_ows_with_bus_bic_and_sep_bic_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- wichita_falls | 4_l_ows_with_bus_bic_and_sep_bic_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.wichita_falls_4_l_ows_with_bus_bic_and_sep_bic_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
+-- weimar | 4_l_ows_with_bus_bic_and_sep_bic_on_sp
+-- =========================================
+
+CREATE TABLE IF NOT EXISTS public.weimar_4_l_ows_with_bus_bic_and_sep_bic_on_sp_ways (
+    way_id BIGINT,
+    tags JSONB,
+    display_name TEXT,
+    geom geometry(LineString, 3857) NOT NULL
+);
+
+
+-- =========================================
 -- bern | 1_l_ows_with_no_bic_paths
 -- =========================================
 
