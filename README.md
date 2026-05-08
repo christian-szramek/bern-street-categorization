@@ -40,8 +40,6 @@ This monorepo consists of multiple projects and directories:
 - Ubuntu 24.04.04 LTS with the latest updates
 - curl 8.5.0
 - Docker 29.3.1 with Docker Compose and possibility to execute docker as a non-root user ([Installation guide](https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository))
-- Node.js 25.8.0 ([Installation through Node Version Manager is recommended](https://github.com/nvm-sh/nvm))
-- npm 11.11.0
 
 ### Installing the Dependencies
 
@@ -66,7 +64,7 @@ cp .env.example .env
 
 [To add a new city follow these instructions.](import/README.md)
 
-### Database and Backend Startup
+### Services Startup
 
 1. Start the Docker services:
 
@@ -74,7 +72,7 @@ cp .env.example .env
 docker compose up -d
 ```
 
-### Street Processing Execution
+### Street Processing
 
 1. Execute the street segment processing with the values according to the .env file:
 
@@ -84,7 +82,24 @@ docker compose up -d
 
 - If you want to rerun the processing, execute the following script: `./rerun.sh`
 
-### Frontend Setup
+### Open the Frontend
+
+1. Open the frontend in the browser e.g.: _http://localhost:8080/_
+
+### Test Setup
+
+[Follow the test setup instructions.](import/flex/test/README.md)
+
+### Python Jupyter Notebook Setup
+
+[Follow the Jupyter Notebook Setup Instructions.](jupyter_notebook/README.md)
+
+## Frontend Development Setup
+
+### Prerequisites
+
+- Node.js 25.8.0 ([Installation through Node Version Manager is recommended](https://github.com/nvm-sh/nvm))
+- npm 11.11.0
 
 1. Navigate to the frontend directory:
 
@@ -105,11 +120,3 @@ npm run dev
 ```
 
 4. Open the frontend in the browser e.g.: _http://localhost:5173/_
-
-### Test Setup
-
-[Follow the test setup instructions.](import/flex/test/README.md)
-
-### Python Jupyter Notebook Setup
-
-[Follow the Jupyter Notebook Setup Instructions.](jupyter_notebook/README.md)
