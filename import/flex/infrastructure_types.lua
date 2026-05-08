@@ -57,6 +57,7 @@ local M = {
   { name = "1_l_ows_with_bus_bic_and_sep_bic_on_sp", area=false, node=false, displayName="1-lane one-way street with with bus/bicycle lane and separate bicycle lane on sidepath" },
   { name = "2_l_ows_with_bus_bic_and_sep_bic_on_sp", area=false, node=false, displayName="2-lane one-way street with with bus/bicycle lane and separate bicycle lane on sidepath" },
   { name = "3_l_ows_with_bus_bic_and_sep_bic_on_sp", area=false, node=false, displayName="3-lane one-way street with with bus/bicycle lane and separate bicycle lane on sidepath" },
+  { name = "4_l_ows_with_bus_bic_and_sep_bic_on_sp", area=false, node=false, displayName="4-lane one-way street with with bus/bicycle lane and separate bicycle lane on sidepath" },
   { name = "1_l_ows_with_no_bic_paths", area=false, node=false, displayName="1-lane one-way street with no bicycle paths" },
   { name = "2_l_ows_with_no_bic_paths", area=false, node=false, displayName="2-lane one-way street with no bicycle paths" },
   { name = "3_l_ows_with_no_bic_paths", area=false, node=false, displayName="3-lane one-way street with no bicycle paths" },
