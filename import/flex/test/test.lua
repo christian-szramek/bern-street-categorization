@@ -92,7 +92,6 @@ execute_all_tests_for_city('bern', 'CH')
 -- Tests for Berlin
 execute_all_tests_for_city('berlin', 'DE')
 
-
 -- Tests for separate bicycle lane on sidepath (marked as extra way)
 test_feature = {}
 test_feature['highway'] = 'path'
