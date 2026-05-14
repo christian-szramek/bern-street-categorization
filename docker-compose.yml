@@ -23,20 +23,6 @@ services:
       - ${PG_TILESERV_PORT}:7800
     volumes:
       - ./docker/pg_tileserv_config:/config
-  pg_featureserv:
-    image: pramsey/pg_featureserv:20250917
-    container_name: pg_featureserv
-    depends_on:
-      - postgis
-    restart: on-failure
-    environment:
-      - DATABASE_URL=postgresql://${PG_USER}:${PGPASSWORD}@postgis/${PG_DB}
-    ports:
-      - ${PG_FEATURESERV_PORT}:9000
-    volumes:
-      - ./docker/pg_featureserv_config:/config
-      - pg_featureserv_cache:/cache
-      - pg_featureserv_assets:/assets
   frontend:
     container_name: frontend
     build:
@@ -46,7 +32,6 @@ services:
       - ${FRONTEND_PORT}:80
     depends_on:
       - pg_tileserv
-      - pg_featureserv
     restart: unless-stopped
   pgadmin:
     image: dpage/pgadmin4:9.13.0
@@ -74,5 +59,3 @@ volumes:
   postgis:
   pgadmin:
   portainer:
-  pg_featureserv_cache:
-  pg_featureserv_assets:

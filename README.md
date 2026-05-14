@@ -18,7 +18,7 @@ Afterwards the needed node, way and area tables get dynamically defined based on
 
 ![Street Import Flow](utils/assets/Street_Import_Flow.png)
 
-To access the infrastructure buckets from the frontend [pg_featureserv](https://access.crunchydata.com/documentation/pg_featureserv/latest/) and [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/) are used as Docker containers. Ways and areas are fetched as tiles and nodes are fetched as GeoJSON. The frontend was developed with [Vue.js](https://vuejs.org/) and [leaflet](https://leafletjs.com/). The street segments are vizualized in different colors and can be (de-)selected in the map by clicking the bullet point in the legend. To improve readability the lane information is abstracted in the legend, but visible when hovering the street segment. Also an example street and a description are shown when hovering the infrastructure type in the legend. The centered city can be changed using the select component in the legend.
+To access the infrastructure buckets from the frontend [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/) is used as a Docker container. Nodes, ways and areas are fetched as vector tiles. The frontend was developed with [Vue.js](https://vuejs.org/) and [leaflet](https://leafletjs.com/). The street segments are visualized in different colors and can be (de-)selected in the map by clicking the bullet point in the legend. To improve readability the lane information is abstracted in the legend, but visible when hovering the street segment. Also, an example street and a description are shown when hovering the infrastructure type in the legend. The centered city can be changed using the select component in the legend.
 
 ![Screenshot of the Frontend](utils/assets/Frontend_Screenshot.png)
 
@@ -58,6 +58,7 @@ sudo apt install osm2pgsql
 ### Env File Configuration
 
 1. Create a `.env` file based on the `.env.example` in the root project directory
+
 ```sh
 cp .env.example .env
 ```

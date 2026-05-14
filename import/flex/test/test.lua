@@ -92,7 +92,6 @@ execute_all_tests_for_city('bern', 'CH')
 -- Tests for Berlin
 execute_all_tests_for_city('berlin', 'DE')
 
-
 -- Tests for separate bicycle lane on sidepath (marked as extra way)
 test_feature = {}
 test_feature['highway'] = 'path'
@@ -110,3 +109,14 @@ test_feature['cycleway'] = 'sidepath'
 execute_test_for_given_feature(test_feature, 'CH', 'sep_bic_lane_on_sp')
 execute_test_for_given_feature(test_feature, 'DE', 'sep_bic_lane_on_sp')
 execute_test_for_given_feature(test_feature, 'US', 'sep_bic_lane_on_sp')
+
+-- Tests with invalid data
+test_feature = {}
+test_feature['name'] = 'Zweite Tramachse: Variante Altstadt Nord (B2)'
+test_feature['railway'] = 'proposed'
+test_feature['source_ref'] = 'https://www.bern.ch/mediencenter/medienmitteilungen/aktuell_ptk/2012-05-zweitetram/downloads/prasentation_mo_zmb_20120501.pdf/@@download/file/prasentation_mo_zmb_20120501.pdf'
+test_feature['tram'] = 'yes'
+
+execute_test_for_given_feature(test_feature, 'CH', 'uncategorized')
+execute_test_for_given_feature(test_feature, 'DE', 'uncategorized')
+execute_test_for_given_feature(test_feature, 'US', 'uncategorized')
