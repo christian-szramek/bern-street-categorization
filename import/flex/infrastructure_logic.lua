@@ -240,7 +240,7 @@ function M.get_infrastructure_type(tags, restriction)
     elseif M.is_extra_marked_separate_bicycle_lane_on_sidepath(tags) then
         return 'sep_bic_lane_on_sp'
     elseif M.is_pedestrian(tags) then
-        if M.is_bicycle_allowed(tags) or restriction == 'US' then
+        if M.is_bicycle_allowed(tags) or (restriction == 'US' and tags.bicycle ~= 'dismount' and tags.bicycle ~= 'no') then
             return 'pedestrian_with_bic_allowed'
         else
             return 'pedestrian'
