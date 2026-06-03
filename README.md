@@ -123,7 +123,7 @@ npm run dev
 4. Open the frontend in the browser e.g.: _http://localhost:5173/_
 
 ## Acknowledgements
-The map data used is provided by [OpenStreetMap](openstreetmap.org/copyright) under the available under the Open Database License.
+The map data used is provided by [OpenStreetMap](openstreetmap.org/copyright) available under the Open Database License.
 
 The following example images for the infratructure category are provided by the OpenStreetMap Wiki under the Creative Commons License. The following images are used:
 - https://wiki.openstreetmap.org/wiki/File:456Humboldtstr.jpg
