@@ -121,3 +121,28 @@ npm run dev
 ```
 
 4. Open the frontend in the browser e.g.: _http://localhost:5173/_
+
+## Acknowledgements
+The map data used is provided by [OpenStreetMap](openstreetmap.org/copyright) under the available under the Open Database License.
+
+The following example images for the infratructure category are provided by the OpenStreetMap Wiki under the Creative Commons License. The following images are used:
+- https://wiki.openstreetmap.org/wiki/File:456Humboldtstr.jpg
+- https://wiki.openstreetmap.org/wiki/File:Morgendlicher_Berufsverkehr_auf_der_BAB_A8_beim_Kreuz_Stuttgart_-_panoramio.jpg
+- https://wiki.openstreetmap.org/wiki/File:Primary-photo.jpg
+- https://wiki.openstreetmap.org/wiki/File:Fietsstrook_Herenweg_Oudorp.jpg
+- https://wiki.openstreetmap.org/wiki/File:Cambridge_Rd_-_geograph.org.uk_-_1189572.jpg
+- https://wiki.openstreetmap.org/wiki/File:Footway_in_Stowupland_-_geograph.org.uk_-_1044849.jpg
+- https://wiki.openstreetmap.org/wiki/File:Cyclist_footrest_01_Flickr_SDOT_Photos.jpg
+- https://wiki.openstreetmap.org/wiki/File:Busspur_und_Haltestelle_in_Mannheim_100_9128.jpg
+- https://wiki.openstreetmap.org/wiki/File:Sharrows_Toronto_2011.jpg
+- https://wiki.openstreetmap.org/wiki/File:Bikeway,_Bicycle_path_-_sign_C13_marked_beginning_of_bikeway,_Poland,_Sosnowiec.jpg
+- https://wiki.openstreetmap.org/wiki/File:Radweg_Schee_Silschede_cut.jpg
+- https://wiki.openstreetmap.org/wiki/File:Z241GetrennterRadUndGehweg.png
+- https://wiki.openstreetmap.org/wiki/File:549c_Spitzenkiel140923.jpg
+- https://wiki.openstreetmap.org/wiki/File:Buffered_bicycle_lane_in_Burlington_VT.jpg
+- https://wiki.openstreetmap.org/wiki/File:Zebra-crossing_sm.jpg
+- https://wiki.openstreetmap.org/wiki/File:Forest_path_and_trees.jpg
+
+The following example images for the infratructure category is provided by Wikimedia Commons under the Creative Commons Attribution-Share Alike 4.0 International License:
+- https://commons.wikimedia.org/wiki/File:Mitte_Am_Zirkus_yoo_Berlin.JPG
+- https://commons.wikimedia.org/wiki/File:No_Image_(2879926)_-_The_Noun_Project.svg (this is licensed under the Creative Commons Attribution 4.0 International License)
