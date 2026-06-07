@@ -1,4 +1,4 @@
-# Automatic Street Categorization of the City Bern
+# Identifying Street Infrastructure Types from OpenStreetMap Data
 
 ## Description
 
@@ -8,19 +8,60 @@ The processing part of the tool mainly consists of two steps. The downloading of
 in the _.env_ file. \
 If the E2E test should be executed the download steps gets skipped and the test data for Bern and Berlin gets processed. For more information check the [test documentation.](import/flex/test/README.md)
 
-![Street Processing Flow](utils/assets/Street_Processing_Flow.png)
+<div align="center">
+  <img src="utils/assets/Street_Processing_Flow.png"
+       alt="Street Processing Flow"
+       width="100%">
+</div>
 
 First the latest OSM data gets downloaded from [Geofabrik](https://www.geofabrik.de/) for the current city. If the city has no dedicated download endpoint, the next bigger area is downloaded and the city data is extracted using the [Osmium Tool](https://osmcode.org/osmium-tool/) and the cities boundary (OSM relation). You can set that by either setting the Geofabrik city download URL in the `REGION_URL` parameter of the _.env_ file, or the next bigger area as the `REGION_URL` and the boundary as the `BOUNDARIES_URL` parameter.
 
-![OSM Download Flow](utils/assets/OSM_Download_Flow.png)
+<div align="center">
+  <img src="utils/assets/OSM_Download_Flow.png"
+       alt="OSM Download Flow"
+       width="100%">
+</div>
 
-Afterwards the needed node, way and area tables get dynamically defined based on a [configuration file](import/flex/infrastructure_types.lua) for each infrastructure bucket. Each feature of the OSM dataset from the previous step will be processed, but only non-ignorable features will be stored. These include the street segments and additionally crossings and cyclist waiting aids marked as nodes and pedestrian areas. Ignored features are for example traffic signs, railways and elevators. After a feature is evaluated as non-ignorable, it's infrastructure type gets determined based on it's OSM tags. Then it gets stored in the according database table including the OSM tags, the display name of the bucket and the geometry information. Used technologies in this step are the [PostgreSQL](https://www.postgresql.org/) database with the [PostGIS](https://postgis.net/) extension and the [OSM2PGSQL](https://osm2pgsql.org/) tool. The result of this step are populated database tables e.g. _bern_2_l_s_with_bus_bic_lane_on_one_side_ representing 2-lane two way streets with a bus or bicycle lane on one side in Bern.
+Afterwards the needed node, way and area tables get dynamically defined based on a [configuration file](import/flex/infrastructure_types.lua) for each infrastructure bucket. Each feature of the OSM dataset from the previous step will be processed, but only non-ignorable features will be stored. These include the street segments and additionally crossings and cyclist waiting aids marked as nodes and pedestrian areas. Ignored features are for example traffic signs, elevators or corridors inside buildings. After a feature is evaluated as non-ignorable, it's infrastructure type gets determined based on it's OSM tags. Then it gets stored in the according database table including the OSM tags, the display name of the bucket and the geometry information. Used technologies in this step are the [PostgreSQL](https://www.postgresql.org/) database with the [PostGIS](https://postgis.net/) extension and the [OSM2PGSQL](https://osm2pgsql.org/) tool. The result of this step are populated database tables e.g. _bern_2_l_s_with_bus_bic_lane_on_one_side_ representing 2-lane two-way streets with a bus or bicycle lane on one side in Bern.
 
-![Street Import Flow](utils/assets/Street_Import_Flow.png)
+<div align="center">
+  <img src="utils/assets/Street_Import_Flow.png"
+       alt="Street Import Flow"
+       width="100%">
+</div>
 
-To access the infrastructure buckets from the frontend [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/) is used as a Docker container. Nodes, ways and areas are fetched as vector tiles. The frontend was developed with [Vue.js](https://vuejs.org/) and [leaflet](https://leafletjs.com/). The street segments are visualized in different colors and can be (de-)selected in the map by clicking the bullet point in the legend. To improve readability the lane information is abstracted in the legend, but visible when hovering the street segment. Also, an example street and a description are shown when hovering the infrastructure type in the legend. The centered city can be changed using the select component in the legend.
+The frontend was developed with [Vue.js](https://vuejs.org/) and [leaflet](https://leafletjs.com/) with [Leaflet.Vectorgrid](https://github.com/Leaflet/Leaflet.VectorGrid). The street segments are visualized in different colors and can be (de-)selected in the map by clicking the bullet point in the legend. To improve readability the lane information is abstracted in the legend, but visible when hovering the street segment. Also, an example street and a description are shown when hovering the infrastructure type in the legend. The centered city can be changed using the select component in the legend.
 
-![Screenshot of the Frontend](utils/assets/Frontend_Screenshot.png)
+<div align="center">
+  <img src="utils/assets/Frontend_Screenshot.png"
+       alt="Screenshot of the Web Frontend"
+       width="100%">
+</div>
+
+The root component that handles the visibility of the infrastructure types, the additional
+info and the centered city is App.vue. It gathers the information from a configuration file
+and renders the child components. Map.vue is responsible for displaying the geographic
+elements. The base map is fetched as raster tiles from OSM. The street infrastructure
+is fetched as vector tiles and each infrastructure category is added as a layer to provide
+the functionality of toggling its visibility. The legend and info functionality is handled in
+there respective Legend.vue and Info.vue components, before manipulating the state in
+the App.vue component.
+
+<div align="center">
+  <img src="utils/assets/Frontend_Components.png"
+       alt="Components of the Web Frontend"
+       width="60%">
+</div>
+
+[Docker](https://www.docker.com/) and [Docker Compose](https://docs.docker.com/compose/) is used to manage the application stack. The web frontend is built
+when starting the stack and is encapsulated in a [nginx](https://nginx.org) web server. The vector tiles,
+including the processed street infrastructure, get provided by [pg_tileserv](https://access.crunchydata.com/documentation/pg_tileserv/latest/). For the spatial database, a [PostGIS](https://postgis.net/) database container is used.
+
+<div align="center">
+  <img src="utils/assets/Deployment_Diagram.png"
+       alt="Deployment"
+       width="70%">
+</div>
 
 ## Repository Structure
 
@@ -63,8 +104,6 @@ sudo apt install osm2pgsql
 cp .env.example .env
 ```
 
-[To add a new city follow these instructions.](import/README.md)
-
 ### Services Startup
 
 1. Start the Docker services:
@@ -81,8 +120,6 @@ docker compose up -d
 ./process.sh
 ```
 
-- If you want to rerun the processing, execute the following script: `./rerun.sh`
-
 ### Open the Frontend
 
 1. Open the frontend in the browser e.g.: _http://localhost:8080/_
@@ -94,6 +131,12 @@ docker compose up -d
 ### Python Jupyter Notebook Setup
 
 [Follow the Jupyter Notebook Setup Instructions.](jupyter_notebook/README.md)
+
+### Additional Setup
+
+- If you want to rerun the processing, execute the following script: `./rerun.sh`
+- If you want to add a new city follow [these instructions](import/README.md)
+- If you want to add a new infrastructure category follow [these instructions](utils/README.md)
 
 ## Frontend Development Setup
 
@@ -122,10 +165,16 @@ npm run dev
 
 4. Open the frontend in the browser e.g.: _http://localhost:5173/_
 
+## Usage of AI Tools
+
+[ChatGPT](https://chatgpt.com/) by [OpenAI](https://openai.com/) in the versions GPT-5.2, GPT-5.3 Instant, GPT-5.4 and GPT-5.5 was used in the web browser to assist the implementation of this system. This includes the implementation of the unit tests and the Jupyter Notebook to plot the processed data.
+
 ## Acknowledgements
+
 The [OpenStreetMap](https://www.openstreetmap.org) data used in this project is provided by [OpenStreetMap Foundation](https://osmfoundation.org/) available under the Open Data Commons Open Database License.
 
 The following example images for the infratructure category are provided by the OpenStreetMap Wiki under the Creative Commons License. The following images are used:
+
 - https://wiki.openstreetmap.org/wiki/File:456Humboldtstr.jpg
 - https://wiki.openstreetmap.org/wiki/File:Morgendlicher_Berufsverkehr_auf_der_BAB_A8_beim_Kreuz_Stuttgart_-_panoramio.jpg
 - https://wiki.openstreetmap.org/wiki/File:Primary-photo.jpg
@@ -144,5 +193,6 @@ The following example images for the infratructure category are provided by the 
 - https://wiki.openstreetmap.org/wiki/File:Forest_path_and_trees.jpg
 
 The following example images for the infratructure category is provided by Wikimedia Commons under the Creative Commons Attribution-Share Alike 4.0 International License:
+
 - https://commons.wikimedia.org/wiki/File:Mitte_Am_Zirkus_yoo_Berlin.JPG
 - https://commons.wikimedia.org/wiki/File:No_Image_(2879926)_-_The_Noun_Project.svg (this is licensed under the Creative Commons Attribution 4.0 International License)

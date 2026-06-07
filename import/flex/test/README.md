@@ -1,6 +1,6 @@
 # Test Setup
 
-You can perform two kind of tests. The unit tests call the _get_infrastructure_type(tags, restriction)_ function of the [infrastructure_logic.lua](../infrastructure_logic.lua) with real world street segments of Bern and Berlin for each infrastructure type. With the E2E tests you can test the whole processing flow, from creating and populating the database tables to visualizing the street segment in the frontend. Real worl street segments from Bern and Berlin for each infrastructure type were used as well to create _osm.pbf_ files like the ones that would be downloaded from Geofabrik. The expected features you can verify are listed below.
+You can perform two kinds of tests with different test levels. The unit tests call the _get_infrastructure_type(tags, restriction)_ function of the [infrastructure_logic.lua](../infrastructure_logic.lua) file with tags of real world street segments of Bern and Berlin for each infrastructure category. With the E2E tests you can test the whole processing flow, from creating and populating the database tables to visualizing the processed infrastructure data in the frontend. Real world street segments (including the geometry information) of Bern and Berlin for each infrastructure category are used to create _osm.pbf_ files similar to the ones that would be downloaded from Geofabrik. The expected features to verify in the web frontend are listed below.
 
 ## Unit Tests
 
@@ -42,7 +42,7 @@ cd import/flex/test
 
 1. Change the `TEST` variable in the .env file to _true_
 2. Execute the `./process.sh` script if it was never run before, otherwise execute the `./rerun.sh` script
-3. Verify that the following street segments with it's IDs are displayed correctly in the frontend. If there is a _B_ after the ID, you have to check this street segment in Berlin:
+3. Verify that the following street segments with it's IDs are displayed correctly in the frontend. If there is a _B_ after the ID, you have to check this infrastructure element in Berlin:
 
 - Street with bicycle forbidden
   - 1 lane
@@ -74,6 +74,7 @@ cd import/flex/test
     - 544738943
     - 200213225
     - 195736528
+    - 450115388 B
   - 3 lane
     - 160248344
     - 122977868
@@ -102,6 +103,7 @@ cd import/flex/test
     - 219927154
     - 558587989
     - 707254590
+    - 4729702 B
   - 5 lane
     - 667913239
     - 48162953
@@ -240,6 +242,7 @@ cd import/flex/test
   - 3 lane
     - 974996812
     - 132150332
+    - 375958862 B
 - One-way street with separate bicycle lane on sidepath
   - 1 lane
     - 75376543
@@ -303,10 +306,12 @@ cd import/flex/test
   - 549017557
   - 1426724026
   - 1069981966
+  - 901435710 B
 - Cycleway multiuse
   - 1415473411
   - 1421702999
   - 9421118
+  - 600391051 B
 - Cyclist waiting aid
   - 10265532955 B
   - 13023132208 B
@@ -315,18 +320,22 @@ cd import/flex/test
   - 536453654
   - 652499475
   - -10430209
+  - 749156163 B
 - Mainly/exclusively for pedestrian with bicycle allowed
   - 453816462
   - 160523653
   - 96207433
+  - 26691727 B
 - Crossing (bicycle, pedestrian, horserider)
   - 453245916
   - 3339477472
   - 5302265579
+  - 7005782146 B
 - Uncategorized
   - 1370384520
   - 37231307
   - 1414952521
+  - 214715852 B
 - Invalid Data (no highway key)
   - Node: 2284200952
   - Way: 1077730959
