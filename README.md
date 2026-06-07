@@ -165,10 +165,6 @@ npm run dev
 
 4. Open the frontend in the browser e.g.: _http://localhost:5173/_
 
-## Usage of AI Tools
-
-[ChatGPT](https://chatgpt.com/) by [OpenAI](https://openai.com/) in the versions GPT-5.2, GPT-5.3 Instant, GPT-5.4 and GPT-5.5 was used in the web browser to assist the implementation of this system. This includes the implementation of the unit tests and the Jupyter Notebook to plot the processed data.
-
 ## Acknowledgements
 
 The [OpenStreetMap](https://www.openstreetmap.org) data used in this project is provided by [OpenStreetMap Foundation](https://osmfoundation.org/) available under the Open Data Commons Open Database License.
@@ -196,3 +192,7 @@ The following example images for the infratructure category is provided by Wikim
 
 - https://commons.wikimedia.org/wiki/File:Mitte_Am_Zirkus_yoo_Berlin.JPG
 - https://commons.wikimedia.org/wiki/File:No_Image_(2879926)_-_The_Noun_Project.svg (this is licensed under the Creative Commons Attribution 4.0 International License)
+
+## Usage of AI Tools
+
+[ChatGPT](https://chatgpt.com/) by [OpenAI](https://openai.com/) in the versions GPT-5.2, GPT-5.3 Instant, GPT-5.4 and GPT-5.5 was used in the web browser to assist the implementation of this system. This includes the implementation of the unit tests and the Jupyter Notebook to plot the processed data.
