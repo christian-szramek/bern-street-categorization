@@ -2,7 +2,7 @@
 
 ## Description
 
-The goal of this tool is to automatically categorize OpenStreetMap (OSM) street segments into predefined infrastructure buckets and visualize them in a web application. It is part of a bachelor thesis and can process the cities Bern, Berlin, Weimar and Wichita Falls.
+The goal of this tool is to automatically categorize OpenStreetMap (OSM) data into predefined infrastructure types and visualize them in a web application. It is part of a bachelor thesis and can process the cities Bern, Berlin, Weimar and Wichita Falls.
 
 The processing part of the tool mainly consists of two steps. The downloading of the required OSM data and the filtering, categorization and storing of the street segments inside a database. These steps are performed for each city that is declared \
 in the _.env_ file. \
