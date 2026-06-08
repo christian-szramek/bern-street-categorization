@@ -194,5 +194,6 @@ The following example images for the infratructure category is provided by Wikim
 - https://commons.wikimedia.org/wiki/File:No_Image_(2879926)_-_The_Noun_Project.svg (this is licensed under the Creative Commons Attribution 4.0 International License)
 
 ## Usage of AI Tools
-
-[ChatGPT](https://chatgpt.com/) by [OpenAI](https://openai.com/) in the versions GPT-5.2, GPT-5.3 Instant, GPT-5.4 and GPT-5.5 was used in the web browser to assist the implementation of this system. This includes the implementation of the unit tests and the Jupyter Notebook to plot the processed data.
+[ChatGPT](https://chatgpt.com/) by [OpenAI](https://openai.com/) in the versions GPT-5.2, GPT-5.3 Instant, GPT-5.4 and GPT-5.5 was used inside the web browser to assist the technical implementation of the system. This includes the code for the unit tests and the Jupyter Notebook.
+It was used to generate boilerplate code, analyze error messages during development or to improve the styling in the CSS code. The generated code was manually inspected and adapted to the system by the author (Christian Szramek) before using it.
+The system architecture decisions, including the repository and component structure, used services, data flow decisions, function to derive the infrastructure category, the test strategy and the selection of test elements in the unit and E2E tests was manually done by the author. 
