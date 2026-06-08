@@ -188,10 +188,13 @@ The following example images for the infratructure category are provided by the 
 - https://wiki.openstreetmap.org/wiki/File:Zebra-crossing_sm.jpg
 - https://wiki.openstreetmap.org/wiki/File:Forest_path_and_trees.jpg
 
-The following example images for the infratructure category is provided by Wikimedia Commons under the Creative Commons Attribution-Share Alike 4.0 International License:
+The following example image for the infratructure category is provided by Wikimedia Commons under the Creative Commons Attribution-Share Alike 4.0 International License:
 
 - https://commons.wikimedia.org/wiki/File:Mitte_Am_Zirkus_yoo_Berlin.JPG
-- https://commons.wikimedia.org/wiki/File:No_Image_(2879926)_-_The_Noun_Project.svg (this is licensed under the Creative Commons Attribution 4.0 International License)
+
+The following example image for the infratructure category is provided by Wikimedia Commons under the Creative Commons Attribution 4.0 International License:
+
+- https://commons.wikimedia.org/wiki/File:No_Image_(2879926)_-_The_Noun_Project.svg
 
 ## Usage of AI Tools
 [ChatGPT](https://chatgpt.com/) by [OpenAI](https://openai.com/) in the versions GPT-5.2, GPT-5.3 Instant, GPT-5.4 and GPT-5.5 was used inside the web browser to assist the technical implementation of the system. This includes the code for the unit tests and the Jupyter Notebook.
