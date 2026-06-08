@@ -198,5 +198,5 @@ The following example image for the infratructure category is provided by Wikime
 
 ## Usage of AI Tools
 [ChatGPT](https://chatgpt.com/) by [OpenAI](https://openai.com/) in the versions GPT-5.2, GPT-5.3 Instant, GPT-5.4 and GPT-5.5 was used inside the web browser to assist the technical implementation of the system. This includes the code for the unit tests and the Jupyter Notebook.
-It was used to generate boilerplate code, analyze error messages during development or to improve the styling in the CSS code. The generated code was manually inspected and adapted to the system by the author (Christian Szramek) before using it.
-The system architecture decisions, including the repository and component structure, used services, frontend logic, data flow decisions, function to derive the infrastructure category, the test strategy and the selection of test elements in the unit and E2E tests were manually done by the author. 
+It was used to generate boilerplate code, improve the styling in the CSS code or to analyze error messages during development. The generated code was manually inspected and adapted to the system before using it by the author (Christian Szramek) as the tool hadn't access to all project files.
+The system architecture decisions, including the repository and component structure, used services, frontend logic, data flow decisions, function to derive the infrastructure category, the test strategy and the selection of test elements in the unit and E2E tests were manually done by the author.
